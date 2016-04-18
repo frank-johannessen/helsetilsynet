@@ -1,0 +1,1 @@
+﻿<%@ Page AutoEventWireup="True" CodeBehind="CreateThumbnail.aspx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.ActivityFeed.CreateThumbnail" Language="C#" %>

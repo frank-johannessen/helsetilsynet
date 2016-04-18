@@ -1,0 +1,14 @@
+.mega-menu > li > .menu {
+  border: 1px solid #cccccc;
+  border-width: 0 1px 1px;
+  margin: 0 -1px; }
+  .mega-menu > li > .menu > .last-child {
+    border: none; }
+.mega-menu > li.my-tools .toolbox {
+  border: 1px solid #cccccc;
+  border-width: 0 1px 1px;
+  margin: 0 -1px; }
+
+.frontpage:before {
+  background: url(images/gradient-frontpage.png) top repeat-x; }
+

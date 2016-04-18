@@ -1,0 +1,225 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EF2E962-797C-47F2-B1E2-8ECFE6D11E5E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>EPiCode.PageTypeUtil</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EPiCode.PageTypeUtil</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPiServer, Version=5.2.80.197, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary, Version=5.2.375.7, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL" />
+    <Reference Include="EPiServer.Configuration, Version=5.2.80.197, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\EPiServer.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionCopy.aspx.cs">
+      <DependentUpon>PageTypeDefinitionCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionExport.aspx.cs">
+      <DependentUpon>PageTypeDefinitionExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionSort.aspx.cs">
+      <DependentUpon>PageTypeDefinitionSort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionUtil.aspx.cs">
+      <DependentUpon>PageTypeDefinitionUtil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\Plugins\PageTypeUtil.aspx.cs">
+      <DependentUpon>PageTypeUtil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\Configuration.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\PropertyImporter.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\PropertyTypeXml.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\PropertyTypeXmlCollection.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\PropertyUtil.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\XmlCreator.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\XmlImportFile.cs" />
+    <Compile Include="EPiCode.PageTypeUtil\PropertyImport\XmlImportFileCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EPiCode.PageTypeUtil\ImportResources\RightContent Simple.xml" />
+    <Content Include="EPiCode.PageTypeUtil\ImportResources\RightContent.xml" />
+    <Content Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionCopy.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionExport.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionSort.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="EPiCode.PageTypeUtil\Plugins\PageTypeDefinitionUtil.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="EPiCode.PageTypeUtil\Plugins\PageTypeUtil.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="References\EPiServer.BaseLibrary.dll" />
+    <Content Include="References\EPiServer.Configuration.dll" />
+    <Content Include="References\EPiServer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EPiCode.PageTypeUtil\Plugins\Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>@echo off
+set solutionName=$(SolutionName)
+set buildConfig=$(ConfigurationName)
+
+echo Building '$(ProjectName)' in %25buildConfig%25 mode
+
+set Bitten="$(BittenBuild)"
+echo Bitten Build: %25Bitten%25
+if not %25Bitten%25=="" GOTO skip
+
+REM Don't copy if there is no solution defined
+if "%25solutionName%25"=="*Undefined*" GOTO skip
+
+set BvnSourceDir=$(ProjectDir)
+if "%25BvnSourceDir:~-1%25"=="\" set BvnSourceDir=%25BvnSourceDir:~0,-1%25
+
+set BvnDestDir=$(SolutionDir)
+if "%25BvnDestDir:~-1%25"=="\" set BvnDestDir=%25BvnDestDir:~0,-1%25
+
+echo Copy From: %25BvnSourceDir%25
+echo Copy To: %25BvnDestDir%25
+
+REM Project and solution could be same place. Don't do anything.
+if %25BvnSourceDir%25==%25BvnDestDir%25 GOTO SameDirectories
+
+REM Masks used by Unleash It
+set BvnMasks="*.aspx;*.ascx;*.asmx;*.gif;*.jpg;*.html;*.js;*.xml;*.png;*.css;*.config;*.js"
+set BvnExclude="_vti_*;_private;_svn;.svn;"
+
+REM Identify the correct version of UnleashIT, and bail if it's not present
+set unleashitcmd="*Undefined*"
+if exist "%25ProgramFiles(x86)%25\Unleash It\UnleashIt.exe" set unleashitcmd="%25ProgramFiles(x86)%25\Unleash It\UnleashIt.exe"
+if exist "%25ProgramFiles%25\Unleash It\UnleashIt.exe" set unleashitcmd="%25ProgramFiles%25\Unleash It\UnleashIt.exe"
+if %25unleashitcmd%25=="*Undefined*" GOTO NoUnleashit
+
+%25unleashitcmd%25 /u /o /s:"%25BvnSourceDir%25" /d:"%25BvnDestDir%25" /masks:"%25BvnMasks%25" /folders:"%25BvnExclude%25"
+
+REM Copy if changed. /u will only write if file exists
+echo Copying .dll file (if changed)
+xcopy /d /y  "$(TargetDir)$(TargetName).dll" "%25BvnDestDir%25\bin\"
+REM Only copy pdb if debug mode
+if "%25buildConfig%25"=="Debug" xcopy /d /y  "$(TargetDir)$(TargetName).pdb" "%25BvnDestDir%25\bin\"
+
+goto continue
+
+:NoUnleashit
+echo Unleash IT could not be found in Program Files or Program Files (x86), cannot deploy
+echo Please visit: www.eworldui.net/unleashit/ to download
+goto continue
+
+:SameDirectories
+echo Source and Destination directories are the same. Skipping.
+goto continue
+
+:skip
+echo Skipping post-build event
+
+:continue
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

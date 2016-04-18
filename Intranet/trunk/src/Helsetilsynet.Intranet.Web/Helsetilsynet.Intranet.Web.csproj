@@ -1,0 +1,2504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{139DABBC-39DB-4B51-B97B-A5A2F375A220}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MakingWaves.Helsetilsynet.Intranet.Web</RootNamespace>
+    <AssemblyName>MakingWaves.Helsetilsynet.Intranet.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedRelease|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\lib\AjaxMin.4.46.4422.26284\lib\net20\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\..\lib\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=2.6.3.862, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration, Version=2.6.3.862, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Autofac.2.6.3.862\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\..\lib\dotless.1.2.4.0\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET.modified">
+      <HintPath>..\..\lib\YUICompressor.NET.1.7.1.0\lib\net35\EcmaScript.NET.modified.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiCode.PageTypeUtil">
+      <HintPath>..\..\lib\EPiCode.PageTypeUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.BaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Blog, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Blog.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Cache, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Criteria, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Criteria.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Data, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework.Exceptions, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Framework.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework.Impl, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Framework.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Security, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Web, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Web.Authorization, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Web.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Blog, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Blog.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Calendar, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Club, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Club.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Contact, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Contact.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Forum, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Forum.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.ImageGallery, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.ImageGallery.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.MyPage, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.MyPage.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Poll, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Poll.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Search, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Wcf.Blog, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Wcf.Blog.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Wcf.Feed, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Wcf.Feed.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Web.Administration, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Configuration, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Enterprise, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Enterprise.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.ImageLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.ImageLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Implementation, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Legacy4, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Legacy4.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.LinkAnalyzer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.LinkAnalyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Log.Analyzers, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Log.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Log.Core, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Log.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Lucene, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Lucene.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Scheduler, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Scheduler.WKTL, Version=5.1.422.4, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Scheduler.WKTL.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Web.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.WebDav, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.WebDav.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.WebParts, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.WebParts.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.WorkflowFoundation, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.WorkflowFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.XForms, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.XmlRpc, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.XmlRpc.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiUtilities">
+      <HintPath>..\..\lib\EPiUtilities.1.0.0.0\lib\EPiUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Esent.Interop">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Esent.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="evohtmltopdf">
+      <HintPath>..\..\lib\EvoHtmlToPdf-v3.5\evohtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GSALib">
+      <HintPath>..\..\lib\GSALib.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\HtmlAgilityPack.1.4.4\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\..\lib\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Jurassic">
+      <HintPath>..\..\lib\Jurassic.2.1.1\lib\Jurassic.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Spatial">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Lucene.Net.Contrib.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.SpellChecker">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Lucene.Net.Contrib.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="MakingWaves.Common, Version=1.7.108.441, Culture=neutral, PublicKeyToken=bbcc6a3679cba463, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MakingWaves.Common.1.7.108.441\lib\net40\MakingWaves.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="MakingWaves.Common.Web, Version=1.7.108.441, Culture=neutral, PublicKeyToken=bbcc6a3679cba463, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MakingWaves.Common.Web.1.7.108.441\lib\net40\MakingWaves.Common.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="MakingWaves.EPiImage, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MakingWaves.EPiImage.2.9.1.0\lib\MakingWaves.EPiImage.dll</HintPath>
+    </Reference>
+    <Reference Include="MakingWaves.FastUpload">
+      <HintPath>..\..\lib\MakingWaves.FastUpload.1.1.0.0\lib\MakingWaves.FastUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\lib\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWaves, Version=0.1.79.735, Culture=neutral, PublicKeyToken=7d0a8c4a744cf5c7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\OpenWaves.0.1.79.735\lib\net40\OpenWaves.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWaves.ActivityFeed, Version=1.0.79.835, Culture=neutral, PublicKeyToken=c2f044223b736562, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\OpenWaves.ActivityFeed.1.0.79.835\lib\net40\OpenWaves.ActivityFeed.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWaves.ActivityFeed.EPiServer.Community, Version=1.0.79.835, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\OpenWaves.ActivityFeed.EPiServer.Community.1.0.79.835\lib\net40\OpenWaves.ActivityFeed.EPiServer.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWaves.ActivityFeed.Web, Version=1.0.79.835, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\OpenWaves.ActivityFeed.Web.1.0.79.835\lib\net40\OpenWaves.ActivityFeed.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWaves.Web, Version=0.1.79.735, Culture=neutral, PublicKeyToken=7d0a8c4a744cf5c7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\OpenWaves.Web.0.1.79.735\lib\net40\OpenWaves.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PageTypeBuilder">
+      <HintPath>..\..\lib\PageTypeBuilder.2.0\lib\net35\PageTypeBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\..\lib\RavenDB.Client.1.0.960\lib\net40\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Backup">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Backup.exe</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Embedded">
+      <HintPath>..\..\lib\RavenDB.Embedded.1.0.960\lib\net40\Raven.Client.Embedded.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\lib\RavenDB.Client.1.0.960\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Database">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Munin">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Munin.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Smuggler">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Smuggler.exe</HintPath>
+    </Reference>
+    <Reference Include="Raven.Storage.Esent">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Storage.Esent.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Storage.Managed">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Raven.Storage.Managed.dll</HintPath>
+    </Reference>
+    <Reference Include="Spatial4n.Core">
+      <HintPath>..\..\lib\RavenDB.Database.1.0.960\lib\net40\Spatial4n.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquishIt.Framework">
+      <HintPath>..\..\lib\SquishIt.0.8.6\lib\SquishIt.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.ApplicationModules, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.ApplicationModules.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Cms.Shell.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Cms.Shell.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Data, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Data.Cache, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Data.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Events, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Framework, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Licensing, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell.UI, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.Shell.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\EPiServer.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization">
+      <Private>True</Private>
+      <HintPath>..\..\lib\EPiServer.6.1.379.1\lib\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\..\lib\YUICompressor.NET.1.7.1.0\lib\net35\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\scripts\custom-validators.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\adapter\jquery\adapter.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\adapter\jquery\jquery.tinymce.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\adapter\prototype\adapter.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\AddOnManager.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ControlManager.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\DOMUtils.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\Element.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\EventUtils.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\Range.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\RangeUtils.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\ScriptLoader.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\Selection.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\Serializer.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\Sizzle.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\TreeWalker.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\dom\TridentSelection.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\Editor.Events.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\Editor.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\EditorCommands.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\EditorManager.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\EnterKey.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\firebug\firebug-lite.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ForceBlocks.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\Formatter.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\DomParser.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Entities.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Node.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\SaxParser.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Schema.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Serializer.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Styles.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\html\Writer.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\LegacyInput.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\Popup.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\tinymce.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Button.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\ColorSplitButton.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Container.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Control.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\DropMenu.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\KeyboardNavigation.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\ListBox.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Menu.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\MenuButton.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\MenuItem.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\NativeListBox.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Separator.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\SplitButton.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\Toolbar.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\ui\ToolbarGroup.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\UndoManager.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\Cookie.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\Dispatcher.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\JSON.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\JSONP.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\JSONRequest.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\Quirks.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\URI.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\VK.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\util\XHR.js" />
+    <Content Include="Templates\scripts\tiny_mce\classes\WindowManager.js" />
+    <Content Include="Templates\scripts\tiny_mce\jquery.tinymce.js" />
+    <Content Include="Templates\scripts\tiny_mce\langs\en.js" />
+    <Content Include="Templates\scripts\tiny_mce\langs\nb_NO.js" />
+    <Content Include="Templates\scripts\tiny_mce\license.txt" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\style\readme.txt" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Templates\scripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\langs\nb_NO.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\langs\nb_NO_dlg.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Templates\scripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_dev.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_jquery.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_jquery_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_prototype.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_prototype_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Templates\scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Templates\scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Templates\scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Templates\scripts\tiny_mce\utils\validate.js" />
+    <Content Include="EPiCode\PageTypeUtil\ImportResources\RightContent Simple.xml" />
+    <Content Include="EPiCode\PageTypeUtil\ImportResources\RightContent.xml" />
+    <Content Include="EPiCode\PageTypeUtil\Plugins\PageTypeDefinitionCopy.aspx" />
+    <Content Include="EPiCode\PageTypeUtil\Plugins\PageTypeDefinitionExport.aspx" />
+    <Content Include="EPiCode\PageTypeUtil\Plugins\PageTypeDefinitionUtil.aspx" />
+    <Content Include="EPiCode\PageTypeUtil\Plugins\PageTypeUtil.aspx" />
+    <Content Include="Templates\ActivityFeed\CreateThumbnail.aspx" />
+    <Content Include="CodeAnalysis\CodeAnalysisConfiguration.xml" />
+    <Content Include="Content\Images\box-tip.gif" />
+    <Content Include="Content\Images\dummy_profile_picture.jpg" />
+    <Content Include="Content\Styles\activityFeed-ie-fallback.css" />
+    <Content Include="Content\Styles\activityFeed-ie8-fallback.css" />
+    <Content Include="Content\Styles\activityFeed.css" />
+    <Content Include="Content\Styles\font-awesome.css" />
+    <Content Include="CustomProperties\FolderBrowserProperty\FolderBrowserDialog.aspx" />
+    <Content Include="evointernal.dll" />
+    <Content Include="Scripts\activityFeed.js" />
+    <Content Include="Scripts\activityFeed.min.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Templates\DynamicContent\LinksFiles.ascx" />
+    <Content Include="Templates\DynamicContent\LinksPageTree.ascx" />
+    <Content Include="Templates\DynamicContent\LinksPageTreeAllLevels.ascx" />
+    <Content Include="Templates\Pages\LargeDocument.aspx" />
+    <Content Include="Templates\Pages\LargeDocumentChapter.aspx" />
+    <Content Include="Templates\Pages\PdfRenderer.aspx" />
+    <Content Include="Templates\scripts\alphabetical-index-columns.js" />
+    <Content Include="Templates\scripts\global.js" />
+    <Content Include="Templates\scripts\lib\jquery.tabs.js" />
+    <Content Include="Templates\Pages\PhoneList.aspx" />
+    <Content Include="Templates\scripts\lib\stickyfloat.js" />
+    <Content Include="Templates\scripts\my_page.js" />
+    <Content Include="Templates\styles\editor.css" />
+    <Content Include="Templates\styles\images\communitydefaults\artikkel_standard_icon.jpg" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_huge.png" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_large.png" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_medium.png" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_portrait.png" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_small.png" />
+    <Content Include="Templates\styles\images\communitydefaults\ClubUnknown_tiny.png" />
+    <Content Include="Templates\styles\images\communitydefaults\standard_calendar_icon.png" />
+    <Content Include="Templates\styles\images\communitydefaults\stort_dokument_icon.jpg" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_huge.png" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_large.png" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_medium.png" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_portrait.png" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_small.png" />
+    <Content Include="Templates\styles\images\communitydefaults\UserUnknown_tiny.png" />
+    <Content Include="Content\Scripts\jquery-1.7.1.js" />
+    <Content Include="Content\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Content\Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Content\Styles\Screen\Master.css" />
+    <Content Include="Content\Styles\Screen\Reset.css" />
+    <Content Include="Content\Styles\Screen\Framework.css" />
+    <Content Include="Content\Styles\Print\Print.css" />
+    <Content Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalEditor.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EPiImage\css\EPiImagePropertiesEditMode.css" />
+    <Content Include="EPiImage\flowplayer\blank.gif" />
+    <Content Include="EPiImage\flowplayer\hori_large.png" />
+    <Content Include="EPiImage\flowplayer\jquery.tools.1.2.3.min.js" />
+    <Content Include="EPiImage\flowplayer\jquery.tools.1.2.4.custom.min.js" />
+    <Content Include="EPiImage\flowplayer\scrollable-buttons.css" />
+    <Content Include="EPiImage\flowplayer\scrollable-horizontal.css" />
+    <Content Include="EPiImage\flowplayer\standalone.css" />
+    <Content Include="EPiImage\flowplayer\vert_large.png" />
+    <Content Include="EPiImage\imgs\i.png" />
+    <Content Include="EPiImage\imgs\image_add.png" />
+    <Content Include="EPiImage\imgs\loading.gif" />
+    <Content Include="EPiImage\imgs\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="EPiImage\imgs\ui-icons_222222_256x240.png" />
+    <Content Include="EPiImage\imgs\ui-icons_454545_256x240.png" />
+    <Content Include="EPiImage\imgs\x.gif" />
+    <Content Include="EPiImage\js\EPiImageGalleryPropertyEditMode.js" />
+    <Content Include="EPiImage\js\EPiImagePropertyEditMode.js" />
+    <Content Include="EPiImage\js\jquery-1.4.2.min.js" />
+    <Content Include="EPiImage\js\jquery-1.7.1.min.js" />
+    <Content Include="EPiImage\js\jquery-ui1.7.3.css" />
+    <Content Include="EPiImage\js\jquery-ui1.7.3.min.js" />
+    <Content Include="EPiImage\js\jquery1.3.2.min.js" />
+    <Content Include="EPiImage\js\json2.min.js" />
+    <Content Include="EPiImage\Services\EPiImageCreateImageService.aspx" />
+    <Content Include="EPiImage\Services\EPiImageGalleryCreateSlideService.aspx" />
+    <Content Include="EPiImage\Services\EPiImageResizeService.aspx" />
+    <Content Include="EPiImage\UserControls\EPiImageGalleryGrid.ascx" />
+    <Content Include="EPiImage\UserControls\EPiImageGalleryViewer.ascx" />
+    <Content Include="EPiImage\UserControls\EPiImageResizer.ascx" />
+    <Content Include="EPiServerCommunity\AccessDenied.aspx" />
+    <Content Include="EPiServerCommunity\AccessRightsPanel.ascx" />
+    <Content Include="EPiServerCommunity\Admin.aspx" />
+    <Content Include="EPiServerCommunity\Administration.css" />
+    <Content Include="EPiServerCommunity\Administration.js" />
+    <Content Include="EPiServerCommunity\API\SearchableItemService.svc" />
+    <Content Include="EPiServerCommunity\Blank.aspx" />
+    <Content Include="EPiServerCommunity\ClientResources\AbuseReport\AbuseReportGadget.css" />
+    <Content Include="EPiServerCommunity\ClientResources\AbuseReport\AbuseReportGadget.js" />
+    <Content Include="EPiServerCommunity\ClientResources\AbuseReport\Icon.png" />
+    <Content Include="EPiServerCommunity\ClientResources\Activity\ActivityGadget.css" />
+    <Content Include="EPiServerCommunity\ClientResources\Activity\ActivityGadget.js" />
+    <Content Include="EPiServerCommunity\ClientResources\Activity\Icon.png" />
+    <Content Include="EPiServerCommunity\ClientResources\Approval\ApprovalGadget.css" />
+    <Content Include="EPiServerCommunity\ClientResources\Approval\ApprovalGadget.js" />
+    <Content Include="EPiServerCommunity\ClientResources\Approval\Icon.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\global.css" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\author.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\author36x36.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Blog.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\BlogEntry.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\BlogEntryComment.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Club.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Comment.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Contest.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\ForumReply.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\ForumRoom.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\ForumTopic.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\icon-eye.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\icon-info.gif" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\icon-refresh.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Image.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\ImageComment.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\ImageGallery.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\system20x20.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\system36x36.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\User.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\Video.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\VideoComment.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Images\VideoGallery.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\disabledRow.gif" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\iconSwitchBg-active.gif" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\iconSwitchBg.gif" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\layoutIcon-compact.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\layoutIcon-table-active.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\layoutIcon-table.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\layoutIcon-users-active.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\layoutIcon-users.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\search-button.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\search-input.png" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Resources\sortDirectionIcon.gif" />
+    <Content Include="EPiServerCommunity\ClientResources\SharedResources\Silverlight.js" />
+    <Content Include="EPiServerCommunity\ControlWrapper.aspx" />
+    <Content Include="EPiServerCommunity\DateTimePicker.ascx" />
+    <Content Include="EPiServerCommunity\Default.aspx" />
+    <Content Include="EPiServerCommunity\EntityEditorExtensions\Attributes.ascx" />
+    <Content Include="EPiServerCommunity\EntityEditorExtensions\Categories.ascx" />
+    <Content Include="EPiServerCommunity\EntityEditorExtensions\Tags.ascx" />
+    <Content Include="EPiServerCommunity\Globalization\AddTranslationControl.ascx" />
+    <Content Include="EPiServerCommunity\Globalization\EditGlobalization.aspx" />
+    <Content Include="EPiServerCommunity\Globalization\FindTranslationControl.ascx" />
+    <Content Include="EPiServerCommunity\Globalization\GlobalizationKeyControl.ascx" />
+    <Content Include="EPiServerCommunity\Images\BrokenImage.gif" />
+    <Content Include="EPiServerCommunity\Images\close.gif" />
+    <Content Include="EPiServerCommunity\Images\collapse.gif" />
+    <Content Include="EPiServerCommunity\Images\expand.gif" />
+    <Content Include="EPiServerCommunity\Images\folder_small.gif" />
+    <Content Include="EPiServerCommunity\Images\General\404.png" />
+    <Content Include="EPiServerCommunity\Images\General\down.png" />
+    <Content Include="EPiServerCommunity\Images\General\refresh.png" />
+    <Content Include="EPiServerCommunity\Images\General\remove.png" />
+    <Content Include="EPiServerCommunity\Images\General\reqField.gif" />
+    <Content Include="EPiServerCommunity\Images\General\save.png" />
+    <Content Include="EPiServerCommunity\Images\General\saveas.png" />
+    <Content Include="EPiServerCommunity\Images\General\search.png" />
+    <Content Include="EPiServerCommunity\Images\General\up.png" />
+    <Content Include="EPiServerCommunity\Images\Globalization\globe.gif" />
+    <Content Include="EPiServerCommunity\Images\HeaderBackground.gif" />
+    <Content Include="EPiServerCommunity\Images\Licensing\license.gif" />
+    <Content Include="EPiServerCommunity\Images\Login\BaseSprite.png" />
+    <Content Include="EPiServerCommunity\Images\Login\BodyBg.png" />
+    <Content Include="EPiServerCommunity\Images\Login\BtnBg.png" />
+    <Content Include="EPiServerCommunity\Images\Login\EPiServerLogo.png" />
+    <Content Include="EPiServerCommunity\Images\Login\EPiServerLogo8.png" />
+    <Content Include="EPiServerCommunity\Images\Login\PaneBg.png" />
+    <Content Include="EPiServerCommunity\Images\Login\PaneCorners.png" />
+    <Content Include="EPiServerCommunity\Images\logotype.png" />
+    <Content Include="EPiServerCommunity\Images\Main\titleBg.png" />
+    <Content Include="EPiServerCommunity\Images\Menu\group_bg.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\item_bg.png" />
+    <Content Include="EPiServerCommunity\Images\Menu\item_hoverBg.png" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrolldown.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrolldown_active.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrolldown_hover.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrollup.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrollup_active.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\scrollup_hover.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\spacer.gif" />
+    <Content Include="EPiServerCommunity\Images\Menu\TableHeadingBg.gif" />
+    <Content Include="EPiServerCommunity\Images\NoImage.gif" />
+    <Content Include="EPiServerCommunity\Images\pixel.gif" />
+    <Content Include="EPiServerCommunity\Images\readMessage.gif" />
+    <Content Include="EPiServerCommunity\Images\saveNOK.png" />
+    <Content Include="EPiServerCommunity\Images\saveOK.png" />
+    <Content Include="EPiServerCommunity\Images\scrolldown.gif" />
+    <Content Include="EPiServerCommunity\Images\scrollup.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\access_denied_large.png" />
+    <Content Include="EPiServerCommunity\Images\Security\add_group_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\add_user_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\administrative_access_rights_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\groups_and_users_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\group_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\group_small.png" />
+    <Content Include="EPiServerCommunity\Images\Security\Logout.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\search_groups_users_small.gif" />
+    <Content Include="EPiServerCommunity\Images\Security\security_large.png" />
+    <Content Include="EPiServerCommunity\Images\Security\user_small.gif" />
+    <Content Include="EPiServerCommunity\Images\sites\newsite.gif" />
+    <Content Include="EPiServerCommunity\Images\sites\site.gif" />
+    <Content Include="EPiServerCommunity\Images\SmallModuleIcon.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_horCol.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_horColHover.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_horExp.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_horExpHover.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_verCol.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_verColHover.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_verExp.gif" />
+    <Content Include="EPiServerCommunity\Images\Splitter\splitter_verExpHover.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\Gradients.png" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\hover_tab_left_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\hover_tab_right_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\selected_tab_bg.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\selected_tab_left_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\selected_tab_right_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\TabBackground.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\tab_left_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\TabStrip\tab_right_icon.gif" />
+    <Content Include="EPiServerCommunity\Images\Tree\col.gif" />
+    <Content Include="EPiServerCommunity\Images\Tree\exp.gif" />
+    <Content Include="EPiServerCommunity\Images\Tree\folder.gif" />
+    <Content Include="EPiServerCommunity\Images\Tree\folders.gif" />
+    <Content Include="EPiServerCommunity\Images\Tree\node_bg.gif" />
+    <Content Include="EPiServerCommunity\Images\unreadMessage.gif" />
+    <Content Include="EPiServerCommunity\Images\up.png" />
+    <Content Include="EPiServerCommunity\Js\pngfix.js" />
+    <Content Include="EPiServerCommunity\Js\StarSuite.js" />
+    <Content Include="EPiServerCommunity\Licensing\ActiveLicense.aspx" />
+    <Content Include="EPiServerCommunity\Login.aspx" />
+    <Content Include="EPiServerCommunity\Moderate.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeBooleanControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeDateTimeControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeIntegerControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeSingleControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeStringControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\AttributeValueControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\EditAttributeValueControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Attribute\EditChoiceControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Blog\BlogControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Blog\BlogWrapper.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Blog\CreateBlogEntryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Blog\EditBlogEntryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Blog\Images\Tree\category.gif" />
+    <Content Include="EPiServerCommunity\Modules\Blog\SearchBlogs.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarControlWrapper.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarDayControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarEventInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarEventInvitesControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarEventRecurrenceControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\CalendarEventRegistrationsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Calendar\SearchCalendarsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Category\CategoryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Category\CategoryFrameWrapper.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Category\CategoryInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Category\ExecuteCategoryTreeCommand.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Category\GetCategoryTreeXml.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Category\Images\Tree\category.gif" />
+    <Content Include="EPiServerCommunity\Modules\Club\ApproveClubMemberControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\ApproveClubsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\Club.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\ClubInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\ClubMemberListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\SearchClubsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Club\SearchExtensions\readme.txt" />
+    <Content Include="EPiServerCommunity\Modules\Contest\Contest.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\ContestInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\MultipleAlternativeQuestionControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\QuestionControlWrapper.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\SingleAlternativeQuestionControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\SubmissionAnswersControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Contest\TextQuestionControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DirectMessage\DirectMessageListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DirectMessage\Images\Tree\category.gif" />
+    <Content Include="EPiServerCommunity\Modules\DirectMessage\ReadMessageControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DirectMessage\SystemMessageControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DocumentArchive\BrowseDocumentArchiveControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DocumentArchive\DocumentArchiveControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DocumentArchive\DocumentArchiveWrapper.ascx" />
+    <Content Include="EPiServerCommunity\Modules\DocumentArchive\UploadDocumentControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\AnswerInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\ControlWrapper.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\Expert.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\ExpertAssignedQuestionsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\ExpertInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\ExpertListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\QuestionInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\QuestionListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\RelatedQuestionsControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Expert\SelectForumRoomControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\EditForumControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\EditRoomControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\ExecuteForumTreeCommand.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Forum.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\ForumFrameWrapper.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\GetForumTreeXml.aspx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\locked.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\topic.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\Tree\forum.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\Tree\iconsnode.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\Tree\room.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\Tree\style.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\Images\Tree\stylenode.gif" />
+    <Content Include="EPiServerCommunity\Modules\Forum\MoveTopicControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\RoomControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Forum\TopicControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\ApproveImagesControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\BrowseImageGalleryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\EditImageCommentControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\GetImage.aspx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\ImageGalleryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\ImageGalleryWrapper.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\ImageInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\ImageListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\Images\Tree\category.gif" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\SearchImageControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\ImageGallery\UploadImageControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Logging\LoggableEntityLogControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\BrowseUserControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\EditUser.ascx" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\PortraitControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\SearchExtensions\readme.txt" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\SearchUsers.ascx" />
+    <Content Include="EPiServerCommunity\Modules\MyPage\UserAttributeListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Poll\Poll.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Poll\PollControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Poll\PollInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Poll\PollListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Poll\PollVoteControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Reporting\ReportCasesControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Reporting\ReportedContentInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Reporting\ReportingControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Reporting\ReportingUserStats.ascx" />
+    <Content Include="EPiServerCommunity\Modules\StarViral\CampaignInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\StarViral\CampaignListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\StarViral\StarViral.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Tag\PredefinedTagControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Tag\PredefinedTagInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\ApproveVideosControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\CreateVideoCommentControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\EditVideoCommentControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\flvplayer.swf" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\Images\big_view.png" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\Images\Close.png" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\Images\small_view.png" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\Images\zoom.png" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\swfobject.js" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\UploadVideo.aspx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\VideoGalleryControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\VideoInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\VideoItemControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\VideoGallery\VideoListControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\Webmail.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailAccountInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailDomainControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailDomainInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailMailServerControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailMailServerInfoControl.ascx" />
+    <Content Include="EPiServerCommunity\Modules\Webmail\WebmailSignatureControl.ascx" />
+    <Content Include="EPiServerCommunity\NoEntityError.ascx" />
+    <Content Include="EPiServerCommunity\OpenIDConfirm.aspx" />
+    <Content Include="EPiServerCommunity\PagingControl.ascx" />
+    <Content Include="EPiServerCommunity\Public\FeedService.svc" />
+    <Content Include="EPiServerCommunity\Public\MetaWeblogService.svc" />
+    <Content Include="EPiServerCommunity\Public\MetaWeblogSetup.aspx" />
+    <Content Include="EPiServerCommunity\Public\OpenID\op_xrds.aspx" />
+    <Content Include="EPiServerCommunity\Public\OpenID\ProfileFields.ascx" />
+    <Content Include="EPiServerCommunity\Public\OpenID\User.aspx" />
+    <Content Include="EPiServerCommunity\Public\OpenID\user_xrds.aspx" />
+    <Content Include="EPiServerCommunity\Public\PingbackService.svc" />
+    <Content Include="EPiServerCommunity\Public\SearchableContentFeedService.svc" />
+    <Content Include="EPiServerCommunity\Public\WeblogUpdatesService.svc" />
+    <Content Include="EPiServerCommunity\SaveResultPanel.ascx" />
+    <Content Include="EPiServerCommunity\Security\AccessRights.ascx" />
+    <Content Include="EPiServerCommunity\Security\AccessRightsControl.ascx" />
+    <Content Include="EPiServerCommunity\Security\AccessRightsWrapperControl.ascx" />
+    <Content Include="EPiServerCommunity\Security\AdministrativeAccessRights.aspx" />
+    <Content Include="EPiServerCommunity\Security\EditGroup.aspx" />
+    <Content Include="EPiServerCommunity\Security\EditGroupTabPageGroupSettings.ascx" />
+    <Content Include="EPiServerCommunity\Security\EditUser.aspx" />
+    <Content Include="EPiServerCommunity\Security\EditUserTabPageUserSettings.ascx" />
+    <Content Include="EPiServerCommunity\Security\ModuleAccessRights.aspx" />
+    <Content Include="EPiServerCommunity\Security\SearchGroupsAndUsers.aspx" />
+    <Content Include="EPiServerCommunity\Security\SecurityEntryLink.ascx" />
+    <Content Include="EPiServerCommunity\Security\SecurityEntrySearch.ascx" />
+    <Content Include="EPiServerCommunity\Start\Start.aspx" />
+    <Content Include="EPiServerCommunity\Styles\login.css" />
+    <Content Include="EPiServerCommunity\Styles\Main.css" />
+    <Content Include="EPiServerCommunity\Styles\Menu.css" />
+    <Content Include="EPiServerCommunity\Styles\Splitter.css" />
+    <Content Include="EPiServerCommunity\Styles\TabStrip.css" />
+    <Content Include="EPiServerCommunity\Styles\Tree.css" />
+    <Content Include="EPiServerCommunity\Views\AbuseReport\EditSettings.ascx" />
+    <Content Include="EPiServerCommunity\Views\AbuseReport\Index.ascx" />
+    <Content Include="EPiServerCommunity\Views\AbuseReport\ReportCaseDetails.ascx" />
+    <Content Include="EPiServerCommunity\Views\AbuseReport\ReportingReported.ascx" />
+    <Content Include="EPiServerCommunity\Views\Activity\EditSettings.ascx" />
+    <Content Include="EPiServerCommunity\Views\Activity\Index.ascx" />
+    <Content Include="EPiServerCommunity\Views\Approval\EditSettings.ascx" />
+    <Content Include="EPiServerCommunity\Views\Approval\Index.ascx" />
+    <Content Include="html\losen.html" />
+    <Content Include="lang\EPiImage_EN.xml" />
+    <Content Include="lang\EPiImage_NO.xml" />
+    <Content Include="lang\EPiImage_SV.xml" />
+    <Content Include="Raven.Studio.xap" />
+    <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.2.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Templates\DynamicContent\Iframe.ascx" />
+    <Content Include="Templates\Pages\CalendarYearOverview.aspx" />
+    <Content Include="Templates\Pages\Login.aspx" />
+    <Content Include="Templates\Pages\MegaMenu.aspx" />
+    <Content Include="Templates\Pages\SystemMessage.aspx" />
+    <Content Include="Templates\Pages\Folder.aspx" />
+    <Content Include="Templates\scripts\frontpage-carousel.js" />
+    <Content Include="Templates\scripts\lib\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="Templates\Pages\ImportedArticle.aspx" />
+    <Content Include="Templates\scripts\lib\jquery.carousel.js" />
+    <Content Include="Templates\scripts\lib\jquery.ui.core.js" />
+    <Content Include="Templates\scripts\lib\jquery.ui.datepicker-no.js" />
+    <Content Include="Templates\Pages\UserSearch.aspx" />
+    <Content Include="Templates\scripts\lib\jquery.ui.rcarousel.js" />
+    <Content Include="Templates\scripts\lib\jquery.ui.widget.js" />
+    <Content Include="Templates\scripts\search.js" />
+    <Content Include="Templates\scripts\user_search.js" />
+    <Content Include="Templates\styles\images\decoration-annet.png" />
+    <Content Include="Templates\styles\images\decoration-barnevern.png" />
+    <Content Include="Templates\styles\images\decoration-kommunal.png" />
+    <Content Include="Templates\styles\images\decoration-sosinav.png" />
+    <Content Include="Templates\styles\images\decoration-speshelse.png" />
+    <Content Include="Templates\styles\images\dots.png" />
+    <Content Include="Templates\styles\images\external_systems\efb62_28.gif" />
+    <Content Include="Templates\styles\images\external_systems\ephorte62_28.gif" />
+    <Content Include="Templates\styles\images\external_systems\ess62_28.gif" />
+    <Content Include="Templates\styles\images\external_systems\let_og_laan_logo_120px.gif" />
+    <Content Include="Templates\styles\images\external_systems\MinWintid62x28.jpg" />
+    <Content Include="Templates\styles\images\external_systems\nel62_28.gif" />
+    <Content Include="Templates\styles\images\external_systems\nestor62_28.gif" />
+    <Content Include="Templates\styles\images\external_systems\pps62_28.gif" />
+    <Content Include="Templates\styles\images\featured-article-reflection.png" />
+    <Content Include="Templates\styles\images\frontpage-gradient.png" />
+    <Content Include="Templates\styles\images\gradient-annet.svg" />
+    <Content Include="Templates\styles\images\gradient-barnevern.svg" />
+    <Content Include="Templates\styles\images\gradient-frontpage.png" />
+    <Content Include="Templates\styles\images\gradient-kommunal.svg" />
+    <Content Include="Templates\styles\images\gradient-sosinav.svg" />
+    <Content Include="Templates\styles\images\gradient-speshelse.svg" />
+    <Content Include="Templates\styles\images\link-arrow.png" />
+    <Content Include="Templates\styles\images\losen-logo.png" />
+    <Content Include="Templates\styles\images\main-menu-active-downarrow.png" />
+    <Content Include="Templates\styles\images\main-menu-downarrow.png" />
+    <Content Include="Templates\styles\images\megamenu-background.png" />
+    <Content Include="Templates\styles\images\megamenu-list-arrow.png" />
+    <Content Include="Templates\styles\images\pdf-logo.png" />
+    <Content Include="Templates\styles\images\pdf-logo2.png" />
+    <Content Include="Templates\styles\images\plus-icon.png" />
+    <Content Include="Templates\styles\images\search-button-icon.png" />
+    <Content Include="Templates\styles\images\settings-icon.png" />
+    <Content Include="Templates\styles\losen-ie8.css">
+      <DependentUpon>losen-ie8.scss</DependentUpon>
+    </Content>
+    <Content Include="Templates\styles\losen-ie9.css">
+      <DependentUpon>losen-ie9.scss</DependentUpon>
+    </Content>
+    <Content Include="Templates\styles\losen.css">
+      <DependentUpon>losen.scss</DependentUpon>
+    </Content>
+    <Content Include="Templates\DynamicContent\LinksGoogle.ascx" />
+    <Content Include="Templates\DynamicContent\LinksInternal.ascx" />
+    <Content Include="Templates\DynamicContent\UserList.ascx" />
+    <Content Include="Templates\styles\pdf-styles.css" />
+    <Content Include="Templates\styles\print.css" />
+    <Content Include="Templates\styles\rcarousel.css" />
+    <Content Include="Templates\Units\Dummy\ActivityFeed.ascx" />
+    <Content Include="Templates\Units\Dummy\CalmeyersCorner.ascx" />
+    <Content Include="Templates\Units\Dummy\FeaturedArticlesFrontpage.ascx" />
+    <Content Include="Templates\Units\Dummy\FeaturedArticlesSectionFront.ascx" />
+    <Content Include="Templates\Units\Login\NewPassword.ascx" />
+    <Content Include="Templates\Units\Placeable\ArticleArciveButton.ascx" />
+    <Content Include="Templates\Units\Placeable\PdfRenderArticle.ascx" />
+    <Content Include="Templates\Units\Placeable\PdfRenderLargeDocument.ascx" />
+    <Content Include="Templates\Units\Placeable\PrintButton.ascx" />
+    <Content Include="Templates\Units\Static\GoogleAnalytics.ascx" />
+    <Content Include="Templates\Units\Static\InspectionReportsSection.ascx" />
+    <Content Include="Templates\Units\Placeable\FileTypeAndSourceTags.ascx" />
+    <Content Include="Templates\Units\Placeable\GeneratePDF.ascx" />
+    <Content Include="Templates\Units\Placeable\LargeDocumentChapterNavigation.ascx" />
+    <Content Include="Templates\Units\Dummy\LargeDocumentTocDocInfo.ascx" />
+    <Content Include="Templates\Units\Dummy\LastUpdated.ascx" />
+    <Content Include="Templates\Units\Dummy\LeftMenu.ascx" />
+    <Content Include="Templates\Units\Dummy\FilteredUserAndCompetenceLinks.ascx" />
+    <Content Include="Templates\Units\Dummy\MainHeading.ascx" />
+    <Content Include="Templates\Units\Dummy\MediaMonitor.ascx" />
+    <Content Include="Templates\Units\Dummy\PageActions.ascx" />
+    <Content Include="Templates\Units\Login\ForgotPassword.ascx" />
+    <Content Include="Templates\Units\Login\Login.ascx" />
+    <Content Include="Templates\Units\Login\Register.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenuExternalSystem.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenuSubTree.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MyTools.ascx" />
+    <Content Include="Templates\Units\Placeable\AddCalendarEvent.ascx" />
+    <Content Include="Templates\Units\Placeable\AddNewClub.ascx" />
+    <Content Include="Templates\Units\Placeable\AddUserToContacts.ascx" />
+    <Content Include="Templates\Units\Placeable\BookmarkThisPage.ascx" />
+    <Content Include="Templates\Units\Placeable\CalendarFullVersion.ascx" />
+    <Content Include="Templates\Units\Placeable\CalendarGraphicView.ascx" />
+    <Content Include="Templates\Units\Placeable\CalmeyersCorner.ascx" />
+    <Content Include="Templates\Units\Placeable\CreateBlogEntry.ascx" />
+    <Content Include="Templates\Units\Placeable\FeaturedArticles.ascx" />
+    <Content Include="Templates\Units\Placeable\JoinClub.ascx" />
+    <Content Include="Templates\Units\Placeable\LeftMenuLargeDocuments.ascx" />
+    <Content Include="Templates\Units\Placeable\LeftMenuUsingParentNode.ascx" />
+    <Content Include="Templates\Units\Placeable\MinimalCalendarView.ascx" />
+    <Content Include="Templates\Pages\Section.aspx" />
+    <Content Include="Templates\Units\Placeable\MinimalCalendarViewDateItems.ascx" />
+    <Content Include="Templates\Units\Placeable\MySettings.ascx" />
+    <Content Include="Templates\Units\Placeable\ResponsibleAuthor.ascx" />
+    <Content Include="Templates\Pages\Search.aspx" />
+    <Content Include="Templates\Units\Placeable\ClubMembers.ascx" />
+    <Content Include="Templates\Units\Placeable\ResultPager.ascx" />
+    <Content Include="Templates\Units\Placeable\RSS.ascx" />
+    <Content Include="Templates\Units\Placeable\SearchFilter.ascx" />
+    <Content Include="Templates\Units\Placeable\SectionLastPublished.ascx" />
+    <Content Include="Templates\Units\Placeable\Tags.ascx" />
+    <Content Include="Templates\Units\Placeable\UserContactInfo.ascx" />
+    <Content Include="Templates\Units\Placeable\UserPicker.ascx" />
+    <Content Include="Templates\Units\Placeable\DisplayUserCollection.ascx" />
+    <Content Include="Templates\Units\Placeable\UserSearchShortVersion.ascx" />
+    <Content Include="Templates\Units\Static\ActivityFeed.ascx" />
+    <Content Include="Templates\Units\Static\CMSPageEntityComments.ascx" />
+    <Content Include="Templates\Units\Static\LastUpdated.ascx" />
+    <Content Include="Templates\Units\Static\EditProfileCompetenceView.ascx" />
+    <Content Include="Templates\Units\Static\EditProfileContactInfo.ascx" />
+    <Content Include="Templates\Units\Placeable\SearchResult.ascx" />
+    <Content Include="Templates\Units\Static\Footer.ascx" />
+    <Content Include="Templates\Units\Static\ListAllCategories.ascx" />
+    <Content Include="Templates\Units\Static\LosenAlphabethicalIndex.ascx" />
+    <Content Include="Templates\Units\Static\LosenAlphabethicalIndexItem.ascx" />
+    <Content Include="Templates\Units\Static\MediaWatch.ascx" />
+    <Content Include="Templates\Units\Static\MetaTags.ascx" />
+    <Content Include="Templates\Units\Static\PrintPdfButton.ascx" />
+    <Content Include="Templates\Units\Static\SearchHelp.ascx" />
+    <Content Include="WebServices\SearchService.asmx" />
+    <Content Include="WebServices\UserSearchService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActivityFeed\ActivityFeedEPiServerCommunityConnector.cs" />
+    <Compile Include="ActivityFeed\ArticleUpdate.cs" />
+    <Compile Include="ActivityFeed\AutoFacResolver.cs" />
+    <Compile Include="ActivityFeed\BlogEntryUpdate.cs" />
+    <Compile Include="ActivityFeed\CalendarUpdate.cs" />
+    <Compile Include="ActivityFeed\ActivityFeedHandler.cs" />
+    <Compile Include="ActivityFeed\ClubUpdate.cs" />
+    <Compile Include="Model\Tabs\Email.cs" />
+    <Compile Include="Templates\ActivityFeed\CreateThumbnail.aspx.cs">
+      <DependentUpon>CreateThumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivityFeed\DocumentUpdate.cs" />
+    <Compile Include="ActivityFeed\PageCommentUpdate.cs" />
+    <Compile Include="ActivityFeed\TopicFormats.cs" />
+    <Compile Include="ActivityFeed\UserGroupMembershipProvider.cs" />
+    <Compile Include="Caching\CachedUserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigSections\ExternalSystemConfigCollection.cs" />
+    <Compile Include="ConfigSections\ExternalSystemConfigElement.cs" />
+    <Compile Include="ConfigSections\ExternalSystemsConfig.cs" />
+    <Compile Include="CustomProperties\ExternalSystemPicker\PropertyExternalSystem.cs" />
+    <Compile Include="CustomProperties\ExternalSystemPicker\PropertyExternalSystemControl.cs" />
+    <Compile Include="CustomProperties\FolderBrowserProperty\FolderBrowserDialog.aspx.cs">
+      <DependentUpon>FolderBrowserDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomProperties\FolderBrowserProperty\FolderBrowserDialog.aspx.designer.cs">
+      <DependentUpon>FolderBrowserDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomProperties\FolderBrowserProperty\PropertyFolderBrowser.cs" />
+    <Compile Include="CustomProperties\FolderBrowserProperty\PropertyFolderBrowserControl.cs" />
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalEditor.ascx.cs">
+      <DependentUpon>LosenAlphabethicalEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalEditor.ascx.designer.cs">
+      <DependentUpon>LosenAlphabethicalEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalEditorControl.cs" />
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalEditorProperty.cs" />
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalItem.cs" />
+    <Compile Include="CustomProperties\LosenAlphabethicalIndex\LosenAlphabethicalUtils.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertySingleUserPicker.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertySingleUserPickerControl.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertyUserPicker.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertyUserPickerControl.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods\AttributeNames.cs" />
+    <Compile Include="ExtensionMethods\BlogExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\CalendarExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ClubExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\DateTimeExtensions.cs" />
+    <Compile Include="ExtensionMethods\FilterForVisitor.cs" />
+    <Compile Include="ExtensionMethods\FriendlyURL.cs" />
+    <Compile Include="ExtensionMethods\IEnumerableExtensions.cs" />
+    <Compile Include="ExtensionMethods\LinkItems.cs" />
+    <Compile Include="ExtensionMethods\CategoryMethods.cs" />
+    <Compile Include="ExtensionMethods\PageDataExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\QueryString.cs" />
+    <Compile Include="ExtensionMethods\SearchCollections.cs" />
+    <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\UserExtensionMethods.cs" />
+    <Compile Include="ConfigSections\ExternalSystemConfigSection.cs" />
+    <Compile Include="GlobalName.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\ArticleArchive.cs" />
+    <Compile Include="Model\BaseEditorialPage.cs" />
+    <Compile Include="Model\BasePage.cs" />
+    <Compile Include="Model\CalendarYearOverview.cs" />
+    <Compile Include="Model\ClubListPage.cs" />
+    <Compile Include="Model\ClubPage.cs" />
+    <Compile Include="Model\IVirtualFolder.cs" />
+    <Compile Include="Model\LargeDocument.cs" />
+    <Compile Include="Model\LargeDocumentChapter.cs" />
+    <Compile Include="Model\Folder.cs" />
+    <Compile Include="Model\GlobalSettings.cs" />
+    <Compile Include="Model\ImportedArticle.cs" />
+    <Compile Include="Model\MegaMenuSettings.cs" />
+    <Compile Include="Model\MyPage.cs" />
+    <Compile Include="Model\PdfRenderer.cs" />
+    <Compile Include="Model\PhoneList.cs" />
+    <Compile Include="Model\Section.cs" />
+    <Compile Include="Model\StartPage.cs" />
+    <Compile Include="Model\SystemMessagePage.cs" />
+    <Compile Include="Model\Tabs\Advanced.cs" />
+    <Compile Include="Model\Tabs\LargeDocument.cs" />
+    <Compile Include="Model\Tabs\Footer.cs" />
+    <Compile Include="Model\Tabs\Information.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\Tabs\LosenIndex.cs" />
+    <Compile Include="Model\PageTypeSortOrder.cs" />
+    <Compile Include="Model\Search.cs" />
+    <Compile Include="Model\Tabs\MegaMenuTab1.cs" />
+    <Compile Include="Model\Tabs\MegaMenuTab2.cs" />
+    <Compile Include="Model\Tabs\MegaMenuTab3.cs" />
+    <Compile Include="Model\Tabs\RightColumn.cs" />
+    <Compile Include="Model\UserSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="RelateSpecificListeners\RelateListenersAndHandlers.cs" />
+    <Compile Include="Templates\Common\LargeDocumentHelper.cs" />
+    <Compile Include="Templates\DynamicContent\Iframe.ascx.cs">
+      <DependentUpon>Iframe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\Iframe.ascx.designer.cs">
+      <DependentUpon>Iframe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksFiles.ascx.cs">
+      <DependentUpon>LinksFiles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksFiles.ascx.designer.cs">
+      <DependentUpon>LinksFiles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksGoogle.ascx.cs">
+      <DependentUpon>LinksGoogle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksGoogle.ascx.designer.cs">
+      <DependentUpon>LinksGoogle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksInternal.ascx.cs">
+      <DependentUpon>LinksInternal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksInternal.ascx.designer.cs">
+      <DependentUpon>LinksInternal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksPageTree.ascx.cs">
+      <DependentUpon>LinksPageTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksPageTree.ascx.designer.cs">
+      <DependentUpon>LinksPageTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksPageTreeAllLevels.ascx.cs">
+      <DependentUpon>LinksPageTreeAllLevels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\LinksPageTreeAllLevels.ascx.designer.cs">
+      <DependentUpon>LinksPageTreeAllLevels.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\UserList.ascx.cs">
+      <DependentUpon>UserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DynamicContent\UserList.ascx.designer.cs">
+      <DependentUpon>UserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\NotLoggedIn.Master.cs">
+      <DependentUpon>NotLoggedIn.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\NotLoggedIn.Master.designer.cs">
+      <DependentUpon>NotLoggedIn.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Article.aspx.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Article.aspx.designer.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\ArticleArchive.aspx.cs">
+      <DependentUpon>ArticleArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\ArticleArchive.aspx.designer.cs">
+      <DependentUpon>ArticleArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\CalendarYearOverview.aspx.cs">
+      <DependentUpon>CalendarYearOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\CalendarYearOverview.aspx.designer.cs">
+      <DependentUpon>CalendarYearOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\ClubListPage.aspx.cs">
+      <DependentUpon>ClubListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\ClubListPage.aspx.designer.cs">
+      <DependentUpon>ClubListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\ClubPage.aspx.cs">
+      <DependentUpon>ClubPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\ClubPage.aspx.designer.cs">
+      <DependentUpon>ClubPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Folder.aspx.cs">
+      <DependentUpon>Folder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Folder.aspx.designer.cs">
+      <DependentUpon>Folder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\ImportedArticle.aspx.cs">
+      <DependentUpon>ImportedArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\ImportedArticle.aspx.designer.cs">
+      <DependentUpon>ImportedArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\LargeDocument.aspx.cs">
+      <DependentUpon>LargeDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\LargeDocument.aspx.designer.cs">
+      <DependentUpon>LargeDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\LargeDocumentChapter.aspx.cs">
+      <DependentUpon>LargeDocumentChapter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\LargeDocumentChapter.aspx.designer.cs">
+      <DependentUpon>LargeDocumentChapter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\MegaMenu.aspx.cs">
+      <DependentUpon>MegaMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\MegaMenu.aspx.designer.cs">
+      <DependentUpon>MegaMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\MyPage.aspx.cs">
+      <DependentUpon>MyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\MyPage.aspx.designer.cs">
+      <DependentUpon>MyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\PdfRenderer.aspx.cs">
+      <DependentUpon>PdfRenderer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\PdfRenderer.aspx.designer.cs">
+      <DependentUpon>PdfRenderer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\PhoneList.aspx.cs">
+      <DependentUpon>PhoneList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\PhoneList.aspx.designer.cs">
+      <DependentUpon>PhoneList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Section.aspx.cs">
+      <DependentUpon>Section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Section.aspx.designer.cs">
+      <DependentUpon>Section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\StartPage.aspx.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\StartPage.aspx.designer.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\SystemMessage.aspx.cs">
+      <DependentUpon>SystemMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\SystemMessage.aspx.designer.cs">
+      <DependentUpon>SystemMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\UserSearchQueryStringReader.cs" />
+    <Compile Include="Templates\PdfView.Master.cs">
+      <DependentUpon>PdfView.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\PdfView.Master.designer.cs">
+      <DependentUpon>PdfView.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\ActivityFeed.ascx.cs">
+      <DependentUpon>ActivityFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\ActivityFeed.ascx.designer.cs">
+      <DependentUpon>ActivityFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\CalmeyersCorner.ascx.cs">
+      <DependentUpon>CalmeyersCorner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\CalmeyersCorner.ascx.designer.cs">
+      <DependentUpon>CalmeyersCorner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FeaturedArticlesFrontpage.ascx.cs">
+      <DependentUpon>FeaturedArticlesFrontpage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FeaturedArticlesFrontpage.ascx.designer.cs">
+      <DependentUpon>FeaturedArticlesFrontpage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FeaturedArticlesSectionFront.ascx.cs">
+      <DependentUpon>FeaturedArticlesSectionFront.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FeaturedArticlesSectionFront.ascx.designer.cs">
+      <DependentUpon>FeaturedArticlesSectionFront.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Login\NewPassword.ascx.cs">
+      <DependentUpon>NewPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Login\NewPassword.ascx.designer.cs">
+      <DependentUpon>NewPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleArciveButton.ascx.cs">
+      <DependentUpon>ArticleArciveButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleArciveButton.ascx.designer.cs">
+      <DependentUpon>ArticleArciveButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PdfRenderArticle.ascx.cs">
+      <DependentUpon>PdfRenderArticle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PdfRenderArticle.ascx.designer.cs">
+      <DependentUpon>PdfRenderArticle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PdfRenderLargeDocument.ascx.cs">
+      <DependentUpon>PdfRenderLargeDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PdfRenderLargeDocument.ascx.designer.cs">
+      <DependentUpon>PdfRenderLargeDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PrintButton.ascx.cs">
+      <DependentUpon>PrintButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\PrintButton.ascx.designer.cs">
+      <DependentUpon>PrintButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\GoogleAnalytics.ascx.cs">
+      <DependentUpon>GoogleAnalytics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\GoogleAnalytics.ascx.designer.cs">
+      <DependentUpon>GoogleAnalytics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\InspectionReportsSection.ascx.cs">
+      <DependentUpon>InspectionReportsSection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\InspectionReportsSection.ascx.designer.cs">
+      <DependentUpon>InspectionReportsSection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\FileTypeAndSourceTags.ascx.cs">
+      <DependentUpon>FileTypeAndSourceTags.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\FileTypeAndSourceTags.ascx.designer.cs">
+      <DependentUpon>FileTypeAndSourceTags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\GeneratePDF.ascx.cs">
+      <DependentUpon>GeneratePDF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\GeneratePDF.ascx.designer.cs">
+      <DependentUpon>GeneratePDF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LargeDocumentChapterNavigation.ascx.cs">
+      <DependentUpon>LargeDocumentChapterNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LargeDocumentChapterNavigation.ascx.designer.cs">
+      <DependentUpon>LargeDocumentChapterNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LargeDocumentTocDocInfo.ascx.cs">
+      <DependentUpon>LargeDocumentTocDocInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LargeDocumentTocDocInfo.ascx.designer.cs">
+      <DependentUpon>LargeDocumentTocDocInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LastUpdated.ascx.cs">
+      <DependentUpon>LastUpdated.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LastUpdated.ascx.designer.cs">
+      <DependentUpon>LastUpdated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LeftMenu.ascx.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\LeftMenu.ascx.designer.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FilteredUserAndCompetenceLinks.ascx.cs">
+      <DependentUpon>FilteredUserAndCompetenceLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\FilteredUserAndCompetenceLinks.ascx.designer.cs">
+      <DependentUpon>FilteredUserAndCompetenceLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\MainHeading.ascx.cs">
+      <DependentUpon>MainHeading.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\MainHeading.ascx.designer.cs">
+      <DependentUpon>MainHeading.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\MediaMonitor.ascx.cs">
+      <DependentUpon>MediaMonitor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\MediaMonitor.ascx.designer.cs">
+      <DependentUpon>MediaMonitor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\PageActions.ascx.cs">
+      <DependentUpon>PageActions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Dummy\PageActions.ascx.designer.cs">
+      <DependentUpon>PageActions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Login\ForgotPassword.ascx.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Login\ForgotPassword.ascx.designer.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Login\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Login\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Login\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Login\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuExternalSystem.ascx.cs">
+      <DependentUpon>MegaMenuExternalSystem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuExternalSystem.ascx.designer.cs">
+      <DependentUpon>MegaMenuExternalSystem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuSubTree.ascx.cs">
+      <DependentUpon>MegaMenuSubTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuSubTree.ascx.designer.cs">
+      <DependentUpon>MegaMenuSubTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pages\UserSearch.aspx.cs">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pages\UserSearch.aspx.designer.cs">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MyTools.ascx.cs">
+      <DependentUpon>MyTools.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MyTools.ascx.designer.cs">
+      <DependentUpon>MyTools.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddCalendarEvent.ascx.cs">
+      <DependentUpon>AddCalendarEvent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddCalendarEvent.ascx.designer.cs">
+      <DependentUpon>AddCalendarEvent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddNewClub.ascx.cs">
+      <DependentUpon>AddNewClub.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddNewClub.ascx.designer.cs">
+      <DependentUpon>AddNewClub.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddUserToContacts.ascx.cs">
+      <DependentUpon>AddUserToContacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\AddUserToContacts.ascx.designer.cs">
+      <DependentUpon>AddUserToContacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleArchiveSearchFilter.ascx.cs">
+      <DependentUpon>ArticleArchiveSearchFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleArchiveSearchFilter.ascx.designer.cs">
+      <DependentUpon>ArticleArchiveSearchFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleTeaser.ascx.cs">
+      <DependentUpon>ArticleTeaser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ArticleTeaser.ascx.designer.cs">
+      <DependentUpon>ArticleTeaser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\BookmarkThisPage.ascx.cs">
+      <DependentUpon>BookmarkThisPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\BookmarkThisPage.ascx.designer.cs">
+      <DependentUpon>BookmarkThisPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalendarFullVersion.ascx.cs">
+      <DependentUpon>CalendarFullVersion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalendarFullVersion.ascx.designer.cs">
+      <DependentUpon>CalendarFullVersion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalendarGraphicView.ascx.cs">
+      <DependentUpon>CalendarGraphicView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalendarGraphicView.ascx.designer.cs">
+      <DependentUpon>CalendarGraphicView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalmeyersCorner.ascx.cs">
+      <DependentUpon>CalmeyersCorner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CalmeyersCorner.ascx.designer.cs">
+      <DependentUpon>CalmeyersCorner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ClubMembers.ascx.cs">
+      <DependentUpon>ClubMembers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ClubMembers.ascx.designer.cs">
+      <DependentUpon>ClubMembers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CreateBlogEntry.ascx.cs">
+      <DependentUpon>CreateBlogEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\CreateBlogEntry.ascx.designer.cs">
+      <DependentUpon>CreateBlogEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\FeaturedArticles.ascx.cs">
+      <DependentUpon>FeaturedArticles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\FeaturedArticles.ascx.designer.cs">
+      <DependentUpon>FeaturedArticles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ISearchFilter.cs" />
+    <Compile Include="Templates\Units\Placeable\JoinClub.ascx.cs">
+      <DependentUpon>JoinClub.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\JoinClub.ascx.designer.cs">
+      <DependentUpon>JoinClub.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LeftMenuLargeDocuments.ascx.cs">
+      <DependentUpon>LeftMenuLargeDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LeftMenuLargeDocuments.ascx.designer.cs">
+      <DependentUpon>LeftMenuLargeDocuments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LeftMenuUsingParentNode.ascx.cs">
+      <DependentUpon>LeftMenuUsingParentNode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\LeftMenuUsingParentNode.ascx.designer.cs">
+      <DependentUpon>LeftMenuUsingParentNode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MinimalCalendarView.ascx.cs">
+      <DependentUpon>MinimalCalendarView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MinimalCalendarView.ascx.designer.cs">
+      <DependentUpon>MinimalCalendarView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MinimalCalendarViewDateItems.ascx.cs">
+      <DependentUpon>MinimalCalendarViewDateItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MinimalCalendarViewDateItems.ascx.designer.cs">
+      <DependentUpon>MinimalCalendarViewDateItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyBookmarks.ascx.cs">
+      <DependentUpon>MyBookmarks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyBookmarks.ascx.designer.cs">
+      <DependentUpon>MyBookmarks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyClubs.ascx.cs">
+      <DependentUpon>MyClubs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyClubs.ascx.designer.cs">
+      <DependentUpon>MyClubs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyContacts.ascx.cs">
+      <DependentUpon>MyContacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MyContacts.ascx.designer.cs">
+      <DependentUpon>MyContacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MySettings.ascx.cs">
+      <DependentUpon>MySettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\MySettings.ascx.designer.cs">
+      <DependentUpon>MySettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ResponsibleAuthor.ascx.cs">
+      <DependentUpon>ResponsibleAuthor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ResponsibleAuthor.ascx.designer.cs">
+      <DependentUpon>ResponsibleAuthor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ResultPager.ascx.cs">
+      <DependentUpon>ResultPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\ResultPager.ascx.designer.cs">
+      <DependentUpon>ResultPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\RSS.ascx.cs">
+      <DependentUpon>RSS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\RSS.ascx.designer.cs">
+      <DependentUpon>RSS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SearchConstants.cs" />
+    <Compile Include="Templates\Units\Placeable\SearchFilter.ascx.cs">
+      <DependentUpon>SearchFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SearchFilter.ascx.designer.cs">
+      <DependentUpon>SearchFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SearchResultSortOrder.cs" />
+    <Compile Include="Templates\Units\Placeable\SectionLastPublished.ascx.cs">
+      <DependentUpon>SectionLastPublished.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SectionLastPublished.ascx.designer.cs">
+      <DependentUpon>SectionLastPublished.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\Tags.ascx.cs">
+      <DependentUpon>Tags.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\Tags.ascx.designer.cs">
+      <DependentUpon>Tags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserContactInfo.ascx.cs">
+      <DependentUpon>UserContactInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserContactInfo.ascx.designer.cs">
+      <DependentUpon>UserContactInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SearchSelections.cs" />
+    <Compile Include="Templates\Units\Placeable\SearchResult.ascx.cs">
+      <DependentUpon>SearchResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\SearchResult.ascx.designer.cs">
+      <DependentUpon>SearchResult.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserPicker.ascx.cs">
+      <DependentUpon>UserPicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserPicker.ascx.designer.cs">
+      <DependentUpon>UserPicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserSearchShortVersion.ascx.cs">
+      <DependentUpon>UserSearchShortVersion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\UserSearchShortVersion.ascx.designer.cs">
+      <DependentUpon>UserSearchShortVersion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\ActivityFeed.ascx.cs">
+      <DependentUpon>ActivityFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\ActivityFeed.ascx.designer.cs">
+      <DependentUpon>ActivityFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\CMSPageEntityComments.ascx.cs">
+      <DependentUpon>CMSPageEntityComments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\CMSPageEntityComments.ascx.designer.cs">
+      <DependentUpon>CMSPageEntityComments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LastUpdated.ascx.cs">
+      <DependentUpon>LastUpdated.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LastUpdated.ascx.designer.cs">
+      <DependentUpon>LastUpdated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\BreadCrumbs.ascx.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\BreadCrumbs.ascx.designer.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\DisplayUserCollection.ascx.cs">
+      <DependentUpon>DisplayUserCollection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Placeable\DisplayUserCollection.ascx.designer.cs">
+      <DependentUpon>DisplayUserCollection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfile.ascx.cs">
+      <DependentUpon>EditProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfile.ascx.designer.cs">
+      <DependentUpon>EditProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfileCompetenceView.ascx.cs">
+      <DependentUpon>EditProfileCompetenceView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfileCompetenceView.ascx.designer.cs">
+      <DependentUpon>EditProfileCompetenceView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfileContactInfo.ascx.cs">
+      <DependentUpon>EditProfileContactInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\EditProfileContactInfo.ascx.designer.cs">
+      <DependentUpon>EditProfileContactInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\ListAllCategories.ascx.cs">
+      <DependentUpon>ListAllCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\ListAllCategories.ascx.designer.cs">
+      <DependentUpon>ListAllCategories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LosenAlphabethicalIndex.ascx.cs">
+      <DependentUpon>LosenAlphabethicalIndex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LosenAlphabethicalIndex.ascx.designer.cs">
+      <DependentUpon>LosenAlphabethicalIndex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LosenAlphabethicalIndexItem.ascx.cs">
+      <DependentUpon>LosenAlphabethicalIndexItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\LosenAlphabethicalIndexItem.ascx.designer.cs">
+      <DependentUpon>LosenAlphabethicalIndexItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenu.ascx.cs">
+      <DependentUpon>MegaMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenu.ascx.designer.cs">
+      <DependentUpon>MegaMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab1.ascx.cs">
+      <DependentUpon>MegaMenuTab1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab1.ascx.designer.cs">
+      <DependentUpon>MegaMenuTab1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab2.ascx.cs">
+      <DependentUpon>MegaMenuTab2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab2.ascx.designer.cs">
+      <DependentUpon>MegaMenuTab2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab3.ascx.cs">
+      <DependentUpon>MegaMenuTab3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\MegaMenu\MegaMenuTab3.ascx.designer.cs">
+      <DependentUpon>MegaMenuTab3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\MediaWatch.ascx.cs">
+      <DependentUpon>MediaWatch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\MediaWatch.ascx.designer.cs">
+      <DependentUpon>MediaWatch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\MetaTags.ascx.cs">
+      <DependentUpon>MetaTags.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\MetaTags.ascx.designer.cs">
+      <DependentUpon>MetaTags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\PrintPdfButton.ascx.cs">
+      <DependentUpon>PrintPdfButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\PrintPdfButton.ascx.designer.cs">
+      <DependentUpon>PrintPdfButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Units\Static\SearchHelp.ascx.cs">
+      <DependentUpon>SearchHelp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Units\Static\SearchHelp.ascx.designer.cs">
+      <DependentUpon>SearchHelp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TinyMceMainEditor.cs" />
+    <Compile Include="Util\DelayedPublish\DelayedPage.cs" />
+    <Compile Include="Util\DelayedPublish\DelayedPageManager.cs" />
+    <Compile Include="Util\DelayedPublish\PublishDelayedPagesToNewsFeed.cs" />
+    <Compile Include="Util\SimpleCacheT.cs" />
+    <Compile Include="Util\CheckBoxLists.cs" />
+    <Compile Include="Util\GoogleMini\DocQuery.cs" />
+    <Compile Include="Util\GoogleMini\Configuration.cs" />
+    <Compile Include="Util\GoogleMini\DocQueryBuilder.cs" />
+    <Compile Include="Util\GoogleMini\SearchItem.cs" />
+    <Compile Include="Util\GoogleMini\ResultElement.cs" />
+    <Compile Include="Util\TinyTexteditor.cs" />
+    <Compile Include="Util\UserSearch\Criterions\CriterionSortOrderWithCollation.cs" />
+    <Compile Include="Util\UserSearch\UserFreetextSearch.cs" />
+    <Compile Include="Util\UserSearch\UserParameterSearch.cs" />
+    <Compile Include="Util\UserSearch\UserSearch.cs" />
+    <Compile Include="Util\UserSearch\UserSearchParameters.cs" />
+    <Compile Include="Util\UserSearch\UserSearchQueryBuilder.cs" />
+    <Compile Include="Templates\ActivityFeed\CreateThumbnail.aspx.designer.cs">
+      <DependentUpon>CreateThumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\SearchService.asmx.cs">
+      <DependentUpon>SearchService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\UserSearchService.asmx.cs">
+      <DependentUpon>UserSearchService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XFormMarkup.cs" />
+    <Content Include="App_Browsers\AdapterMappings.browser" />
+    <Content Include="connectionStrings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Browsers\IE11.browser" />
+    <None Include="connectionStrings.Production.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+    </None>
+    <None Include="connectionStrings.Staging.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+    </None>
+    <None Include="connectionStrings.Test.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EPiImage\DemoTemplates\EPiImageDemoPage1.aspx" />
+    <Content Include="EPiImage\DemoTemplates\EPiImageDemoPage2.aspx" />
+    <Content Include="episerver.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="EPiImage\EPiImage.config" />
+    <Content Include="EPiImage\DemoTemplates\EPiImageDemoPageTypes Unzip And Import.zip" />
+    <None Include="Content\font\fontawesome-webfont.eot" />
+    <None Include="Content\font\fontawesome-webfont.svg" />
+    <None Include="Content\font\fontawesome-webfont.svgz" />
+    <None Include="Content\font\fontawesome-webfont.ttf" />
+    <None Include="Content\font\fontawesome-webfont.woff" />
+    <None Include="Templates\scripts\tiny_mce\classes\firebug\FIREBUG.LICENSE" />
+    <Content Include="EPiCode\PageTypeUtil\Plugins\Web.config" />
+    <None Include="episerver.Production.config">
+      <DependentUpon>episerver.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="episerver.Staging.config">
+      <DependentUpon>episerver.config</DependentUpon>
+    </None>
+    <None Include="episerver.Test.config">
+      <DependentUpon>episerver.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EPiServerFramework.config" />
+    <Content Include="EPiServerCommunity\Community.Master" />
+    <Content Include="EPiServerCommunity\Public\OpenID\Provider.ashx" />
+    <None Include="EPiServerFramework.Production.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+    </None>
+    <None Include="EPiServerFramework.Staging.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+    </None>
+    <None Include="EPiServerFramework.Test.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EPiServerLog.config" />
+    <Content Include="FastUpload\FastUploadDialog.aspx" />
+    <Content Include="FastUpload\img\AddMultipleFiles.gif" />
+    <Content Include="FastUpload\img\backgrounds.gif" />
+    <Content Include="FastUpload\img\buttons-disabled.png" />
+    <Content Include="FastUpload\img\buttons.png" />
+    <Content Include="FastUpload\img\delete.gif" />
+    <Content Include="FastUpload\img\done.gif" />
+    <Content Include="FastUpload\img\error.gif" />
+    <Content Include="FastUpload\img\FastUpload.png" />
+    <Content Include="FastUpload\img\plupload-bw.png" />
+    <Content Include="FastUpload\img\plupload.png" />
+    <Content Include="FastUpload\img\throbber.gif" />
+    <Content Include="FastUpload\img\transp50.png" />
+    <Content Include="FastUpload\js\ee.js" />
+    <Content Include="FastUpload\js\i18n\cs.js" />
+    <Content Include="FastUpload\js\i18n\da.js" />
+    <Content Include="FastUpload\js\i18n\de.js" />
+    <Content Include="FastUpload\js\i18n\es.js" />
+    <Content Include="FastUpload\js\i18n\fi.js" />
+    <Content Include="FastUpload\js\i18n\fr.js" />
+    <Content Include="FastUpload\js\i18n\it.js" />
+    <Content Include="FastUpload\js\i18n\ja.js" />
+    <Content Include="FastUpload\js\i18n\lv.js" />
+    <Content Include="FastUpload\js\i18n\nl.js" />
+    <Content Include="FastUpload\js\i18n\pt-br.js" />
+    <Content Include="FastUpload\js\i18n\ru.js" />
+    <Content Include="FastUpload\js\i18n\sv.js" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\done.gif" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\error.gif" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="FastUpload\js\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="FastUpload\js\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="FastUpload\js\jquery.ui.plupload\img\plupload-bw.png" />
+    <Content Include="FastUpload\js\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="FastUpload\js\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="FastUpload\js\plupload.browserplus.js" />
+    <Content Include="FastUpload\js\plupload.flash.js" />
+    <Content Include="FastUpload\js\plupload.flash.swf" />
+    <Content Include="FastUpload\js\plupload.full.js" />
+    <Content Include="FastUpload\js\plupload.gears.js" />
+    <Content Include="FastUpload\js\plupload.html4.js" />
+    <Content Include="FastUpload\js\plupload.html5.js" />
+    <Content Include="FastUpload\js\plupload.js" />
+    <Content Include="FastUpload\js\plupload.silverlight.js" />
+    <Content Include="FastUpload\js\plupload.silverlight.xap" />
+    <Content Include="FastUpload\js\pluploadinit.js" />
+    <Content Include="FileSummary.config" />
+    <Content Include="FastUpload\Temp.Master" />
+    <Content Include="FastUpload\FastUploadService.ashx" />
+    <Content Include="Templates\MasterPage.Master" />
+    <Content Include="Licenses\Test\EPiServerRelateLicense.config" />
+    <Content Include="Licenses\Test\License.config" />
+    <Content Include="Templates\NotLoggedIn.Master" />
+    <Content Include="Licenses\Production\License.config" />
+    <Content Include="Licenses\Production\EPiServerRelateLicense.config" />
+    <Content Include="Templates\PdfView.Master" />
+    <None Include="Templates\styles\lib\_box-shadow.scss" />
+    <None Include="Templates\styles\lib\_columns.scss" />
+    <None Include="Templates\styles\lib\_gradients.scss" />
+    <None Include="Templates\styles\lib\_grids.scss" />
+    <None Include="Templates\styles\lib\_text-decoration.scss" />
+    <None Include="Templates\styles\lib\_transitions.scss" />
+    <None Include="Templates\styles\losen-ie8.scss" />
+    <None Include="Templates\styles\losen-ie9.scss" />
+    <None Include="Templates\styles\losen-layout-columns.scss" />
+    <None Include="Templates\styles\losen.scss" />
+    <None Include="Templates\styles\_losen-constants-colors.scss" />
+    <None Include="Templates\styles\_losen-constants-layout.scss" />
+    <None Include="Templates\styles\_losen-constants-typography.scss" />
+    <None Include="web.Production.config">
+      <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="web.Staging.config">
+      <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="web.Test.config">
+      <DependentUpon>web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="lang\contentChannelText.xml" />
+    <Content Include="lang\Z_Helsetilsynet.IntranetNO.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="lang\languageDA.xml" />
+    <Content Include="lang\languageDE.xml" />
+    <Content Include="lang\languageEN.xml" />
+    <Content Include="lang\languageES.xml" />
+    <Content Include="lang\languageFI.xml" />
+    <Content Include="lang\languageFR.xml" />
+    <Content Include="lang\languageJA.xml" />
+    <Content Include="lang\languageNL.xml" />
+    <Content Include="lang\languageNO.xml" />
+    <Content Include="lang\languagePT.xml" />
+    <Content Include="lang\languageSV.xml" />
+    <Content Include="lang\languageZH.xml" />
+    <Content Include="lang\newtext.xml" />
+    <Content Include="lang\newtext_OnlineCenter.xml" />
+    <Content Include="lang\newtext_OnlineCenter_sent_to_translation.xml" />
+    <Content Include="lang\newtext_sent_to_translation.xml" />
+    <Content Include="lang\OnlineCenter_DA.xml" />
+    <Content Include="lang\OnlineCenter_DE.xml" />
+    <Content Include="lang\OnlineCenter_EN.xml" />
+    <Content Include="lang\OnlineCenter_ES.xml" />
+    <Content Include="lang\OnlineCenter_FI.xml" />
+    <Content Include="lang\OnlineCenter_FR.xml" />
+    <Content Include="lang\OnlineCenter_JA.xml" />
+    <Content Include="lang\OnlineCenter_NL.xml" />
+    <Content Include="lang\OnlineCenter_NO.xml" />
+    <Content Include="lang\OnlineCenter_PT.xml" />
+    <Content Include="lang\OnlineCenter_SV.xml" />
+    <Content Include="lang\OnlineCenter_ZH.xml" />
+    <Content Include="lang\tinyMCE.da.lang.xml" />
+    <Content Include="lang\tinyMCE.de.lang.xml" />
+    <Content Include="lang\tinyMCE.en.lang.xml" />
+    <Content Include="lang\tinyMCE.es.lang.xml" />
+    <Content Include="lang\tinyMCE.fi.lang.xml" />
+    <Content Include="lang\tinyMCE.fr.lang.xml" />
+    <Content Include="lang\tinyMCE.ja.lang.xml" />
+    <Content Include="lang\tinyMCE.nl.lang.xml" />
+    <Content Include="lang\tinyMCE.no.lang.xml" />
+    <Content Include="lang\tinyMCE.pt.lang.xml" />
+    <Content Include="lang\tinyMCE.sv.lang.xml" />
+    <Content Include="lang\tinyMCE.zh.lang.xml" />
+    <Content Include="lang\workflowFoundation.xml" />
+    <Content Include="lang\workflowFoundation_DA.xml" />
+    <Content Include="lang\workflowFoundation_DE.xml" />
+    <Content Include="lang\workflowFoundation_EN.xml" />
+    <Content Include="lang\workflowFoundation_ES.xml" />
+    <Content Include="lang\workflowFoundation_FI.xml" />
+    <Content Include="lang\workflowFoundation_FR.xml" />
+    <Content Include="lang\workflowFoundation_JA.xml" />
+    <Content Include="lang\workflowFoundation_NL.xml" />
+    <Content Include="lang\workflowFoundation_NO.xml" />
+    <Content Include="lang\workflowFoundation_PT.xml" />
+    <Content Include="lang\workflowFoundation_SV.xml" />
+    <Content Include="lang\workflowFoundation_ZH.xml" />
+    <Content Include="Templates\Pages\Article.aspx" />
+    <Content Include="Templates\Pages\ArticleArchive.aspx" />
+    <Content Include="Templates\Pages\ClubListPage.aspx" />
+    <Content Include="Templates\Pages\ClubPage.aspx" />
+    <Content Include="Templates\Pages\MyPage.aspx" />
+    <Content Include="Templates\Pages\Settings.aspx" />
+    <Content Include="Templates\Pages\StartPage.aspx" />
+    <Content Include="Templates\scripts\lib\jquery-1.7.2.min.js" />
+    <Content Include="Templates\Units\Placeable\ArticleArchiveSearchFilter.ascx" />
+    <Content Include="Templates\Units\Placeable\ArticleTeaser.ascx" />
+    <Content Include="Templates\Units\Placeable\MyBookmarks.ascx" />
+    <Content Include="Templates\Units\Placeable\MyClubs.ascx" />
+    <Content Include="Templates\Units\Placeable\MyContacts.ascx" />
+    <Content Include="Templates\Units\Static\BreadCrumbs.ascx" />
+    <Content Include="Templates\Units\Static\EditProfile.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenu.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenuTab1.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenuTab2.ascx" />
+    <Content Include="Templates\Units\MegaMenu\MegaMenuTab3.ascx" />
+    <Content Include="WarmMeUp\WarmMeUp.exe" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Templates\scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
+    <Folder Include="Templates\scripts\tiny_mce\plugins\spellchecker\includes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Relate.HelpersAndExtensions\Relate.HelpersAndExtensions.csproj">
+      <Project>{B022BB50-179D-48E3-BE71-B746FF2F9541}</Project>
+      <Name>Relate.HelpersAndExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49906</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

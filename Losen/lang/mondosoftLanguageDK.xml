@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<!-- 
+		MondoSearch Integration package - translation file.
+	-->
+	<language name="Dansk" id="DK">
+		<!-- This first section needs to follow EPiServer-standards to work properly.-->
+		<!-- Search template -->
+		<pagetypes>
+			<common>
+				<property name="CategoriesPerPage">
+					<caption>Categories per Page</caption>
+					<help>The maximum number of categories to show on a result page.</help>
+				</property>
+				<property name="ResultsPerCategory">
+					<caption>Results per Category</caption>
+					<help>The maximum number of results to show per category in multi-category mode.</help>
+				</property>
+				<property name="ResultsPerPage">
+					<caption>Results per Page</caption>
+					<help>The maximum number of results to show on single-category result pages.</help>
+				</property>
+				<property name="StemmingOn">
+					<caption>Stemming</caption>
+					<help>Stemming automatically expands the query to include morphological equivalents of the search words.</help>
+				</property>
+				<property name="SortByDateOn">
+					<caption>Sort by Date</caption>
+					<help>Give extra weight to recent documents when ranking results.</help>
+				</property>
+				<property name="SearchTypeOption">
+					<caption>Search Logic Option</caption>
+					<help>Specify the logic to use for multi-word queries (auto-Boolean (or), and, or exact phrase).</help>
+				</property>
+				<property name="PhoneticsOn">
+					<caption>Phonetics Option</caption>
+					<help>Choose when phonetic matches should be shown (default, always, never, or only when no results).</help>
+				</property>
+				<property name="UseCategories">
+					<caption>Use Categories</caption>
+					<help>Enables or disabled categories. Database performance can be improved by disabling categories.</help>
+				</property>
+			</common>
+		</pagetypes>
+		<!-- The following sections are based on the calls made from the Integration package.-->
+		<mondosoft>
+			<!-- Start Page template -->
+			<startpage>
+				<mostwanted>Most Wanted</mostwanted>
+			</startpage>
+			<!-- Most Wanted control -->
+			<mostwanted>
+				<text>Mondosoft introduces &lt;b&gt;The Most Wanted&lt;/b&gt; pages of the month. The list is based on BehaviorTracking™ from Mondosoft. &lt;br /&gt;&lt;br /&gt;Take a look and select the pages of your interest.</text>
+			</mostwanted>
+			<!-- Search template -->
+			<searchtemplate>
+				<defs_da>The page is in Danish</defs_da>
+				<defs_nl>The page is in Dutch</defs_nl>
+				<defs_en>The page is in English</defs_en>
+				<defs_fi>The page is in Finnish</defs_fi>
+				<defs_fr>The page is in French</defs_fr>
+				<defs_de>The page is in German</defs_de>
+				<defs_is>The page is in Icelandic</defs_is>
+				<defs_it>The page is in Italian</defs_it>
+				<defs_no>The page is in Norwegian</defs_no>
+				<defs_pt>The page is in Portuguese</defs_pt>
+				<defs_es>The page is in Spanish</defs_es>
+				<defs_sv>The page is in Swedish</defs_sv>
+				<defs_ar>The page is in Arabic</defs_ar>
+				<defs_bg>The page is in Bulgarian</defs_bg>
+				<defs_cs>The page is in Czech</defs_cs>
+				<defs_cn>The page is in Chinese (Simplified)</defs_cn>
+				<defs_et>The page is in Estonian</defs_et>
+				<defs_el>The page is in Greek</defs_el>
+				<defs_eo>The page is in Esperanto</defs_eo>
+				<defs_he>The page is in Hebrew</defs_he>
+				<defs_hu>The page is in Hungarian</defs_hu>
+				<defs_ja>The page is in Japanese</defs_ja>
+				<defs_ko>The page is in Korean</defs_ko>
+				<defs_lv>The page is in Latvian</defs_lv>
+				<defs_lt>The page is in Lithuanian</defs_lt>
+				<defs_mk>The page is in Macedonian</defs_mk>
+				<defs_pl>The page is in Polish</defs_pl>
+				<defs_ro>The page is in Romanian</defs_ro>
+				<defs_ru>The page is in Russian</defs_ru>
+				<defs_sr>The page is in Serbian</defs_sr>
+				<defs_sk>The page is in Slovak</defs_sk>
+				<defs_sl>The page is in Slovenian</defs_sl>
+				<defs_sq>The page is in Albanian</defs_sq>
+				<defs_th>The page is in Thai</defs_th>
+				<defs_vi>The page is in Vietnamese</defs_vi>
+				<defs_tw>The page is in Chinese (Traditional)</defs_tw>
+				<defs_hr>The page is in Croatian</defs_hr>
+				<rtext.all_all_words>All pages contain all #SEARCH_WORDS search words</rtext.all_all_words>
+				<rtext.all_both_words>All pages contain both search words</rtext.all_both_words>
+				<rtext.all_documents>All #CAT_PAGES pages</rtext.all_documents>
+				<rtext.all_phrase>All pages contain the phrase</rtext.all_phrase>
+				<rtext.all_words>All words</rtext.all_words>
+				<rtext.alternatives_title>Alternative words you can try:</rtext.alternatives_title>
+				<rtext.date_format>dd/mm/yy</rtext.date_format>
+				<rtext.dynamic>Dynamic</rtext.dynamic>
+				<rtext.error>Error:</rtext.error>
+				<rtext.first_cat>First category</rtext.first_cat>
+				<rtext.first_num_cats>First #PREV_CATS categories</rtext.first_num_cats>
+				<rtext.first_num_pages>First #PREV_PAGES pages</rtext.first_num_pages>
+				<rtext.first_page>First page</rtext.first_page>
+				<rtext.first_two_cats>First 2 categories</rtext.first_two_cats>
+				<rtext.first_two_pages>First 2 pages</rtext.first_two_pages>
+				<rtext.found_help>Found:</rtext.found_help>
+				<rtext.headline>Search result</rtext.headline>
+				<rtext.help_age_head>Age:</rtext.help_age_head>
+				<rtext.help_age_hint>show newer pages first</rtext.help_age_hint>
+				<rtext.help_age>#OLD_PAGES_PCT% is more than half a year old</rtext.help_age>
+				<rtext.help_cat_head>Categories:</rtext.help_cat_head>
+				<rtext.help_lang_alt>Show only pages that are in #LANG_NAME</rtext.help_lang_alt>
+				<rtext.help_lang_head>Language:</rtext.help_lang_head>
+				<rtext.help>Count:</rtext.help>
+				<rtext.ignore_help>Ignored:</rtext.ignore_help>
+				<rtext.last_cat>Last category</rtext.last_cat>
+				<rtext.last_num_cats>Last #NEXT_CATS categories</rtext.last_num_cats>
+				<rtext.last_num_pages>Last #NEXT_PAGES pages</rtext.last_num_pages>
+				<rtext.last_page>Last page</rtext.last_page>
+				<rtext.last_two_cats>Last 2 categories</rtext.last_two_cats>
+				<rtext.last_two_pages>Last 2 pages</rtext.last_two_pages>
+				<rtext.link_list_alt>The page is a list of links</rtext.link_list_alt>
+				<rtext.missing>Missing</rtext.missing>
+				<rtext.new>New</rtext.new>
+				<rtext.next_cat>Next category</rtext.next_cat>
+				<rtext.next_num_cats>Next #NEXT_CATS categories</rtext.next_num_cats>
+				<rtext.next_num_pages>Next #NEXT_PAGES pages</rtext.next_num_pages>
+				<rtext.next_page>Next page</rtext.next_page>
+				<rtext.next_two_cats>Next 2 categories</rtext.next_two_cats>
+				<rtext.next_two_pages>Next 2 pages</rtext.next_two_pages>
+				<rtext.no_all_words>No pages contain all #SEARCH_WORDS search words</rtext.no_all_words>
+				<rtext.no_both_words>No pages contain both search words</rtext.no_both_words>
+				<rtext.no_phrase>No pages contain the phrase</rtext.no_phrase>
+				<rtext.nothing_help>Nothing!</rtext.nothing_help>
+				<rtext.num_all_words>#WORDS_PAGES pages contain all #SEARCH_WORDS search words</rtext.num_all_words>
+				<rtext.num_both_words>#WORDS_PAGES pages contain both search words</rtext.num_both_words>
+				<rtext.num_category>#FOUND_CATS categories</rtext.num_category>
+				<rtext.num_page_cat>#CAT_PAGES pages</rtext.num_page_cat>
+				<rtext.num_page>#FOUND_PAGES pages</rtext.num_page>
+				<rtext.num_phrase>#PHRASE_PAGES pages contain the phrase</rtext.num_phrase>
+				<rtext.of>#FOUND_PAGES of #TOTAL_PAGES</rtext.of>
+				<rtext.old>Old</rtext.old>
+				<rtext.one_all_words>One page contains all #SEARCH_WORDS search words</rtext.one_all_words>
+				<rtext.one_both_words>One page contains both search words</rtext.one_both_words>
+				<rtext.one_category>One category</rtext.one_category>
+				<rtext.one_page_cat>1 page</rtext.one_page_cat>
+				<rtext.one_page>One page</rtext.one_page>
+				<rtext.one_phrase>One page contains the phrase</rtext.one_phrase>
+				<rtext.other_cat>Other</rtext.other_cat>
+				<rtext.p_alt_aud>The page contains sound</rtext.p_alt_aud>
+				<rtext.p_alt_img>The page contains a relevant image</rtext.p_alt_img>
+				<rtext.p_alt_mul>The page contains multimedia / functions</rtext.p_alt_mul>
+				<rtext.p_alt_vid>The page contains video</rtext.p_alt_vid>
+				<rtext.phrase>Phrase</rtext.phrase>
+				<rtext.prev_cat>Previous category</rtext.prev_cat>
+				<rtext.prev_num_cats>Previous #PREV_CATS categories</rtext.prev_num_cats>
+				<rtext.prev_num_pages>Previous #PREV_PAGES pages</rtext.prev_num_pages>
+				<rtext.prev_page>Previous page</rtext.prev_page>
+				<rtext.prev_two_cats>Previous 2 categories</rtext.prev_two_cats>
+				<rtext.prev_two_pages>Previous 2 pages</rtext.prev_two_pages>
+				<rtext.search_help>Search:</rtext.search_help>
+				<rtext.site>Results from search on #SITE_NAME</rtext.site>
+				<rtext.title>MondoSearch - Search result</rtext.title>
+				<rtext.two_all_words>2 pages contain all #SEARCH_WORDS search words</rtext.two_all_words>
+				<rtext.two_both_words>2 pages contain both search words</rtext.two_both_words>
+				<rtext.two_category>2 categories</rtext.two_category>
+				<rtext.two_page_cat>2 pages</rtext.two_page_cat>
+				<rtext.two_page>2 pages</rtext.two_page>
+				<rtext.two_phrase>2 pages contain the phrase</rtext.two_phrase>
+				<rtext.word_not_found>#SEARCH_WORDS_NOT_FOUND was not found</rtext.word_not_found>
+				<stext.and>Search for all the words</stext.and>
+				<stext.date_headline>Rank by age of page:</stext.date_headline>
+				<stext.date_new>New pages first</stext.date_new>
+				<stext.date_no>No</stext.date_no>
+				<stext.date_some>Partly</stext.date_some>
+				<stext.db_closed>The search engine is updating now. Please try again later...</stext.db_closed>
+				<stext.download>Download</stext.download>
+				<stext.email>E-mail</stext.email>
+				<stext.headline>Search</stext.headline>
+				<stext.lang_headline>Language:</stext.lang_headline>
+				<stext.media_aud_alt>Search for pages containing sound</stext.media_aud_alt>
+				<stext.media_aud>Sound</stext.media_aud>
+				<stext.media_headline>Search for:</stext.media_headline>
+				<stext.media_img_alt>Search for a relevant image</stext.media_img_alt>
+				<stext.media_img>Image</stext.media_img>
+				<stext.media_mul_alt>Search for pages containing multimedia / functions</stext.media_mul_alt>
+				<stext.media_mul>Multimedia / functions</stext.media_mul>
+				<stext.media_text>Media</stext.media_text>
+				<stext.media_vid_alt>Search for pages containing video</stext.media_vid_alt>
+				<stext.media_vid>Video</stext.media_vid>
+				<stext.no_media>No particular media type</stext.no_media>
+				<stext.or>Search for any of the words</stext.or>
+				<stext.search_all_cats>All categories</stext.search_all_cats>
+				<stext.search_cat>Select category:</stext.search_cat>
+				<stext.search>Enter your search words:</stext.search>
+				<stext.submit_image_height>24</stext.submit_image_height>
+				<stext.submit_image_width>85</stext.submit_image_width>
+				<stext.submit_image>SearchEN.gif</stext.submit_image>
+				<stext.submit_text>Search</stext.submit_text>
+				<stext.title>MondoSearch - Search</stext.title>
+				<version>5.2</version>
+				<noaccess>No access!</noaccess>
+			</searchtemplate>
+			<searchoptions>
+				<searchtypeoption>
+					<none/>
+					<or>Auto-Boolean (Or) - one or more search words may exist</or>
+					<and>And - all search words must exist</and>
+					<exact>Exact - the exact phrase must exist</exact>
+				</searchtypeoption>
+				<phoneticson>
+					<default>Default</default>
+					<always>Always use phonetics</always>
+					<usenoresult>Use phonetics only when no result are found</usenoresult>
+					<never>Never use phonetics</never>
+				</phoneticson>
+			</searchoptions>
+			<plugins>
+				<common>
+					<anerrorhasoccurred>An error has occurred!</anerrorhasoccurred>
+					<nodatafromservice>No data was received from the service</nodatafromservice>
+				</common>
+				<metadata>
+					<breadcrumbhome>Home!</breadcrumbhome>
+				</metadata>
+				<pageviewbt>
+					<name>BehaviorTracking</name>
+					<shortname>BT</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use BehaviorTracking™ to find out more about how people are using the search function.</description>
+					<searchphrases>Search phrases used to find the page</searchphrases>
+					<expectedphrases>Search words expected to have been on the page</expectedphrases>
+					<pageinfo>Page information</pageinfo>
+					<pageurl>Page URL: </pageurl>
+					<totalclicks>Total Clicks: </totalclicks>
+					<avgdailyclick>Average Daily Click: </avgdailyclick>
+					<searchtrend>Search Trend</searchtrend>
+					<savebutton>Save Metadata</savebutton>
+					<publishbutton>Publish Metadata</publishbutton>
+					<nodata>There is no data available for this page&lt;br /&gt;&lt;br /&gt;</nodata>
+					<checkchildrenbutton>Child Page Click Count</checkchildrenbutton>
+				</pageviewbt>
+				<treeviewms>
+					<name>MondoSearch</name>
+					<shortname>MS</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use MondoSearch™ to find the information you are looking for.</description>
+					<searchingress>Enter some search words and click on "Search"&lt;br /&gt;</searchingress>
+					<searchbuttontext>Search</searchbuttontext>
+					<anerroroccurred>An unexpected error occurred during the search. Run a diagnostic test and check the settings in Admin Mode.</anerroroccurred>
+					<noresult>No pages were found during the search.</noresult>
+					<noaccess>You do not have access to this function. You must belong to a user group configured with MondoSearch access permissions.</noaccess>
+					<enterasearchstring>Please enter a search string.</enterasearchstring>
+				</treeviewms>
+				<treeviewbt>
+					<name>BehaviorTracking</name>
+					<shortname>BT</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use BehaviorTracking™ to find out more about how people are using the search function.</description>
+				</treeviewbt>
+				<treeviewim>
+					<name>InformationManager</name>
+					<shortname>IM</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use InformationManager™ to fine-tune the search feature over time.</description>
+				</treeviewim>
+				<configurationmenu>
+					<name>MondoSearch Configuration</name>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use the MondoSearch Configuration settings to set up your integration to MondoSearch™ , BehaviorTracking™ and InformationManager™.</description>
+				</configurationmenu>
+				<controlcentermenu>
+					<name>MondoSearch Control Center</name>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Use the MondoSearch Control Center to work with your integration to MondoSearch™ , BehaviorTracking™ and InformationManager™.</description>
+				</controlcentermenu>
+				<scheduler>
+					<displayname>MondoSearch Heart Beat &lt;img style="border:0px; margin:0px; padding:0px;" src="../mondosoft/images/logo16.gif" /&gt;</displayname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>The Heart Beat enables you to schedule the MondoSearch Crawler and check the health of the system.</description>
+				</scheduler>
+				<configuration>
+					<title>MondoSearch Configuration</title>
+					<heading>MondoSearch Configuration</heading>
+					<info>Use the MondoSearch Configuration settings to set up your integration to MondoSearch™ , BehaviorTracking™ and InformationManager™.&lt;br /&gt;&lt;br /&gt;</info>
+					<webservicesettings>
+						<tabname>Web Service Settings</tabname>
+						<searchservice_license>MondoSearch license code</searchservice_license>
+						<searchservice_url>MondoSearch SearchService URL</searchservice_url>
+						<connectionstring_ms>MondoSearch Crawler Web service connection string</connectionstring_ms>
+						<connectionstring_im>InformationManager Web service connection string</connectionstring_im>
+						<connectionstring_bt>BehaviorTracking Web service connection string</connectionstring_bt>
+						<ms_url>MondoSearch Crawler Web service URL</ms_url>
+						<im_url>InformationManager Web service URL</im_url>
+						<bt_url>BehaviorTracking Web service URL</bt_url>
+						<demosettingsbutton>Fill with Demo Settings</demosettingsbutton>
+						<generate>
+							<createnew>Create New...</createnew>
+							<info>Enter the requested data and click on "Generate" to create the connection string.</info>
+							<remember>Don't forget to click on "Save" on the bottom of the page to save the new connection string.</remember>
+							<user>User</user>
+							<password>Password</password>
+							<hostname>Host name</hostname>
+							<licensecode>License code</licensecode>
+							<buttongenerate>Generate Connection String</buttongenerate>
+							<buttoncancel>Cancel</buttoncancel>
+						</generate>
+						<demo>
+							<searchserviceurl>http://episerverdemo.mondosearch.com/SearchService/SearchService.asmx</searchserviceurl>
+							<searchservicelicense>7d4248463149916c73902d4a86b3513f</searchservicelicense>
+							<connectionstringms>USERNAME='epi' HOSTNAME='episerverdemo.mondosearch.com' CRYPT='MjSw+tkOALhXG/DvpKDCP4/8tR80tArrQK69D34rLbdv/y00mhdzq4GLlUPRLL5l7hwWkntZau7jWCYWvirxHdZgmkPyUz2bGoXLD7ObJSbUmlb7C4G0clVFwURCTNUj6Aa7/E6Q/aI='</connectionstringms>
+							<connectionstringbt>USERNAME='episerverdemo' CRYPT='AgV0GTq65qCYOW9tno7ZtvJBcveU78n2XuQZGPVDtGumjJe49AhvdHInGeN36YNJfnrMkfvZGZQ='</connectionstringbt>
+							<connectionstringim>USERNAME='epi' HOSTNAME='episerverdemo.mondosearch.com' CRYPT='MjSw+tkOALhXG/DvpKDCP4/8tR80tArrQK69D34rLbdv/y00mhdzq4GLlUPRLL5l7hwWkntZau7jWCYWvirxHdZgmkPyUz2bGoXLD7ObJSbUmlb7C4G0clVFwURCTNUj6Aa7/E6Q/aI='</connectionstringim>
+							<msurl>http://episerverdemo.mondosearch.com/SearchService/MSService.asmx</msurl>
+							<bturl>http://episerverdemo.behaviortracking.com/WebService/BTService.asmx</bturl>
+							<imurl>http://episerverdemo.mondosearch.com/SearchService/IMService.asmx</imurl>
+						</demo>
+						<warning>Warning! Saving these settings will restart the Web application.</warning>
+						<savebutton>Save</savebutton>
+					</webservicesettings>
+					<settings>
+						<tabname>General Settings</tabname>
+						<accessgroupms>User groups with MondoSearch access</accessgroupms>
+						<accessgroupbt>User groups with BehaviorTracking access</accessgroupbt>
+						<accessgroupim>User groups with InformationManager access</accessgroupim>
+						<useshorttabnames>Use short tab names</useshorttabnames>
+						<datespan>Date span for BehaviorTracking</datespan>
+						<accessgroupitems>
+							<nolimit>All</nolimit>
+							<donotshow>None</donotshow>
+							<line>-----------</line>
+						</accessgroupitems>
+						<datespanitems>
+							<default>Default</default>
+							<previousday>Previous day</previousday>
+							<previous7days>Previous 7 days</previous7days>
+							<previous14days>Previous 14 days</previous14days>
+							<previous30days>Previous 30 days</previous30days>
+							<previous90days>Previous 90 days</previous90days>
+							<previous365days>Previous 365 days</previous365days>
+							<allavailabletime>All available time</allavailabletime>
+						</datespanitems>
+						<warning>Warning! Saving these settings will restart the Web application.</warning>
+						<savebutton>Save</savebutton>
+					</settings>
+					<crawlersettings>
+						<tabname>Crawler Settings</tabname>
+						<crawleragent>Crawler agent for Metadata</crawleragent>
+						<alertmailto>Send alerts to this e-mail address</alertmailto>
+						<alertmailfrom>Send alerts from this e-mail address</alertmailfrom>
+						<crawlerintervall>Crawl frequency in hours</crawlerintervall>
+						<donotrun>Do not start the Crawler within this time frame (hh:mm - hh:mm)</donotrun>
+						<warning>Warning! Saving these settings will restart the Web application.</warning>
+						<savebutton>Save</savebutton>
+					</crawlersettings>
+					<backgroundjob>
+						<tabname>Background Job</tabname>
+						<info>Use the controls on this page to create (or delete) a background job in EPiServer that checks the state of the MondoSearch Crawler every 20 minutes. If the Crawler is due to run (as defined by the crawl frequency set under “Crawler Settings”), the background job will start the Crawler and then publish the new database. If, after two run intervals have passed, no new pages have been indexed (or if something else goes wrong) then an e-mail alert will be sent to the administrator (also defined under “Crawler Settings”).&lt;br /&gt;&lt;br /&gt;To run the background job every 20 minutes, click on the "Create Background Job" button (if the button is not available, then the job is running already). To stop running the job, click on the "Delete Background Job" button (if the button is not available, then the job is already not running).&lt;br /&gt;&lt;br /&gt;To run the job immediately just once, click on “Run Background Job Once”.&lt;/br&gt;&lt;br /&gt;To read a log of recent background-job runs, enter the number of log entries you would like to read in the field provided and click on the “Load Log” button.&lt;/br&gt;&lt;br /&gt;</info>
+						<createschedulerbutton>Create Background Job</createschedulerbutton>
+						<killjobbutton>Delete Background Job</killjobbutton>
+						<runjobbutton>Run Background Job Once</runjobbutton>
+						<loadlogbutton>Load Log</loadlogbutton>
+						<nofologitems>20</nofologitems>
+					</backgroundjob>
+					<diagnostic>
+						<tabname>Diagnostics</tabname>
+						<info>Use this page to test your integration setup. A complete test can take up to several minutes to run.</info>
+						<buttoninternettest>Test Internet Access</buttoninternettest>
+						<buttonsearchservicetest>Test Search Service</buttonsearchservicetest>
+						<buttonmstest>Test MondoSearch</buttonmstest>
+						<buttonbttest>Test BehaviorTracking</buttonbttest>
+						<buttonimtest>Test InformationManager</buttonimtest>
+						<buttonalltests>Run All Tests</buttonalltests>
+						<intenetaccess>Test for Internet access (can the Web server reach http://www.mondosoft.com?)</intenetaccess>
+						<intenetaccesshelp>The Web server uses HTTP to connect to each of the Web services required by the solution. If this test fails, then a firewall may be blocking traffic over HTTP (port 80).</intenetaccesshelp>
+						<searchserviceaccess>Test for access to the SearchServices Web service</searchserviceaccess>
+						<searchserviceaccesshelp>If this test fails, then the URL configured for the SearchServices may be incorrect. It could also indicate that the Web service is down or unreachable. Try calling the Web service manually by entering its URL in a Web browser.</searchserviceaccesshelp>
+						<searchserviceisok>Test if the SearchServices are alive</searchserviceisok>
+						<searchserviceisokhelp>If this test fails, then it could indicate that the search engine is currently updating.</searchserviceisokhelp>
+						<searchservicecanrun>Test if the SearchServices can run (search for 'i')</searchservicecanrun>
+						<searchservicecanrunhelp>If this test fails, it probably indicates a major problem on the SearchServices server. Try to access it using the InSite tools on the server.</searchservicecanrunhelp>
+						<msserviceaccess>Test for access to the MondoSearch Crawler Web service</msserviceaccess>
+						<msserviceaccesshelp>If this test fails, then the URL configured for the MondoSearch Crawler Web service may be incorrect. It could also indicate that the Web service is down or unreachable. Try calling the Web service manually by entering its URL in a Web browser.</msserviceaccesshelp>
+						<msserviceisok>Test if MondoSearch is alive</msserviceisok>
+						<msserviceisokhelp>If this test fails, then it could indicate that the search engine is currently updating.</msserviceisokhelp>
+						<msservicecanrun>Test if MondoSearch can run</msservicecanrun>
+						<msservicecanrunhelp>If MondoSearch cannot run, it probably indicates a major problem on the MondoSearch Server. Try to access it using the InSite tools on the server.</msservicecanrunhelp>
+						<btserviceaccess>Test for access to the BehaviorTracking Web service</btserviceaccess>
+						<btserviceaccesshelp>If this test fails, then the URL configured for the BehaviorTracking Web service may be incorrect. It could also indicate that the Web service is down or unreachable. Try calling the Web service manually by entering its URL in a Web browser.</btserviceaccesshelp>
+						<btserviceisok>Test if BehaviorTracking is alive</btserviceisok>
+						<btserviceisokhelp>If this test fails, then it could indicate that the search engine is currently updating.</btserviceisokhelp>
+						<btservicecanrun>Test if BehaviorTracking can run</btservicecanrun>
+						<btservicecanrunhelp>If BehaviorTracking cannot run, it probably indicates a major problem on the BehaviorTracking server. Try to access BehaviorTracking using its native interface on its server.</btservicecanrunhelp>
+						<imserviceaccess>Test for access to the InformationManager Web service</imserviceaccess>
+						<imserviceaccesshelp>If this test fails, then the URL configured for the InformationManager Web service may be incorrect. It could also indicate that the Web service is down or unreachable. Try calling the Web service manually by entering its URL in a Web browser.</imserviceaccesshelp>
+						<imserviceisok>Test if InformationManager is alive</imserviceisok>
+						<imserviceisokhelp>If InformationManager is not alive, then it could indicate that the search engine is currently updating.</imserviceisokhelp>
+						<imservicecanrun>Test if InformationManager can run</imservicecanrun>
+						<imservicecanrunhelp>If InformationManager cannot run, it probably indicates a major problem on the InformationManager server. Try to access InformationManager using its native interface on its server.</imservicecanrunhelp>
+					</diagnostic>
+				</configuration>
+				<controlcenter>
+					<title>MondoSearch Control Center</title>
+					<heading>MondoSearch Control Center</heading>
+					<info>Use the MondoSearch Control Center to work with your integration to MondoSearch™ , BehaviorTracking™ and InformationManager™.&lt;br /&gt;&lt;br /&gt;</info>
+					<startpage>
+						<tabname>Start Page</tabname>
+						<info>&lt;h1&gt;Welcome&lt;/h1&gt;Use the MondoSearch Control Center to monitor and control the MondoSearch Crawler. You can also publish updates to the search database and check the log generated at the last Crawler run. Note that during standard operation, you will usually schedule the Crawler to run and publish automatically at regular intervals.</info>
+						<firsttime>&lt;h1&gt;Welcome&lt;/h1&gt;It appears that you have not yet configured the MondoSearch/EPiServer integration. Please enter the required URLs and connection strings by selecting the "Config" tab (on  the left) and then choosing "MondoSearch Configuration".</firsttime>
+					</startpage>
+					<overview>
+						<tabname>Overview</tabname>
+						<crawlerstate>Crawler state</crawlerstate>
+						<productionstate>Production state</productionstate>
+						<lastproductionpublish>Last production publish</lastproductionpublish>
+						<pagesnotgrabbed>Pages not grabbed</pagesnotgrabbed>
+						<pagessavedtodb>Pages saved to database</pagessavedtodb>
+						<serviceaddress>Service address (URL)</serviceaddress>
+						<refresh>Refresh</refresh>
+					</overview>
+					<maintenance>
+						<tabname>Maintenance</tabname>
+						<mondosearchsectionheader>MondoSearch Crawler</mondosearchsectionheader>
+						<mondosearchsectiondescription>Use the controls provided here to manually start or kill the MondoSearch Crawler program. Choose if you want to publish the result immediately and also choose if you want verbose logging. If the Crawler is already running, you can kill it, though this is not recommended.&lt;br /&gt;&lt;br /&gt;</mondosearchsectiondescription>
+						<startbutton>Start the Crawler</startbutton>
+						<stopbutton>Stop the Crawler</stopbutton>
+						<publishaftergrabbing>Publish after grabbing</publishaftergrabbing>
+						<verboselogging>Verbose logging</verboselogging>
+						<killbutton>Kill the Crawler</killbutton>
+						<publishbutton>Publish for Production</publishbutton>
+						<killcrawlerwarning>Clicking on 'Kill the Crawler' stops the Crawler immediately. Note that this function does not clean up the database and therefore leaves the system in an undefined state; use with care.</killcrawlerwarning>
+					</maintenance>
+					<log>
+						<tabname>Log</tabname>
+						<info>&lt;br /&gt;The log shows information from the last crawl.&lt;br /&gt;&lt;br /&gt;</info>
+						<getlogbutton>Refresh</getlogbutton>
+					</log>
+				</controlcenter>
+			</plugins>
+			<btreports>
+				<charts>
+					<btchartpagesfoundpersearch>
+						<heading>Pages Found per Search</heading>
+						<xaxis>Content Pages Found</xaxis>
+						<yaxis>Searches</yaxis>
+					</btchartpagesfoundpersearch>
+					<btchartsearchesperday>
+						<heading>Searches per Day</heading>
+						<xaxis>Day</xaxis>
+						<yaxis>Searches</yaxis>
+					</btchartsearchesperday>
+					<btchartsessionsperday>
+						<heading>Sessions per Day</heading>
+						<xaxis>Day</xaxis>
+						<yaxis>Sessions</yaxis>
+					</btchartsessionsperday>
+					<btlinksdetailssearchterms>
+						<heading>Most Common Search Phrases</heading>
+					</btlinksdetailssearchterms>
+					<btchartperformancemap>
+						<heading>Performance Map</heading>
+						<xaxis>% Searches Returning Results</xaxis>
+						<yaxis>% Sessions with a Selection</yaxis>
+						<dataset1>Primary Date Span</dataset1>
+						<dataset2>Local Date Span</dataset2>
+						<dataset3>Other Sites</dataset3>
+					</btchartperformancemap>
+					<btchartperformancemapdetailed>
+						<dataset1>All Data</dataset1>
+					</btchartperformancemapdetailed>
+				</charts>
+				<general>
+					<listid>ID</listid>
+					<listlabel>Area</listlabel>
+					<listextra/>
+					<listdescription>Value</listdescription>
+					<otherwordsinsearchterms>Other words</otherwordsinsearchterms>
+					<noofitems>Number of items</noofitems>
+					<refresh>Refresh</refresh>
+				</general>
+				<noaccess>
+					<heading>No Access</heading>
+					<description>You have no access to this report. You must belong to the user group defined for accessing BehaviorTracking.</description>
+				</noaccess>
+				<overview>
+					<menuname>Overview - Searches per Day</menuname>
+					<heading>Overview - Searches per Day</heading>
+					<description>This page shows a summary of the search-engine activities conducted on your site during your selected time intervals.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Analysis</firstcol1>
+					<firstcol2>Result</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<allavailabledays>All available days</allavailabledays>
+					<noofdays>Number of days in the active date span</noofdays>
+					<noofsearches>Number of searches in the active date span</noofsearches>
+					<searchesperday>Searches per day</searchesperday>
+					<noofsessions>Number of sessions in the active date span</noofsessions>
+					<urlclicks>Number of "clicks" (pages selected)</urlclicks>
+					<noresultsearches>Searches with no results</noresultsearches>
+					<noresultsearchespercent>Percentage of searches with no results</noresultsearchespercent>
+					<noclicksessionspercent>Percentage of sessions with no clicks</noclicksessionspercent>
+				</overview>
+				<performancemap>
+					<menuname>Performance Map</menuname>
+					<heading>Performance Map</heading>
+					<description>The Performance Map gives an overview of how well your search engine is meeting the needs of its users. It rates your site's performance based on the number of searches returning at least one result and the number of sessions including in at least one click.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Analysis</firstcol1>
+					<firstcol2>Analysis Result</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>65</firstcol2width>
+					<ssi>Site Success Index (SSI)</ssi>
+					<ssiexplanation>SSI Explanation</ssiexplanation>
+					<sr>Search Result Rate (SRR)</sr>
+					<srexplanation>SRR Explanation</srexplanation>
+					<siq>Search Implementation Quality (SIQ)</siq>
+					<siqexplanation>SIQ Explanation</siqexplanation>
+					<ssi_excellent>&lt;B&gt;Excellent:&lt;/B&gt; Your search engine nearly always returns links and your users seem to be interested in these because they nearly always click on one of them.</ssi_excellent>
+					<ssi_good>&lt;B&gt;Good:&lt;/B&gt; Your search engine usually returns links and your users are normally interested in them because they often chose to click on them. Check your SRR and SIQ scores to find out which type of improvements you could make.</ssi_good>
+					<ssi_ok>&lt;B&gt;Medium:&lt;/B&gt; A significant number of users might be frustrated with your search engine because it often returns no results and/or the results do not seem interesting. Check your SRR and SIQ scores to find out which type of improvements you could make. You probably need to improve both the number of results returned per search (stemming, phonetics, auto-Boolean) and the presentation of these results (titles, descriptions, categories, ranking).</ssi_ok>
+					<ssi_poor>&lt;B&gt;Low:&lt;/B&gt; Most of your users seem to be frustrated with your search engine because it usually returns no results and/or the results do not seem interesting. Check your SRR and SIQ scores to find out which type of improvements you could make. You probably need to improve both the number of results returned per search (stemming, phonetics, auto-Boolean) and the presentation of these results (titles, descriptions, categories, ranking). &lt;P&gt; It is possible that visitors often misunderstand the purpose of your site. Check the "Top Not-Found Terms" and "Top Not Clicked Terms" lists to see if people seem to be looking for the wrong things.</ssi_poor>
+					<sr_excellent>&lt;B&gt;Excellent:&lt;/B&gt; Nearly all searches find one or more pages. However, you should check your SIQ score to see if users also seem to like the pages they find.</sr_excellent>
+					<sr_good>&lt;B&gt;Good:&lt;/B&gt; Searches usually find one or more pages. You could improve this by applying phonetics and stemming in your search engine and/or adding META-tag key words to your pages. Use the "Top Not-Found Terms" page to find out which SearchNames and SearchHeaders you should create.</sr_good>
+					<sr_ok>&lt;B&gt;Medium:&lt;/B&gt; Many searches do not find any results. Use the "Top Not-Found Terms" page to obtain information about typical searches where no results are found. If you see that people are having trouble with spelling, enable stemming. If you see that people are looking for competitors' products, then create SearchNames or SearchHeaders linking these to your own similar products.  &lt;P&gt; If you see that people are looking for information that you do not have on your site, create new pages or use SearchHeaders to give a short explanation for some of the most-common terms.  &lt;P&gt; Configure your search form to apply an "auto-Boolean" (or) operator by default to increase the number of pages found by multi-word queries.</sr_ok>
+					<sr_poor>&lt;B&gt;Low:&lt;/B&gt; Most searches do not find any pages at all. Make sure your crawler is functioning properly and that your entire site is being indexed. &lt;P&gt; Configure your search form to apply an "auto-Boolean" (or) operator by default to increase the number of pages found by multi-word queries. &lt;P&gt; Use the "Top Not-Found Terms" page to obtain information about typical searches where no results are found. If you see that people are having trouble with spelling, enable stemming and phonetics. If you see that people are looking for competitors' products, then create SearchNames or SearchHeaders linking these to your own similar products. &lt;P&gt; If you see that people are looking for information that you do not have on your site, create new pages or use SearchHeaders to give a short explanation.</sr_poor>
+					<siq_excellent>&lt;B&gt;Excellent:&lt;/B&gt; Users seem to like the results they are getting because they nearly always click on a link when the result list includes at least one page.</siq_excellent>
+					<siq_good>&lt;B&gt;Good:&lt;/B&gt; Users are usually, but not always interested in the results they are getting. This might be because the best pages might be missing from the result list or ranked too low. Check the list of "Top Not-Clicked Terms" for guidance. &lt;P&gt; Improve your ranking system by applying search-engine categories (including "best bets") and/or by adding META-tags to your best content pages (to add key-words, rank-words and rank-document settings). &lt;P&gt; To help make sure users recognize the pages they are looking for, apply editorial page titles and descriptions. &lt;P&gt; To draw special attention to your best pages, use SearchHeaders or even SearchNames.</siq_good>
+					<siq_ok>&lt;B&gt;Medium:&lt;/B&gt; Users too often leave your result page without clicking on a link. Check the list of "Top Not-Clicked Terms" to find out where your biggest problems are. &lt;P&gt; Check to see if your page titles and descriptions are accurate; if they are inaccurate or vague, fix your pages or enable auto-generation of these in your search engine. &lt;P&gt; Improve your ranking system by applying search-engine categories (including "best bets") and/or by adding META-tags to your best content pages (to add key-words, rank-words and rank-document settings).</siq_ok>
+					<siq_poor>&lt;B&gt;Low:&lt;/B&gt; Users do not seem to like the results they are getting; they rarely click on the links on your result page. Check the list of "Top Not-Clicked Terms" to find out where your biggest problems are. &lt;P&gt; Check to see if your page titles and descriptions are accurate; if they are inaccurate or vague, fix your pages or enable auto-generation of these in your search engine. &lt;P&gt; It is possible that the best pages are not appearing when they should in your result list, possibly because your search engine is too restrictive; enable phonetics and stemming and consider applying an "auto-Boolean" (or) operator by default to all multi-word queries. &lt;P&gt; Improve your ranking system by applying search-engine categories (including "best bets") and/or by adding META-tags to your best content pages (to add key-words, rank-words and rank-document settings).</siq_poor>
+				</performancemap>
+				<searchesandclicks>
+					<menuname>Searches &amp; Clicks</menuname>
+					<heading>Searches &amp; Clicks</heading>
+					<description>The entries under the "Searches &amp; Clicks" heading enable you to analyze the queries submitted to your search engine. These will help you find out what your users are searching for, spot common misspellings and find ways to help make sure users find what they want quickly. This page gives a summary of the searches and clicks logged by your search engine.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Related Search Terms</firstcol1>
+					<firstcol2>No. of Searches</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<noofsearches>Number of searches in the active date span</noofsearches>
+					<searchesperday>Searches per Day</searchesperday>
+					<urlclicks>Number of "clicks" (pages selected)</urlclicks>
+					<noresultsearches>Searches with no results</noresultsearches>
+					<noresultsearchespercent>Percentage of searches with no results</noresultsearchespercent>
+				</searchesandclicks>
+				<topsearchterms>
+					<menuname>Top Search Terms</menuname>
+					<heading>Top Search Terms</heading>
+					<description>This page lists the search terms most-often submitted by users of your site. Click on a term for more details about that term.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Search Terms</firstcol1>
+					<firstcol2>Sessions</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topsearchterms>
+				<relatedwords>
+					<heading>Term Details for: #WORD</heading>
+					<description>This page shows how a given search term was typically employed by users of your search engine. It lists other terms most-often used in sessions that included the current term, the most-recent sessions that include the current term and the links most-often selected after using the current term.</description>
+					<firstheading>Related Terms</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Related Words</firstcol1>
+					<firstcol2>Sessions</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<secondheading>Most-Recent Sessions that Include this Term</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Host Name</secondcol1>
+					<secondcol2>Date</secondcol2>
+					<secondcol3>Searches</secondcol3>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>60</secondcol1width>
+					<secondcol2width>20</secondcol2width>
+					<secondcol3width>15r</secondcol3width>
+					<thirdheading>Pages Chosen</thirdheading>
+					<thirdcol0>ID</thirdcol0>
+					<thirdcol1>URL</thirdcol1>
+					<thirdcol2>Clicked</thirdcol2>
+					<thirdcol0width>4</thirdcol0width>
+					<thirdcol1width>60</thirdcol1width>
+					<thirdcol2width>35r</thirdcol2width>
+				</relatedwords>
+				<topnotfound>
+					<menuname>Top Not Found</menuname>
+					<heading>Top Not-Found Terms</heading>
+					<description>This page lists the most often-used search terms that did not return any results.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Search Terms Not Found</firstcol1>
+					<firstcol2>Sessions</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topnotfound>
+				<topnotclicked>
+					<menuname>Top Not Clicked</menuname>
+					<heading>Top Not-Clicked Terms</heading>
+					<description>This page provides a list of the most often-used search terms that did not result in a click (i.e., the user did not click on any of the links on the result page). This might be because a term did not produce any results or because the user was dissatisfied with the result list. For each term, the total number of sessions in which it was submitted but not clicked is also shown. Note, however, that there may also have been sessions in which the term was used and the user did click on a link.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Search Terms Not Resulting in a Click</firstcol1>
+					<firstcol2>Count</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topnotclicked>top links chosen
+				<toplinkschosen>
+					<menuname>Top Links Chosen</menuname>
+					<heading>Top Links Chosen</heading>
+					<description>This page provides a list of the links most often selected by users after they used your search engine.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Page Links Chosen</firstcol1>
+					<firstcol2>Count</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</toplinkschosen>
+				<searchsessions>
+					<menuname>Search Sessions</menuname>
+					<heading>Search Sessions</heading>
+					<description>The entries under the "Search Sessions" heading enable you to find out who has been using your site and how each session progressed. This page gives a summary of the sessions logged by your search engine.</description>
+					<noofsessions>Number of sessions</noofsessions>
+					<noofsessionswithoutclick>Number of sessions without clicks</noofsessionswithoutclick>
+					<averageduration>Average session duration</averageduration>
+					<searchespersession>Searches per session</searchespersession>
+					<sessionclickrate>Session click rate (%)</sessionclickrate>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Area</firstcol1>
+					<firstcol2>Result</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</searchsessions>
+				<mostrecentsessions>
+					<menuname>Most-Recent Sessions</menuname>
+					<heading>Most-Recent Sessions</heading>
+					<description>This page lists the most-recent user sessions. Each session is identified either by the IP number or (when available) the domain name of the searcher.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Session</firstcol1>
+					<firstcol2>Date</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</mostrecentsessions>
+				<sessiondetails>
+					<menuname>Session Details</menuname>
+					<heading>Session Details</heading>
+					<description>This page provides the click-by-click details of a single user session, thereby enabling you to follow a single user's experience as though you were looking right over his or her shoulder.</description>
+					<actiontypeclick>Click</actiontypeclick>
+					<actiontypesearch>Search</actiontypesearch>
+					<firstheading>Session Overview</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Description</firstcol1>
+					<firstcol2>Value</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<secondheading>Session Log</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Time</secondcol1>
+					<secondcol2>Action</secondcol2>
+					<secondcol3>Word</secondcol3>
+					<secondcol4>Pages</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>15</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>50</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+					<hostname>Host name</hostname>
+					<date>Session date </date>
+					<duration>Session duration</duration>
+					<searchcount>Number of unique searches</searchcount>
+					<clickcount>Number of clicks</clickcount>
+					<ipaddress>IP address</ipaddress>
+				</sessiondetails>
+				<topvisitordomains>
+					<menuname>Top Visitor Domains</menuname>
+					<heading>Top Visitor Domains</heading>
+					<description>This page shows either the IP addresses or (when available) the domain name from which users have most-often used your search engine.</description>
+					<firstcol0>Rank</firstcol0>
+					<firstcol1>Domain</firstcol1>
+					<firstcol2>Number of sessions</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topvisitordomains>
+				<listofsessions>
+					<heading>Most Recent Sessions from host #HOSTID</heading>
+					<description>This page provides the click-by-click details of a single user session, thereby enabling you to follow a single user's experience as though you were looking right over his or her shoulder.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Description</firstcol1>
+					<firstcol2>Value</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</listofsessions>
+				<trends>
+					<menuname>Trends</menuname>
+					<heading>Search-Term Trends</heading>
+					<description>This page highlights the biggest changes in search-term usage on your site. It tracks the 100 most-used terms and generates two tables: one that shows the terms whose popularity has most increased during each date span and one that shows the terms whose popularity has most decreased. Both of the tables here are sorted with the fastest-moving terms at the top. Previous rankings are calculated for the periods immediately before the current date span and for the same number of days. Terms that were not in the top-100 during the previous period show a previous ranking of "-".</description>
+					<firstheading>Advancing Terms</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Term</firstcol1>
+					<firstcol2>Current</firstcol2>
+					<firstcol3>Previous</firstcol3>
+					<firstcol4>Up</firstcol4>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>50</firstcol1width>
+					<firstcol2width>15</firstcol2width>
+					<firstcol3width>15</firstcol3width>
+					<firstcol4width>15r</firstcol4width>
+					<secondheading>Retreating Terms</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Term</secondcol1>
+					<secondcol2>Current</secondcol2>
+					<secondcol3>Previous</secondcol3>
+					<secondcol4>Down</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>50</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>15</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+				</trends>
+				<searchtermstrends>
+					<menuname>Search-Term Trends</menuname>
+					<heading>Search-Term Trends</heading>
+					<description>This page highlights the biggest changes in search-term usage on your site. It tracks the 100 most-used terms and generates two tables: one that shows the terms whose popularity has most increased during each date span and one that shows the terms whose popularity has most decreased. Both of the tables here are sorted with the fastest-moving terms at the top. Previous rankings are calculated for the periods immediately before the current date span and for the same number of days. Terms that were not in the top-100 during the previous period show a previous ranking of "-".</description>
+					<firstheading>Advancing Terms</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Term</firstcol1>
+					<firstcol2>Current</firstcol2>
+					<firstcol3>Previous</firstcol3>
+					<firstcol4>Up</firstcol4>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>50</firstcol1width>
+					<firstcol2width>15</firstcol2width>
+					<firstcol3width>15</firstcol3width>
+					<firstcol4width>15r</firstcol4width>
+					<secondheading>Retreating Terms</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Term</secondcol1>
+					<secondcol2>Current</secondcol2>
+					<secondcol3>Previous</secondcol3>
+					<secondcol4>Down</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>50</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>15</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+				</searchtermstrends>
+				<behaviormatch>
+					<menuname>BehaviorMatch</menuname>
+					<heading>BehaviorMatch</heading>
+					<description>BehaviorTracking is able to analyze usage patterns to discover common search terms that were unsuccessful on a first search attempt, but which did succeed when changed slightly, for example to correct spelling. This feature is called BehaviorMatch. Users can use the list shown here as a guideline either for manually creating synonyms in a third-party search engine or for adding key-word META-tags to content pages.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Original Search term</firstcol1>
+					<firstcol2>Suggested synonyms</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>35</firstcol1width>
+					<firstcol2width>60</firstcol2width>
+				</behaviormatch>
+				<a>
+					<menuname/>
+					<heading/>
+					<description/>
+				</a>
+				<notfoundbox>
+					<heading>Top-10 Search Words Not Found</heading>
+				</notfoundbox>
+			</btreports>
+			<imreports>
+				<noaccess>
+					<heading>No Access</heading>
+					<description>You do not have access to this report. You must  belong to the user group defined for accessing InformationManager.</description>
+				</noaccess>
+				<synonyms>
+					<menuname>Synonyms</menuname>
+					<heading>Synonyms</heading>
+					<description>Synonyms are used to associate different words that have the same meaning; thereafter, searching for a given word will also find pages that only include its synonym(s). You should enter the query as you expect the user to type it, then provide the synonym(s) as they appear on your Web site. Queries can be assigned either as exact (full phrase) or partial (any part of the query) matches. Each synonym can either be displayed as search-again help (under the search-again form on the result page) or automatically included in the search (query expansion).</description>
+					<updatedescription>Update the values of the synonym and save it. You can also delete the synonym using the Delete button.</updatedescription>
+					<updateitemcolumn>Item</updateitemcolumn>
+					<updatevaluecolumn>Value</updatevaluecolumn>
+					<updatequery>Query</updatequery>
+					<updateexact>Exact</updateexact>
+					<updateinclude>Include</updateinclude>
+					<updateenable>Enable</updateenable>
+					<updateword>Synonyms</updateword>
+					<updatesave>Save</updatesave>
+					<updatedelete>Delete</updatedelete>
+					<updatecancel>Cancel</updatecancel>
+					<addsynonym>Add Synonym</addsynonym>
+					<firstcol0>Query</firstcol0>
+					<firstcol1>Exact</firstcol1>
+					<firstcol2>Include</firstcol2>
+					<firstcol3>Enable</firstcol3>
+					<firstcol4>Synonyms</firstcol4>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>10</firstcol1width>
+					<firstcol2width>10</firstcol2width>
+					<firstcol3width>10</firstcol3width>
+					<firstcol4width>35</firstcol4width>
+				</synonyms>
+				<searchheaders>
+					<menuname>SearchHeaders</menuname>
+					<heading>SearchHeaders</heading>
+					<description>SearchHeaders are special displays that are triggered by specific search words. They enable you to promote new products, special offers, company news and more based on stated user interests (i.e., their queries). SearchHeaders often take the form of banner ads placed at the top of the result list, but you can design them however you like. They can contain all types of HTML, so you can include text, graphics, animations and/or links as required.</description>
+					<updatedescription>Update the SearchHeader and save it. You can also delete the SearchHeader by clicking on the Delete button.</updatedescription>
+					<updateitemcolumn>Item</updateitemcolumn>
+					<updatevaluecolumn>Value</updatevaluecolumn>
+					<updateword>Query</updateword>
+					<updateexact>Exact</updateexact>
+					<updatepersonalize>Personalize No.</updatepersonalize>
+					<updatepersonalizeinfo>Use "1" to create the default header.</updatepersonalizeinfo>
+					<updateheader>Header (HTML)</updateheader>
+					<updateinclude>Include</updateinclude>
+					<updateenable>Enable</updateenable>
+					<updatesave>Save</updatesave>
+					<updatedelete>Delete</updatedelete>
+					<updatecancel>Cancel</updatecancel>
+					<addsearchheader>Add SearchHeader</addsearchheader>
+					<firstcol0>Query</firstcol0>
+					<firstcol1>Exact</firstcol1>
+					<firstcol2>Personalize No.</firstcol2>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>30</firstcol2width>
+				</searchheaders>
+				<searchnames>
+					<menuname>SearchNames</menuname>
+					<heading>SearchNames</heading>
+					<description>SearchNames associate a specific query with a specific URL from your site. When users enter a query that matches a SearchName, they will jump directly from the search form to the target page, bypassing the result list entirely.</description>
+					<updatedescription>Update the SearchName and save it. You can also delete the SearchName using the Delete button.</updatedescription>
+					<updateitemcolumn>Item</updateitemcolumn>
+					<updatevaluecolumn>Value</updatevaluecolumn>
+					<updateword>Query</updateword>
+					<updateexact>Exact</updateexact>
+					<updatepersonalize>Personalize No.</updatepersonalize>
+					<updatepersonalizeinfo>Use "1" to create the default name.</updatepersonalizeinfo>
+					<updateurl>URL to redirect to</updateurl>
+					<updateinclude>Include</updateinclude>
+					<updateenable>Enable</updateenable>
+					<updatesave>Save</updatesave>
+					<updatedelete>Delete</updatedelete>
+					<updatecancel>Cancel</updatecancel>
+					<addsearchname>Add SearchName</addsearchname>
+					<firstcol0>Query</firstcol0>
+					<firstcol1>Exact</firstcol1>
+					<firstcol2>Personalize No.</firstcol2>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>30</firstcol2width>
+				</searchnames>
+			</imreports>
+			<scheduler>
+				<subjectwehaveaproblem>Message from the MondoSearch Watcher - we have a problem.</subjectwehaveaproblem>
+				<oldproductiondate>An Error has occured! Either the Crawler or the Publisher seems not to be doing do its job. Last production publish was {0}! Please contact the Web administrator.</oldproductiondate>
+				<probablymissedwhencrawling>An Error has occured! The Crawler seems to have missed a significant number of pages during its last crawl. Previously it saved {0} pages but this time it only found {1} pages! Please contact the Web administrator.</probablymissedwhencrawling>
+				<isnotalive>An Error has occured! The Crawler is scheduled to run but the service is not alive! Please contact the Web administrator.</isnotalive>
+				<exceptionthrown>"Error. An exception has occurred when the Heart Beat tried to run! '{0}' "</exceptionthrown>
+			</scheduler>
+		</mondosoft>
+	</language>	
+</languages>

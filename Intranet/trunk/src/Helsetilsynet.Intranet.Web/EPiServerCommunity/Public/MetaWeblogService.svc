@@ -1,0 +1,19 @@
+﻿<%@ ServiceHost Language="C#" Service="EPiServer.Community.Wcf.Blog.MetaWeblog.MetaWeblog" Factory="MetaWeblogServiceHostFactory" %>
+
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+public class MetaWeblogServiceHostFactory : ServiceHostFactory
+{
+    protected override ServiceHost CreateServiceHost(System.Type serviceType, System.Uri[] baseAddresses)
+    {
+        var host = base.CreateServiceHost(serviceType, baseAddresses);
+        
+        WebHttpBinding binding = new WebHttpBinding("MetaWeblogCustomBinding");
+        var endpoint = host.AddServiceEndpoint(typeof(EPiServer.Community.Wcf.Blog.MetaWeblog.IMetaWeblog), binding, "");
+
+        endpoint.Behaviors.Add(new EPiServer.Community.Wcf.Blog.XmlRpc.XmlRpcEndpointBehavior());
+
+        return host;
+    }
+}

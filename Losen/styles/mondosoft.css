@@ -1,0 +1,188 @@
+
+/* BEGIN Mondosoft Search Controls */
+input.MssSearchTextBox
+{
+	width: 250px;
+	vertical-align: top;
+}
+input.MssSearchCommand
+{
+	width: 80px;
+}
+input.MssSearchAgainCommand
+{
+	width: 80px;
+}
+input.MssSearchAgainTextBox
+{
+	width: 250px;
+}
+/* Advanced Search */
+select.MssAdvDateFilterDropdown
+{
+	width: 250px;
+}
+input.MssAdvExcludeWordsTextBox
+{
+	width: 250px;
+}
+/* Search Result*/
+div.MssSearchResultContainer
+{ 
+	border: 1px solid #c0c0c0;
+}
+div.MssSearchResultHeading
+{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0px 3px 2px;
+}
+a.MssSearchResultHeading
+{
+	font-size: 100%;
+	font-weight: normal;
+	padding-left: 5px;
+}
+div.MssSearchShowAllPagesInCategory
+{
+	padding: 3px 0px 10px 4px;
+	color: #003366;	
+	font-weight: bold;		
+}
+a.MssSearchResultTitle
+{
+	font-size: 1em;
+	font-weight: bold;
+}
+div.MssSearchResultDesc
+{
+	padding: 4px 0px 4px 0px;
+}
+div.MssSearchInformation
+{
+	font-style:italic;
+}
+
+a.MssSearchResultLink
+{
+	color: #4D4D4D;
+}
+div.MssSearchItem
+{
+	padding: 4px 4px 4px 4px;
+}
+div.MssSearchItemAlt
+{
+	padding: 4px 4px 4px 4px;
+	background-color: #f7f7f7;
+}
+div.MssSearchSummary
+{
+	padding: 4px 0px 6px 0px; 
+	font-size: 1em;
+}
+div.MssSearchSummaryCaption
+{ 
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/* Category settings */
+div.MssCategoryContainer
+{
+	padding: 0px 0px 4px 0px;
+}
+div.MssCategoryHeader
+{
+	font-size: 13px;
+	color: #4D4D4D;
+	font-weight: bold;	
+	padding: 5px 0px 3px 0px;
+}
+div.MssCategoryItem
+{
+}
+a.MssCategoryLink
+{
+	font-weight: bold;
+}
+div.MssSearchCategoryContainer
+{
+	border: 1px solid #c0c0c0;
+	margin-bottom: 20px;
+}
+div.MssSearchCategoryHeading
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #003366;
+	padding: 4px 8px 3px 8px;
+	background-color: #D1D6DB;
+}
+span.MssSearchCategoryHeadingText
+{
+	
+}
+/* END Mondosoft Search Controls */
+
+div.mainarea
+{
+	float: left;
+	width: 400px;
+	padding: 5px 5px 5px 10px;
+}
+
+div.rightarea
+{
+	width: 185px;
+	float: right;
+	text-align:left;
+	padding: 5px 5px 5px 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+img.arrowimage
+{
+	border: none;
+	margin-right: 5px;
+}
+
+.advancedsearchheading
+{
+	font-weight: bold;
+	padding-left: 6px;
+}
+
+div.searchresulttext
+{
+	padding: 0px 0px 10px 2px;
+}
+
+.searchbutton
+{
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+.itemheading
+{
+	width: 300px;
+}
+
+.aligntop
+{
+	vertical-align: top;
+}
+
+.nohitsheading
+{
+	font-size: 13px;
+	font-weight: bold;
+	padding: 5px 0px 0px 2px;
+}
+
+.nohitstext p
+{
+	padding-left: 2px;
+}

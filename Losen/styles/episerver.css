@@ -1,0 +1,154 @@
+.Heading1 {FONT-WEIGHT: 900; FONT-SIZE: 12pt; COLOR: #333366;}
+.Heading {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #666666;}
+.Introduction {FONT-WEIGHT: bold;}
+.Tabletext {FONT-SIZE: 8pt;}
+.NormalRed {COLOR: #990000;}
+.Bildtext {FONT-STYLE:Italic ; FONT-SIZE: 7pt;  }
+.Bold {FONT-WEIGHT: bold;}
+.Italic {FONT-STYLE:Italic}
+
+.Helptext {CURSOR: hand}
+.DateText {COLOR: #808080}
+
+.EditCaption, .EditValue{PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px;PADDING-TOP: 0px;}
+.IndexHead, .IndexHead A {COLOR: #000000; BACKGROUND-COLOR: #FFFFFF}
+
+.ConferenceCommand {COLOR: #663399; BACKGROUND-COLOR: #FFFFFF}
+.ConferenceCommand A {COLOR: #000000; BACKGROUND-COLOR: #FFFFFF}
+.ConferenceHeading1 {FONT-WEIGHT: bold; FONT-SIZE: 12pt;}
+.ConferenceHeading2 {FONT-WEIGHT: bold; FONT-SIZE: 10pt;}
+table.Conference{background-color: #F5F5FA;	border-style: solid; border-color: #CCCCCC;	border-width: 1px;}
+
+TD.LinkList{PADDING-RIGHT: 0px;PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;}
+
+A.Arrows {FONT-WEIGHT: 900; FONT-SIZE: 7.5pt; COLOR: #990000; TEXT-DECORATION: none;}
+
+BODY.NewsgroupList {BACKGROUND-COLOR:#F3F3F3;}
+BODY.NewsgroupItem {BACKGROUND-COLOR:#FFFFFF;}
+TR.NewsgroupRow {BACKGROUND-COLOR: #ffffff; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY:tahoma; PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-TOP: 2px}
+TR.NewsgroupRowActive{ BACKGROUND-COLOR: #E5F2FF; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY:tahoma; FONT-WEIGHT:bold PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-TOP: 2px}
+TD.NewsgroupTableheading { COLOR: #ffffff; FONT-SIZE: 11px; FONT-FAMILY:tahoma; FONT-WEIGHT:bold; HEIGHT: 20px;PADDING-LEFT: 10px; BACKGROUND: #003366}
+A.NewsgroupBarButton { COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY:tahoma; FONT-WEIGHT:bold; TEXT-DECORATION: none}
+.NewsgroupBarTitle {COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY:Arial; FONT-WEIGHT:bold;}
+.NewsgroupItemMessage {FONT-SIZE: 12px; FONT-FAMILY:Verdana, Courier new}
+.NewsgroupItemHeading{COLOR: #ffffff; FONT-SIZE: 11px; FONT-FAMILY:tahoma; FONT-WEIGHT:bold;}
+.NewsgroupItemHeading2{COLOR: #ffffff; FONT-SIZE: 11px; FONT-FAMILY:tahoma;}
+div.PasswordField {background-color: #DCDACE; border-style: solid; border-color: #000000; border-width: 1px;}
+
+.CalendarHeading {FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT:20px}
+Table.CalendarFrame{BORDER-RIGHT: #FFFFFF;BORDER-TOP: #FFFFFF; BORDER-LEFT: #FFFFFF;BORDER-BOTTOM: #FFFFFF;BACKGROUND-COLOR: #FFFFFF}
+.selectedDateCell {cursor:hand;	font: normal 10px verdana;height:20px; width:20px; background-color:#FFFFFF; border:solid 2px #000000;}
+.dateCellInactive {font: normal 10px verdana; height:20px; width:20px; background-color:#FFFFFF; border:solid 1px #000000;}
+.dateCellOtherMonth {font: normal 10px verdana;	height:20px; width:20px; background-color:#888888; border:solid 1px #000000;}
+.weekendCell{font: normal 10px verdana;	height:20px; width:20px; background-color:#EEEEEE;	border:solid 1px #000000;}
+.dateCellActive {font: normal 10px verdana;	height:20px; width:20px; background-color:#E6E4D7; border:solid 2px #000000;}
+.dayWeekHeader {font: normal 10px verdana;	background-color:#FFFFFF; height:20px;	width:20px;	color:#666666;	border:solid 1px #FFFFFF;}
+
+.SiteMapHeader{background-color:#EEEEFF;}
+.SiteMap {background-color:#F9F9FF;}
+.HeadDate { font-size: 9pt; font-weight: 900; color: #FFFFFF; text-decoration: none}
+.SearchText {font-size: 8pt; font-weight: normal; color: #333333; text-decoration: none}
+.BrandHead {font-size: 8pt; font-weight: 900; color: #003366; text-decoration: none}
+.ListHeads {font-size: 7.5pt; font-weight: 900; color: #333366; text-decoration: none }
+.DateListingText {font-size: 7.5pt; font-weight: normal; color: #333333; text-decoration: none }
+.ReadMoreArrow {font-size: 7pt; font-weight: 900; color: #003366; text-decoration: none; white-space: pre; letter-spacing: -3px}
+.ReadMore {font-size: 7.5pt; font-weight: bolder; color: #666666; text-decoration: none;}
+.NormalStartPage {font-size: 7.5pt; color: #666666; font-weight: 900}
+.NewsListingText {font-size: 7.5pt; color: #000000; text-decoration: none;}
+A.NewsListingText:hover { text-decoration: none;}
+A.Footer { FONT-SIZE: 7.5pt; color: #333366; font-weight: bold; text-decoration: none;}
+A.Footer:hover {text-decoration: none;}
+.PressInfo {font-size: 7.5pt; font-weight: normal; color: #666666; text-decoration: none; white-space: pre }
+.PressSign {font-size: 7.5pt; font-weight: normal; color: #333333; text-decoration: none; white-space: pre }
+
+A.MenuText {font-size: 7.5pt; text-decoration: none}
+A.MenuText:hover {text-decoration: none}
+A.MenuTextSelected {font-weight: bold; color: #333366; text-decoration: none}
+
+TR.login { }
+TD.login { font-weight:bold; }
+INPUT.loginInput { width:150px; border:solid 1px #000000}
+INPUT.loginButton { font-weight:bold; border:solid 1px #000000}
+H1.login { font-size:14px;}
+H2.login { font-size:12px;}
+DIV.loginBox { padding:20px; width:300; height:200px; background-image:url(../images/loginbackground.gif);}
+
+.LoginUser {font-size: 7.5pt; font-weight: normal; color: #333366; text-decoration: none }
+.LoginButton { font-size: 7.5pt; font-weight: bolder; color: #333366; text-decoration: underline }
+
+P {
+	margin: 0px 0px 16px 0px;
+}
+
+.Normal,
+BODY,
+TD,
+P {
+	EditMenuName: Normal;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #333333;			
+}
+
+UL {
+	margin: 8px 0px 16px 30px;
+	list-style-image: url(/images/list-image.gif);
+	list-style: outside;
+}
+
+I,
+EM {
+	color: #666666;
+}
+
+UL UL {
+	margin: 4px 0px 4px 25px;
+}
+
+OL {
+	margin: 8px 0px 8px 15px;
+	list-style: inside;
+}
+
+OL OL {
+	margin: 4px 0px 4px 25px;
+	list-style: inside;
+}
+
+LI {
+	margin: 0px 0px 4px 0px;
+}
+
+.subtitle {
+	EditMenuName: Mellomtittel;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+}
+
+.subtitle2 {
+	EditMenuName: Mellomtittel2;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+	FONT-WEIGHT: bold;
+}
+
+.lastUpdate {
+	EditMenuName: Sist Oppdatert;
+	font-size: 11px;
+	font-weight: normal;
+	margin: 30px 0px 4px 0px;
+}
+
+A:link,
+A:active,
+A:visited,
+A:hover {
+	color: #cc0033;
+}

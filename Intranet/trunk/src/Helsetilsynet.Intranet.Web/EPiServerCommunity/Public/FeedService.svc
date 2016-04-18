@@ -1,0 +1,18 @@
+﻿<%@ServiceHost language="c#" Service="EPiServer.Community.Wcf.Feed.SyndicationFeedService" Factory="FeedServiceHostFactory" %>
+
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+public class FeedServiceHostFactory : WebServiceHostFactory
+{
+    protected override ServiceHost CreateServiceHost(System.Type serviceType, System.Uri[] baseAddresses)
+    {
+        var host = base.CreateServiceHost(serviceType, baseAddresses);
+
+        // The purpose of this code is to solve an issue when multiple authentication methods cause activation to fail
+        WebHttpBinding binding = new WebHttpBinding();
+        var endpoint = host.AddServiceEndpoint(typeof(EPiServer.Community.Wcf.Feed.ISyndicationFeedService), binding, "");
+
+        return host;
+    }
+}

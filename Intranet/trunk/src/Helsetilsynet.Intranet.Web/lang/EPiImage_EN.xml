@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <epiimage>
+      <selectimage>Select image</selectimage>
+      <addimage>Add image</addimage>
+      <preview>Preview</preview>
+      <imagedescription>Image description</imagedescription>
+      <imagelink>Image link</imagelink>
+      <saveandclose>Save &amp; close</saveandclose>
+      <prev>Prev</prev>
+      <next>Next</next>
+      <prevtooltip>Save and go to the previous image</prevtooltip>
+      <nexttooltip>Save and go to the next image</nexttooltip>
+      <draganddroptooltip>Drag and drop files or folders from the File Managment Action Window here.</draganddroptooltip>
+      <errorcreateslidefailed>Create slide failed</errorcreateslidefailed>
+      <errorfiltypenotsupported>File type not supported</errorfiltypenotsupported>
+      <errorimagenotfound>Source image not found</errorimagenotfound>
+      <erroremptyparameter>Empty parameter</erroremptyparameter>
+    </epiimage>
+  </language>
+</languages>

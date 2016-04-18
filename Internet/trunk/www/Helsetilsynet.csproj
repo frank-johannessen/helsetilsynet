@@ -1,0 +1,1402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <Target Name="ApplyTransform" Condition="Exists('Web.$(Configuration).config')">
+    <TransformXml Source="web.config" Transform="web.$(Configuration).Config" Destination="web.config_output" />
+  </Target>
+  <Target Name="BeforeCompile">
+    <CallTarget Targets="ApplyTransform" />
+  </Target>
+  <!--<Target Name="BeforeBuild">
+    <Exec Command="attrib -r Web.config"/>
+    <Copy SourceFiles="Web.config_output" DestinationFiles="Web.config" />
+  </Target> -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D97FE31A-6FE5-4E5C-8324-280E6FA748A5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Helsetilsynet</RootNamespace>
+    <AssemblyName>Helsetilsynet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'InternalTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.48.4489.28432\lib\net20\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoGenerateCustomProperty">
+      <HintPath>..\lib\AutoGenerateCustomProperty.dll</HintPath>
+    </Reference>
+    <Reference Include="BVNetwork.EPi404">
+      <HintPath>..\lib\BVNetwork.EPi404.dll</HintPath>
+    </Reference>
+    <Reference Include="BVNetwork.FileNotFound.RedirectGadget, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\BVNetwork.FileNotFound.RedirectGadget.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ElektroPost.Licensing, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ElektroPost.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiCode.LinkReport">
+      <HintPath>..\lib\EPiCode.LinkReport.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiCode.PageTypeUtil">
+      <HintPath>..\lib\EPiCode.PageTypeUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiCode.WebParts">
+      <HintPath>..\lib\EPiCode.WebParts.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiCode.WebParts.Core">
+      <HintPath>..\lib\EPiCode.WebParts.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.ApplicationModules, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.ApplicationModules.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.BaseLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Blog, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Blog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cms.Shell.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Cms.Shell.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Configuration, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Data, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Data.Cache, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Data.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Enterprise, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Enterprise.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Events, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Events.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Framework, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.ImageLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.ImageLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Implementation, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Implementation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Legacy4, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Legacy4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Licensing, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.LinkAnalyzer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.LinkAnalyzer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Log.Analyzers, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Log.Analyzers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Log.Core, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Log.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Lucene, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Lucene.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Scheduler, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Scheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Scheduler.WKTL, Version=5.1.422.4, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Scheduler.WKTL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.SeoPlugin">
+      <HintPath>..\lib\EPiServer.SeoPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Shell.UI, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Shell.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.Web.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.WebDav">
+      <HintPath>..\lib\EPiServer.WebDav.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.WorkflowFoundation, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.WorkflowFoundation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Wsrp">
+      <HintPath>..\lib\EPiServer.Wsrp.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.XForms, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.XForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.XmlRpc, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EPiServer.XmlRpc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="evohtmltopdf">
+      <HintPath>..\lib\EVOPDF\evohtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashDynamicContent">
+      <HintPath>..\lib\FlashDynamicContent.dll</HintPath>
+    </Reference>
+    <Reference Include="GSALib">
+      <HintPath>..\lib\GSALib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Preview">
+      <HintPath>..\lib\Microsoft.Web.Preview.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Web.Services3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mobiletech">
+      <HintPath>..\lib\Mobiletech.dll</HintPath>
+    </Reference>
+    <Reference Include="SearchEngineSitemaps">
+      <HintPath>..\lib\SearchEngineSitemaps.dll</HintPath>
+    </Reference>
+    <Reference Include="SquishIt.Framework">
+      <HintPath>..\packages\SquishIt.0.9.5.4\lib\SquishIt.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition, Version=2009.22.10.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.ComponentModel.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization">
+      <HintPath>..\lib\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="wnvhtmlconvert">
+      <HintPath>..\lib\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404NotFound.aspx.cs">
+      <DependentUpon>404NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404NotFound.aspx.designer.cs">
+      <DependentUpon>404NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GlobalName.cs" />
+    <Compile Include="Class\PlugIn\RadioYesNo.cs" />
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalEditor.ascx.cs">
+      <DependentUpon>AlphabethicalEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalEditor.ascx.designer.cs">
+      <DependentUpon>AlphabethicalEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalEditorControl.cs" />
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalEditorProperty.cs" />
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalItem.cs" />
+    <Compile Include="CustomProperties\htilDictionaryProperty\AlphabethicalUtils.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertySingleUserPicker.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertySingleUserPickerControl.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertyUserPicker.cs" />
+    <Compile Include="CustomProperties\PropertyUserPickerControl\PropertyUserPickerControl.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="templates\Avenir\Classes\Constants\PageTypeName.cs" />
+    <Compile Include="templates\Avenir\Classes\Constants\QueryStringName.cs" />
+    <Compile Include="templates\Avenir\Classes\Filters\PageTypeFilter.cs" />
+    <Compile Include="templates\Avenir\Classes\Helpers\MobileHelper.cs" />
+    <Compile Include="templates\Avenir\Classes\Helpers\PageTypesHelper.cs" />
+    <Compile Include="templates\Avenir\Classes\PropertyMappings\CommonPropertyMappings.cs" />
+    <Compile Include="templates\Avenir\Classes\PropertyMappings\HTMasterPropertyMappings.cs" />
+    <Compile Include="templates\Avenir\Classes\PropertyMappings\LargeDocumentsPropertyMappings.cs" />
+    <Compile Include="templates\Avenir\Classes\PropertyMappings\MobilePropertyMappings.cs" />
+    <Compile Include="templates\Avenir\MasterPages\HTMaster.Master.cs">
+      <DependentUpon>HTMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\MasterPages\HTMaster.Master.designer.cs">
+      <DependentUpon>HTMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\MasterPages\PdfView.Master.cs">
+      <DependentUpon>PdfView.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\MasterPages\PdfView.Master.designer.cs">
+      <DependentUpon>PdfView.Master</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Article.aspx.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Article.aspx.designer.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\BoxListing.aspx.cs">
+      <DependentUpon>BoxListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\BoxListing.aspx.designer.cs">
+      <DependentUpon>BoxListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\EmailPage.aspx.cs">
+      <DependentUpon>EmailPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\EmailPage.aspx.designer.cs">
+      <DependentUpon>EmailPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\LargeDocument.aspx.cs">
+      <DependentUpon>LargeDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\LargeDocument.aspx.designer.cs">
+      <DependentUpon>LargeDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\ListUsers.aspx.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\ListUsers.aspx.designer.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\ListAllPages.aspx.cs">
+      <DependentUpon>ListAllPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\ListAllPages.aspx.designer.cs">
+      <DependentUpon>ListAllPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Lover.aspx.designer.cs">
+      <DependentUpon>Lover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\LovListe.aspx.designer.cs">
+      <DependentUpon>LovListe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\NotFound.aspx.designer.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\PdfRenderer.aspx.cs">
+      <DependentUpon>PdfRenderer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\PdfRenderer.aspx.designer.cs">
+      <DependentUpon>PdfRenderer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SectionPage.aspx.designer.cs">
+      <DependentUpon>SectionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Subsection.aspx.designer.cs">
+      <DependentUpon>Subsection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\TestingNyno.aspx.cs">
+      <DependentUpon>TestingNyno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\TestingNyno.aspx.designer.cs">
+      <DependentUpon>TestingNyno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\WashingHtml.aspx.cs">
+      <DependentUpon>WashingHtml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\WashingHtml.aspx.designer.cs">
+      <DependentUpon>WashingHtml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Subsection.aspx.cs">
+      <DependentUpon>Subsection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\WashingUrl.aspx.cs">
+      <DependentUpon>WashingUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\WashingUrl.aspx.designer.cs">
+      <DependentUpon>WashingUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Tilsynssaker.aspx.cs">
+      <DependentUpon>Tilsynssaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Tilsynssaker.aspx.designer.cs">
+      <DependentUpon>Tilsynssaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\NotFound.aspx.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Pdf.aspx.cs">
+      <DependentUpon>Pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Pdf.aspx.designer.cs">
+      <DependentUpon>Pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\GoogleIndex.aspx.cs">
+      <DependentUpon>GoogleIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\GoogleIndex.aspx.designer.cs">
+      <DependentUpon>GoogleIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\LovListe.aspx.cs">
+      <DependentUpon>LovListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Blank.aspx.cs">
+      <DependentUpon>Blank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Blank.aspx.designer.cs">
+      <DependentUpon>Blank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Emner.aspx.cs">
+      <DependentUpon>Emner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Emner.aspx.designer.cs">
+      <DependentUpon>Emner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Lover.aspx.cs">
+      <DependentUpon>Lover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\RssFeed.aspx.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\RssFeed.aspx.designer.cs">
+      <DependentUpon>RssFeed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SectionPage.aspx.cs">
+      <DependentUpon>SectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SubscriptionPage.aspx.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\SubscriptionPage.aspx.designer.cs">
+      <DependentUpon>SubscriptionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Tilsynsrapporter.aspx.cs">
+      <DependentUpon>Tilsynsrapporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Pages\Tilsynsrapporter.aspx.designer.cs">
+      <DependentUpon>Tilsynsrapporter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\ChangedPages.ascx.cs">
+      <DependentUpon>ChangedPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\ChangedPages.ascx.designer.cs">
+      <DependentUpon>ChangedPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\CategoryList.ascx.cs">
+      <DependentUpon>CategoryList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\CategoryList.ascx.designer.cs">
+      <DependentUpon>CategoryList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\ChangedPagesFront.ascx.cs">
+      <DependentUpon>ChangedPagesFront.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\ChangedPagesFront.ascx.designer.cs">
+      <DependentUpon>ChangedPagesFront.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\DocList.ascx.designer.cs">
+      <DependentUpon>DocList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GeneratePDF.ascx.cs">
+      <DependentUpon>GeneratePDF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GeneratePDF.ascx.designer.cs">
+      <DependentUpon>GeneratePDF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\LeftMenuLargeDocuments.ascx.cs">
+      <DependentUpon>LeftMenuLargeDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\LeftMenuLargeDocuments.ascx.designer.cs">
+      <DependentUpon>LeftMenuLargeDocuments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\MenuOnRootChapter.ascx.cs">
+      <DependentUpon>MenuOnRootChapter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\MenuOnRootChapter.ascx.designer.cs">
+      <DependentUpon>MenuOnRootChapter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\PdfRenderLargeDocument.ascx.cs">
+      <DependentUpon>PdfRenderLargeDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LargeDocuments\PdfRenderLargeDocument.ascx.designer.cs">
+      <DependentUpon>PdfRenderLargeDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LetterHead.ascx.designer.cs">
+      <DependentUpon>LetterHead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LimitTextAndLinkForSearch.ascx.cs">
+      <DependentUpon>LimitTextAndLinkForSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LimitTextAndLinkForSearch.ascx.designer.cs">
+      <DependentUpon>LimitTextAndLinkForSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Links.ascx.designer.cs">
+      <DependentUpon>Links.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageBody.ascx.designer.cs">
+      <DependentUpon>PageBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\SearchSummary.ascx.cs">
+      <DependentUpon>SearchSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\SearchSummary.ascx.designer.cs">
+      <DependentUpon>SearchSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Subscription.ascx.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Subscription.ascx.designer.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GoogleShortList.ascx.cs">
+      <DependentUpon>GoogleShortList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GoogleShortList.ascx.designer.cs">
+      <DependentUpon>GoogleShortList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\LetterHead.ascx.cs">
+      <DependentUpon>LetterHead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\DocList.ascx.cs">
+      <DependentUpon>DocList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GoogleSearch.ascx.cs">
+      <DependentUpon>GoogleSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\GoogleSearch.ascx.designer.cs">
+      <DependentUpon>GoogleSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\KeywordList.ascx.cs">
+      <DependentUpon>KeywordList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\KeywordList.ascx.designer.cs">
+      <DependentUpon>KeywordList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Links.ascx.cs">
+      <DependentUpon>Links.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\MainBody.ascx.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\MainBody.ascx.designer.cs">
+      <DependentUpon>MainBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\News.ascx.cs">
+      <DependentUpon>News.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\News.ascx.designer.cs">
+      <DependentUpon>News.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageBody.ascx.cs">
+      <DependentUpon>PageBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageList.ascx.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageList.ascx.designer.cs">
+      <DependentUpon>PageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageListGoogle.ascx.cs">
+      <DependentUpon>PageListGoogle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\PageListGoogle.ascx.designer.cs">
+      <DependentUpon>PageListGoogle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\RssQuery.ascx.cs">
+      <DependentUpon>RssQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\RssQuery.ascx.designer.cs">
+      <DependentUpon>RssQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\BreadCrumbs.ascx.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\BreadCrumbs.ascx.designer.cs">
+      <DependentUpon>BreadCrumbs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Placeable\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\NewMenu.ascx.cs">
+      <DependentUpon>NewMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\NewMenu.ascx.designer.cs">
+      <DependentUpon>NewMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\QuickSearch.ascx.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\QuickSearch.ascx.designer.cs">
+      <DependentUpon>QuickSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\SocialMediaIcons.ascx.cs">
+      <DependentUpon>SocialMediaIcons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\SocialMediaIcons.ascx.designer.cs">
+      <DependentUpon>SocialMediaIcons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\SubMenu.ascx.cs">
+      <DependentUpon>SubMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\SubMenu.ascx.designer.cs">
+      <DependentUpon>SubMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\UtilMenu.ascx.cs">
+      <DependentUpon>UtilMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Units\Static\UtilMenu.ascx.designer.cs">
+      <DependentUpon>UtilMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Classes\Helpers\ConfigManager.cs" />
+    <Compile Include="templates\Avenir\Util\EditorSavedEvent.cs" />
+    <Compile Include="templates\Avenir\Util\Nyno.cs" />
+    <Compile Include="templates\Avenir\Classes\Helpers\PropertyHelper.cs" />
+    <Compile Include="templates\Avenir\Util\SubscriptionSelector.cs" />
+    <Compile Include="templates\Avenir\Util\docQuery.cs">
+    </Compile>
+    <Compile Include="templates\Avenir\Util\Lib.cs">
+    </Compile>
+    <Compile Include="templates\Avenir\Util\RssLinkSelector.cs" />
+    <Compile Include="templates\Avenir\Util\TinyMceConfig.cs" />
+    <Compile Include="templates\Avenir\Util\UlCheckboxList.cs" />
+    <Compile Include="templates\Avenir\Webparts\ManagementConsole.ascx.cs">
+      <DependentUpon>ManagementConsole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\ManagementConsole.ascx.designer.cs">
+      <DependentUpon>ManagementConsole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\BannerWP.ascx.cs">
+      <DependentUpon>BannerWP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\BannerWP.ascx.designer.cs">
+      <DependentUpon>BannerWP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\FlashWP.ascx.designer.cs">
+      <DependentUpon>FlashWP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\LongStringWebPart.ascx.designer.cs">
+      <DependentUpon>LongStringWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\SistPubliserte.ascx.cs">
+      <DependentUpon>SistPubliserte.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\SistPubliserte.ascx.designer.cs">
+      <DependentUpon>SistPubliserte.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\Tilsynsrapporter.ascx.cs">
+      <DependentUpon>Tilsynsrapporter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\Tilsynsrapporter.ascx.designer.cs">
+      <DependentUpon>Tilsynsrapporter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageListWebPart.ascx.cs">
+      <DependentUpon>PageListWebPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageListWebPart.ascx.designer.cs">
+      <DependentUpon>PageListWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\LongStringWebPart.ascx.cs">
+      <DependentUpon>LongStringWebPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\FlashWP.ascx.cs">
+      <DependentUpon>FlashWP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\Tilsynssaker.ascx.cs">
+      <DependentUpon>Tilsynssaker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\Tilsynssaker.ascx.designer.cs">
+      <DependentUpon>Tilsynssaker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageListWP.ascx.cs">
+      <DependentUpon>PageListWP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageListWP.ascx.designer.cs">
+      <DependentUpon>PageListWP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageSummaryWebPart.ascx.cs">
+      <DependentUpon>PageSummaryWebPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\PageSummaryWebPart.ascx.designer.cs">
+      <DependentUpon>PageSummaryWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\RssControl.ascx.cs">
+      <DependentUpon>RssControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Avenir\Webparts\Units\RssControl.ascx.designer.cs">
+      <DependentUpon>RssControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Modules\PageTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="templates\Modules\SearchAndReplace.aspx.designer.cs">
+      <DependentUpon>SearchAndReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Modules\Subscription.cs" />
+    <Compile Include="templates\Modules\UndersokelsessakerSelectList.cs" />
+    <Compile Include="templates\Modules\VirksomhetsIndividSakerSelectList.cs" />
+    <Compile Include="templates\Modules\VurderingsgrunnlagSelectList.cs" />
+    <Compile Include="templates\Modules\TjenesteomradeSelectList.cs" />
+    <Compile Include="templates\Modules\ReaksjonstypeSelectList.cs" />
+    <Compile Include="templates\Old\VirksomhetSelectList.cs" />
+    <Compile Include="templates\Modules\PersonellSelectList.cs" />
+    <Compile Include="templates\Modules\FylkeSelectList.cs" />
+    <Compile Include="templates\Modules\DocTypeSelectList.cs" />
+    <Compile Include="templates\Modules\KeywordSelectList.cs" />
+    <Compile Include="templates\Modules\PageContainer.cs" />
+    <Compile Include="templates\Modules\SearchAndReplace.aspx.cs">
+      <DependentUpon>SearchAndReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404NotFound.aspx" />
+    <Content Include="Bvn\FileNotFound\Admin\default.aspx" />
+    <Content Include="Bvn\FileNotFound\Images\fnf_logo.gif" />
+    <Content Include="Bvn\FileNotFound\NotFound.aspx" />
+    <Content Include="CustomProperties\htilDictionaryProperty\AlphabethicalEditor.ascx" />
+    <None Include="CustomRedirects.config" />
+    <Content Include="Default.aspx" />
+    <Content Include="EPiCode\LinkChecker\imgs\flag_green.png" />
+    <Content Include="EPiCode\LinkChecker\imgs\flag_red.png" />
+    <Content Include="EPiCode\LinkChecker\LinkReport.aspx" />
+    <Content Include="EPiCode\WebParts\PageListWebPart.ascx" />
+    <Content Include="EPiCode\WebParts\RssControl.ascx" />
+    <Content Include="episeo\EpiSeoDomain.ascx" />
+    <Content Include="episeo\EpiSeoPage.ascx" />
+    <Content Include="episeo\loader.gif" />
+    <Content Include="episeo\sync.aspx" />
+    <Content Include="episeo\tabprecheck_active.png" />
+    <Content Include="episeo\tabprecheck_inactive.png" />
+    <Content Include="episeo\tabprecheck_inactiveover.png" />
+    <Content Include="episeo\tabpublished_active.png" />
+    <Content Include="episeo\tabpublished_inactive.png" />
+    <Content Include="episeo\tabpublished_inactiveover.png" />
+    <Content Include="episeo\xReport.aspx" />
+    <Content Include="episeo\xtsync.js" />
+    <Content Include="Global.asax" />
+    <Content Include="htil.ico" />
+    <Content Include="inc\vurderingsgrunnlaglist.inc" />
+    <Content Include="inc\tjenesteomradelist.inc" />
+    <Content Include="inc\reaksjonstypelist.inc" />
+    <Content Include="inc\virksomhetlist.inc" />
+    <Content Include="inc\personelllist.inc" />
+    <Content Include="inc\fylkelist.inc" />
+    <Content Include="inc\doctypelist.inc" />
+    <Content Include="inc\keywordlist.inc" />
+    <Content Include="inc\PageContainerCode.html" />
+    <Content Include="lang\bvnerrorhandler.xml" />
+    <Content Include="lang\bvnerrorhandlerDE.xml" />
+    <Content Include="lang\bvnerrorhandlerDK.xml" />
+    <Content Include="lang\bvnerrorhandlerEN-GB.xml" />
+    <Content Include="lang\bvnerrorhandlerEN.xml" />
+    <Content Include="lang\bvnerrorhandlerNO.xml" />
+    <Content Include="lang\bvnerrorhandlerSV.xml" />
+    <Content Include="lang\contentChannelText.xml" />
+    <Content Include="lang\demo_EN.xml" />
+    <Content Include="lang\demo_SV.xml" />
+    <Content Include="lang\languageDA.xml" />
+    <Content Include="lang\languageDE.xml" />
+    <Content Include="lang\languageEN.xml" />
+    <Content Include="lang\languageES.xml" />
+    <Content Include="lang\languageFI.xml" />
+    <Content Include="lang\languageFR.xml" />
+    <Content Include="lang\languageJA.xml" />
+    <Content Include="lang\languageNL.xml" />
+    <Content Include="lang\languageNO.xml" />
+    <Content Include="lang\languagePT.xml" />
+    <Content Include="lang\languageSV.xml" />
+    <Content Include="lang\languageZH.xml" />
+    <Content Include="lang\lang_DA.xml" />
+    <Content Include="lang\lang_DE.xml" />
+    <Content Include="lang\lang_EN.xml" />
+    <Content Include="lang\lang_ES.xml" />
+    <Content Include="lang\lang_FI.xml" />
+    <Content Include="lang\lang_FR.xml" />
+    <Content Include="lang\lang_JA.xml" />
+    <Content Include="lang\lang_NL.xml" />
+    <Content Include="lang\lang_NO.xml" />
+    <Content Include="lang\lang_PT.xml" />
+    <Content Include="lang\lang_SV.xml" />
+    <Content Include="lang\lang_ZH.xml" />
+    <Content Include="lang\LinkDetective_EN.xml" />
+    <Content Include="lang\LinkDetective_NO.xml" />
+    <Content Include="lang\Netmeeting_EN.xml" />
+    <Content Include="lang\Netmeeting_EN_GB.xml" />
+    <Content Include="lang\Netmeeting_NO.xml" />
+    <Content Include="lang\NewPublicTemplates.xml" />
+    <Content Include="lang\newtext.xml" />
+    <Content Include="lang\newtext_demo.xml" />
+    <Content Include="lang\newtext_OnlineCenter.xml" />
+    <Content Include="lang\newtext_OnlineCenter_sent_to_translation.xml" />
+    <Content Include="lang\newtext_sent_to_translation.xml" />
+    <Content Include="lang\OnlineCenter_DA.xml" />
+    <Content Include="lang\OnlineCenter_DE.xml" />
+    <Content Include="lang\OnlineCenter_EN.xml" />
+    <Content Include="lang\OnlineCenter_ES.xml" />
+    <Content Include="lang\OnlineCenter_FI.xml" />
+    <Content Include="lang\OnlineCenter_FR.xml" />
+    <Content Include="lang\OnlineCenter_JA.xml" />
+    <Content Include="lang\OnlineCenter_NL.xml" />
+    <Content Include="lang\OnlineCenter_NO.xml" />
+    <Content Include="lang\OnlineCenter_PT.xml" />
+    <Content Include="lang\OnlineCenter_SV.xml" />
+    <Content Include="lang\OnlineCenter_ZH.xml" />
+    <Content Include="lang\RedirectsGadget.xml" />
+    <Content Include="lang\SearchEngineSitemaps.xml" />
+    <Content Include="lang\tinyMCE.da.lang.xml" />
+    <Content Include="lang\tinyMCE.de.lang.xml" />
+    <Content Include="lang\tinyMCE.en.lang.xml" />
+    <Content Include="lang\tinyMCE.es.lang.xml" />
+    <Content Include="lang\tinyMCE.fi.lang.xml" />
+    <Content Include="lang\tinyMCE.fr.lang.xml" />
+    <Content Include="lang\tinyMCE.ja.lang.xml" />
+    <Content Include="lang\tinyMCE.nl.lang.xml" />
+    <Content Include="lang\tinyMCE.no.lang.xml" />
+    <Content Include="lang\tinyMCE.pt.lang.xml" />
+    <Content Include="lang\tinyMCE.sv.lang.xml" />
+    <Content Include="lang\tinyMCE.zh.lang.xml" />
+    <Content Include="lang\WebPartsCore_ALL.xml" />
+    <Content Include="lang\workflowFoundation.xml" />
+    <Content Include="lang\workflowFoundation_DA.xml" />
+    <Content Include="lang\workflowFoundation_DE.xml" />
+    <Content Include="lang\workflowFoundation_EN.xml" />
+    <Content Include="lang\workflowFoundation_ES.xml" />
+    <Content Include="lang\workflowFoundation_FI.xml" />
+    <Content Include="lang\workflowFoundation_FR.xml" />
+    <Content Include="lang\workflowFoundation_JA.xml" />
+    <Content Include="lang\workflowFoundation_NL.xml" />
+    <Content Include="lang\workflowFoundation_NO.xml" />
+    <Content Include="lang\workflowFoundation_PT.xml" />
+    <Content Include="lang\workflowFoundation_SV.xml" />
+    <Content Include="lang\workflowFoundation_ZH.xml" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\BaseSprite.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\Gradients.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\gray_border.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\navigate_close.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\navigate_open.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\notfoundicon.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\Images\SpriteTools.png" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Content\RedirectGadget.css" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery-1.4.1.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery.validate.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\jquery.validate.min.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftAjax.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Ignored.ascx" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Index.ascx" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Pager.ascx" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Redirects.ascx" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Referers.ascx" />
+    <Content Include="modules\BVNetwork.FileNotFound.RedirectGadget\Views\Redirect\Suggestions.ascx" />
+    <Content Include="packages.config" />
+    <Content Include="inc\Undersokelsessakerlist.inc" />
+    <Content Include="inc\VirksomhetsIndividSakerlist.inc" />
+    <None Include="robots.txt" />
+    <None Include="robots.InternalTest.txt">
+      <DependentUpon>robots.txt</DependentUpon>
+    </None>
+    <None Include="robots.Staging.txt">
+      <DependentUpon>robots.txt</DependentUpon>
+    </None>
+    <None Include="robots.Production.txt">
+      <DependentUpon>robots.txt</DependentUpon>
+    </None>
+    <Content Include="SearchEngineSitemaps\admin\admin.aspx" />
+    <Content Include="SearchEngineSitemaps\SiteMap.aspx" />
+    <Content Include="SearchEngineSitemaps\SiteMapIndex.aspx" />
+    <Content Include="styles\webparts.css" />
+    <Content Include="templates\Avenir\Images\focusInspect.jpg" />
+    <Content Include="templates\Avenir\Images\focusInspect0.JPG" />
+    <Content Include="templates\Avenir\Images\focusInspect2.jpg" />
+    <Content Include="templates\Avenir\Images\focusInspect4.JPG" />
+    <Content Include="templates\Avenir\Images\focusSpeaker.jpg" />
+    <Content Include="templates\Avenir\Images\htillogo_skrivut_screen.gif" />
+    <Content Include="templates\Avenir\Images\iconFontSize.png" />
+    <Content Include="templates\Avenir\Images\iconFontSizeSwitched.png" />
+    <Content Include="templates\Avenir\Images\iconPrint.gif" />
+    <Content Include="templates\Avenir\Images\iconShare.gif" />
+    <Content Include="templates\Avenir\Images\iconSitemap.gif" />
+    <Content Include="templates\Avenir\Images\languageArabic.gif" />
+    <Content Include="templates\Avenir\Images\languageMandarin.gif" />
+    <Content Include="templates\Avenir\Images\leseWebTemp.png" />
+    <Content Include="templates\Avenir\Images\logoHelsetilsynet.png" />
+    <Content Include="templates\Avenir\Images\pdf-logo2.png" />
+    <Content Include="templates\Avenir\Images\siteTitle.gif" />
+    <Content Include="templates\Avenir\Images\siteTitleOLD.gif" />
+    <Content Include="templates\Avenir\Images\socialMediaSprite.png" />
+    <Content Include="templates\Avenir\Images\testbilde.png" />
+    <Content Include="templates\Avenir\Pages\Article.aspx" />
+    <Content Include="templates\Avenir\Pages\BoxListing.aspx" />
+    <Content Include="templates\Avenir\Pages\EmailPage.aspx" />
+    <Content Include="templates\Avenir\Pages\LargeDocument.aspx" />
+    <Content Include="templates\Avenir\Pages\ListUsers.aspx" />
+    <Content Include="templates\Avenir\Pages\ListAllPages.aspx" />
+    <Content Include="templates\Avenir\Pages\PdfRenderer.aspx" />
+    <Content Include="templates\Avenir\Pages\TestingNyno.aspx" />
+    <Content Include="templates\Avenir\Pages\WashingHtml.aspx" />
+    <Content Include="templates\Avenir\Pages\Subsection.aspx" />
+    <Content Include="templates\Avenir\Pages\WashingUrl.aspx" />
+    <Content Include="templates\Avenir\Pages\Tilsynssaker.aspx" />
+    <Content Include="templates\Avenir\Pages\NotFound.aspx" />
+    <Content Include="templates\Avenir\Pages\Pdf.aspx" />
+    <Content Include="templates\Avenir\Pages\GoogleIndex.aspx" />
+    <Content Include="templates\Avenir\Pages\LovListe.aspx" />
+    <Content Include="templates\Avenir\Pages\Blank.aspx" />
+    <Content Include="templates\Avenir\Pages\Emner.aspx" />
+    <Content Include="templates\Avenir\Pages\Lover.aspx" />
+    <Content Include="templates\Avenir\Pages\RssFeed.aspx" />
+    <Content Include="templates\Avenir\Pages\Search.aspx" />
+    <Content Include="templates\Avenir\Pages\SectionPage.aspx" />
+    <Content Include="templates\Avenir\Pages\SiteMap.aspx" />
+    <Content Include="templates\Avenir\Pages\SubscriptionPage.aspx" />
+    <Content Include="templates\Avenir\Pages\Tilsynsrapporter.aspx" />
+    <Content Include="templates\Avenir\Scripts\entourage.js" />
+    <Content Include="templates\Avenir\Scripts\functions.js" />
+    <Content Include="templates\Avenir\Scripts\googlesearch.js" />
+    <Content Include="templates\Avenir\Scripts\jquery.js" />
+    <Content Include="templates\Avenir\Scripts\matchMediaPolyfill.js" />
+    <Content Include="templates\Avenir\Scripts\responsive-tables.js" />
+    <Content Include="templates\Avenir\Styles\base.css" />
+    <Content Include="templates\Avenir\Styles\episerver.css" />
+    <Content Include="templates\Avenir\Styles\gfx\bg.png" />
+    <Content Include="templates\Avenir\Styles\gfx\bgSearchLeft.png" />
+    <Content Include="templates\Avenir\Styles\gfx\bgSearchRight.png" />
+    <Content Include="templates\Avenir\Styles\gfx\boxTopLeftCol.png" />
+    <Content Include="templates\Avenir\Styles\gfx\boxTopRightCol.png" />
+    <Content Include="templates\Avenir\Styles\gfx\breadCrumbExpandCollapse.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\btnMeldeskjema.png" />
+    <Content Include="templates\Avenir\Styles\gfx\btnScrollVertical.png" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHead1.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHead2.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHeadLeft.png" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHeadLeft2.png" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHeadRight.png" />
+    <Content Include="templates\Avenir\Styles\gfx\focusBoxHeadRight2.png" />
+    <Content Include="templates\Avenir\Styles\gfx\iconAdditional.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconCollapseGroup.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconEmail.png" />
+    <Content Include="templates\Avenir\Styles\gfx\iconExpandGroup.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconExternalLink.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconExternalLink.png" />
+    <Content Include="templates\Avenir\Styles\gfx\iconExternalLinkLarge.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconInfo.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconMinus.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconMinusSmall.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconPlus.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconPlusSmall.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconPrint.png" />
+    <Content Include="templates\Avenir\Styles\gfx\iconReadMore.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconsDoc.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconShare.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\iconsSocial.png" />
+    <Content Include="templates\Avenir\Styles\gfx\ie6-mainMenuItemLeft.png" />
+    <Content Include="templates\Avenir\Styles\gfx\ie6-mainMenuItemRight.png" />
+    <Content Include="templates\Avenir\Styles\gfx\listBullet.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\mainMenuBg.jpg" />
+    <Content Include="templates\Avenir\Styles\gfx\mainMenuItemLeft.png" />
+    <Content Include="templates\Avenir\Styles\gfx\mainMenuItemRight.png" />
+    <Content Include="templates\Avenir\Styles\gfx\mapNorway.jpg" />
+    <Content Include="templates\Avenir\Styles\gfx\pdf.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\pdfAnimated.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\question.jpg" />
+    <Content Include="templates\Avenir\Styles\gfx\question.png" />
+    <Content Include="templates\Avenir\Styles\gfx\readMoreIcon.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\searchBoxShadow.png" />
+    <Content Include="templates\Avenir\Styles\gfx\sprites.gif" />
+    <Content Include="templates\Avenir\Styles\gfx\sprites.png" />
+    <Content Include="templates\Avenir\Styles\gfx\tabBoxTabs.png" />
+    <Content Include="templates\Avenir\Styles\gfx\topicDude.jpg" />
+    <Content Include="templates\Avenir\Styles\helsetilsynet.css" />
+    <Content Include="templates\Avenir\Styles\helsetilsynetPDF.css" />
+    <Content Include="templates\Avenir\Styles\Htil-pdf.css" />
+    <Content Include="templates\Avenir\Styles\ie-lte-6.css" />
+    <Content Include="templates\Avenir\Styles\ie-lte-7.css" />
+    <Content Include="templates\Avenir\Styles\large-documents.css" />
+    <Content Include="templates\Avenir\Styles\main-menu.css" />
+    <Content Include="templates\Avenir\Styles\pdf-styles.css" />
+    <Content Include="templates\Avenir\Styles\Pdf.css" />
+    <Content Include="templates\Avenir\Styles\responsive-tables.css" />
+    <Content Include="templates\Avenir\Styles\webparts.css" />
+    <Content Include="templates\Avenir\Units\Placeable\ChangedPages.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\CategoryList.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\ChangedPagesFront.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\GeneratePDF.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\LargeDocuments\LeftMenuLargeDocuments.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\LargeDocuments\MenuOnRootChapter.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\LargeDocuments\PdfRenderLargeDocument.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\LimitTextAndLinkForSearch.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\SearchSummary.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\Subscription.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\GoogleShortList.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\LetterHead.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\DocList.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\GoogleSearch.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\KeywordList.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\Links.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\MainBody.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\News.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\PageBody.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\PageList.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\PageListGoogle.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\RssQuery.ascx" />
+    <Content Include="templates\Avenir\Units\Static\BreadCrumbs.ascx" />
+    <Content Include="templates\Avenir\Units\Placeable\Pager.ascx" />
+    <Content Include="templates\Avenir\Units\Static\Header.ascx" />
+    <Content Include="templates\Avenir\Units\Static\MainMenu.ascx" />
+    <Content Include="templates\Avenir\Units\Static\NewMenu.ascx" />
+    <Content Include="templates\Avenir\Units\Static\QuickSearch.ascx" />
+    <Content Include="templates\Avenir\Units\Static\SocialMediaIcons.ascx" />
+    <Content Include="templates\Avenir\Units\Static\SubMenu.ascx" />
+    <Content Include="templates\Avenir\Units\Static\UtilMenu.ascx" />
+    <Content Include="templates\Avenir\Webparts\ManagementConsole.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\BannerWP.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\SistPubliserte.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\Tilsynsrapporter.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\PageListWebPart.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\LongStringWebPart.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\FlashWP.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\Tilsynssaker.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\PageListWP.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\PageSummaryWebPart.ascx" />
+    <Content Include="templates\Avenir\Webparts\Units\RssControl.ascx" />
+    <Content Include="templates\lang\contentChannelText.xml" />
+    <Content Include="templates\lang\demo_EN.xml" />
+    <Content Include="templates\lang\demo_SV.xml" />
+    <Content Include="templates\lang\languageDA.xml" />
+    <Content Include="templates\lang\languageDE.xml" />
+    <Content Include="templates\lang\languageEN.xml" />
+    <Content Include="templates\lang\languageES.xml" />
+    <Content Include="templates\lang\languageFI.xml" />
+    <Content Include="templates\lang\languageFR.xml" />
+    <Content Include="templates\lang\languageJA.xml" />
+    <Content Include="templates\lang\languageNL.xml" />
+    <Content Include="templates\lang\languageNO.xml" />
+    <Content Include="templates\lang\languagePT.xml" />
+    <Content Include="templates\lang\languageSV.xml" />
+    <Content Include="templates\lang\languageZH.xml" />
+    <Content Include="templates\lang\lang_DA.xml" />
+    <Content Include="templates\lang\lang_DE.xml" />
+    <Content Include="templates\lang\lang_EN.xml" />
+    <Content Include="templates\lang\lang_ES.xml" />
+    <Content Include="templates\lang\lang_FI.xml" />
+    <Content Include="templates\lang\lang_FR.xml" />
+    <Content Include="templates\lang\lang_JA.xml" />
+    <Content Include="templates\lang\lang_NL.xml" />
+    <Content Include="templates\lang\lang_NO.xml" />
+    <Content Include="templates\lang\lang_PT.xml" />
+    <Content Include="templates\lang\lang_SV.xml" />
+    <Content Include="templates\lang\lang_ZH.xml" />
+    <Content Include="templates\lang\NewPublicTemplates.xml" />
+    <Content Include="templates\lang\newtext.xml" />
+    <Content Include="templates\lang\newtext_demo.xml" />
+    <Content Include="templates\lang\newtext_sent_to_translation.xml" />
+    <Content Include="templates\lang\WebPartsCore_ALL.xml" />
+    <Content Include="templates\lang\workflowFoundation.xml" />
+    <Content Include="templates\lang\workflowFoundation_DA.xml" />
+    <Content Include="templates\lang\workflowFoundation_DE.xml" />
+    <Content Include="templates\lang\workflowFoundation_EN.xml" />
+    <Content Include="templates\lang\workflowFoundation_ES.xml" />
+    <Content Include="templates\lang\workflowFoundation_FI.xml" />
+    <Content Include="templates\lang\workflowFoundation_FR.xml" />
+    <Content Include="templates\lang\workflowFoundation_JA.xml" />
+    <Content Include="templates\lang\workflowFoundation_NL.xml" />
+    <Content Include="templates\lang\workflowFoundation_NO.xml" />
+    <Content Include="templates\lang\workflowFoundation_PT.xml" />
+    <Content Include="templates\lang\workflowFoundation_SV.xml" />
+    <Content Include="templates\lang\workflowFoundation_ZH.xml" />
+    <Content Include="templates\Modules\SearchAndReplace.aspx" />
+    <Content Include="templates\Avenir\MasterPages\HTMaster.Master" />
+    <None Include="episerver.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="episerver.InternalTest.config">
+      <DependentUpon>episerver.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="episerver.Staging.config">
+      <DependentUpon>episerver.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="episerver.Production.config">
+      <DependentUpon>episerver.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EPiServerFramework.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EPiServerFramework.InternalTest.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EPiServerFramework.Staging.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+    </None>
+    <None Include="EPiServerFramework.Production.config">
+      <DependentUpon>EPiServerFramework.config</DependentUpon>
+    </None>
+    <None Include="License.config" />
+    <None Include="License.InternalTest.config">
+      <DependentUpon>License.config</DependentUpon>
+    </None>
+    <None Include="License.Staging.config">
+      <DependentUpon>License.config</DependentUpon>
+    </None>
+    <None Include="License.Production.config">
+      <DependentUpon>License.config</DependentUpon>
+    </None>
+    <Content Include="templates\Avenir\MasterPages\PdfView.Master" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.InternalTest.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Staging.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="connectionStrings.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="connectionStrings.InternalTest.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="connectionStrings.Staging.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="connectionStrings.Production.config">
+      <DependentUpon>connectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FileSummary.config" />
+    <None Include="FileSummary.InternalTest.config">
+      <DependentUpon>FileSummary.config</DependentUpon>
+    </None>
+    <None Include="FileSummary.Staging.config">
+      <DependentUpon>FileSummary.config</DependentUpon>
+    </None>
+    <None Include="FileSummary.Production.config">
+      <DependentUpon>FileSummary.config</DependentUpon>
+    </None>
+    <None Include="EPiServerLog.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EPiServerLog.InternalTest.config">
+      <DependentUpon>EPiServerLog.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EPiServerLog.Staging.config">
+      <DependentUpon>EPiServerLog.config</DependentUpon>
+    </None>
+    <None Include="EPiServerLog.Production.config">
+      <DependentUpon>EPiServerLog.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templates\Avenir\Pages\LovListe.aspx.resx">
+      <DependentUpon>LovListe.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Avenir\Pages\NotFound.aspx.resx">
+      <DependentUpon>NotFound.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Avenir\Units\Placeable\LetterHead.ascx.resx">
+      <DependentUpon>LetterHead.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Avenir\Units\Placeable\DocList.ascx.resx">
+      <DependentUpon>DocList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Avenir\Units\Placeable\Links.ascx.resx">
+      <DependentUpon>Links.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Avenir\Units\Placeable\PageBody.ascx.resx">
+      <DependentUpon>PageBody.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\Modules\SearchAndReplace.aspx.resx">
+      <DependentUpon>SearchAndReplace.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>6666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/Helsetilsynet</DevelopmentServerVPath>
+          <IISUrl>http://localhost/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

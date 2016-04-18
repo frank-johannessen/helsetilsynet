@@ -1,0 +1,86 @@
+﻿#abuseGadgetItemReports td {
+	cursor: pointer;
+}
+
+#abuseGadgetItemReports .epi-abuseGadget-itemReport-selected {
+	background-color: #FFEEB3;
+}
+.epi-abuseGadget-header {
+	background: #666;
+	color: #fff;
+	margin-bottom: 1px;
+	padding: 0.3em 0.5em;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+}
+
+.epi-abuseGadget-vScroll {
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 225px;
+	_height: 225px;
+	border-top: 1px solid #cecece;
+}
+
+.epi-abuseGadget-reportDetailed 
+{
+    padding: 0.3em 0.5em;
+}
+
+#abuseGadgetImagePopup {
+	position: absolute;
+	background: #272727;
+	padding: 1em;
+}
+#abuseGadgetImagePopup div {
+	clear: both;
+	float: left;
+	margin-top: 1em;
+	color: #fff;
+	width: 400px;
+}
+
+.epi-abuseGadget-commentTeaser {
+	padding-left: 40px;
+}
+
+.epi-abuseGadget-commentsTable 
+{
+    width: 100% !important;
+}
+
+.epi-abuseGadget-commentsTable td {
+	border-bottom: 1px solid #fff !important;
+	background: #f0f0f0;
+	padding: 0.3em 0.5em !important;
+	vertical-align: top;
+}
+
+.epi-abuseGadget-authorIcon {
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	padding: 1px;
+	border: 1px solid #cfcfcf;
+	background: #fff;
+}
+
+a:hover .epi-abuseGadget-authorIcon {
+	border: 1px solid #666;
+}
+
+.epi-abuseGadget-snapshotItem {
+    background: #eee !important;
+    border: 1px solid #cecece !important;
+}
+
+.epi-abuseGadget-snapshotContentWrapper {
+    min-height: 50px;
+    max-height: 150px;
+    _height: 150px;
+    overflow: auto;
+}
+
+.epi-abuseGadget-snapshotContentWrapper img {
+    max-width: 100%;
+}

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Iframe.ascx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.DynamicContent.Iframe" %>
+<iframe width="<%= Width %>" height="<%= Height %>" src="<%= Url %>" scrolling="no">Your browser does not support IFrames.</iframe>

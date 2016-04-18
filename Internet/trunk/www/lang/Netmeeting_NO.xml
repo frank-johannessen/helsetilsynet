@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<language name="Norsk" id="no">
+		<netmeeting>
+			<templates>
+				<admin>          
+					<title>Redaktørgrensesnitt for nettmøtesiden</title>
+					<heading>Nettmøte</heading>
+					<subheading>Modul for administrering av spørsmål og svar</subheading>
+				</admin>
+			</templates>
+			<units>
+				<report>
+					<endmeetingwarning>Dette vil avslutte møtet og alle besvarte spørsmål vil kun bli lagret på nettmøtesiden.</endmeetingwarning>
+					<generatereportswarning>Dette vil lagre alle spørsmålene til tekstfiler på disk og slette alle spørsmålene fra databasen. Du vil få mulighet til å lagre en kopi av alle spørsmålene.</generatereportswarning>
+					<netmeetingendedwarning>Nettmøtet er avsluttet og spørsmål er slettet fra databasen</netmeetingendedwarning>
+					<answeredquestions>Besvarte spørsmål</answeredquestions>
+					<noansweredquestions>Ingen spørsmål ble besvart.</noansweredquestions>
+					<questionsonhold>Spørsmål satt til vent</questionsonhold>
+					<noquestionsonhold>Ingen spørsmål ble satt på vent.</noquestionsonhold>
+					<untreatedquestions>Ubehandlete spørsmål</untreatedquestions>
+					<nountreatedquestions>Alle spørsmål ble behandlet.</nountreatedquestions>
+					<thrownquestions>Forkastet spørsmål</thrownquestions>
+					<nothrownquestions>Ingen spørsmål ble forkastet.</nothrownquestions>
+					<questionsisanswering>Spørsmål som var under behandlig ved nettmøteavslutting</questionsisanswering>
+					<noquestionsisanswering>Ingen spørsmål var under behandling når nettmøtet ble avsluttet.</noquestionsisanswering>
+					<writername>Innsendt av: </writername>
+					<time>kl: </time>
+          <answer>Svar: </answer>
+				</report>
+				<errormessages>
+          
+          <!-- Vises til sluttbruker -->
+          <titletolong>Tittelteksten er for lang!</titletolong>
+          <titletolongdetails> Antall tegn som er lovlig er {0}. Din tittel inneholder {1} tegn.</titletolongdetails>
+          <questiontolong>Spørsmålsteksten er for lang!</questiontolong>
+          <questiontolongdetails> Antall tegn som er lovlig er {0}. Ditt spørsmål inneholder {1} tegn.</questiontolongdetails>
+					<nametolong>Navneteksten er for lang!</nametolong>
+          <nametolongdetails> Antall tegn som er lovlig er {0}. Ditt navnefelt inneholder {1} tegn.</nametolongdetails>
+          <nonetmeetingid>Noe gikk galt! Vennligst prøv igjen senere.</nonetmeetingid>
+          <missingquestion>Du må fylle ut spørsmål før du kan sende inn!</missingquestion>
+					<missingtitle>Du må fylle ut tittel på spørsmålet ditt!</missingtitle>
+					<missinganswer>Du må fylle ut svar før du kan sende inn!</missinganswer>
+					<meetingended>Dette nettmøtet er avsluttet!</meetingended>
+					<meetingnotexists>Nettmøttet du prøver å nå finnes ikke!</meetingnotexists>
+          <nojavascript>Du har ikke støtte for javascript. For å få kunne delta i nettmøte må klienten din støtte javascript.</nojavascript>
+          <emptyquestion>Ingen spørsmål å vise</emptyquestion>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+          
+					<noteditor>Du er ikke logget inn eller brukeren du er logget inn som har ikke nok rettigheter til å se denne siden. Vennligst logg inn med en bruker med nok rettigheter for å gjøre noe på denne siden!</noteditor>
+					<updatelist>Status på dette spørsmålet er endret. Listen vil nå oppdatere seg</updatelist>
+				</errormessages>
+				<messages>
+          
+          <!-- Vises til sluttbruker -->
+          <sendquestionsuccess>Ditt spørsmål er sendt. Takk for at du deltok i nettmøtet!</sendquestionsuccess>
+          <!-- Slutt på elementer som vises til sluttbruker -->					
+          
+					<isansweringsuccess>Spørsmålet er nå satt i besvaringsmodus.</isansweringsuccess>
+					<sendanswersuccess>Ditt svar er sendt.</sendanswersuccess>
+					<statusok>Spørsmålet har riktig status</statusok>
+					<onholdsuccess>Spørsmålet er nå satt på vent.</onholdsuccess>
+					<restoresuccess>Spørsmålet er nå gjenopprettet.</restoresuccess>
+					<throwsuccess>Spørsmålet er nå forkastet.</throwsuccess>
+				</messages>
+				<menu>
+					<show>Vis:</show>
+					<all>Alle &gt;</all>
+					<notanswered>Ubehandlede &gt;</notanswered>
+					<onhold>På vent &gt;</onhold>
+					<answered>Besvarte &gt;</answered>
+					<thrown>Forkastede &gt;</thrown>
+					<isanswering>Spørsmål til besvaring &gt;</isanswering>
+					<frontpage>Til nettmøtet &gt;</frontpage>
+					<endraport>Avslutt nettmøtet og generer rapport</endraport>
+				</menu>
+				<heading>					
+					<netmeeting>Nettmøte: </netmeeting>
+					<answeredquestions>Besvarte spørsmål og svar</answeredquestions>
+					<unansweredquestions>Ubehandlede spørsmål</unansweredquestions>
+					<thrownquestions>Spørsmål satt til "Forkastet"</thrownquestions>
+					<onholdquestions>Spørsmål satt til "På vent"</onholdquestions>
+					<answerquestion>Besvar spørsmålet</answerquestion>
+					<isanswered>Spørsmål som er til besvaring</isanswered>
+				</heading>
+				<intro>
+					<answeredquestions>Spørsmål som er besvart kan redigeres. Ved å lagre og publisere svaret på nytt, blir svaret oppdatert på siden nettmøtet arrangeres</answeredquestions>
+					<unansweredquestions>Velg hvordan du vil behandle spørsmålene i listen nedenfor.</unansweredquestions>
+					<thrownquestions></thrownquestions>
+					<onholdquestions></onholdquestions>
+				</intro>
+				<button>
+          
+          <!-- Vises til sluttbruker -->
+          <close>Lukk</close>
+          <admin>Gå til redaktørmodus</admin>
+          <sendquestion>Send spørsmål</sendquestion>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+          
+					<answer>Besvar spørsmålet</answer>
+					<throw>Forkast spørsmål</throw>
+					<onhold>Sett spørsmål på vent</onhold>
+					<saveandpublish>Lagre og publiser</saveandpublish>
+					<cancel>Avbryt</cancel>
+					<restore>Gjenopprett spørsmål til ubehandlede</restore>
+					<alteranswer>Endre svar</alteranswer>
+					<update>Oppdater</update> 
+					<endmeeting>Avslutt nettmøtet</endmeeting>
+					<generateraport>Generer rapport</generateraport>
+					<back>Tilbake</back>
+				</button>
+				<answeritem>
+					<from>Innsendt av </from>
+					<clock>kl.</clock>
+					<editable>(Spørsmålsteksten kan redigeres.)</editable>
+					<answer>Ditt svar:</answer>
+				</answeritem>
+				<questionitem>
+          
+          <!-- Vises til sluttbruker -->
+          <title>Tittel</title>
+          <question>Spørsmål</question>
+          <name>Fra (navn)</name>
+          <anonymous>Anonym</anonymous>   
+					<from>Innsendt av </from>
+					<clock>kl.</clock>
+					<sendquestion>Still spørsmål</sendquestion>
+					<netmeetingended>Nettmøtet er nå avsluttet.</netmeetingended>
+					<gototop>Til toppen av siden</gototop>
+          <!-- Slutt på elementer som vises til sluttbruker -->	
+          
+				</questionitem>
+				<paging>
+					<firstpage>Første side</firstpage>
+					<prevpage>Forrige side</prevpage>
+					<currentpage>Gjeldende side</currentpage>
+					<pagenumber>Side {0}</pagenumber>
+					<nextpage>Neste side</nextpage>
+					<lastpage>Siste side</lastpage>
+				</paging>
+			</units>
+		</netmeeting>
+	</language>
+  <language name="nynorsk"
+            id="nn-no">
+    <netmeeting>
+      <templates>
+        <admin>
+          <title>Redaktørgrensesnitt for nettmøtesiden</title>
+          <heading>Nettmøte</heading>
+          <subheading>Modul for administrering av spørsmål og svar</subheading>
+        </admin>
+      </templates>
+      <units>
+        <report>
+          <endmeetingwarning>Dette vil avslutte møtet og alle besvarte spørsmål vil bli lagret på nettmøtesiden.</endmeetingwarning>
+          <generatereportswarning>Dette vil lagre alle spørsmålene til tekstfiler på disk og slette alle spørsmålene fra databasen. Du vil også få mulighet til å lagre en kopi av alle spørsmålene.</generatereportswarning>
+          <netmeetingendedwarning>Nettmøtet er avsluttet og spørsmål er slettet fra databasen.</netmeetingendedwarning>
+          <answeredquestions>Besvarte spørsmål</answeredquestions>
+          <noansweredquestions>Ingen spørsmål ble besvart.</noansweredquestions>
+          <questionsonhold>Spørsmål satt til vent</questionsonhold>
+          <noquestionsonhold>Ingen spørsmål ble satt på vent.</noquestionsonhold>
+          <untreatedquestions>Ubehandlete spørsmål</untreatedquestions>
+          <nountreatedquestions>Alle spørsmål ble behandlet.</nountreatedquestions>
+          <thrownquestions>Forkastet spørsmål</thrownquestions>
+          <nothrownquestions>Ingen spørsmål ble forkastet.</nothrownquestions>
+          <questionsisanswering>Spørsmål som var under behandlig ved nettmøte avslutting</questionsisanswering>
+          <noquestionsisanswering>Ingen spørsmål var under behandling når nettmøtet ble avsluttet.</noquestionsisanswering>
+          <writername>Innsendt av: </writername>
+          <time>kl: </time>
+          <answer>Svar: </answer>
+        </report>
+        <errormessages>
+
+          <!-- Vises til sluttbruker -->
+          <titletolong>Tittelteksten er for lang!</titletolong>
+          <titletolongdetails> Talet på lovlege teikn er {0}. Tittelen din inneheld {1} teikn.</titletolongdetails>
+          <questiontolong>Spørsmålsteksten er for lang!</questiontolong>
+          <questiontolongdetails> Antall tegn som er lovlig er {0}. Ditt spørsmål inneholder {1} tegn.</questiontolongdetails>
+          <nametolong>Navneteksten er for lang!</nametolong>
+          <nametolongdetails> Talet på lovlege teikn er {0}. Navnefeltet ditt inneheld {1} teikn.</nametolongdetails>
+          <nonetmeetingid>Noko gjekk gale! Ver vennleg å prøve igjen seinare</nonetmeetingid>
+          <missingquestion>Du må fylle ut spørsmål før du kan sende inn!</missingquestion>
+          <missingtitle>Du må fylle ut tittel på spørsmålet ditt!</missingtitle>
+          <missinganswer>Du må fylle ut svar før du kan sende inn!</missinganswer>
+          <meetingended>Dette nettmøtet er avslutta!</meetingended>
+          <meetingnotexists>Nettmøttet du prøver å nå finst ikkje!</meetingnotexists>
+          <nojavascript>Klienten du er på støttar ikkje javascript. For å få kunne delta i nettmøtet, må klienten din støtte javascript.</nojavascript>
+          <emptyquestion>Ingen spørsmål å vise</emptyquestion>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+
+          <noteditor>Du er ikke logget inn eller brukeren du er logget inn med har ikke nok rettigheter til å se denne siden. Vennligst logg inn med en bruker med nok rettigheter for å gjøre noe på denne siden!</noteditor>
+          <updatelist>Status på dette spørsmålet er endret. Listen vil nå oppdatere seg</updatelist>
+        </errormessages>
+        <messages>
+
+          <!-- Vises til sluttbruker -->
+          <sendquestionsuccess>Ditt spørsmål er sendt. Takk for at du deltok i nettmøtet!</sendquestionsuccess>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+
+          <isansweringsuccess>Spørsmålet er nå satt i besvaringsmodus.</isansweringsuccess>
+          <sendanswersuccess>Ditt svar er sendt.</sendanswersuccess>
+          <statusok>Spørsmålet har riktig status</statusok>
+          <onholdsuccess>Spørsmålet er nå satt i på vent.</onholdsuccess>
+          <restoresuccess>Spørsmålet er nå gjenopprettet.</restoresuccess>
+          <throwsuccess>Spørsmålet er nå forkastet.</throwsuccess>
+        </messages>
+        <menu>
+          <show>Vis:</show>
+          <all>Alle</all>
+          <notanswered>Ubehandlede</notanswered>
+          <onhold>På vent</onhold>
+          <answered>Besvarte</answered>
+          <thrown>Forkastede</thrown>
+          <isanswering>Spørsmål til besvaring</isanswering>
+          <frontpage>Til nettmøtet</frontpage>
+          <endraport>Generer rapporter og avslutt netmøtet</endraport>
+        </menu>
+        <heading>
+          <netmeeting>Nettmøte: </netmeeting>
+          <answeredquestions>Besvarte spørsmål og svar</answeredquestions>
+          <unansweredquestions>Ubehandlede spørsmål</unansweredquestions>
+          <thrownquestions>Spørsmål satt til "Forkastet"</thrownquestions>
+          <onholdquestions>Spørsmål satt til "På vent"</onholdquestions>
+          <answerquestion>Besvar spørsmålet</answerquestion>
+          <isanswered>Spørsmål som er til besvaring</isanswered>
+        </heading>
+        <intro>
+          <answeredquestions>Spørsmål som er besvart kan redigeres. Ved å lagre og publisere svaret på bytt, blir svaret oppdatert på siden nettmøtet arrangeres</answeredquestions>
+          <unansweredquestions>Velg hvordan du vil behandle spørsmålene i listen nedenfor.</unansweredquestions>
+          <thrownquestions></thrownquestions>
+          <onholdquestions></onholdquestions>
+        </intro>
+        <button>
+
+          <!-- Vises til sluttbruker -->
+          <close>Lukk</close>
+          <admin>Gå til redaktørmodus</admin>
+          <sendquestion>Send spørsmål</sendquestion>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+
+          <answer>Besvar spørsmålet</answer>
+          <throw>Forkast spørsmål</throw>
+          <onhold>Sett spørsmål på vent</onhold>
+          <saveandpublish>Lagre og publiser</saveandpublish>
+          <cancel>Avbryt</cancel>
+          <restore>Gjenopprett spørsmål til ubehandlede</restore>
+          <alteranswer>Endre svar</alteranswer>
+          <update>Oppdater</update>
+          <endmeeting>Avslutt nettmøtet</endmeeting>
+          <generateraport>Generer rapporter</generateraport>
+          <back>Tilbake</back>
+        </button>
+        <answeritem>
+          <from>Innsendt av </from>
+          <clock>kl.</clock>
+          <editable>(Spørsmålsteksten kan redigeres.)</editable>
+          <answer>Ditt svar:</answer>
+        </answeritem>
+        <questionitem>
+
+          <!-- Vises til sluttbruker -->
+          <title>Tittel</title>
+          <question>Spørsmål</question>
+          <name>Frå (namn)</name>
+          <anonymous>Anonym</anonymous>
+          <from>Innsendt av </from>
+          <clock>kl.</clock>
+          <sendquestion>Still spørsmål</sendquestion>
+          <netmeetingended>Nettmøtet er no avslutta.</netmeetingended>
+          <gototop>Til toppen av sida</gototop>
+          <!-- Slutt på elementer som vises til sluttbruker -->
+
+        </questionitem>
+        <paging>
+          <firstpage>Første side</firstpage>
+          <prevpage>Forrige side</prevpage>
+          <currentpage>Gjeldende side</currentpage>
+          <pagenumber>Side {0}</pagenumber>
+          <nextpage>Neste side</nextpage>
+          <lastpage>Siste side</lastpage>
+        </paging>
+      </units>
+    </netmeeting>
+  </language>
+</languages>

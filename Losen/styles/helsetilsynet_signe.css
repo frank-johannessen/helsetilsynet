@@ -1,0 +1,986 @@
+/* GLOBAL */
+
+/* 
+Vi har følgende felter:
+Hovedfeltet øverst i midten
+Listingen midt i skjermbildet
+Toppfeltet forsiden
+
+skrift undersøkefeltet
+*/
+
+
+
+BODY {
+	background-color: White;
+	background-image: url(/images/bg.gif);
+	background-repeat: repeat-y;
+font-family: verdana;
+}
+
+BODY,
+TD 
+{
+	font-family: verdana;
+	font-size: 70%;
+	line-height: 18px;
+	color: #333333;
+
+}
+
+A:link,
+A:active,
+A:visited,
+A:hover {
+	color: #1A6068;
+text-decoration: none;
+}
+
+.fylkeMargin {
+	margin: 6px 0px 5px 0px;
+}
+
+P {
+	margin: 10px 10px 16px 0px;
+}
+
+FORM {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+.arrow-right {
+	border: 0px;
+	margin-left: 4px;	
+	margin-top: 3px;
+}
+
+.arrow-left {
+	border: 0px;
+	margin-right: 6px;	
+	margin-top: 3px;
+}
+
+.print {
+	border: 0px;
+	margin-right: 8px;
+}
+
+.vr {
+	background-color: #CCCCCC;
+	background-image: url(/images/vr-blue.gif);
+}
+
+.header .vr {
+	background-color: #C6C6B9;
+	background-image: url(/images/vr-blue.gif);
+}
+
+/* FRONTPAGE  Hovedfeltet øverst i midten*/
+
+.frontpage .header {
+	background-color: #E9E9AD; margin: 14px 14px 14px 14px; color: black;	
+}
+
+.frontpage .vr {
+	background-color: #CCCC99;
+	background-image: url(/images/vr-blue.gif); color: #cc0033;	
+
+}
+
+	
+
+.frontpage .div.subtitle{ font-family: verdana; font-size: 22pt; margin: 14px 14px 14px 14px;}
+
+.frontpage .div.normal { font-family: verdana; font-size: 8pt; line-height: 19px; margin: 14px 14px 14px 14px;}
+
+/* IDENT */
+
+.ident {
+	background-color: #F4F2E6;
+}
+
+.ident .slogan {
+	padding: 6px 10px 5px 25px;
+	font-weight: bold;
+}
+
+/* NEWS */
+
+<!--Toppfeltet forsiden-->
+
+.news {
+	background-color: white;
+}
+
+.news .title {
+	padding: 5px 15px 0px 15px;
+	font-size: 18pt;
+	line-height: 26px; color: #6d6d0a; font-weight: normal; 
+}
+
+.news .titleTilsyn {
+	padding: 4px 15px 0px 15px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal; color: #6d6d0a;
+}
+
+.news .titleSmall {
+	padding: 4px 15px 0px 15px;
+	font-size: 16px;
+	line-height: 18px; color: color: #6d6d0a;
+	/*font-weight: bold;*/
+}
+
+.news .smallTitle {
+	margin: 10px 0px -2px 16px;
+}
+
+.news .smallTitle .smallTitleDate 
+{
+	color: #6d6d0a;
+}
+
+.news .content {
+	padding: 0px 15px 0px 15px;
+}
+
+.news .leadtext {
+	padding: 0px 15px 8px 15px;
+}
+
+.news .leadtext A:link,
+.news .leadtext A:active,
+.news .leadtext A:visited,
+.news .leadtext A:hover {
+	color: #6d6d0a;
+	text-decoration: none;	
+}
+
+.news .leadtext .link {
+	margin: 8px 0px 0px 0px;
+}
+
+.news .leadtext .link A:link,
+.news .leadtext .link A:active,
+.news .leadtext .link A:visited,
+.news .leadtext .link A:hover {
+	color: #6d6d0a;
+	text-decoration: none;
+}
+
+/* ARTICLE */
+
+.article .header {
+	background-color: #B9B94E;
+}
+
+.article .header .title {
+	padding: 5px 15px 0px 15px;
+	margin: 0px 0px 8px 0px;
+	font-size: 30px;
+	line-height: 32px;
+}
+
+.article .body {
+/*	background-color: #EFEFE7; */
+	padding: 8px 15px 5px 15px;
+}
+
+.article .leadtext {
+	padding: 0px 15px 8px 15px;
+}
+
+.article .leadtext .link {
+	margin: 8px 0px 0px 0px;
+}
+
+.article .leadtext .link A:link,
+.article .leadtext .link A:active,
+.article .leadtext .link A:visited,
+.article .leadtext .link A:hover {
+	color: #CC0033;
+	text-decoration: none;
+}
+
+/* bodytext */
+.article .body P {
+	margin: 0px 0px 16px 0px;
+}
+
+/* subtitle */
+.article .body H1,
+.article .body H2,
+.article .body H3,
+.article .body H4,
+.article .body H5,
+.article .body H6,
+.article .body .subtitle {
+	font-size: 18px; /*16*/
+	font-weight: normal;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+}
+
+/* lists */
+.article .body UL {
+	margin: 8px 0px 16px 30px;
+	list-style-image: url(/images/list-image.gif);
+	list-style: outside;
+}
+
+.article .body I,
+.article .body EM {
+	color: #666666;
+}
+
+.article .body UL UL {
+	margin: 4px 0px 4px 25px;
+}
+
+.article .body OL {
+	margin: 8px 0px 8px 15px;
+	list-style: inside;
+}
+
+.article .body OL OL {
+	margin: 4px 0px 4px 25px;
+	list-style: inside;
+}
+
+.article .body LI {
+	margin: 0px 0px 4px 0px;
+}
+
+
+/* TEASER */
+
+.teaser {
+	padding: 0px 20px 30px 15px;
+}
+
+.headTitle 
+{
+	padding: 15px 20px 20px 15px;
+	font-size: 16pt;
+	color:#585858;
+}
+
+.teaser .title {
+	font-size: 22pt;
+	line-height: 26px;
+	color: #585858;
+}
+
+.teaser .title A:link,
+.teaser .title A:active,
+.teaser .title A:visited,
+.teaser .title A:hover {
+	color: #585858;
+	text-decoration: none;
+}
+
+.teaser .subTitle {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight:bold;
+	color: #585858;
+}
+
+.teaser .subTitle A:link,
+.teaser .subTitle A:active,
+.teaser .subTitle A:visited,
+.teaser .subTitle A:hover {
+	color: #585858;
+	text-decoration: none;
+}
+
+.teaser .leadTextLink A:link,
+.teaser .leadTextLink A:active,
+.teaser .leadTextLink A:visited,
+.teaser .leadTextLink A:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+
+.teaserDate A:link,
+.teaserDate A:active,
+.teaserDate A:visited,
+.teaserDate A:hover {
+	color: #cc0033;
+	text-decoration: none;
+}
+
+
+.teaserLink {
+	padding: 20px 20px 0px 0px;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.teaserLink A:link,
+.teaserLink A:active,
+.teaserLink A:visited,
+.teaserLink A:hover {
+	color: #585858;
+	text-decoration: none;
+}
+	
+/* RELATIONS */
+
+.relations {
+	padding: 0px 15px 0px 15px;
+}
+
+.relations .title {
+	margin: 8px 0px 12px 0px;
+	font-size: 16pt;
+	line-height: 20px;
+}
+
+.relations .content {
+	margin: 0px 0px 5px 0px;
+}
+
+.article .relations {
+	padding: 0px 15px 0px 15px;
+}
+
+.article .relations .content {
+	margin: 0px 0px 5px 0px;
+}
+
+.article .relations .title {
+	color: #666666;	
+}
+
+.frontpage .article .relations {
+	padding: 0px 15px 0px 15px;
+}
+
+.frontpage .article .body .title {
+	font-size: 18px; /*16*/
+	font-weight: normal;
+	line-height: 16px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+}
+
+.frontpage .article .relations .content {
+	margin: 0px 0px 5px 0px;
+}
+
+.frontpage .article .relations .title {
+	color: #666666;	
+}
+
+.frontpage .relations .title,
+.section .relations .title {
+	color: White;
+}
+
+.relations .content P {
+	margin: 0px 0px 8px 0px;
+}
+
+.frontpage .article .relations .content A:link,
+.frontpage .article .relations .content A:active,
+.frontpage .article .relations .content A:visited,
+.frontpage .article .relations .content A:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #cc0033;
+}
+
+.frontpage .relations,
+.section .relations {
+	background-color: #85ABBF;
+}
+
+.frontpage .article .relations 
+{
+	background-color: Transparent;
+}
+
+.frontpage .relations .content,
+.section .relations .content {
+	color: White;
+}
+
+.frontpage .relations .content A:link,
+.frontpage .relations .content A:active,
+.frontpage .relations .content A:visited,
+.frontpage .relations .content A:hover,
+.section .relations .content A:link,
+.section .relations .content A:active,
+.section .relations .content A:visited,
+.section .relations .content A:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+/* SEARCH Søkefeltet*/
+
+.header .search {
+	background-color: #E9E9AD;
+}
+
+.search {
+	padding: 8px 15px 0px 15px;
+}
+
+.search .input {
+	width: 280px;
+	margin: 0px 0px 8px 0px;
+}
+
+.search .section {
+	background-color: #b4b42b;
+	width: 280px;
+}
+
+.search .submit {
+	margin-top: 1px;
+	margin-left: 5px;
+}
+
+.search .options {
+	padding: 0px 15px 5px 15px;
+}
+
+.search .options .subtitle {
+	font-size: 75%;
+	padding: 0px 0px 3px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.search .options .checkbox {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 16px;
+	height: 16px;
+}
+
+.search .options .option {
+	/*color: #cc0033;*/
+	/*font-size: 12px;*/
+	padding: 0px 0px 3px 0px;
+}
+
+
+/* FUNCTIONS */
+
+.functions {
+	background-color: #E9E9AD;
+}
+
+.functions .search {
+	padding: 8px 15px 0px 15px;
+}
+
+.functions .search .input {
+	width: 140px;
+}
+
+.functions .search .submit {
+	margin-top: 1px;
+	margin-left: 5px;
+}
+
+.functions .search .advanced {
+	margin: 6px 0px 0px 0px;	
+}
+
+.functions .content {
+	padding: 4px 15px 8px 15px;
+}
+
+.functions .content P {
+	margin: 4px 0px 0px 0px;
+}
+
+.functions A:link,
+.functions A:active,
+.functions A:visited,
+.functions A:hover {
+	text-decoration: none;
+/* skrift undersøkefeltet */
+color: #6d6d0a
+}
+
+/* LEFTMENU */
+
+.leftmenu {
+/*	padding: 7px 0px 0px 0px; */
+	width: 175px;
+	margin-top: 0px;
+}
+
+.leftmenu .on,
+.leftmenu .off {
+	padding: 3px 15px 4px 0px;		
+}
+
+.leftmenu .HomePageColor A:link,
+.leftmenu .HomePageColor A:active,
+.leftmenu .HomePageColor A:visited,
+.leftmenu .HomePageColor A:hover {
+	color: black;			
+}
+
+.leftmenu .home A:link,
+.leftmenu .home A:active,
+.leftmenu .home A:visited,
+.leftmenu .home A:hover {
+	text-decoration: none;
+	color: #B9B94E;		
+}
+
+.leftmenu A:link,
+.leftmenu A:active,
+.leftmenu A:visited,
+.leftmenu A:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.leftmenu .hr {
+	background-color: #b4b42b;
+}
+
+.leftmenu .home .hr {
+	background-color: White;
+	background-image: url(/images/hr-red.gif);
+}
+
+.leftmenu .parent .hr {
+	background-color: #b4b42b;
+}
+
+.leftmenu .child .hr {
+	background-color: #B9B94E;
+	background-image: url(/images/leftmenu-hr-child2.gif); 
+}
+
+<!--Forside -->
+
+.leftmenu #on {
+	background-color: #B9B94E;
+}
+
+.leftmenu .home #on {
+	background-color:#B9B94E;	
+}
+
+.leftmenu .parent,
+.leftmenu .child {
+	background-color: #E9E9AD; text-decoration: bold;
+}
+
+.leftmenu .child .on,
+.leftmenu .child .off {
+	color: #cece99;		
+}
+
+.leftmenu .icon {
+	margin: 6px 0px 0px 9px;
+}
+
+.leftmenu .child A:link,
+.leftmenu .child A:active,
+.leftmenu .child A:visited,
+.leftmenu .child A:hover {
+	text-decoration: none;
+	color: black;		
+}
+
+
+/* REPORTS */
+
+.reports {
+	background-color: #B0B89D;
+/*	background-color: #339966; */
+}
+
+.reports .title {
+	padding: 8px 15px 0px 15px;
+	font-size: 18px;
+	line-height: 20px;
+	color: black;
+}
+
+.reports .content {
+	padding: 5px 0px 1px 0px;
+}
+
+.reports .hr {
+	background-color: #B1B3B4;
+/*	background-color: #33CC99; */
+}
+
+.reports .content .more {
+	padding: 3px 15px 4px 15px;		
+}
+
+.reports .content .more A:link,
+.reports .content .more A:active,
+.reports .content .more A:visited,
+.reports .content .more A:hover {
+	text-decoration: none;	
+	color: Black;
+}
+
+.reports .content .link {
+	padding: 3px 15px 4px 15px;		
+}
+
+.reports .content .link A:link,
+.reports .content .link A:active,
+.reports .content .link A:visited,
+.reports .content .link A:hover {
+	text-decoration: none;
+	color: black;
+}
+
+/* RESULTS */
+
+.results {
+/*	background-color: #00B08B;	*/
+}
+
+.results .title {
+	padding: 8px 0px 14px 15px;
+	font-size: 18px;
+	line-height: 20px;
+/*	color: White;	*/
+}
+
+.results .content {
+	padding: 5px 0px 1px 0px;
+}
+
+.results .hr {
+	background-color: White;
+}
+
+.results .content .more {
+	padding: 3px 15px 4px 15px;		
+}
+
+.results .content .more A:link,
+.results .content .more A:active,
+.results .content .more A:visited,
+.results .content .more A:hover {
+	text-decoration: none;	
+	color: Black;
+}
+
+.results .content .link {
+	padding: 3px 15px 4px 15px;		
+}
+
+.results .content .link A:link,
+.results .content .link A:active,
+.results .content .link A:visited,
+.results .content .link A:hover {
+	text-decoration: underline;
+/*	color: White; */
+}
+
+/* UPDATES Listingen midt i skjermbildet*/
+
+.updates {
+	background-color: #D0D069;	
+}
+
+.updates .title {
+	padding: 8px 15px 0px 15px;
+	font-size: 17px;
+	line-height: 20px; color: #6d6d0a; text-decoration: none; 	
+	
+}
+
+.updates .content {
+	padding: 5px 0px 1px 0px;
+}
+
+.updates .hr {
+	background-color: #EAEACE;
+}
+
+.updates .content .more {
+	padding: 3px 15px 4px 15px; color: #041A1D;		
+}
+
+.updates .content .more A:link,
+.updates .content .more A:active,
+.updates .content .more A:visited,
+.updates .content .more A:hover {
+	text-decoration: none;	
+	color: #041A1D;	
+}
+
+.updates .content .link {
+	padding: 3px 15px 4px 15px;		
+}
+
+.updates .content .link A:link,
+.updates .content .link A:active,
+.updates .content .link A:visited,
+.updates .content .link A:hover {
+	text-decoration: none;
+	color: ##041A1D;
+}
+
+/* SITEMAP */
+
+.section .sitemap {
+	/*background-color: #ececed;*/
+}
+
+.sitemap {
+	/*background-color: #F9F3AA;*/
+}
+
+.sitemap .hr {
+	background-color: White;
+}
+
+.sitemap .title {
+	padding: 12px 0px 8px 15px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;	
+}
+
+.sitemap .listTitle 
+{
+	font-weight: bold;
+}
+
+.sitemap .cellMargin
+{
+	margin: 0px 15px 8px 0px;
+}
+
+.sitemap .lvl1,
+.sitemap .lvl2 {
+	padding: 3px 0px 4px 0px;
+}
+
+.sitemap .lvl1 A:link,
+.sitemap .lvl1 A:active,
+.sitemap .lvl1 A:visited,
+.sitemap .lvl1 A:hover {
+	text-decoration: none;
+	color: #cc0033;
+}
+
+
+.sitemap .lvl2 A:link,
+.sitemap .lvl2 A:active,
+.sitemap .lvl2 A:visited,
+.sitemap .lvl2 A:hover {
+	text-decoration: none;
+	/*color: #666666;*/
+	color: #cc0033;
+}
+
+/* SITEMAP2 */
+
+.section .sitemap2 {
+	background-color: #ececed;
+}
+
+.sitemap2 {
+	background-color: #F9F3AA;
+}
+
+.sitemap2 .hr {
+	background-color: White;
+}
+
+.sitemap2 .title {
+	padding: 12px 0px 8px 15px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;	
+}
+
+.sitemap2 .lvl1,
+.sitemap2 .lvl2 {
+	padding: 3px 0px 4px 0px;		
+}
+
+.sitemap2 .lvl1 A:link,
+.sitemap2 .lvl1 A:active,
+.sitemap2 .lvl1 A:visited,
+.sitemap2 .lvl1 A:hover {
+	text-decoration: none;
+	color: #333333;
+}
+
+
+.sitemap2 .lvl2 A:link,
+.sitemap2 .lvl2 A:active,
+.sitemap2 .lvl2 A:visited,
+.sitemap2 .lvl2 A:hover {
+	text-decoration: none;
+	color: #666666;
+}
+
+.article .sitemap2{
+	background-color: #ECECED;
+	padding: 8px 15px 5px 15px;
+}
+
+/* Tilsynsrapporter */
+.category {
+	background-color: #959595;
+}
+
+.frontpage .article .body .cattitle {
+	font-size: 18px; /*16*/
+	font-weight: normal;
+	line-height: 22px;
+	padding: 0px 0px 0px 0px;
+	margin: 25px 0px 0px 0px;
+}
+
+.frontpage .article .body .hr {
+	background-color: #cccccc;
+}
+
+.frontpage .article .body .catlink 
+{
+	line-height: 7px;
+	margin: 15px 0px 15px 0px;
+}
+
+/* Fylker */
+.frontpage .fylke {
+	background-color: #7C9DB0;
+}
+
+.frontpage .fylke .hr {
+	background-color: #85ABBF;
+}
+
+.fylke .title {
+	padding: 8px 15px 0px 15px;
+	font-size: 18px;
+	line-height: 20px;
+	color: White;
+}
+
+.fylke A:link,
+.fylke A:active,
+.fylke A:visited,
+.fylke A:hover {
+	text-decoration: none;
+	color: white;
+	line-height: 12px;	
+}
+
+.fylke .link {
+	margin: 3px 0px 4px 15px;
+	}
+	
+	
+.frontpage .article .tablemargin {
+	margin-top: 10px;	 
+}
+
+.frontpage .news .breadbrumb 
+{
+	margin: 5px 0px 0px 15px;
+}
+
+.frontpage .news .breadbrumb A:link,
+.frontpage .news .breadbrumb A:active,
+.frontpage .news .breadbrumb A:visited,
+.frontpage .news .breadbrumb A:hover
+{
+	text-decoration: none;
+	color: #cc0033;	
+}
+
+.CalendarHeading {FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT:20px}
+Table.CalendarFrame{BORDER-RIGHT: #FFFFFF;BORDER-TOP: #FFFFFF; BORDER-LEFT: #FFFFFF;BORDER-BOTTOM: #FFFFFF;BACKGROUND-COLOR: #FFFFFF}
+.selectedDateCell {cursor:hand;	font: normal 10px verdana;height:20px; width:20px; background-color:#FFFFFF; border:solid 2px #000000;}
+.dateCellInactive {font: normal 10px verdana; height:20px; width:20px; background-color:#FFFFFF; border:solid 1px #000000;}
+.dateCellOtherMonth {font: normal 10px verdana;	height:20px; width:20px; background-color:#888888; border:solid 1px #000000;}
+.weekendCell{font: normal 10px verdana;	height:20px; width:20px; background-color:#EEEEEE;	border:solid 1px #000000;}
+.dateCellActive {font: normal 10px verdana;	height:20px; width:20px; background-color:#E6E4D7; border:solid 2px #000000;}
+.dayWeekHeader {font: normal 10px verdana;	background-color:#FFFFFF; height:20px;	width:20px;	color:#666666;	border:solid 1px #FFFFFF;}
+
+
+.subtitle2 {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+	FONT-WEIGHT: bold;
+}
+
+.subtitle {
+	EditMenuName: Mellomtittel;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+}
+
+.lastUpdate {
+	font-size: 11px;
+	margin: 20px 0px 5px 0px;
+}
+
+
+.copyText {
+	padding: 15px 15px 0px 15px;
+	font-size:11px;
+}
+
+div.noVisibility
+{
+	position:absolute;
+	bottom:0;	
+	visibility:hidden;
+}
+
+#LatestFromNoticeBoard
+{
+	padding-left: 3px;
+}
+
+TABLE.dokumentstyringsboks 
+{float: right; clear: right;
+border-top:0.01in solid gray;
+border-left:0.01in solid gray;
+}
+
+
+TD.dokumentstyringsboks 
+{
+	
+border-bottom:0.01in solid gray;
+border-right:0.01in solid gray;
+
+
+
+padding-left: 4px; 
+padding-right: 4px; paddin-top:0; padding-bottom: 0
+
+}
+
+TBODY.dokumentstyringsboks 
+{ font-size: 80%}

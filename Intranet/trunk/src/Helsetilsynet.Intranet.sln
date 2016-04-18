@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helsetilsynet.Intranet.Web", "Helsetilsynet.Intranet.Web\Helsetilsynet.Intranet.Web.csproj", "{139DABBC-39DB-4B51-B97B-A5A2F375A220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relate.HelpersAndExtensions", "Relate.HelpersAndExtensions\Relate.HelpersAndExtensions.csproj", "{B022BB50-179D-48E3-BE71-B746FF2F9541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helsetilsynet.Intranet.Web.Tests", "Helsetilsynet.Intranet.Web.Tests\Helsetilsynet.Intranet.Web.Tests.csproj", "{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AutomatedRelease|Any CPU = AutomatedRelease|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.AutomatedRelease|Any CPU.ActiveCfg = AutomatedRelease|Any CPU
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.AutomatedRelease|Any CPU.Build.0 = AutomatedRelease|Any CPU
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139DABBC-39DB-4B51-B97B-A5A2F375A220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.AutomatedRelease|Any CPU.ActiveCfg = AutomatedRelease|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.AutomatedRelease|Any CPU.Build.0 = AutomatedRelease|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B022BB50-179D-48E3-BE71-B746FF2F9541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.AutomatedRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.AutomatedRelease|Any CPU.Build.0 = Release|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6180AF-E9B5-4E5A-8C3F-5325BC357A76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

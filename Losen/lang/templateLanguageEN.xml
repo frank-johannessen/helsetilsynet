@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="English" id="EN">
+		<templates>
+			<mobileinfo>
+				<maininfo>
+					&lt;b&gt;How to enable WAP-functions in EPiServer&lt;/b&gt;
+					&lt;p&gt;Since the wap/mobile device support in EPiServer is based on the Microsoft 
+						Mobile Internet Toolkit it is not enabled by default. If you want to activate 
+						the mobile device support, follow the instructions below.&lt;/p&gt;
+					&lt;ul&gt;
+						&lt;li&gt;
+							Download and install the Microsoft Mobile Internet Toolkit on your development 
+							machine. It can be downloaded from &lt;a href="http://www.msdn.microsoft.com/downloads/default.asp?url=/downloads/sample.asp?url=/msdn-files/027/001/817/msdncompositedoc.xml" target="_blank"&gt;
+								http://www.msdn.microsoft.com&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;
+							Go to EPiServers Admin-mode and open the page type definition for Mobile page&lt;/li&gt;
+						&lt;ul&gt;
+							&lt;li&gt;
+								Enter Settings for this page type.
+							&lt;/li&gt;
+							&lt;li&gt;
+								Change "Filename" to point to templates/Mobile.aspx instead of 
+								templates/MobileInfo.aspx
+							&lt;/li&gt;
+							&lt;li&gt;
+								Save changes.
+							&lt;/li&gt;
+						&lt;/ul&gt;
+						&lt;li&gt;
+							Add a reference to System.Web.Mobile (installed with the Mobile Internet 
+							Toolkit) to your EPiServer devlopment project.&lt;/li&gt;
+						&lt;li&gt;
+							Include the file /templates/Mobile.aspx in your EPiServer development project.&lt;/li&gt;
+						&lt;li&gt;
+							Recompile your EPiServer project.&lt;/li&gt;
+					&lt;/ul&gt;
+				</maininfo>
+			</mobileinfo>
+			<form>
+				<numberofvotes>Number of votes: {0}</numberofvotes>
+				<showform>To the form</showform>
+				<requirelogon>This form requires that you have logged on.</requirelogon>
+				<denymultipleposts>You have already answered this form.</denymultipleposts>
+				<postedmessage>Thank you for your answer!</postedmessage>
+			</form>
+			<register>
+				<invalidemail>Please enter a valid email address so we can process your application.</invalidemail>
+				<invalidpassword>You have to enter a password. Enter the same password in the two text fields.</invalidpassword>
+				<expiredidentity>Your user information has expired, please log on again.</expiredidentity>
+				<usernotsaved>the user could not be saved, please try another username.</usernotsaved>
+				<errorwhilesavinguser>An error occured, user has not been saved.</errorwhilesavinguser>
+				<invalidsettings>All settings for extranet users has not been set.</invalidsettings>
+				<applyemailsubject>A new user has asked for membership.</applyemailsubject>
+				<applyemailbodyprefix>Go to this page to activate the user:</applyemailbodyprefix>
+				<usersaved>You will receive an email as soon as your application has been approved and activated.</usersaved>
+				<usersavedandactivated>You can now log on to the website.</usersavedandactivated>
+			</register>
+			<page>
+				<login>Login</login>
+				<logout>Logout</logout>
+				<notproperlyconfigured>Quicksearch isn't properly configured. (Dynamic propterty "Global search page" must have been defined)</notproperlyconfigured>
+			</page>
+			<newsgrouplist>
+				<search>Search</search>
+				<subscribe>Subscribe</subscribe>
+				<unsubscribe>Remove Subscription</unsubscribe>
+			</newsgrouplist>
+			<search>
+				<searchfiles>			Search documents and files</searchfiles>
+				<onlywholewords>		Match whole word</onlywholewords>
+				<searchresult>			Search result:</searchresult>
+				<rank>					Rank</rank>
+				<match>					Match</match>
+				<matches>				match(es)</matches>
+				<nomatches>				No matches found, please try again.</nomatches>
+				<help>
+					&lt;b&gt;Search hints!&lt;/b&gt;
+					&lt;ul&gt;
+					&lt;li&gt;Enter up to 10 words separated with space, for example &lt;i&gt;&lt;b&gt;&lt;nobr&gt;word1 word2 word33&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br/&gt;&lt;/li&gt;
+					&lt;li&gt;Restrict the search by placing a plus sign (+) in front of the words that must be found to consider the page a match, for example &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+word1 +word2 +word3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt;
+					&lt;li&gt;Restrict the search by placing a minus sign (-) in front of the words that must not occur to consider the page a match, for example &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+word1 +word2 -word3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt;
+					&lt;li&gt;If "Match whole word" is selected but you still want to match part of a word, place an asterisk(*) at the end of the rod, for example &lt;i&gt;&lt;b&gt;&lt;nobr&gt;word1* word2&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt; which will match "word123 ord2" but not "word123 word234"&lt;/li&gt;
+					&lt;/ul&gt;	
+				</help>
+				<indexservererror>		The index engine is not running at the moment and searches against files and documents cannot be done.
+				</indexservererror>
+				<quicksearch>		Quick search</quicksearch>
+			</search>
+			<login>
+				<logintitle>Login</logintitle>
+				<loginheading>Protected information. Please login.</loginheading>
+				<username>				Name</username>
+					<password>				Password</password>
+					<persistentlogin>		Enable automatic logon to this web site</persistentlogin>
+					<usernamerequired>		You must enter a name</usernamerequired>
+					<loginfailed>			Login failed</loginfailed>
+			</login>
+			<calendar>
+				<next>Next</next>
+				<previous>Previous</previous>
+			</calendar>
+			<changedpages file="templates/ChangedPages.aspx">
+				<header>			Last changed files</header>
+				<lastmodified>		Last changed</lastmodified>
+				<page>				Page</page>
+				<updatedpages>		Latest updated pages</updatedpages>
+			</changedpages>
+			<conference>
+				<deleteconfirm>Want to delete this item?</deleteconfirm>
+				<createnew>Create new post</createnew>
+				<post>Post</post>
+				<heading>Heading</heading>
+				<message>Message</message>
+				<author>Author</author>
+				<previous>Previous</previous>
+				<next>Next</next>
+				<reply>Reply</reply>
+				<change>Change</change>
+				<delete>Delete</delete>
+				<replies>Replies</replies>
+				<uponelevel>Up one level</uponelevel>
+			</conference>
+			<form>
+				<thankyouforyourreply>Thank you for your reply!</thankyouforyourreply>
+				<showstat>Show statistics</showstat>
+			</form>
+
+			<newsgroupitem>
+				<reply>Reply</reply>
+				<name>Name</name>
+				<email>Email</email>
+				<subject>Subject</subject>
+			</newsgroupitem>
+			<newsgrouplist>
+				<newpost>New Subject</newpost>
+				<settings>Settings</settings>
+				<subject>Subject</subject>
+				<author>Author</author>
+				<created>Created</created>
+			</newsgrouplist>
+			<newsgroupsettings>
+				<personalsettings>Personal Settings</personalsettings>
+				<firstname>Firstname</firstname>
+				<lastname>Lastname</lastname>
+				<email>Email</email>
+				<interval see="/templates/subscribe/interval"/>
+				<fastaspossible see="/templates/subscribe/fastaspossible"/>
+				<daily see="/templates/subscribe/daily"/>
+				<everysecondday see="/templates/subscribe/everysecondday"/>
+				<weekly see="/templates/subscribe/weekly"/>
+				<everysecondweek see="/templates/subscribe/everysecondweek"/>
+				<everyfourthweek see="/templates/subscribe/everyfourthweek"/>
+			</newsgroupsettings>
+			<newsgrouptree>
+				<back>Back</back>
+			</newsgrouptree>
+			<notimplemented>
+				<notimplemented>This feature is not available yet</notimplemented>
+			</notimplemented>
+			<register>
+				<couldnotsave>User could not be created</couldnotsave>
+				<saved>User created</saved>
+				<notallowed>This site does not allow user registration.</notallowed>
+			</register>
+			<subscribe>
+				<interval>Interval</interval>
+				<fastaspossible>As soon as possible</fastaspossible>
+				<daily>Daily</daily>
+				<everysecondday>Every second day</everysecondday>
+				<weekly>Weekly</weekly>
+				<everysecondweek>Every second week</everysecondweek>
+				<everyfourthweek>Every fourth week</everyfourthweek>
+				<subscriptions>Subscriptions</subscriptions>
+			</subscribe>
+			<page>
+				<readmore>Read more</readmore>
+			</page>
+		</templates>
+		<pagetypes>
+			<common>
+				<property name="NewsContainer">
+					<caption>	News list</caption>
+					<help>	Specify the page you want to fetch the news listing from</help>
+				</property>	
+				<property name="EmbeddedURL">
+					<caption>Sökväg till Flashfilm</caption>
+					<help>Specify  sökvägen till flashfilmen som skall laddas genom att klicka på knappen och markera filen</help>
+				</property>
+				<property name="Height">
+					<caption>Height</caption>
+					<help>Height on the flashmovie</help>
+				</property>
+				<property name="Width">
+					<caption>Width</caption>
+					<help>Width on the flashmovie</help>
+				</property>
+				<property name="StartPublishOffset">
+					<caption>	"Start publish date" relative to when the page has been created</caption>
+					<help>		Set "Start publish date" relative to when the page has been created</help>
+				</property>
+				<property name="StopPublishOffset">
+					<caption>	"Stop publish date" relative to when the page has been created</caption>
+					<help>		Set "Stop publish date" relative to when the page has been created</help>
+				</property>
+				<property name="MainBody">
+					<caption>Editor</caption>
+					<help>Content of your page. Here you can enter text, insert images, documents, tables, etc.</help>
+				</property>
+				<property name="ListingContainer">
+					<caption>Fetch listing from</caption>
+					<help>Specify the page you want to fetch the listing from</help>
+				</property>
+				<property name="ListingCount">
+					<caption>Display number of pages in the list</caption>
+					<help>Using an integer, specify the number of pages to be displayed in the listing</help>
+				</property>
+				<property name="ListingType">
+					<caption>Type of page in the listing</caption>
+					<help>Specify the page type that is to be shown in the listing</help>
+				</property>
+				<property name="ListingCategoryList">
+					<caption>Display the following categories</caption>
+					<help>Specify the categories that are to be displayed on this page</help>
+				</property>
+				<property name="EPSUBSCRIBE">
+					<caption>Activate subscription</caption>
+					<help>Check this box to allow visitors to subscribe to this page</help>
+				</property>
+				<property name="WriterName">
+					<caption>Writer</caption>
+					<help>Name of the person who is responsible for the content</help>
+				</property>
+				<property name="MailTo">
+					<caption>E-mail address of the recipient</caption>
+					<help>E-mail address of the person who will receive the information</help>
+				</property>
+				<property name="MainIntro">
+					<caption>Introduction</caption>
+					<help>Introductory text often shown in listings</help>
+				</property>
+				<property name="MainBodyLoggedIn">
+					<caption>Editor for users who are logged in</caption>
+					<help>Description of the choices a user can make when he or she is logged in</help>
+				</property>
+				<property name="MainScope">
+					<caption>Scope for IndexServer search</caption>
+					<help>Specify the folder in which the search will take place. If you leave this field empty, the search will take place in the Upload folder</help>
+				</property>
+				<property name="MainCatalog">
+					<caption>Catalog for the Index Server</caption>
+					<help>Specify the Index Server catalog to search</help>
+				</property>
+				<property name="RecentContainer">
+					<caption>Display pages from</caption>
+					<help>Specify the page from which you want to display the recently changed pages</help>
+				</property>
+				<property name="RecentHours">
+					<caption>Display the pages that have been changed in the past x hours</caption>
+					<help>Specify how far back you want to display changed pages, using an integer for the number of hours</help>
+				</property>
+				<property name="IndexContainer">
+					<caption>Display content from page</caption>
+					<help>Specify the page from which the index will start</help>
+				</property>
+				<property name="IndexLevel">
+					<caption>Display the index with the number of levels down</caption>
+					<help>Specify an integer for the number of sub-levels to be displayed in the index</help>
+				</property>
+				<property name="IndexColumns">
+					<caption>Number of columns for the index</caption>
+					<help>Specify an integer for the number of columns to be displayed in the index</help>
+				</property>
+				<property name="MailFrom">
+					<caption>E-mail sender</caption>
+					<help>E-mail address of the person who will receive the answers on the form</help>
+				</property>
+				<property name="MainForm">
+					<caption>Form</caption>
+					<help>Specify the form that will be shown on this page. By clicking on the button, you can create your own forms</help>
+				</property>
+				<property name="EPSUBSCRIBEHIDDEN">
+					<caption>Do not display this on the subscription page</caption>
+					<help>Specify if you want to show this page in the ordinary subscription page </help>
+				</property>
+				<property name="NewsGroupRoot">
+					<caption>Main page for news groups</caption>
+					<help>Specify the page that will be the main page for the news group</help>
+				</property>
+				<property name="NewsGroupPageTypeID">
+					<caption>Page type for news items</caption>
+					<help>Specify the page type that will be used for news items</help>
+				</property>
+				<property name="AllowNewsItem">
+					<caption>Allow news item</caption>
+					<help>Specify if you will allow news item on this page </help>
+				</property>
+				<property name="WriterEmail">
+					<caption>E-mail address</caption>
+					<help>E-mail address of the person who created the news item</help>
+				</property>
+				<property name="NewsGroupContainer">
+					<caption>Belongs to the following news group</caption>
+					<help>Specify the news group that the news item will belong to</help>
+				</property>
+				<property name="MainMenuContainer">
+					<caption>Display menus from</caption>
+					<help>Specify a place in the menu tree from where menus will be displayed on the selected page</help>
+				</property>
+				<property name="MainSearchPage">
+					<caption>Global search page</caption>
+					<help>Specify the page that will be the global search page for the web site</help>
+				</property>
+				<property name="MetaDescription">
+					<caption>Page description</caption>
+					<help>Describe the content of the page</help>
+				</property>
+				<property name="MetaKeywords">
+					<caption>Standard search words for pages</caption>
+					<help>Specify a comma-separated list of search words that match this page</help>
+				</property>
+				<property name="EventInputGuide">
+					<caption>Recurring activity</caption>
+					<help>Select this box if you want to create a recurring activity</help>
+				</property>
+				<property name="EventStartDate">
+					<caption>Start date</caption>
+					<help>Specify the start date for the activity</help>
+				</property>
+				<property name="EventStopDate">
+					<caption>Stop date</caption>
+					<help>Specify the stop date for the activity</help>
+				</property>
+				<property name="ValidDays">
+					<caption>Recurring day</caption>
+					<help>Specify if the activity is to recur at set intervals</help>
+				</property>
+				<property name="nDaysToRender">
+					<caption>Number of days to show in calendar</caption>
+					<help>Specify an integer for how many days you want to show in the calendar</help>
+				</property>
+				<property name="CalendarType">
+					<caption>Type of pages to show in calendar</caption>
+					<help>Specify which page type to use for calender event</help>
+				</property>
+				<property name="CalendarContainer">
+					<caption>Show calendar information from</caption>
+					<help>Specify a place in the menu tree from where calendar will be displayed</help>
+				</property>
+				<property name="Box1Caption">
+					<caption>1. Heading</caption>
+				</property>
+				<property name="Box1Container">
+					<caption>1. Fetch listing from</caption>
+					<help>Specify the page you want to fetch the listing from</help>
+				</property>
+				<property name="Box1Count">
+					<caption>1. Display number of pages in the list</caption>
+					<help>Using an integer, specify the number of pages to be displayed in the listing</help>
+				</property>
+				<property name="Box1SortOrder">
+					<caption>1. Sort order</caption>
+					<help>Defines the order in which children of this page will be displayed.</help>
+				</property>
+				<property name="Box2Caption">
+					<caption>2. Heading</caption>
+				</property>
+				<property name="Box2Container">
+					<caption>2. Fetch listing from</caption>
+					<help>Specify the page you want to fetch the listing from</help>
+				</property>
+				<property name="Box2Count">
+					<caption>2. Display number of pages in the list</caption>
+					<help>Using an integer, specify the number of pages to be displayed in the listing</help>
+				</property>
+				<property name="Box2SortOrder">
+					<caption>2. Sort order</caption>
+					<help>Defines the order in which children of this page will be displayed.</help>
+				</property>
+				<property name="MailSubject">
+					<caption>	Subject in subscription e-mail</caption>
+					<help>		This is the subject field in the subscription mail that will be sent to the subscribers.</help>
+				</property>
+				<property name="MailReadMore">
+					<caption>	Link text in the mail</caption>
+					<help>		This text will build the link that the user will be able to click on in the subcription mail. </help>
+				</property>
+				<property name="MailBody">
+					<caption>	Introduction text in mail</caption>
+					<help>		Enter the text that will be the message body above the list of modified pages sent in the subscription mail. </help>
+				</property>
+				<property name="EPSUBSCRIBE-ROOT">
+					<caption>	Subscription root</caption>
+					<help>		Select a startingpoint for the suncription. A link to each page changed or added below this point in the tree will be sent in the subscription mail.</help>
+				</property>
+				<property name="MainContainer">
+					<caption>Start page for the search</caption>
+					<help>If this field is left empty, the search will start from the start page</help>
+				</property>
+				<property name="RightListingContainer">
+					<caption>List to the right</caption>
+					<help>Enter starting point for the help list to the right.</help>
+				</property>
+				<property name="EnableStatistics">
+					<caption>Show statistics on page template</caption>
+					<help>Show statistics on page for visitors.</help>
+				</property>
+				<property name="ConferenceContainer">
+						<caption>Start page for the conference</caption>
+						<help>Specify which page is the first page in this forum (usually this page)</help>
+				</property>
+			</common>
+	
+			<pagetype name="Vanlig webbsida">
+				<name>Ordinary web page</name>
+				<description>Ordinary information page</description>
+			</pagetype>
+			<pagetype name="Prenumeration">
+				<name>Subscription</name>
+				<description>Page for visitors to select subscription information</description>
+			</pagetype>
+			<pagetype name="Kalender">
+				<name>Calendar</name>
+				<description>Main page for calendar</description>
+			</pagetype>
+			<pagetype name="Kalenderhändelse">
+				<name>Calendar event</name>
+				<description>Page for a new event on the calendar</description>
+				<captions>
+					<caption name="Normalt möte">Normal activity</caption>
+					<caption name="Tid för möte">Date of activity</caption>
+					<caption name="Starttid">Start time</caption>
+					<caption name="Sluttid">Stop time</caption>
+					<caption name="Återkommande möte">Recurring activity</caption>
+					<caption name="Hela dagen">Whole day</caption>
+					<caption name="Inträffar varje">Occurs every</caption>
+					<caption name="Begränsning av intervall">Limit interval</caption>
+					<caption name="Startdatum">Start date</caption>
+					<caption name="Slutdatum">Stop date</caption>
+					<caption name="Normalt möte">Normal activity</caption>
+					<caption name="Återkommande möte">Recurring activity</caption>
+					<caption name="Minst en dag måste markeras vid återkommande möte!">At least one day must be selected for recurring activity</caption>
+					<caption name="Ange mötesinformation">Specify meeting information</caption>
+				</captions>
+			</pagetype>
+			<pagetype name="Diskussion">
+				<name>Discussion forum</name>
+				<description>Main page for creating a discussion forum</description>
+			</pagetype>
+			<pagetype name="Sök">
+				<name>Search</name>
+				<description>Page for searching for information on the web site</description>
+			</pagetype>
+			<pagetype name="Ändrat nyligen">
+				<name>Changed recently</name>
+				<description>Page that displays a list of pages that have recently been changed</description>
+			</pagetype>
+			<pagetype name="Innehållsförteckning">
+				<name>Index</name>
+				<description>Page that displays the content of all or part of the web site</description>
+			</pagetype>
+			<pagetype name="Fillistning">
+				<name>File listing</name>
+				<description>Page that lists files from a directory on the web server</description>
+			</pagetype>
+			<pagetype name="Startsida">
+				<name>Start page</name>
+				<description>Start page on the web site</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, huvudsida">
+				<name>News groups, main page</name>
+				<description>Main page for news groups</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, kategori">
+				<name>News groups, category</name>
+				<description>Category for news groups</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, nyhetsgrupp">
+				<name>News groups, news group</name>
+				<description>Page for news group</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, inlägg">
+				<name>News groups, news item</name>
+				<description>Page for news item in a news group</description>
+			</pagetype>
+			<pagetype name="Registrera användare">
+				<name>Register users</name>
+				<description>Page where visitors can register themselves on the web site</description>
+			</pagetype>
+			<pagetype name="Formulärsida">
+				<name>Form page</name>
+				<description>Page which contains a form</description>
+			</pagetype>
+			<pagetype name="Alfabetisk innehållsförteckning">
+				<name>Alphabetical tabel of content</name>
+				<description>Page that lists content in a alfabetical order</description>
+			</pagetype>	
+			<pagetype name="FlashSida">
+				<name>Flash page</name>
+				<description>Page for loading a flashmovie</description>
+			</pagetype>
+			<pagetype name="Rösta">
+				<name>Vote</name>
+				<description>Page for creating a type of question</description>	
+			</pagetype>				
+			<pagetype name="Mobile page">
+				<name>Mobile page</name>
+				<description>Page for mobile units</description>
+			</pagetype>	
+			<pagetype name="SYS - Välkomstsida">
+				<name>Welcome page in edit mode</name>
+				<description>First page in edit mode</description>
+			</pagetype>		
+			<pagetype name="SYS - Papperskorg"> 
+				<name>Recycle bin</name>
+				<description>Tree structure for recycle bin on the website</description>
+			</pagetype>		
+	</pagetypes>		
+		
+		<categories>
+			<category name="News">
+				<description>News</description>
+			</category>
+			<category name="Technical">
+				<description>Technical</description>
+			</category>
+			<category name="Data">
+				<description>Data</description>
+			</category>
+		</categories>		
+	</language>
+</languages>

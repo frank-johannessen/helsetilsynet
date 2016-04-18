@@ -1,0 +1,1 @@
+<%@ Control Language="c#" AutoEventWireup="True" Codebehind="UserAttributeListControl.ascx.cs" Inherits="EPiServer.Community.Web.Administration.UserAttributeListControl" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>

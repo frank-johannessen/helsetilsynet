@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleArciveButton.ascx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.Units.Placeable.ArticleArciveButton" %>
+<a href="<%= GetArchiveUrl() %>" class="article-archive-link"><%= GetArchiveTitle() %></a>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<import>
+	<importinfo>
+		<name>Right Menu Content - Simple Version</name>
+		<description>Properties to be shown in the right menu.</description>
+	</importinfo>
+	<properties>
+		<!-- RightContent -->
+		<property>
+			<name>RightContent</name>
+			<editcaption>Content to the right</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>true</languagespecific>
+			<tab>RightMenu</tab>
+			<type>
+				<name>LongString</name>
+				<basetype>LongString</basetype>
+				<!-- Custom ones -->
+				<fulltype></fulltype>
+				<assemblyname></assemblyname>
+			</type>
+		</property>
+	</properties>
+</import>

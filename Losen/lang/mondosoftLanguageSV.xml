@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<!-- 
+		MondoSearch Integration package - translation file.
+	-->
+	<language name="Svenska" id="SV">
+		<!-- This first section needs to follow EPiServer-standards to work properly.-->
+		
+		<!-- Search template -->
+		<pagetypes>
+			<common>
+				<property name="CategoriesPerPage">
+					<caption>Kategorier per sida</caption>
+					<help>Det maximala antalet kategorier som visas på en sida.</help>
+				</property>
+				<property name="ResultsPerCategory">
+					<caption>Result per kategori</caption>
+					<help>Det maximala antalet resultat som visas då fler kategorer visas.</help>
+				</property>
+				<property name="ResultsPerPage">
+					<caption>Result per sida</caption>
+					<help>Det maximala antalet resultat som visas för en enskild kategorisida.</help>
+				</property>
+				<property name="StemmingOn">
+					<caption>Basera på ordstam</caption>
+					<help>Genom att använda ordstammar är det möjligt att automatiskt utöka frågan så att den språkvetenskapligt även innefattar ord med samma ordstam.</help>
+				</property>
+				<property name="SortByDateOn">
+					<caption>Sortera på datum</caption>
+					<help>Sorterar resultatet baserat på datum istället för sökordens rangordning.</help>
+				</property>
+				<property name="SearchTypeOption">
+					<caption>Söktyp</caption>
+					<help>Ange vilken söktyp som ska gälla - 'Blankt', 'And', 'Or' eller 'Excact'.</help>
+				</property>
+				<property name="PhoneticsOn">
+					<caption>Fonetisk sökning</caption>
+					<help>Ange hur den fonetisk sökningen sak hanteras - 'Default', 'Always', 'When no result' eller 'Never'.</help>
+				</property>
+				<property name="UseCategories">
+					<caption>Använd kategorier</caption>
+					<help>Använd eller använd inte kategorier. Databasprestandan kan förbättras genom att inte använda kategorier.</help>
+				</property>
+			</common>
+		</pagetypes>
+		<!-- The following sections are based on the calls made from the Integration package.-->
+		<mondosoft>
+			<!-- Start Page template -->
+			<startpage>
+				<mostwanted>Mest eftersökta</mostwanted>
+			</startpage>
+
+			<!-- Most Wanted control -->
+			<mostwanted>
+				<text>Mondosoft introducerar månadens &lt;b&gt;Mest eftersöka&lt;/b&gt; sidor. Listan basera sig på BehaviorTracking™ från Mondosoft. &lt;br /&gt;&lt;br /&gt;Ta en titt och välj en sida som intresserar dig.</text>
+			</mostwanted>
+			
+			<!-- Search template -->
+			<searchtemplate>
+				<defs_da>Sidan är på danska</defs_da>
+				<defs_nl>Sidan är på holländska</defs_nl>
+				<defs_en>Sidan är på engelska</defs_en>
+				<defs_fi>Sidan är på finska</defs_fi>
+				<defs_fr>Sidan är på franska</defs_fr>
+				<defs_de>Sidan är på tyska</defs_de>
+				<defs_is>Sidan är på isländska</defs_is>
+				<defs_it>Sidan är på italienska</defs_it>
+				<defs_no>Sidan är på norska</defs_no>
+				<defs_pt>Sidan är på portugisiska</defs_pt>
+				<defs_es>Sidan är på spanska</defs_es>
+				<defs_sv>Sidan är på svenska</defs_sv>
+				<defs_ar>Sidan är på arabiska</defs_ar>
+				<defs_bg>Sidan är på bulgariska</defs_bg>
+				<defs_cs>Sidan är på tjeckiska</defs_cs>
+				<defs_cn>Sidan är på kinesiska (förenklad)</defs_cn>
+				<defs_et>Sidan är på estniska</defs_et>
+				<defs_el>Sidan är på grekiska</defs_el>
+				<defs_eo>Sidan är på esparanto</defs_eo>
+				<defs_he>Sidan är på hebreiska</defs_he>
+				<defs_hu>Sidan är på ungerska</defs_hu>
+				<defs_ja>Sidan är på japanska</defs_ja>
+				<defs_ko>Sidan är på koreanska</defs_ko>
+				<defs_lv>Sidan är på lettiska</defs_lv>
+				<defs_lt>Sidan är på litauiska</defs_lt>
+				<defs_mk>Sidan är på makedonska</defs_mk>
+				<defs_pl>Sidan är på polska</defs_pl>
+				<defs_ro>Sidan är på rumänska</defs_ro>
+				<defs_ru>Sidan är på ryska</defs_ru>
+				<defs_sr>Sidan är på serbiska</defs_sr>
+				<defs_sk>Sidan är på slovakiska</defs_sk>
+				<defs_sl>Sidan är på slovenska</defs_sl>
+				<defs_sq>Sidan är på albanska</defs_sq>
+				<defs_th>Sidan är på thailändska</defs_th>
+				<defs_vi>Sidan är på vietnamesiska</defs_vi>
+				<defs_tw>Sidan är på kinesiska (traditionell)</defs_tw>
+				<defs_hr>Sidan är på kroatiska</defs_hr>
+
+				<rtext.all_all_words>Alla sidor innehåller alla #SEARCH_WORDS sökord</rtext.all_all_words>
+				<rtext.all_both_words>Alla sidor innehåller båda sökorden</rtext.all_both_words>
+				<rtext.all_documents>Alla #CAT_PAGES sidor</rtext.all_documents>
+				<rtext.all_phrase>Alla sidor innehåller frasen</rtext.all_phrase>
+				<rtext.all_words>Alla ord</rtext.all_words>
+				<rtext.alternatives_title>Alternativa ord du kan pröva:</rtext.alternatives_title>
+				<rtext.date_format>yy-mm-dd</rtext.date_format>
+				<rtext.dynamic>Dynamisk</rtext.dynamic>
+				<rtext.error>Fel:</rtext.error>
+				<rtext.first_cat>Första kategorin</rtext.first_cat>
+				<rtext.first_num_cats>Första #PREV_CATS kategorierna</rtext.first_num_cats>
+				<rtext.first_num_pages>Första #PREV_PAGES sidorna</rtext.first_num_pages>
+				<rtext.first_page>Första sidan</rtext.first_page>
+				<rtext.first_two_cats>Första två kategorierna</rtext.first_two_cats>
+				<rtext.first_two_pages>Första två sidorna</rtext.first_two_pages>
+				<rtext.found_help>Hittade:</rtext.found_help>
+				<rtext.headline>Sökresultat</rtext.headline>
+				<rtext.help_age_head>Ålder:</rtext.help_age_head>
+				<rtext.help_age_hint>Visa nyare sidor först</rtext.help_age_hint>
+				<rtext.help_age>#OLD_PAGES_PCT% är mer än ett halvår gamla</rtext.help_age>
+				<rtext.help_cat_head>Kategorier:</rtext.help_cat_head>
+				<rtext.help_lang_alt>Visa bara sidor som är på #LANG_NAME</rtext.help_lang_alt>
+				<rtext.help_lang_head>Språk:</rtext.help_lang_head>
+				<rtext.help>Antal:</rtext.help>
+				<rtext.ignore_help>Ignorerad:</rtext.ignore_help>
+				<rtext.last_cat>Sista kategorin</rtext.last_cat>
+				<rtext.last_num_cats>Sista #NEXT_CATS kategorierna</rtext.last_num_cats>
+				<rtext.last_num_pages>Sista #NEXT_PAGES sidorna</rtext.last_num_pages>
+				<rtext.last_page>Sista sidan</rtext.last_page>
+				<rtext.last_two_cats>Sista två kategorierna</rtext.last_two_cats>
+				<rtext.last_two_pages>Sista två sidorna</rtext.last_two_pages>
+				<rtext.link_list_alt>Sidan är en länklista</rtext.link_list_alt>
+				<rtext.missing>Saknas</rtext.missing>
+				<rtext.new>Ny</rtext.new>
+				<rtext.next_cat>Nästa kategori</rtext.next_cat>
+				<rtext.next_num_cats>Nästa #NEXT_CATS kategorier</rtext.next_num_cats>
+				<rtext.next_num_pages>Nästa #NEXT_PAGES sidor</rtext.next_num_pages>
+				<rtext.next_page>Nästa sida</rtext.next_page>
+				<rtext.next_two_cats>Nästa två kategorier</rtext.next_two_cats>
+				<rtext.next_two_pages>Nästa två sidor</rtext.next_two_pages>
+				<rtext.no_all_words>Inga sidor innehåller alla  #SEARCH_WORDS sökord</rtext.no_all_words>
+				<rtext.no_both_words>Inga sidor innehåller båda sökorden</rtext.no_both_words>
+				<rtext.no_phrase>Inga sidor innehåller frasen</rtext.no_phrase>
+				<rtext.nothing_help>Ingenting!</rtext.nothing_help>
+				<rtext.num_all_words>#WORDS_PAGES sidor innehåller alla #SEARCH_WORDS sökord</rtext.num_all_words>
+				<rtext.num_both_words>#WORDS_PAGES sidor innehåller båda sokorden</rtext.num_both_words>
+				<rtext.num_category>#FOUND_CATS kategorier</rtext.num_category>
+				<rtext.num_page_cat>#CAT_PAGES sidor</rtext.num_page_cat>
+				<rtext.num_page>#FOUND_PAGES sidor</rtext.num_page>
+				<rtext.num_phrase>#PHRASE_PAGES sidor innehåller frasen</rtext.num_phrase>
+				<rtext.of>#FOUND_PAGES av #TOTAL_PAGES</rtext.of>
+				<rtext.old>Gammal</rtext.old>
+				<rtext.one_all_words>En sida innehåller alla #SEARCH_WORDS sökord</rtext.one_all_words>
+				<rtext.one_both_words>En sida innehåller båda sökorden</rtext.one_both_words>
+				<rtext.one_category>En kategori</rtext.one_category>
+				<rtext.one_page_cat>En sida</rtext.one_page_cat>
+				<rtext.one_page>En sida</rtext.one_page>
+				<rtext.one_phrase>En sida innehåller frasen</rtext.one_phrase>
+				<rtext.other_cat>Annan</rtext.other_cat>
+				<rtext.p_alt_aud>Sidan innehåller ljud</rtext.p_alt_aud>
+				<rtext.p_alt_img>Sidan innehåller en relevant bild</rtext.p_alt_img>
+				<rtext.p_alt_mul>Sidan innehåller multimedia / funktioner</rtext.p_alt_mul>
+				<rtext.p_alt_vid>Sidan innehåller video</rtext.p_alt_vid>
+				<rtext.phrase>Fras</rtext.phrase>
+				<rtext.prev_cat>Föregående kategori</rtext.prev_cat>
+				<rtext.prev_num_cats>Föregående #PREV_CATS kategorier</rtext.prev_num_cats>
+				<rtext.prev_num_pages>Föregående #PREV_PAGES sidor</rtext.prev_num_pages>
+				<rtext.prev_page>Föregående sida</rtext.prev_page>
+				<rtext.prev_two_cats>Föregående två kategorier</rtext.prev_two_cats>
+				<rtext.prev_two_pages>Föregående två sidor</rtext.prev_two_pages>
+				<rtext.search_help>Sök:</rtext.search_help>
+				<rtext.site>Resultat från sökning på #SITE_NAME</rtext.site>
+				<rtext.title>MondoSearch - Sökresultat</rtext.title>
+				<rtext.two_all_words>Två sidor innehåller alla #SEARCH_WORDS sökord</rtext.two_all_words>
+				<rtext.two_both_words>Två sidor innehåller båda sökorden</rtext.two_both_words>
+				<rtext.two_category>Två kategorier</rtext.two_category>
+				<rtext.two_page_cat>Två sidor</rtext.two_page_cat>
+				<rtext.two_page>Två sidor</rtext.two_page>
+				<rtext.two_phrase>Två sidor innehåller frasen</rtext.two_phrase>
+				<rtext.word_not_found>#SEARCH_WORDS_NOT_FOUND gick inte att hitta</rtext.word_not_found>
+				<stext.and>Sök efter alla orden</stext.and>
+				<stext.date_headline>Rangordna baserat på sidan ålder:</stext.date_headline>
+				<stext.date_new>Nya sidor först</stext.date_new>
+				<stext.date_no>Nej</stext.date_no>
+				<stext.date_some>Delvis</stext.date_some>
+				<stext.db_closed>Sökmotorn håller på att uppdatera just nu. Vänligen försök igen lite senare.</stext.db_closed>
+				<stext.download>Ladda ner</stext.download>
+				<stext.email>Epost</stext.email>
+				<stext.headline>Sök</stext.headline>
+				<stext.lang_headline>Språk:</stext.lang_headline>
+				<stext.media_aud_alt>Sök efter alla sidor som innehåller ljud</stext.media_aud_alt>
+				<stext.media_aud>Ljud</stext.media_aud>
+				<stext.media_headline>Sök efter:</stext.media_headline>
+				<stext.media_img_alt>Sök efter en relevant bild</stext.media_img_alt>
+				<stext.media_img>Bild</stext.media_img>
+				<stext.media_mul_alt>Sök efter sidor som innehåller multimedia / funktioner</stext.media_mul_alt>
+				<stext.media_mul>Multimedia / funktioner</stext.media_mul>
+				<stext.media_text>Media</stext.media_text>
+				<stext.media_vid_alt>Sök efter sidor som innehåller video</stext.media_vid_alt>
+				<stext.media_vid>Video</stext.media_vid>
+				<stext.no_media>Ingen speciall mediatyp</stext.no_media>
+				<stext.or>Sök efter något av orden</stext.or>
+				<stext.search_all_cats>Alla katagorier</stext.search_all_cats>
+				<stext.search_cat>Välj kategori:</stext.search_cat>
+				<stext.search>Ange dina sökord:</stext.search>
+				<stext.submit_image_height>24</stext.submit_image_height>
+				<stext.submit_image_width>85</stext.submit_image_width>
+				<stext.submit_image>SearchSV.gif</stext.submit_image>
+				<stext.submit_text>Sök</stext.submit_text>
+				<stext.title>MondoSearch - Sök</stext.title>
+				<version>5.2</version>
+				<noaccess>Ingen åtkomst!</noaccess>
+			</searchtemplate>
+			<searchoptions>
+				<searchtypeoption>
+					<none></none>
+					<or>Or - träff om något av sökorden finns</or>
+					<and>And - alla sökord måste finnas</and>
+					<exact>Exact - bara den exakta frasen</exact>
+				</searchtypeoption>
+				<phoneticson>
+					<default>Använd inställningarna i det bakomliggande systemet</default>
+					<always>Använd alltid fonetisk sökning</always>
+					<usenoresult>Använd bara fonetisk sökning om inga sidor hittades</usenoresult>
+					<never>Använd aldrig fonetisk sökning</never>
+				</phoneticson>
+			</searchoptions>
+			<plugins>
+				<common>
+					<anerrorhasoccurred>Ett fel har uppstått!</anerrorhasoccurred>
+					<nodatafromservice>Erhöll inga data från datakällan</nodatafromservice>
+				</common>
+				<metadata>
+					<breadcrumbhome>Hem!</breadcrumbhome>
+				</metadata>
+				<pageviewbt>
+					<name>BehaviorTracking</name>
+					<shortname>BT</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Använd BehaviorTracking™ för att få mer information kring hur användarna använder sökfunktionen.</description>
+					<searchphrases>Sökfraser som använts för att hitta sidan</searchphrases>
+					<expectedphrases>Sökord som förväntades vara på sidan</expectedphrases>
+					<pageinfo>Sidinformation</pageinfo>
+					<pageurl>Sidadress (Url): </pageurl>
+					<totalclicks>Totalt antal klick: </totalclicks>
+					<avgdailyclick>Dagligt antal klick i medeltal: </avgdailyclick>
+					<searchtrend>Söktrend</searchtrend>
+					<savebutton>Spara metadata</savebutton>
+					<publishbutton>Publicera metadata</publishbutton>
+					<nodata>Det finns ingen tillgänglig information kring denna sida&lt;br /&gt;&lt;br /&gt;</nodata>
+					<checkchildrenbutton>Lista antalet sökfraser per barnsida</checkchildrenbutton>
+				</pageviewbt>
+				<treeviewms>
+					<name>MondoSearch</name>
+					<shortname>MS</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Använd MondoSearch™ för att finna sidorna du letar efter.</description>
+					<searchingress>Ange ett ord eller en fras och klicka på "Sök"&lt;br /&gt;</searchingress>
+					<searchbuttontext>Sök</searchbuttontext>
+					<anerroroccurred>Ett oväntat fel har uppstått. Kör en diagostisk test och kontrollera inställningarna i administratörsläget.</anerroroccurred>
+					<noresult>Inga sidor hittades vid sökningen.</noresult>
+					<noaccess>Du har inge åtkomst till denna funktion. Kontakta din MondoSearch-administrator.</noaccess>
+					<enterasearchstring>Vänligen ange en söksträng att söka efter.</enterasearchstring>
+				</treeviewms>
+				<treeviewbt>
+					<name>BehaviorTracking</name>
+					<shortname>BT</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Används BehaviorTracking™ för att få reda på mer om användarens sökbeteende.</description>
+				</treeviewbt>
+				<treeviewim>
+					<name>InformationManager</name>
+					<shortname>IM</shortname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Använd InformationManager™ för att finjustera sökningen över tiden.</description>
+				</treeviewim>
+				<configurationmenu>
+					<name>MondoSearch-inställningar</name>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Använd "MondoSearch inställningar" för att konfigurera integrationen med MondoSearch™ , BehaviorTracking™ coh InformationManager™.</description>
+				</configurationmenu>
+				<controlcentermenu>
+					<name>MondoSearch kontrollpanel</name>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Använd "MondoSearch kontrollpanel" för att arbeta med din integration med MondoSearch™ , BehaviorTracking™ och InformationManager™.</description>
+				</controlcentermenu>
+				<scheduler>
+					<displayname>MondoSearch bakgrundsjobb &lt;img style="border:0px; margin:0px; padding:0px;" src="../mondosoft/images/logo16.gif" /&gt;</displayname>
+					<imgurl>mondosoft/images/logo16.gif</imgurl>
+					<description>Detta är det bakgrundsjobb som hanterar den automatisk aktiveringen av sidindexeraren samt systemövervakningen.</description>
+				</scheduler>
+				<configuration>
+					<title>MondoSearch-inställningar</title>
+					<heading>MondoSearch-inställningar</heading>
+					<info>Använd "MondoSearch-inställningar" för att konfigurera integrationen med MondoSearch™ , BehaviorTracking™ and InformationManager™.&lt;br /&gt;&lt;br /&gt;</info>
+					<webservicesettings>
+						<tabname>WebService-inställningar</tabname>
+						<searchservice_license>MondoSearch-licens</searchservice_license>
+						<searchservice_url>URL som pekar på MondoSearch-webbtjänst (sökning)</searchservice_url>
+						<connectionstring_ms>Anslutningssträng för access mot MondoSearch:s webbtjänst</connectionstring_ms>
+						<connectionstring_im>Anslutningssträng för access mot InformationManager:s webbtjänst</connectionstring_im>
+						<connectionstring_bt>Anslutningssträng för access mot BehaviorTracking:s webbtjänst</connectionstring_bt>
+						<ms_url>URL som pekar på MondoSearch:s webbtjänst (underhåll)</ms_url>
+						<im_url>URL som pekar på InformationManager:s webbtjänst</im_url>
+						<bt_url>URL som pekar på BehaviorTracking:s webbtjänst</bt_url>
+						<demosettingsbutton>Fyll med demoinställningar</demosettingsbutton>
+						<generate>
+							<createnew>Skapa ny...</createnew>
+							<info>Ange din anslutningsuppgifter och klicka på "Generera anslutningssträng" för att skapa en ny anslutningssträng.</info>
+							<remember>Glöm inte att klicka på "Spara"-knappen längst ner på sidan för att spara den nya anslutningssträngen.</remember>
+							<user>Användare</user>
+							<password>Lösenord</password>
+							<hostname>Värdnamn</hostname>
+							<licensecode>Licenskod</licensecode>
+							<buttongenerate>Generera anslutningssträng</buttongenerate>
+							<buttoncancel>Avbryt</buttoncancel>
+						</generate>
+						<demo>
+							<searchserviceurl>http://episerverdemo.mondosearch.com/SearchService/SearchService.asmx</searchserviceurl>
+							<searchservicelicense>7d4248463149916c73902d4a86b3513f</searchservicelicense>
+							<connectionstringms>USERNAME='epi' HOSTNAME='episerverdemo.mondosearch.com' CRYPT='MjSw+tkOALhXG/DvpKDCP4/8tR80tArrQK69D34rLbdv/y00mhdzq4GLlUPRLL5l7hwWkntZau7jWCYWvirxHdZgmkPyUz2bGoXLD7ObJSbUmlb7C4G0clVFwURCTNUj6Aa7/E6Q/aI='</connectionstringms>
+							<connectionstringbt>USERNAME='episerverdemo' CRYPT='AgV0GTq65qCYOW9tno7ZtvJBcveU78n2XuQZGPVDtGumjJe49AhvdHInGeN36YNJfnrMkfvZGZQ='</connectionstringbt>
+							<connectionstringim>USERNAME='epi' HOSTNAME='episerverdemo.mondosearch.com' CRYPT='MjSw+tkOALhXG/DvpKDCP4/8tR80tArrQK69D34rLbdv/y00mhdzq4GLlUPRLL5l7hwWkntZau7jWCYWvirxHdZgmkPyUz2bGoXLD7ObJSbUmlb7C4G0clVFwURCTNUj6Aa7/E6Q/aI='</connectionstringim>
+							<msurl>http://episerverdemo.mondosearch.com/SearchService/MSService.asmx</msurl>
+							<bturl>http://episerverdemo.behaviortracking.com/WebService/BTService.asmx</bturl>
+							<imurl>http://episerverdemo.mondosearch.com/SearchService/IMService.asmx</imurl>
+						</demo>
+						<warning>Varning! Då dessa inställningar sparas kommer webbapplikationen startas om.</warning>
+						<savebutton>Save</savebutton>
+					</webservicesettings>
+					<settings>
+						<tabname>Allmäna inställningar</tabname>
+						<accessgroupms>Behörighetsgrupp för MS-åtkomst</accessgroupms>
+						<accessgroupbt>Behörighetsgrupp för BT-åtkomst</accessgroupbt>
+						<accessgroupim>Behörighetsgrupp för IM-åtkomst</accessgroupim>
+						<useshorttabnames>Används kort fliknamn</useshorttabnames>
+						<datespan>Datumintervall för BehaviorTracking</datespan>
+						<accessgroupitems>
+							<nolimit>Inga begränsningar</nolimit>
+							<donotshow>Visa aldrig</donotshow>
+							<line>-----------</line>
+						</accessgroupitems>
+						<datespanitems>
+							<default>Standard</default>
+							<previousday>Föregående dag</previousday>
+							<previous7days>Föregående 7 dagar</previous7days>
+							<previous14days>Föregående 14 dagar</previous14days>
+							<previous30days>Föregående 30 dagar</previous30days>
+							<previous90days>Föregående 90 dagar</previous90days>
+							<previous365days>Föregående 365 dagar</previous365days>
+							<allavailabletime>All tillgänglig tid</allavailabletime>
+						</datespanitems>
+						<warning>Varning! Då dessa inställningar sparas kommer webbapplikationen startas om.</warning>
+						<savebutton>Spara</savebutton>
+					</settings>
+					<crawlersettings>
+						<tabname>Inställningar webbplatsindexering</tabname>
+						<crawleragent>Agentnamn som används av indexeringsmotorn</crawleragent>
+						<alertmailto>Sänd varningar till denna epostadress</alertmailto>
+						<alertmailfrom>Sänd varningar från denna epostadress</alertmailfrom>
+						<crawlerintervall>Indexeringsintervall i timmar</crawlerintervall>
+						<donotrun>Starta ej indexeringen mellan dessa tider (tt:mm - tt:mm)</donotrun>
+						<warning>Varning! Då dessa inställningar sparas kommer webbapplikationen startas om.</warning>
+						<savebutton>Spara</savebutton>
+					</crawlersettings>
+					<backgroundjob>
+						<tabname>Bakgrundsjobb</tabname>
+						<info>Det går att starta ett bakgrundsjobb i EPiServer som regelbundet (var 20:e minut) kontrollerar indexeringsmotorns tillstånd. Indexeringsmotorn startar automatiskt publiserar resultatet när det, baserat på tidsintervallet, är dags att indexera igen. Om indexeringen inte fungerat inom dubbla tidsintervallet eller om något annt fel uppstått så kommer ett epostmeddelande att skickas till den mottagare som angivits under Indexeringsinställningar.&lt;br /&gt;&lt;br /&gt; Om bakgrundsjobbet inte är aktiverat kan du klicka på knappen "Skapa bakgrundsjobb". Du kan också ta bort bakgrundsjobbet genom att klicka på knappen "Ta bort bakgrundsjobb".&lt;br /&gt;&lt;br /&gt;Du kan köra bakgrundsjobbet manuellt genom att klicka på knappen "Kör bakgrundsjobbet manuellt" och du kan slutligen se loggen för bakgrundsjobbet genom att klicka på "Visa logg".&lt;/br&gt;&lt;br /&gt;</info>
+						<createschedulerbutton>Skapa bakgrundsjobb</createschedulerbutton>
+						<killjobbutton>Ta bort bakgrundsjobb</killjobbutton>
+						<runjobbutton>Kör bakgrundsjobbet manuellt</runjobbutton>
+						<loadlogbutton>Visa logg</loadlogbutton>
+						<nofologitems>20</nofologitems>
+					</backgroundjob>
+					<diagnostic>
+						<tabname>Diagnostik</tabname>
+						<info>Använd denna sida för att testa integrationen. Notera gärna att en diagnos i vissa fall kan ta flera minuter att köra.</info>
+						
+						<buttoninternettest>Testa internetåtkomst</buttoninternettest>
+						<buttonsearchservicetest>Testa sökservicen</buttonsearchservicetest>
+						<buttonmstest>Testa MondoSearch</buttonmstest>
+						<buttonbttest>Testa BehaviorTracking</buttonbttest>
+						<buttonimtest>Testa InformationManager</buttonimtest>
+						<buttonalltests>Kör alla tester</buttonalltests>
+						
+						<intenetaccess>Testa om webservern har internetåtkomst (kan servern nå http://www.mondosoft.com)</intenetaccess>
+						<intenetaccesshelp>Alla anslutningar från webbservern till webtjänsterna använder sig av http. Om webbservern inte kan nå internet kan det indikera att en brandvägg blockerar trafiken ut från webbservern över http (port 80).</intenetaccesshelp>
+
+						<searchserviceaccess>Testa om webbservern kan nå webbtjänsten för SearchServices</searchserviceaccess>
+						<searchserviceaccesshelp>Om webbservern inte kan nå webbtjänsten så kan det indikera fel i inställningarna av URL. Det kan också indikera att webbtjänsten inte kan nås eller att den inte är igång. Försök att anropa webbtjänsten manuellt i en webbläsare via den angivna URL:en.</searchserviceaccesshelp>
+						<searchserviceisok>Testa om tjänsten SearchServices är igång</searchserviceisok>
+						<searchserviceisokhelp>Om SearchServices inte är igång så kan det bero på att sökmotorn håller på att indexera.</searchserviceisokhelp>
+						<searchservicecanrun>Testa om tjänsten SearchServices fungerar (sök efter 'i')</searchservicecanrun>
+						<searchservicecanrunhelp>Om SearchServices inte fungerar så beror det förmodligen på ett mer allvarligt fel på SearchServices-servern Försök att använda InSite-verktygen på servern.</searchservicecanrunhelp>
+
+						<msserviceaccess>Testa om webbservern kan nå webbtjänsten för MondoSearch</msserviceaccess>
+						<msserviceaccesshelp>Om webbservern inte kan nå webbtjänsten så kan det indikera fel i inställningarna av URL. Det kan också indikera att webbtjänsten inte kan nås eller att den inte är igång. Försök att anropa webbtjänsten manuellt i en webbläsare via den angivna URL:en.</msserviceaccesshelp>
+						<msserviceisok>Testa om tjänsten MondoSearch är igång</msserviceisok>
+						<msserviceisokhelp>Om MondoSearch inte är igång så kan det bero på att sökmotorn håller på att indexera.</msserviceisokhelp>
+						<msservicecanrun>Testa om tjänsten MondoSearch fungerar</msservicecanrun>
+						<msservicecanrunhelp>Om MondoSearch inte fungerar så beror det förmodligen på ett mer allvarligt fel på MondoSearch-servern Försök att använda InSite-verktygen på servern.</msservicecanrunhelp>
+
+						<btserviceaccess>Testa om webbservern kan nå webbtjänsten för BehaviorTracking</btserviceaccess>
+						<btserviceaccesshelp>Om webbservern inte kan nå webbtjänsten så kan det indikera fel i inställningarna av URL. Det kan också indikera att webbtjänsten inte kan nås eller att den inte är igång. Försök att anropa webbtjänsten manuellt i en webbläsare via den angivna URL:en.</btserviceaccesshelp>
+						<btserviceisok>Testa om tjänsten BehaviorTracking är igång</btserviceisok>
+						<btserviceisokhelp>Om BehaviorTracking inte är igång så kan det bero på att sökmotorn håller på att indexera.</btserviceisokhelp>
+						<btservicecanrun>Testa om tjänsten BehaviorTracking fungerar</btservicecanrun>
+						<btservicecanrunhelp>Om BehaviorTracking inte fungerar så beror det förmodligen på ett mer allvarligt fel på BehaviorTracking-servern. Försök att använda InSite-verktygen på servern.</btservicecanrunhelp>
+
+						<imserviceaccess>Testa om webbservern kan nå webbtjänsten för InformationManager</imserviceaccess>
+						<imserviceaccesshelp>Om webbservern inte kan nå webbtjänsten så kan det indikera fel i inställningarna av URL. Det kan också indikera att webbtjänsten inte kan nås eller att den inte är igång. Försök att anropa webbtjänsten manuellt i en webbläsare via den angivna URL:en.</imserviceaccesshelp>
+						<imserviceisok>Testa om tjänsten InformationManager är igång</imserviceisok>
+						<imserviceisokhelp>Om InformationManager inte är igång så kan det bero på att sökmotorn håller på att indexera.</imserviceisokhelp>
+						<imservicecanrun>Testa om tjänsten InformationManager fungerar</imservicecanrun>
+						<imservicecanrunhelp>Om InformationManager inte fungerar så beror det förmodligen på ett mer allvarligt fel på InformationManager-servern. Försök att använda InSite-verktygen på servern.</imservicecanrunhelp>
+
+					</diagnostic>
+				</configuration>
+				<controlcenter>
+					<title>MondoSearch kontrollpanel</title>
+					<heading>MondoSearch kontrollpanel</heading>
+					<info>Använd MondoSearch kontrollpanel för att arbeta med MondoSearch™ , BehaviorTracking™ and InformationManager™.&lt;br /&gt;&lt;br /&gt;</info>
+					<startpage>
+						<tabname>Startsida</tabname>
+						<info>&lt;h1&gt;Välkommen&lt;/h1&gt;Du har kommit till kontrollpanelen för MondoSearch™ , BehaviorTracking™ och InformationManager™. På denna sida kan du hantera indexeringsmotorn samt publiceringsfunktionen i MondoSearch. Du kan också kontrollera hur den senaste indexeringen gick.</info>
+						<firsttime>&lt;h1&gt;Välkommen&lt;/h1&gt;Du har kommit till kontrollpanelen för MondoSearch™ , BehaviorTracking™ och InformationManager™. Det verkar som om det är första gången du använder integrationspaketet mellan MondoSearch och EPiServer. Vänligen klicka på Konfigurations-fliken till vänster och välj sedan alternativet MondoSearch-konfiguration.</firsttime>
+					</startpage>
+					<overview>
+						<tabname>Översikt</tabname>
+						<crawlerstate>Status på indexeringsmotorn</crawlerstate>
+						<productionstate>Produktionsstatus</productionstate>
+						<lastproductionpublish>Senaste gången publicering skedde</lastproductionpublish>
+						<pagesnotgrabbed>Sidor som inte indexerades</pagesnotgrabbed>
+						<pagessavedtodb>Antal sidor som sparats i databas</pagessavedtodb>
+						<serviceaddress>Serviceadress (URL)</serviceaddress>
+						<refresh>Uppdatera</refresh>
+					</overview>
+					<maintenance>
+						<tabname>Underhåll</tabname>
+						<mondosearchsectionheader>MondoSearch-indexeringr</mondosearchsectionheader>
+						<mondosearchsectiondescription>Du kan starta indexeringen menaullt inifrån EPiServer. Välj om du automatiskt vill publicera resultatet och välj om du vill ha en utökad loggning. Om indexeringen redan är igång kan du avbryta den. Detta är dock inte att rekommendera då indexeringen kan hamna i ett instabilt läge.&lt;br /&gt;&lt;br /&gt;</mondosearchsectiondescription>
+						<startbutton>Starta indexeringen</startbutton>
+						<stopbutton>Stoppa indexeringen</stopbutton>
+						<publishaftergrabbing>Publicera automatiskt efter indexering</publishaftergrabbing>
+						<verboselogging>Utökad loggning</verboselogging>
+						<killbutton>Avbryt indexeringen</killbutton>
+						<publishbutton>Publicera för produktion</publishbutton>
+						<killcrawlerwarning>Genom att klicka på knappen "Avbryt" stannar indexeringen omgående. Notera att denna åtgärd inte städar upp databasen och att systemet därmed lämnas i ett instabilt tillstånd. Använd funktionen med försiktighet.</killcrawlerwarning>
+					</maintenance>
+					<log>
+						<tabname>Logg</tabname>
+						<info>&lt;br /&gt;Loggen visar information från den senaste indexeringen.&lt;br /&gt;&lt;br /&gt;</info>
+						<getlogbutton>Uppdatera</getlogbutton>
+					</log>
+				</controlcenter>
+			</plugins>
+			<btreports>
+				<charts>
+					<btchartpagesfoundpersearch>
+						<heading>Hittade sidor per sökning</heading>
+						<xaxis>Innehållssidor som hittats</xaxis>
+						<yaxis>Sökningar</yaxis>
+					</btchartpagesfoundpersearch>
+					<btchartsearchesperday>
+						<heading>Sökningar per dag</heading>
+						<xaxis>Dag</xaxis>
+						<yaxis>Sökningar</yaxis>
+					</btchartsearchesperday>
+					<btchartsessionsperday>
+						<heading>Sessioer per dag</heading>
+						<xaxis>Dag</xaxis>
+						<yaxis>Sessioner</yaxis>
+					</btchartsessionsperday>
+					<btlinksdetailssearchterms>
+						<heading>De vanligaste sökfraserna</heading>
+					</btlinksdetailssearchterms>
+					<btchartperformancemap>
+						<heading>Prestandaöversikt</heading>
+						<xaxis>% Sökningar som ledde till resultat</xaxis>
+						<yaxis>% Sessioner med en selektion</yaxis>
+						<dataset1>Primärt datumintervall</dataset1>
+						<dataset2>Lokalt datumintervall</dataset2>
+						<dataset3>Andra webbar</dataset3>
+					</btchartperformancemap>
+					<btchartperformancemapdetailed>
+						<dataset1>All data</dataset1>
+					</btchartperformancemapdetailed>
+				</charts>
+				<general>
+					<listid>ID</listid>
+					<listlabel>Område</listlabel>
+					<listextra></listextra>
+					<listdescription>Värde</listdescription>
+					<otherwordsinsearchterms>Andra ord</otherwordsinsearchterms>
+					<noofitems>Antal poster</noofitems>
+					<refresh>Updatera</refresh>
+				</general>
+				<noaccess>
+					<heading>Ingen åtkomst</heading>
+					<description>Du har ingen åtkomst till denna rapport. Du behöver tillhöra den åtkomstgrupp som är definierad att kunna nå BehaviorTracking.</description>
+				</noaccess>
+				<overview>
+					<menuname>Översikt - sökningar per dag</menuname>
+					<heading>Översikt - sökningar per dag</heading>
+					<description>Uppgifterna under "Översikt - sökningar per dag" ger dig den snabbaste om mest generella överblicken över hur sökmotorn fungerar. Denna sida visar en summering av sökfunktioner som utförts på din webbplats under valt tidsintervall.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Analys</firstcol1>
+					<firstcol2>Resultat</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<allavailabledays>Alla tillgängliga dagar</allavailabledays>
+					<noofdays>Antal dagar inom det aktiva datumintervallet</noofdays>
+					<noofsearches>Antal sökningar inom det aktiva datumintervallet</noofsearches>
+					<searchesperday>Sökningar per dag</searchesperday>
+					<noofsessions>Antal sessioner inom det aktiva datumintervallet</noofsessions>
+					<urlclicks>Antal "klick" (sidor valda)</urlclicks>
+					<noresultsearches>Sökningar utan resultat</noresultsearches>
+					<noresultsearchespercent>Procentandel av sökningar utan resultat</noresultsearchespercent>
+					<noclicksessionspercent>Procentandel med sessioner utan klick</noclicksessionspercent>
+				</overview>
+				<performancemap>
+					<menuname>Prestandaöversikt</menuname>
+					<heading>Prestandaöversikt</heading>
+					<description>Prestandaöversikten ger en överblick över hur väl sökmotorn tillgodoser besökarens behov. Den värderar webbplatsens kvalitet baserat på antalet sökningar som resulterar i åtminstonde ett reultat och antalet sessioner som åtminstone leder till ett klick.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Analys</firstcol1>
+					<firstcol2>Analysresultat</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>65</firstcol2width>
+					<ssi>SSI (Site Success Index)</ssi>
+					<ssiexplanation>SSI-förklaring</ssiexplanation>
+					<sr>SRR (Search Result Rate)</sr>
+					<srexplanation>SRR-förklaring</srexplanation>
+					<siq>SIQ (Search Implementation Quality)</siq>
+					<siqexplanation>SIQ-förklaring</siqexplanation>
+					<ssi_excellent>&lt;B&gt;Mycket bra:&lt;/B&gt; Din sökmotor returnerar nästan alltid sökresultat. Dina besökare tycks också vara intresserade av resultaten då de nästan alltid väljer att klicka på något av dem.</ssi_excellent>
+					<ssi_good>&lt;B&gt;Bra:&lt;/B&gt; Din sökmotor returnerar ofta resultat och dina besökare verkar vara intresserade av resultaten då de oftast klickar på dem. Kontrollera värdena på SRR och SIQ för att se vilka förbättringar du kan göra.</ssi_good>
+					<ssi_ok>&lt;B&gt;Mindre bra:&lt;/B&gt; En anmärkningsvärt stor del av besökarna kan vara frustrerade över din sökmotor då den ofta inte resulterar i något resultat och/eller resultaten inte tycks intressera besökaren. Kontrollera värdena på SRR och SIQ för att se vilka förbättringar du kan göra. Du bör förmodligen försöka förbättra antalet träffar genom att t ex arbeta med en språkstam. Du kan också behöva förbättra presentationen av resultatet genom att justera titlar, beskrivningar, kategorier och rankning.</ssi_ok>
+					<ssi_poor>&lt;B&gt;Dåligt:&lt;/B&gt; De flesta av besökarna kan vara frustrerade över din sökmotor då den ofta inte resulterar i något resultat och/eller resultaten inte tycks intressera besökaren. Kontrollera värdena på SRR och SIQ för att se vilka förbättringar du kan göra. Du bör förmodligen försöka förbättra antalet träffar genom att t ex arbeta med en språkstam. Du kan också behöva förbättra presentationen av resultatet genom att justera titlar, beskrivningar, kategorier och rankning.&lt;br&gt;Det är möjligt att besökarna ofta missförstår syftet med din webbplats. Kontrollera "De vanligaste termerna som ej hittas" och "De vanligaste termerna som ej ledde till klick" för att se om besökarna letar efter fel saker.</ssi_poor>
+					<sr_excellent>&lt;B&gt;Mycket bra:&lt;/B&gt; Nästan alla sökningar ger resultat. Du skulle ändå kunna kontrollera SIQ-värdet för att se om dina besökare gillar de sidor de hittar.</sr_excellent>
+					<sr_good>&lt;B&gt;Bra:&lt;/B&gt; Sökningar leder ofta till att en eller flera sidor hittas. Du kan förbättra detta genom att använda fonetik och språkstammar vid sökningen. Du kan också lägga till Meta-data eller nyckelord på sidorna. Arbeta med "De vanligaste termerna som ej hittas" för att se vilka sökhuvuden och söklänkar som ska läggas till.</sr_good>
+					<sr_ok>&lt;B&gt;Mindre bra:&lt;/B&gt; Många sökningar leder inte till något sökresultat. Använd "De vanligaste termerna som ej hittas" för att se vilka söktermer som inte leder till något resultat.  Om besökarna tycks stava fel så bör du slå på stöd för språkstammar och fonetisk sökning. Om du ser att besökaren söker efter konkurrenade produkter, använd sökhuvuden och söklänkar för att leda dem till din motsvarande produkt. &lt;br /&gt; Om du ser att besökarna letar efter information som inte finns på din webbplats bör den efterfrågade informationen läggas upp eller så bör sökhuvuden visas som hanterar problemet.  &lt;br /&gt; Ställ in din sökmotor så att villkoret "Or" för att öka på antalet träffar vid en sökning med flera ord.</sr_ok>
+					<sr_poor>&lt;B&gt;Dåligt:&lt;/B&gt; De flesta sökningarna leder inte till några träffar över huvud taget. Säkerställ att indexeringen fungerar korrekt och att alla sidor verkligen indexeras.&lt;br /&gt; Ställ in din sökmotor så att villkoret "Or" för att öka på antalet träffar vid en sökning med flera ord. Använd "De vanligaste termerna som ej hittas" för att se vilka söktermer som inte leder till något resultat. Om besökarna tycks stava fel så bör du slå på stöd för språkstammar och fonetisk sökning. Om du ser att besökaren söker efter konkurrenade produkter, använd sökhuvuden och söklänkar för att leda dem till din motsvarande produkt. &lt;br /&gt; Om du ser att besökarna letar efter information som inte finns på din webbplats bör den efterfrågade informationen läggas upp eller så bör sökhuvuden visas som hanterar problemet.</sr_poor>
+					<siq_excellent>&lt;B&gt;Mycket bra:&lt;/B&gt; Besökarna tycks gilla sökresultaten de får fram då de nästan alltid klicka på någon av länkarna i resultatet.</siq_excellent>
+					<siq_good>&lt;B&gt;Bra:&lt;/B&gt; Besökarna är ofta, men inte alltid, intresserade av resultatet sökningen ger. Detta kan bero på att de eftersökta sidorna saknas eller att de är för lågt rankade. Kontrollera "De vanligaste termerna som ej hittas" för att se vad som eftersöks men inte hittas.&lt;br /&gt; Förbättra ditt rankningssytem genom att lägga till sökmotorkategorier (inklusive "bästa gissningen") och/eller lägg till Meta-data till dina bästa innehållssidor. &lt;P&gt; För att säkerställa att besökaren hittar de sidor denne söker efter, justera rubriker och sidinnehåll/sidbeskrivningar. &lt;br /&gt;  För att styra besökaren till dina bästa sidor, använd sökhuvuden eller söklänkar.</siq_good>
+					<siq_ok>&lt;B&gt;Mindre bra:&lt;/B&gt; Besökarna lämnar för ofta söksidan utan att ha klickat på något av sökresultaten. Gå igenom listan "De vanligaste termerna som ej ledde till klick" och se var problemet ligger.  &lt;br /&gt; Gå igenom dina rubriker och sidbeskrivningar/sidinnehåll för att se att detta är relevant. Om sidbeskrivning saknas bör automatgenerering av sidbeskrivning vara påslaget i indexeringsmotorn.&lt;br /&gt; Förbättra ditt rankningssytem genom att lägga till sökmotorkategorier (inklusive "bästa gissningen") och/eller lägg till Meta-data till dina bästa innehållssidor.</siq_ok>
+					<siq_poor>&lt;B&gt;Dåligt:&lt;/B&gt; Besökarna tycks inte alls gilla de sökresultat de erhåller. Dom klickar sällan på något resultat på söksidan. Gå igenom listan "De vanligaste termerna som ej ledde till klick" och se var problemet ligger.  &lt;br /&gt; Gå igenom dina rubriker och sidbeskrivningar/sidinnehåll för att se att dessa är relevanta. Om sidbeskrivning saknas bör automatgenerering av sidbeskrivning vara påslaget i indexeringsmotorn.&lt;br /&gt; Det är möjligt att de bästa sidorna inte visas i sökresultatet för att sökmotorn är för restriktiv. ANvänd då fonetisk sökning spårkstammar. Överväg också att ställa in din sökmotor så att villkoret "Or" används för att öka på antalet träffar vid en sökning med flera ord. Förbättra ditt rankningssytem genom att lägga till sökmotorkategorier (inklusive "bästa gissningen") och/eller lägg till Meta-data till dina bästa innehållssidor.</siq_poor>
+				</performancemap>
+				<searchesandclicks>
+					<menuname>Sökningar  &amp; klick</menuname>
+					<heading>Sökningar  &amp; klick</heading>
+					<description>Valen under "Sökningar  &amp; klick" ger dig möjlighet att analysera frågorna som skickats till sökmotorn. Dessa kommer att hjälpa dig upptäcka vad dina användare söker efter, fånga upp vanliga felstavningar och finna vägar som hjälper dem hitta vad de söker snabbare. Denna sida ger dig en summering av sökningar och klickningar som loggats av din sökmotor.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Relaterade söktermer</firstcol1>
+					<firstcol2>Antal sökningar</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<noofsearches>Antal sökningar i det akttuella datumintervallet</noofsearches>
+					<searchesperday>Sökningar per dag</searchesperday>
+					<urlclicks>Antal "klick" (sidor valda</urlclicks>
+					<noresultsearches>Sökningar utan resultat</noresultsearches>
+					<noresultsearchespercent>Procentandel av sökningar utan resultat</noresultsearchespercent>
+				</searchesandclicks>
+				<topsearchterms>
+					<menuname>De vanligaste söktermerna</menuname>
+					<heading>De vanligaste söktermerna</heading>
+					<description>Denna sida visar de söktermer som mest eftersöks på din webbplats. Klicka på en term för att få reda på mer detaljer om termen.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Söktermer</firstcol1>
+					<firstcol2>Ssessioner</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topsearchterms>
+				<relatedwords>
+					<heading>Detaljer för söktermen: #WORD</heading>
+					<description>Denna sida visar hur en sökterm har använts via sökmotorn. Den listar andra termer som ofta använts under samma session, de senaste sessionerna termen har använts i samt de länkar som vanligast har blivit valda baserat på termen.</description>
+					<firstheading>Relaterade termer</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Relaterade ord</firstcol1>
+					<firstcol2>Sessioner</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<secondheading>De senaste sessionerna som innehåller termen</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Värdnamn</secondcol1>
+					<secondcol2>Datum</secondcol2>
+					<secondcol3>Sökning</secondcol3>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>60</secondcol1width>
+					<secondcol2width>20</secondcol2width>
+					<secondcol3width>15r</secondcol3width>
+					<thirdheading>Valda sidor</thirdheading>
+					<thirdcol0>ID</thirdcol0>
+					<thirdcol1>Url</thirdcol1>
+					<thirdcol2>Klickad</thirdcol2>
+					<thirdcol0width>4</thirdcol0width>
+					<thirdcol1width>60</thirdcol1width>
+					<thirdcol2width>35r</thirdcol2width>
+				</relatedwords>
+				<topnotfound>
+					<menuname>De vanligaste termerna som ej hittas</menuname>
+					<heading>De vanligaste termerna som ej hittas</heading>
+					<description>Denna sida innehåller de söktermer som inte resulterade i några träffar.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Söktermer som inte gick att hitta</firstcol1>
+					<firstcol2>Sessioner</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topnotfound>
+				<topnotclicked>
+					<menuname>De vanligaste termerna som ej ledde till klick</menuname>
+					<heading>De vanligaste termerna som ej ledde till klick</heading>
+					<description>Denna sida innehåller en lista med de vanligaste söktermerna som inte ledde till att besökaren klickade på någon länk på söksidan. Detta kan bero på att söktermen inte resulterade i någon träff eller att besökaren inte fick fram önskat sökresultat. För varje sökterm visas också det totala antalet sessioner söktermen har använts men ej resulterat i några klick. Noter dock att det kan ha varit sessioner där söktermen använts och användaren klickade på någon av sökresultaten.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Sökterm som ej resulterade i något klick</firstcol1>
+					<firstcol2>Antal</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topnotclicked>toplinkschosen
+				<toplinkschosen>
+					<menuname>De vanligaste valda sökresultaten</menuname>
+					<heading>De vanligaste valda sökresultaten</heading>
+					<description>Denna sida innehåller en lista med de länkar som oftast har valts av anvädarna när de använt sökmotorn.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Valda länkar</firstcol1>
+					<firstcol2>Antal</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</toplinkschosen>
+				<searchsessions>
+					<menuname>Söksessioner</menuname>
+					<heading>Söksessioner</heading>
+					<description>Denna sida innehåller infromation om vem som använt din sökmotorn på din webbplats och hur utfallet blev. Du får en summering av de sessioner som blivit loggade av sökmotorn.</description>
+					<noofsessions>Antal sessioner</noofsessions>
+					<noofsessionswithoutclick>Antal sessioner utan klick</noofsessionswithoutclick>
+					<averageduration>Sessionens varaktighet i medeltal</averageduration>
+					<searchespersession>Sökningar per session</searchespersession>
+					<sessionclickrate>Klickandel per session (%)</sessionclickrate>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Område</firstcol1>
+					<firstcol2>Resultat</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</searchsessions>
+				<mostrecentsessions>
+					<menuname>De senaste sessionerna</menuname>
+					<heading>De senaste sessionerna</heading>
+					<description>Denna sida innehåller en lista över de senaste användarsessionerna. Varje session är identifieras antingen av IP-nummer eller (när detta är tillgängligt) domännamnet för besökaren.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Session</firstcol1>
+					<firstcol2>Datum</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</mostrecentsessions>
+				<sessiondetails>
+					<menuname>Sessionsdetaljer</menuname>
+					<heading>Sessionsdetaljer</heading>
+					<description>Denna sida innehåller information om varje enskilt klick för en användarsession. Detta gör det möjligt att följa en användares agerande som om du tittade över axeln på besökaren.</description>
+					<actiontypeclick>Klick</actiontypeclick>
+					<actiontypesearch>Sök</actiontypesearch>
+					<firstheading>Sessionsöversikt</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Beskrivning</firstcol1>
+					<firstcol2>Värde</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+					<secondheading>Sessionslogg</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Tid</secondcol1>
+					<secondcol2>Händelse</secondcol2>
+					<secondcol3>Ord</secondcol3>
+					<secondcol4>Sidor</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>15</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>50</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+					<hostname>Värdnamn</hostname>
+					<date>Sessionsdatum </date>
+					<duration>Sessionens varaktighet</duration>
+					<searchcount>Antal unika sökningar</searchcount>
+					<clickcount>Antal klick</clickcount>
+					<ipaddress>IP-adress</ipaddress>
+				</sessiondetails>
+				<topvisitordomains>
+					<menuname>De vanligaste besökarna</menuname>
+					<heading>De vanligaste besökarna</heading>
+					<description>Denna sida visar antingen IP-adresser eller (när detta är tillgängligt) domännamnet från vilket besökaren oftast har använt din sökmotor.</description>
+					<firstcol0>Rank</firstcol0>
+					<firstcol1>Domän</firstcol1>
+					<firstcol2>Antal sessioner</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</topvisitordomains>
+				<listofsessions>
+					<heading>Sessionsdetaljer</heading>
+					<description>Denna sida innehåller information om varje enskilt klick för en användarsession. Detta gör det möjligt att följa en användares agerande som om du tittade över axeln på besökaren.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Beskrivning</firstcol1>
+					<firstcol2>Värde</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>60</firstcol1width>
+					<firstcol2width>35r</firstcol2width>
+				</listofsessions>
+				<trends>
+					<menuname>Trender</menuname>
+					<heading>Söktermstrend</heading>
+					<description>Denna sida visar de största förändringarna i användandet av olika söktermer på din webbplats. Den håller rätt på de 100 mest använda söktermerna och skapar två tabeller: en som visar vilka söktermer som ökat i användande och en som visar termer som minskat i användande. Båda tabellerna visas med de söktermer som har de största förändringarna överst. Den aktuella (nuvarande) rangordningen är baserat på det aktuella tidsintervallet (det primära och det sekundära), föregående rangordning är baserad på tidsperioden direkt före varje tidsintervall med samma antal dagar som bas. Söktermer som inte fanns med i den föregående topp-100 rankingen visas som "-".</description>
+					<firstheading>Söktermer som är på uppåtgående</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Sökterm</firstcol1>
+					<firstcol2>Nuvarande</firstcol2>
+					<firstcol3>Föregående</firstcol3>
+					<firstcol4>Upp</firstcol4>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>50</firstcol1width>
+					<firstcol2width>15</firstcol2width>
+					<firstcol3width>15</firstcol3width>
+					<firstcol4width>15r</firstcol4width>					
+					<secondheading>Söktermer som är på nedåtgående</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Slterm</secondcol1>
+					<secondcol2>Nuvarande</secondcol2>
+					<secondcol3>Föregående</secondcol3>
+					<secondcol4>Ner</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>50</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>15</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+				</trends>
+				<searchtermstrends>
+					<menuname>Söktermstrender</menuname>
+					<heading>Söktermer som är på uppåtgående</heading>
+					<description>Denna sida visar de största förändringarna i användandet av olika söktermer på din webbplats. Den håller rätt på de 100 mest använda söktermerna och skapar två tabeller: en som visar vilka söktermer som ökat i användande och en som visar termer som minskat i användande. Båda tabellerna visas med de söktermer som har de största förändringarna överst. Den aktuella (nuvarande) rangordningen är baserat på det aktuella tidsintervallet (det primära och det sekundära), föregående rangordning är baserad på tidsperioden direkt före varje tidsintervall med samma antal dagar som bas. Söktermer som inte fanns med i den föregående topp-100 rankingen visas som "-".</description>
+					<firstheading>Söktermer som är på uppåtgående</firstheading>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Sökterm</firstcol1>
+					<firstcol2>Nuvarande</firstcol2>
+					<firstcol3>Föregående</firstcol3>
+					<firstcol4>Upp</firstcol4>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>50</firstcol1width>
+					<firstcol2width>15</firstcol2width>
+					<firstcol3width>15</firstcol3width>
+					<firstcol4width>15r</firstcol4width>					
+					<secondheading>Söktermer som är på nedåtgående</secondheading>
+					<secondcol0>ID</secondcol0>
+					<secondcol1>Sökterm</secondcol1>
+					<secondcol2>Nuvarande</secondcol2>
+					<secondcol3>Föregående</secondcol3>
+					<secondcol4>Ner</secondcol4>
+					<secondcol0width>4</secondcol0width>
+					<secondcol1width>50</secondcol1width>
+					<secondcol2width>15</secondcol2width>
+					<secondcol3width>15</secondcol3width>
+					<secondcol4width>15r</secondcol4width>
+				</searchtermstrends>
+				<behaviormatch>
+					<menuname>BehaviorMatch</menuname>
+					<heading>BehaviorMatch</heading>
+					<description>BehaviorTracking kan identifiera användarens beteende för att upptäcka söktermer som inte initialt resulterade i några träffar men som gav träffar då sökfrasen justerades något. Funktionen kallas för "BehaviorMatch". Användare kan använda listan för att manuellt kunna skapa synonymer i andra sökmotorer genom att lägga till de föreslagna orden som Meta-data på sidorna.</description>
+					<firstcol0>ID</firstcol0>
+					<firstcol1>Initial sökterm</firstcol1>
+					<firstcol2>Föreslagna synonymer</firstcol2>
+					<firstcol0width>4</firstcol0width>
+					<firstcol1width>35</firstcol1width>
+					<firstcol2width>60</firstcol2width>
+				</behaviormatch>
+				<a>
+					<menuname></menuname>
+					<heading></heading>
+					<description></description>
+				</a>
+				<notfoundbox>
+					<heading>Tio-i-topp - sökord som inte gick att hitta</heading>
+				</notfoundbox>
+			</btreports>
+			<imreports>
+				<noaccess>
+					<heading>Ingen åtkomst</heading>
+					<description>Du har ingen åtkomst till denna rapport. Du behöver tillhöra den åtkomstgrupp som är definierad att kunna nå InformationManager.</description>
+				</noaccess>
+				<synonyms>
+					<menuname>Synonymer</menuname>
+					<heading>Synonymer</heading>
+					<description>Synonymer används för att definiera olika ord med samma innebörd. Du skriver in sökfrasen såsom användaren kommer att skriva in den. Ange sedan synonymer som går att hitta på din webbplats. Sökfrasen kan antingen definieras så att den exakt ska motsvara den sökta texten eller som ett av orden i sökfrasen. Synonymen kan också antingen bli presenterad för besökaren som ett förslag på annat sökord eller så kan sökmotorn direkt använda synonymerna som alternativa ord i sökningen.</description>
+					<updatedescription>Uppdatera värdena och spara synonymen. Du kan också radera synonymen genom att klicka på knappen "Radera".</updatedescription>
+					<updateitemcolumn>Fält</updateitemcolumn>
+					<updatevaluecolumn>Värde</updatevaluecolumn>
+					<updatequery>Sökfras</updatequery>
+					<updateexact>Exakt</updateexact>
+					<updateinclude>Inkludera</updateinclude>
+					<updateenable>Aktiverad</updateenable>
+					<updateword>Synonymer</updateword>
+					<updatesave>Spara</updatesave>
+					<updatedelete>Radera</updatedelete>
+					<updatecancel>Avbryt</updatecancel>
+					<addsynonym>Lägg till synonym</addsynonym>
+					<firstcol0>Sökfras</firstcol0>
+					<firstcol1>Exakt</firstcol1>
+					<firstcol2>Inkludera</firstcol2>
+					<firstcol3>Aktiverad</firstcol3>
+					<firstcol4>Synonymer</firstcol4>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>10</firstcol1width>
+					<firstcol2width>10</firstcol2width>
+					<firstcol3width>10</firstcol3width>
+					<firstcol4width>35</firstcol4width>
+				</synonyms>
+				<searchheaders>
+					<menuname>Sökhuvuden</menuname>
+					<heading>Sökhuvuden</heading>
+					<description>Genom att använda sökhuvuden får du en kraftfull möjlighet att lyfta fram produkterbjudanden, nyhetsrubriker, orderformulär eller det du vill lyfta fram på din webbplats. Beroende på sökfras så kan du visa olika bilder eller texter ovanför sökresultaten som kan innehålla länkar till delar av webbplatsen du vill framhäva.</description>
+					<updatedescription>Uppdatera värdena och spara sökhuvudet. Du kan också radera sökhuvudet genom att klicka på knappen "Radera".</updatedescription>
+					<updateitemcolumn>Item</updateitemcolumn>
+					<updatevaluecolumn>Value</updatevaluecolumn>
+					<updateword>Query</updateword>
+					<updateexact>Exact</updateexact>
+					<updatepersonalize>Personaliseringsnummer</updatepersonalize>
+					<updatepersonalizeinfo>Använd värdet "1" för att skapa ett standardsökhuvud.</updatepersonalizeinfo>
+					<updateheader>Header (HTML)</updateheader>
+					<updateinclude>Include</updateinclude>
+					<updateenable>Enable</updateenable>
+					<updatesave>Save</updatesave>
+					<updatedelete>Delete</updatedelete>
+					<updatecancel>Cancel</updatecancel>
+					<addsearchheader>Add SearchHeader</addsearchheader>
+					<firstcol0>Query</firstcol0>
+					<firstcol1>Exact</firstcol1>
+					<firstcol2>Personaliseringsnummer</firstcol2>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>30</firstcol2width>
+				</searchheaders>
+				<searchnames>
+					<menuname>Söklänkar</menuname>
+					<heading>Söklänkar</heading>
+					<description>Genom att använda söklänkar får du en kraftfull möjlighet att associera en sökfras med angiven länk till någon sida på din webbplats. Om användaren skriver in den angivna sökfrasen så kommer sidan den associerade sidan direkt att visas för besökaren utan att först visa sökresultaten.</description>
+					<updatedescription>Uppdatera värdena och spara söklänken. Du kan också radera söklänken genom att klicka på knappen "Radera".</updatedescription>
+					<updateitemcolumn>Fält</updateitemcolumn>
+					<updatevaluecolumn>Värde</updatevaluecolumn>
+					<updateword>Sökfras</updateword>
+					<updateexact>Exakt</updateexact>
+					<updatepersonalize>Personaliseringsnummer</updatepersonalize>
+					<updatepersonalizeinfo>Använd värdet "1" för att skapa en standardlänk.</updatepersonalizeinfo>
+					<updateurl>Url att länka vidare till</updateurl>
+					<updateinclude>Inkludera</updateinclude>
+					<updateenable>Aktivera</updateenable>
+					<updatesave>Spara</updatesave>
+					<updatedelete>Radera</updatedelete>
+					<updatecancel>Avbryt</updatecancel>
+					<addsearchname>Lägg till söklänk</addsearchname>
+					<firstcol0>Sökfras</firstcol0>
+					<firstcol1>Exakt</firstcol1>
+					<firstcol2>Personaliseringsnummer</firstcol2>
+					<firstcol0width>30</firstcol0width>
+					<firstcol1width>30</firstcol1width>
+					<firstcol2width>30</firstcol2width>
+				</searchnames>
+			</imreports>
+			<scheduler>
+				<subjectwehaveaproblem>Ett meddelande från MondoSearch övervakningsfunktion - vi har ett problem</subjectwehaveaproblem>
+				<oldproductiondate>Något är fel! Indexerinsgmotorn eller publiceringsfunktionen i MondoSearch tycks inte fungera korrekt. Föregående publicering skedde {0}! Var vänlig och kontakta webbadministratören.</oldproductiondate>
+				<probablymissedwhencrawling>Något är fel! Indexerinsgmotorn har troligen missat att indexera ett stort antal sidor när senast indexerade webbplatsen. Vid föregående indexering fanns {0} sidor medans det nu bara tycks finnas {1} sidor! Var vänlig och kontakta webbadministratören.</probablymissedwhencrawling>
+				<isnotalive>Något är fel! Indexerinsgmotorn skulle behöva startas men tjänsten är inte igång. Var vänlig och kontakta webbadministratören.</isnotalive>
+				<exceptionthrown>"Något är fel! Ett undantagsfel har uppstått när bakgrundsjobbet skulle köras! '{0}' "</exceptionthrown>
+			</scheduler>
+		</mondosoft>
+	</language>	
+</languages>

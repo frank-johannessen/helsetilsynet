@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="norsk" id="no">
+    <epiimage>
+      <selectimage>Velg bilde</selectimage>
+      <addimage>Legg til bilde</addimage>
+      <preview>Forhåndsvisning</preview>
+      <imagedescription>Bildebeskrivelse</imagedescription>
+      <imagelink>Lenke</imagelink>
+      <saveandclose>Lagre &amp; lukk</saveandclose>
+      <prev>Forrige</prev>
+      <next>Neste</next>
+      <prevtooltip>Lagre og gå til forrige bilde</prevtooltip>
+      <nexttooltip>Lagre og gå til neste bilde</nexttooltip>
+      <draganddroptooltip>Dra og slippe filer eller mapper fra Filhåndtering i Oppgavevinduet hit.</draganddroptooltip>
+      <errorcreateslidefailed>Kunne ikke legge til bilde</errorcreateslidefailed>
+      <errorfiltypenotsupported>Filtypen støttes ikke</errorfiltypenotsupported>
+      <errorimagenotfound>Fant ikke bildefilen</errorimagenotfound>
+      <erroremptyparameter>Tomt parameter</erroremptyparameter>
+    </epiimage>
+  </language>
+</languages>

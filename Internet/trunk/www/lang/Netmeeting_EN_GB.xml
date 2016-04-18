@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <netmeeting>
+    <templates>
+      <admin>
+        <title>NetMeeting Editor Interface</title>
+        <heading>NetMeeting</heading>
+        <subheading>Module for administrering questions and answers</subheading>
+      </admin>
+    </templates>
+    <units>
+      <report>
+        <endmeetingwarning>This will end the netmeeting and save all answered questions on the page.</endmeetingwarning>
+        <generatereportswarning>This will save all questions to disk as text files and erase all question from the database. You will also get an option to save a copy of all questions.</generatereportswarning>
+        <netmeetingendedwarning>The netmeeting is closed and questions has been removed from the database</netmeetingendedwarning>
+        <answeredquestions>
+          Answered questions
+        </answeredquestions>
+        <noansweredquestions>No questions were answered.</noansweredquestions>
+        <questionsonhold>Questions on hold</questionsonhold>
+        <noquestionsonhold>No questions on hold.</noquestionsonhold>
+        <untreatedquestions>New questions</untreatedquestions>
+        <nountreatedquestions>All questions were treated.</nountreatedquestions>
+        <thrownquestions>
+          Discarded questions
+        </thrownquestions>
+        <nothrownquestions>No questions were discarded .</nothrownquestions>
+        <questionsisanswering>Questions that were under treatment when NetMeeting ended</questionsisanswering>
+        <noquestionsisanswering>No questions were under treatment when NetMeeting ended.</noquestionsisanswering>
+        <writername>Sent by: </writername>
+        <time>time: </time>
+        <answer>Answer: </answer>
+      </report>
+      <errormessages>
+
+        <!-- Vises til sluttbruker -->
+        <titletolong>The title is too long!</titletolong>
+        <titletolongdetails> Number of characters allowed is {0}. Your title contains {1} characters.</titletolongdetails>
+        <questiontolong>The text of your question is too long!</questiontolong>
+        <questiontolongdetails> Number of characters allowed is {0}. Your question contains {1} characters.</questiontolongdetails>
+        <nametolong>The name text is too long!</nametolong>
+        <nametolongdetails> Number of characters allowed is {0}. Your name text contains {1} characters.</nametolongdetails>
+        <nonetmeetingid>There was an error. Please try again later.</nonetmeetingid>
+        <missingquestion>You must fill in the title of your question before you can send in!</missingquestion>
+        <missingtitle>You must fill in the title of your question!</missingtitle>
+        <missinganswer>You must fill in the answer before you can send in!</missinganswer>
+        <meetingended>This net meeting is finished!</meetingended>
+        <meetingnotexists>The net meeting you are searching for does not exist!</meetingnotexists>
+        <nojavascript>You do not have support for javascript. In order to take part in a net meeting the client must support javascript.</nojavascript>
+        <emptyquestion> </emptyquestion>
+        <!-- Slutt på elementer som vises til sluttbruker -->
+
+        <noteditor>You are not logged in or the user you are logged in with have not sufficient rights to view this page. Please log in with a user with sufficient rights to do anything on this page!</noteditor>
+        <updatelist>Question status has changed. The list will update itself</updatelist>
+      </errormessages>
+      <messages>
+
+        <!-- Vises til sluttbruker -->
+        <sendquestionsuccess>Your question is sent. Thank you for taking part in the net meeting. </sendquestionsuccess>
+        <!-- Slutt på elementer som vises til sluttbruker -->
+
+        <isansweringsuccess>The question has been cleared for answering.</isansweringsuccess>
+        <sendanswersuccess>Your answer has been sent.</sendanswersuccess>
+        <statusok>The question has correct status</statusok>
+        <onholdsuccess>The question has been set on hold.</onholdsuccess>
+        <restoresuccess>The question has been restored.</restoresuccess>
+        <throwsuccess>The question has been discarded.</throwsuccess>
+      </messages>
+      <menu>
+        <show></show>
+        <all>All</all>
+        <notanswered>New</notanswered>
+        <onhold>On hold</onhold>
+        <answered>Answered</answered>
+        <thrown>Discarded</thrown>
+        <isanswering>Questions being answered</isanswering>
+        <frontpage>To the meeting</frontpage>
+        <endraport>Generate reports and end meeting</endraport>
+      </menu>
+      <heading>
+        <netmeeting>Netmeeting: </netmeeting>
+        <answeredquestions>Answered questions</answeredquestions>
+        <unansweredquestions>New questions</unansweredquestions>
+        <thrownquestions>Questions marked as "discarded"</thrownquestions>
+        <onholdquestions>Questions on hold</onholdquestions>
+        <answerquestion>Answer question</answerquestion>
+        <isanswered>Questions currently being answered</isanswered>
+      </heading>
+      <intro>
+        <answeredquestions>Question that has been answered can be edited. Save and re-publish will update the answer on the meeting page.</answeredquestions>
+        <unansweredquestions>
+          Select how to treat questions from the list below .
+        </unansweredquestions>
+        <thrownquestions></thrownquestions>
+        <onholdquestions></onholdquestions>
+      </intro>
+      <button>
+
+        <!-- Vises til sluttbruker -->
+        <close>Close</close>
+        <admin>Go to edit-mode</admin>
+        <sendquestion>Send question</sendquestion>
+        <!-- Slutt på elementer som vises til sluttbruker -->
+
+        <answer>Answer question</answer>
+        <throw>Discard question</throw>
+        <onhold>Put question on hold</onhold>
+        <saveandpublish>Save and publish</saveandpublish>
+        <cancel>Cancel</cancel>
+        <restore>Restor question as "new"</restore>
+        <alteranswer>Change answer</alteranswer>
+        <update>Update</update>
+        <endmeeting>End meeting</endmeeting>
+        <generateraport>Generate report</generateraport>
+        <back>Back</back>
+      </button>
+      <answeritem>
+        <from>Sent by </from>
+        <clock>time: </clock>
+        <editable>(Answer text is editable.)</editable>
+        <answer>Your answer:</answer>
+      </answeritem>
+      <questionitem>
+
+        <!-- Vises til sluttbruker -->
+        <title>Title</title>
+        <question>Question</question>
+        <name>From (name)</name>
+        <anonymous>Anonymous</anonymous>
+        <from>Sent by </from>
+        <clock>Time </clock>
+        <sendquestion>Ask question</sendquestion>
+        <netmeetingended>This net meeting is now concluded!</netmeetingended>
+        <gototop>To top of the page</gototop>
+        <!-- Slutt på elementer som vises til sluttbruker -->
+
+      </questionitem>
+      <paging>
+        <firstpage>First</firstpage>
+        <prevpage>>Previous</prevpage>
+        <currentpage>Current page</currentpage>
+        <pagenumber>Page {0}</pagenumber>
+        <nextpage>Next</nextpage>
+        <lastpage>Last</lastpage>
+      </paging>
+    </units>
+  </netmeeting>
+  </language>
+</languages>

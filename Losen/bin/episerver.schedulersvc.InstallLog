@@ -1,0 +1,22 @@
+﻿Installing assembly 'd:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe'.
+Affected parameters are:
+   assemblypath = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe
+   logfile = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.InstallLog
+EPiServer.SchedulerSvc - copy files to [C:\Program Files\EPiServer.Scheduler\]
+EPiServer.SchedulerSvc - already registered as service, clearing installers 
+Committing assembly 'd:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe'.
+Affected parameters are:
+   assemblypath = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe
+   logfile = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.InstallLog
+Installing assembly 'd:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe'.
+Affected parameters are:
+   assemblypath = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe
+   logfile = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.InstallLog
+EPiServer.SchedulerSvc - files in /Program Files/ directory already correct version
+Installing service EPiServer.SchedulerSvc...
+Service EPiServer.SchedulerSvc has been successfully installed.
+Creating EventLog source EPiServer.SchedulerSvc in log Application...
+Committing assembly 'd:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe'.
+Affected parameters are:
+   assemblypath = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.exe
+   logfile = d:\inetpub\wwwroot\episerverintranett\bin\episerver.schedulersvc.InstallLog

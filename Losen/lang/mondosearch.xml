@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+	<language name="Norsk" id="NO">
+		<mondosearch>
+			<search> 
+				<search>Søk:</search>
+				<command>Søk</command>				
+				<summary>
+					<caption>&lt;b&gt;Oversikt: &lt;/b&gt;&lt;br&gt;</caption>
+					<pages>treff</pages>
+					<categories>menyer</categories>
+					<pagesindatabase>Sider i databasen:</pagesindatabase>
+					<pagesfound>Sider funnet:</pagesfound>
+					<categoriesfound>Antall menyer funnet:</categoriesfound>
+					<pageswithallwords>Sider med alle søkeord:</pageswithallwords>					
+					<dayssincesearchupdate>&lt;br&gt;Siste oppdatering av databasen (crawl) skjedde for </dayssincesearchupdate>
+					<dayssincesearchupdateago>&amp;nbsp;dag(er) siden.&lt;br&gt;&lt;br&gt;</dayssincesearchupdateago>
+				</summary>
+			</search>
+			<advancedsearch>
+				<caption>Søkeinnstillinger:</caption>
+				<wordexceptions>Ord som ikke skal være med i søkeresultatet:</wordexceptions>
+				<timeperiod>
+					<timeperiodtitle>Begrens på tidsperiode:</timeperiodtitle>
+					<notimelimit>(Ikke begrens)</notimelimit>
+					<lastweek>Siste uke</lastweek>
+					<lasttwoweeks>Siste to uker</lasttwoweeks>
+					<lastmonth>Siste måned</lastmonth>   
+					<treemonths>3 måneder tilbake</treemonths>
+					<sixmonths>6 måneder tilbake</sixmonths>
+					<oneyear>1 år tilbake</oneyear>
+				</timeperiod>
+				<searchtypeoption>
+					<caption>Teksten må:</caption>
+					<textmustcontain>søk på noen av ordene (eller)</textmustcontain>
+					<textmustcontainall>søk på alle ordene (og)</textmustcontainall>
+					<textmustbeexact>søk på hele frasen/begrepet (eks: &quot;individuell plan&quot;)</textmustbeexact>					
+				</searchtypeoption>
+				<sortorder>
+					<caption>Sortering og valg i treffliste</caption>
+					<sortbyrank>vis de beste treffene øverst</sortbyrank>
+					<sortbydate>vis de nyeste treffene øverst</sortbydate>
+				</sortorder>
+				<showonlytitle>vis bare dokumentets tittel i trefflisten</showonlytitle>
+				<category>Begrens søket til en eller flere hovedmenyer:</category>
+				<language>Språk:</language>
+			</advancedsearch>
+			<result>
+				<resultlist>Treffliste</resultlist>
+				<caption>Ditt søk på</caption>
+				<caption2>ga</caption2>
+				<caption3>treff i</caption3>
+				<caption4>menyer.</caption4>
+				<nohits>ga null treff.</nohits>
+				<previous>Forrige</previous>
+				<next>Neste</next>
+				<showallpagesincategory1>Vis alle</showallpagesincategory1>
+				<showallpagesincategory2>treff i menyen</showallpagesincategory2>
+				<showallpages>Vis alle treff</showallpages>
+				<showpagesinallcategories>Vis treff i alle menyer</showpagesinallcategories>
+				<categoryinfo>
+					<caption>Treff i menyer:</caption>
+				</categoryinfo>
+				<filetype>
+					<pdf>(pdf)</pdf>
+					<word>(word)</word>
+					<excel>(excel)</excel>
+					<powerpoint>(powerpoint)</powerpoint>
+				</filetype>
+				<firstof>første av i alt</firstof>
+			</result>
+						
+			<searchservicesdisabled>
+				<disabledhead>Søk er midlertidig deaktivert</disabledhead>
+				<disabledtext>På grunn av vedlikehold, har søketjenesten deaktivert. Vi beklager for uleilighet dette kan medføre. Vennligs forsøk igjen senere.</disabledtext>
+				<debugdisabledhead>Søketjeneste aktivert i debug mode</debugdisabledhead>			
+				<debugdisabledtext>Du har tilgang til søketjenesten i debug mode, søketjenesten har blitt deaktivert for alle andre brukere. Denne modus blir brukt under utvikling og feilsøking, for å unngå å vise feilmeldinger til vanlige brukere. Du kan endre disse instillingene direkte i web.config eller under System Settings i </debugdisabledtext>
+				<debugdisabledtext2>Admin Mode</debugdisabledtext2>
+				<debugdisabledtext3>.</debugdisabledtext3>
+			</searchservicesdisabled>  
+			<searchfailed>
+				<searchfailedreason>
+					Vi beklager ubeleiligheten, men dessverre har det oppstått en feil under søket. 
+					Årsaken ser ut til å ligge ved søketjenestens konfigurasjon eller en feil med infrastrukturen. 
+					Vennligst kom tilbake senere, og vi skal gjøre vårt beste for å reparere feilen i mellomtiden.
+				</searchfailedreason>
+				<debugtext>Information kun vist for administrator og utviklere.</debugtext>
+				<debugerrornumber>Feilnummer: </debugerrornumber>
+				<debugerrormessage>Feilmelding: </debugerrormessage>
+			</searchfailed> 
+			<developer>
+				<debuginformation>Utvikler Debug Informasjon</debuginformation>
+				<debugmql>MQL:</debugmql>
+			</developer>
+			<plugin>
+				<plugintree>
+					<displayname>&amp;nbsp;&lt;img src='../mondosearch/images/msbutton.gif'&gt;&amp;nbsp;</displayname>
+					<description>MondoSearch verktøy</description>
+					<refreshstatus>Oppdater status</refreshstatus>
+					<startcrawler>Start indeksering</startcrawler>
+					<startcrawlerinfo>
+						Klikk på knappen nedenfor for å starte en indeksering av nettstedet/nettstedene.
+					</startcrawlerinfo>
+					<startcrawlersettings>Innstillinger</startcrawlersettings>
+					<startinitialcrawl>Initiell indeksering</startinitialcrawl>
+					<startinitialcrawlinfo>
+						Indekseringen begynner med en tom søkedatabase
+						og indekserer alle sider den finner.
+					</startinitialcrawlinfo>
+					<startspecifiedcrawl>Spesifisert indeksering</startspecifiedcrawl>
+					<startspecifiedcrawlinfo>
+						Kun sider definert i en logg fil. Logg filen oppdateres hver gang en 
+						side opprettes, endres eller slettes i EPiServer.
+					</startspecifiedcrawlinfo>
+					<dopublish>Publiser søkedatabasen etter indeksering</dopublish>
+					<dopublishinfo>
+						Hvis valgt erstattes den gamle søkedatabasen med den nye oppdaterte søkedatabasen.
+					</dopublishinfo>
+					<logs>Logger</logs>
+					<viewcrawlerlog>Vis indekseringslogg</viewcrawlerlog>
+					<viewcrawlerloginfo>
+						Indekseringsloggen er en detaljert oversikt generert av MondoSearch 
+						etter fullført indeksering.
+					</viewcrawlerloginfo>		
+					<viewpublishlog>Vis publiseringslogg</viewpublishlog>
+					<viewpublishloginfo>
+						Publiseringsloggen er en detaljert oversikt generert av MondoSearch 
+						etter fullført publisering av ny søkedatabase.
+					</viewpublishloginfo>	
+					<links>Lenker</links>	
+					<insiteinfo>
+						InSite er administrasjonsverktøyet for MondoSearch. Via InSite administreres blant annet instillinger
+						for indeksering, søk, kategorier og publisering.
+					</insiteinfo>
+					<informationmanagerinfo>
+						Ved bruk av Information Manager tilpasses brukeropplevelsen av søket. Her kan blant 
+						annet synonymer og searh headers defineres.
+					</informationmanagerinfo>
+					<behaviortrackinginfo>
+						Statistikk over søket, trender og generell performance kan monitoreres via Behavior 
+						Tracking. Her kan man finne ut hva de besøkende leter etter, hvis de finner det de søker,
+						samt analysere brukernes søke mønster på nettstedet. 
+					</behaviortrackinginfo>						
+				</plugintree>
+			</plugin>
+		</mondosearch>
+	</language>
+	
+	<language name="English" id="EN">
+		<mondosearch>
+			<search>
+				<search>Search:</search>
+				<command>Search</command>
+				<summary>
+					<caption>&lt;b&gt;Summary: &lt;/b&gt;&lt;br&gt;</caption>
+					<pages>pages</pages>
+					<categories>categories</categories>
+					<pagesindatabase>Pages in database:</pagesindatabase>
+					<pagesfound>Pages found:</pagesfound>
+					<categoriesfound>Categories found:</categoriesfound>
+					<pageswithallwords>Pages containing all search words:</pageswithallwords>	
+					<dayssincesearchupdate>&lt;br&gt;The database was updated (crawl performed) </dayssincesearchupdate>
+					<dayssincesearchupdateago>&amp;nbsp;day(s) ago.&lt;br&gt;&lt;br&gt;</dayssincesearchupdateago>
+				</summary>
+			</search>
+			<advancedsearch>
+				<caption>Advanced search :</caption>
+				<wordexceptions>Words that not are included in the search result :</wordexceptions>
+				<timeperiod>
+					<timeperiodtitle>Limit on timeperiod : </timeperiodtitle>
+					<notimelimit>(No limit)</notimelimit>
+					<lastweek>Last week</lastweek>
+					<lasttwoweeks>Last two weeks</lasttwoweeks>
+					<lastmonth>Last month</lastmonth>
+					<treemonths>3 months back</treemonths>
+					<sixmonths>6 months back</sixmonths>
+					<oneyear>1 year back</oneyear>
+				</timeperiod>
+				<searchtypeoption>
+					<caption>The text must:</caption>
+					<textmustcontain>contain one or more of the search query</textmustcontain>
+					<textmustcontainall>contain all of the search query</textmustcontainall>
+					<textmustbeexact>be exactly alike the search query</textmustbeexact>
+				</searchtypeoption>
+				<category>Choose category:</category>
+				<language>Language:</language>
+			</advancedsearch>
+			<result>
+				<caption>Searchresult:</caption>
+				<previous>Previous</previous>
+				<next>Next</next>
+				<showallpagesincategory1>Show all</showallpagesincategory1>
+				<showallpagesincategory2>pages in the category</showallpagesincategory2>
+				<showallpages>Show all pages</showallpages>
+				<showpagesinallcategories>Show pages in all categories</showpagesinallcategories>
+				<categoryinfo>
+					<caption>Categories found:</caption>
+				</categoryinfo>
+			</result>			
+			<searchservicesdisabled>
+				<disabledhead>Search temporarily disabled</disabledhead>
+				<disabledtext>Due to maintenance, the search services on this website has been temporarily disabled. We apologize for the inconvenience. Please check back soon.</disabledtext>
+				<debugdisabledhead>Search services enabled in debug mode</debugdisabledhead>			
+				<debugdisabledtext>You are accessing this page in search debug mode, search services has been disabled for all other users. This mode is to be used during development and troubleshooting, to avoid showing error messages	to normal users. You can alter these settings directly in web.config or under System Settings in </debugdisabledtext>
+				<debugdisabledtext2>Admin Mode</debugdisabledtext2>
+				<debugdisabledtext3>.</debugdisabledtext3>
+			</searchservicesdisabled>  
+			<searchfailed>
+				<searchfailedreason>We apologize for the inconvenience, but unfortunately the search failed to complete. The reason seems to be	with the search service configuration or an error with the infrastructure. Please try again. If the error occurs again, please come back in a little while, and we'll try to fix the problem in the meantime.</searchfailedreason>
+				<debugtext>Information shown only for administrators and developers</debugtext>
+				<debugerrornumber>Errornumber: </debugerrornumber>
+				<debugerrormessage>Errormessage: </debugerrormessage>
+			</searchfailed> 
+			<developer>
+				<debuginformation>Developer Debug Information</debuginformation>
+				<debugmql>MQL:</debugmql>
+			</developer>
+			<plugin>
+				<plugintree>
+					<displayname>&amp;nbsp;&lt;img src='../mondosearch/images/msbutton.gif'&gt;&amp;nbsp;</displayname>
+					<description>MondoSearch Utilites</description>
+					<refreshstatus>Refresh status</refreshstatus>
+					<startcrawler>Start the crawler</startcrawler>
+					<startcrawlerinfo>
+						Click the button below, to start a MondoSearch crawl of your website/websites.
+					</startcrawlerinfo>
+					<startcrawlersettings>Settings</startcrawlersettings>
+					<startinitialcrawl>Initial crawl</startinitialcrawl>
+					<startinitialcrawlinfo>
+						The crawler starts with an empty grab database and grabs each page it can find.
+					</startinitialcrawlinfo>
+					<startspecifiedcrawl>Specified crawl</startspecifiedcrawl>
+					<startspecifiedcrawlinfo>
+						The crawler grabs only those pages specifically listed in a grab file. 
+						The grab file is updated everytime a page is created, changed or 
+						deleted in EPiServer.
+					</startspecifiedcrawlinfo>
+					<dopublish>Publish search database after Crawling</dopublish>
+					<dopublishinfo>
+						When checked the old search database is replaced with the new updated search database. 
+					</dopublishinfo>
+					<logs>Logs</logs>
+					<viewcrawlerlog>View Crawler Log</viewcrawlerlog>
+					<viewcrawlerloginfo>
+						The crawler log is a detailed statistics page generated by the crawler 
+						after it grabs a site. 
+					</viewcrawlerloginfo>		
+					<viewpublishlog>View Publish Log</viewpublishlog>
+					<viewpublishloginfo>
+						The publish log displays detailed information about the most recent publish operation. 
+					</viewpublishloginfo>	
+					<links>Links</links>	
+					<insiteinfo>
+						This is where you control the crawler, set up search and result configurations, 
+						edit grabmaps, changes category functionality and publishes crawler results to 
+						the production database. 
+					</insiteinfo>
+					<informationmanagerinfo>
+						Using Information Manager you can set up synonyms, create search headers and 
+						fine tune the search results to your liking. 
+					</informationmanagerinfo>
+					<behaviortrackinginfo>
+						Search trends, statistics and general performance can be found in Behavior 
+						Tracking. You can find out what users are looking for, if they find it or not, 
+						and analyze search patterns on your site.  
+					</behaviortrackinginfo>	
+				</plugintree>
+			</plugin>
+		</mondosearch>
+	</language>
+	
+	<language name="Svenska" id="SV">
+		<mondosearch>
+			<search> 
+				<search>Sök:</search>
+				<command>Sök</command>				
+				<summary>
+					<caption>&lt;b&gt;Översikt: &lt;/b&gt;&lt;br&gt;</caption>
+					<pages>sidor</pages>
+					<categories>kategorier</categories>
+					<pagesindatabase>Sidor i databasen:</pagesindatabase>
+					<pagesfound>Sidor funna:</pagesfound>
+					<categoriesfound>Antal kategorier funna:</categoriesfound>
+					<pageswithallwords>Sidor med alla sökord:</pageswithallwords>					
+					<dayssincesearchupdate>&lt;br&gt;Sista uppdatering av databasen (crawl) skedde för </dayssincesearchupdate>
+					<dayssincesearchupdateago>&amp;nbsp;dag(ar) sedan.&lt;br&gt;&lt;br&gt;</dayssincesearchupdateago>
+				</summary>
+			</search>
+			<advancedsearch>
+				<caption>Sökinnställningar:</caption>
+				<wordexceptions>Visa inte sidor med följande ord:</wordexceptions>
+				<timeperiod>
+					<timeperiodtitle>Avgränsa på tidsperiod:</timeperiodtitle>
+					<notimelimit>(Ingen avgränsning)</notimelimit>
+					<lastweek>Sista veckan</lastweek>
+					<lasttwoweeks>Sista två veckorna</lasttwoweeks>
+					<lastmonth>Sista månaden</lastmonth>   
+					<treemonths>3 månader tillbaka</treemonths>
+					<sixmonths>6 månader tillbaka</sixmonths>
+					<oneyear>1 år tillbaka</oneyear>
+				</timeperiod>
+				<searchtypeoption>
+					<caption>Texten ska:</caption>
+					<textmustcontain>innehålla något av orden (or)</textmustcontain>
+					<textmustcontainall>innehålla alla ord (and)</textmustcontainall>
+					<textmustbeexact>vara exakt lik orden (phrase)</textmustbeexact>					
+				</searchtypeoption>
+				<category>Välj kategori:</category>
+				<language>Språk:</language>
+			</advancedsearch>
+			<result>
+				<caption>Sökresultat:</caption>
+				<previous>Förra</previous>
+				<next>Nästa</next>
+				<showallpagesincategory1>Visa alla</showallpagesincategory1>
+				<showallpagesincategory2>sidor i kategorin</showallpagesincategory2>
+				<showallpages>Visa alla sidor</showallpages>
+				<showpagesinallcategories>Visa träff från alla kategorier</showpagesinallcategories>
+				<categoryinfo>
+					<caption>Kategorier funna:</caption>
+				</categoryinfo>
+			</result>						
+			<searchservicesdisabled>
+				<disabledhead>Söket är tillfälligt avsängt</disabledhead>
+				<disabledtext>På grund av uppdatering av funktionaliteten är söket avsängt. Vi beklager detta. Vänligen försök igen senare.</disabledtext>
+				<debugdisabledhead>Söket är aktiverat i debug mode</debugdisabledhead>			
+				<debugdisabledtext>Du har tillgång till söket i debug mode, söket är avsängt för alla andra användare. Detta modus används under utveckling og felsökning, för att andvika att felmeddelanden visas för vanliga användare. Du kan ändra dessa inställningar i web.config eller under System Settings i </debugdisabledtext>
+				<debugdisabledtext2>Admin Mode</debugdisabledtext2>
+				<debugdisabledtext3>.</debugdisabledtext3>
+			</searchservicesdisabled>  
+			<searchfailed>
+				<searchfailedreason>
+					Vi beklagar, men tyvärr har det uppstått ett fel under söket.  
+					Vänligen kom tillbaka senare, vi ska göra vårt bästa för att reparera felet under tiden.
+				</searchfailedreason>
+				<debugtext>Information som bara visas fär administratorer och utvecklare.</debugtext>
+				<debugerrornumber>Felnummer: </debugerrornumber>
+				<debugerrormessage>Felmeddelande: </debugerrormessage>
+			</searchfailed> 
+			<developer>
+				<debuginformation>Debug Information</debuginformation>
+				<debugmql>MQL:</debugmql>
+			</developer>
+			<plugin>
+				<plugintree>
+					<displayname>&amp;nbsp;&lt;img src='../mondosearch/images/msbutton.gif'&gt;&amp;nbsp;</displayname>
+					<description>MondoSearch inställningar</description>
+					<refreshstatus>Uppdatera status</refreshstatus>
+					<startcrawler>Starta indexering</startcrawler>
+					<startcrawlerinfo>
+						Klicka på knappen nedanför för att starta en indexering av web siten/web siterna.
+					</startcrawlerinfo>
+					<startcrawlersettings>Inställningar</startcrawlersettings>
+					<startinitialcrawl>Initiell indexering</startinitialcrawl>
+					<startinitialcrawlinfo>
+						Indexeringen startar med en tom sökdatabas
+						och indexerar alla sidor som finnes på web siten.
+					</startinitialcrawlinfo>
+					<startspecifiedcrawl>Spesifisert indexering</startspecifiedcrawl>
+					<startspecifiedcrawlinfo>
+						Bara sidor som är definerad i en logg fil indexeras. Logg filen uppdateres varje gång en 
+						sida skapas, ändras eller tas bort i EPiServer. Observera att denna logg funktionaliteten
+						måste aktiveras av den partner som implementerar lösningen.
+					</startspecifiedcrawlinfo>
+					<dopublish>Publicera sökdatabasen efter fullförd indexering</dopublish>
+					<dopublishinfo>
+						Om vald ersätts den gamla sökdatabasen med den nya uppdaterade sökdatabasen.
+					</dopublishinfo>
+					<logs>Loggar</logs>
+					<viewcrawlerlog>Visa indexeringslogg</viewcrawlerlog>
+					<viewcrawlerloginfo>
+						Indexeringsloggen är en detaljerad översikt skapad av MondoSearch 
+						efter fullförd indexering.
+					</viewcrawlerloginfo>		
+					<viewpublishlog>Viss publiceringslogg</viewpublishlog>
+					<viewpublishloginfo>
+						Publiceringsloggen är en detaljerad översikt skapad av MondoSearch 
+						efter fullförd publicering av den nya sökdatabasen.
+					</viewpublishloginfo>	
+					<links>Länkar</links>	
+					<insiteinfo>
+						InSite är MondoSearchs administrationsverktyg. Via InSite administreras bl.a. 
+						inställningar för indexering, sök, kategorier och publicering.
+					</insiteinfo>
+					<informationmanagerinfo>
+						Genom Information Manager anpassas sökupplevelsen för användaren. Här kan man bl.a. 
+						sätta upp synonymer och searh headers.
+					</informationmanagerinfo>
+					<behaviortrackinginfo>
+						Statistik över söket, trender och generell kan monitoreras via Behavior 
+						Tracking. Här kan man se vad besökarna letar efter, om de finner det de söker efter,
+						samt analysera användarnas sökbeteede på web siten. 
+					</behaviortrackinginfo>	
+				</plugintree>
+			</plugin>
+		</mondosearch>
+	</language>
+</languages>

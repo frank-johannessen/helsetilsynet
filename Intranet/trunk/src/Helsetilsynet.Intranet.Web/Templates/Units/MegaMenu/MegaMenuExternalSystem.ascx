@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MegaMenuExternalSystem.ascx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.Units.MegaMenu.MegaMenuExternalSystem" %>
+<a href="<%= ExternalSystemConfigElement.Url %>" class="external-system" target="_blank"><asp:Image runat="server" ID="img" /><span><%= ExternalSystemConfigElement.Name%></span></a>

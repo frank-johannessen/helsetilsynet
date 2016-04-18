@@ -1,0 +1,47 @@
+﻿.read-more,
+.update button,
+.submit-comment button,
+.update button:hover,
+.update button:focus,
+.submit-comment button:hover,
+.submit-comment button:focus,
+.update button.disabled,
+.update button.disabled:hover,
+.update button.disabled:focus,
+.submit-comment button.disabled,
+.submit-comment button.disabled:hover,
+.submit-comment button.disabled:focus   
+  {
+       filter: none;
+  }
+    
+
+
+.submit-comment textarea 
+{
+    width:409px;
+}
+
+
+.like-list-container > span 
+{
+    position:absolute;
+    top: 10px;
+    left: 63px;
+}
+
+.comments-list .submit-comment 
+{
+    margin-right:0;
+}
+
+.ie8 .comments-list > ul > li 
+{
+    padding: 10px 0 0 10px;
+     width:422px;
+}
+.ie8 .comments-list .submit-comment 
+{
+    width:412px;
+    margin-right:10px;
+}

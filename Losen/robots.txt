@@ -1,0 +1,11 @@
+# Search Spider inclusion and exclusion file.
+# For more information about the layout and syntax
+# of this file, see: http://www.robotstxt.org/
+# This file will make sure MondoSearch does not index secure parts of the EPiServer site
+
+User-agent: *
+Disallow: /edit/
+Disallow: /admin/
+Disallow: /util/
+Disallow: /webservices/
+Disallow: /mondosearch/

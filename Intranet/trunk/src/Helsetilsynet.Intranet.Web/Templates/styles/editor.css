@@ -1,0 +1,42 @@
+﻿body {
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+h2 {
+    EditMenuName: Overskrift 2;
+    font-size: 1.285em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.subtitle2 {
+    font-size: 1.285em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+h3 {
+    EditMenuName: Overskrift 3;
+    font-size: 14px;
+}
+h4 {
+    EditMenuName: Overskrift 4;
+    font-size: 12px;
+}
+.show-in-menu {
+    EditMenuName: Vis i meny;
+}
+table, table tr, table td {
+    border: 1px solid #DDDDDD;
+    border-collapse: collapse;
+}
+table caption {
+    text-align: left;
+}
+table tbody {
+    border-collapse: collapse;    
+}
+table td {
+     padding: 0.2em 1em;
+}

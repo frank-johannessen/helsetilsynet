@@ -1,0 +1,1207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BVNetwork.EPiMss</name>
+    </assembly>
+    <members>
+        <member name="T:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration">
+            <summary>
+            Configuration Settings for the EPiServer Mondosoft Integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.GetNumberOfCategories">
+            <summary>
+            Calls the SearchInfo method to find the actual number
+            of categories defined by Mondosearch
+            </summary>
+            <returns>The count of categories. 1 or higher. If an error occurs, the method returns 0.</returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.EnablePaging">
+            <summary>
+            Indicates if result pagination should be used. Default is false.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.CategoryCount">
+            <summary>
+            The number of categories found by Mondosearch. Will always
+            be 1 or higher. If categories have not been enabled, all
+            crawled pages will be in the "Other" category.
+            </summary>
+            <remarks>This count is read once the first time we perform a
+            search, and will then be cached until the application restarts</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.CategoryNumberOfHitsOnPage">
+            <summary>
+            Returns the number of hits to show per category on the first result page if using
+            categories. Default is 5, if not overridden in web.config
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.PagingNumberOfHitsOnPage">
+            <summary>
+            Returns the number of hits to show on one result page. Reads the value from web.config,
+            or returns the default value of 10 if not defined.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.PagingMaxNumberOfPages">
+            <summary>
+            The maximum number of pages to show, regardless of the number of search hits.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.SearchLocation">
+            <summary>
+            Where to search. Indicates if we're to use the local machine or call
+            a web service. Default is Local
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.SecurityFilterEnabled">
+            <summary>
+            Indicates if the security filter has been enabled or not. Default is true.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.CurrentRequestLanguage">
+            <summary>
+            Returns the language of the current request. The language of the request
+            can change based on the language set on the page, for the user, or through code.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.DataPath">
+            <summary>
+            The physical Mondosoft data path. If present, always ends with a "\". If not 
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.ExecPath">
+            <summary>
+            The Mondosoft exec path
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.HostURL">
+            <summary>
+            The Mondosoft host url
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.LicenseNumber">
+            <summary>
+            The Mondosoft License number used for searches
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.SearchServicesEnabled">
+            <summary>
+            Indicates if search services is enabled on the site. Search can be explicitly
+            disabled, or disabled because of missing or wrong configuration settings.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.UserIsDebuggingMember">
+            <summary>
+            Indicates if the search services are enabled, but visible only in debug mode. 
+            will never return true if the search services has not been disabled in web.config
+            </summary>
+            <remarks>This check is user dependent, and checks if the role of the user is 
+            among the enabled debug mode roles. The check does not take in account the
+            status of the search service, and can thus return true, even if search is 
+            enabled on the site.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.SearchServicesDisabledThroughConfig">
+            <summary>
+            Indicates if search services has been disabled in web.config. Certain groups
+            might still use search, for troubleshooting and debugging purposes.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.DebuggingGroups">
+            <summary>
+            The groups of users that should have access to search even if disabled
+            through web.config.
+            </summary>
+            <remarks>If the config has not been set, if defaults to Administrators</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Configuration.SearchConfiguration.WebServiceUrl">
+            <summary>
+            The url to the search web service
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Configuration.SearchLocation">
+            <summary>
+            What search instance to use
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Crawler.CrawlerUtil">
+            <summary>
+            Utility functions for the Mondosoft Crawler
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Crawler.CrawlerUtil.GetCrawlerStatusCode">
+            <summary>
+            Returns the crawler status code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Crawler.CrawlerUtil.GetCrawlerStatus">
+            <summary>
+            Gets the status of the crawler
+            </summary>
+            <returns>A status string</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Crawler.CrawlerUtil.StartCrawler(BVNetwork.EPiMss.Library.Crawler.CrawlerMode,System.Boolean)">
+            <summary>
+            Starts the crawler.
+            </summary>
+            <param name="crawlerMode"></param>
+            <param name="doPublish"></param>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Interface.ISearchParameters">
+            <summary>
+            Interface for classes that wants to contribute parameters to the
+            querystring for fully qualified search urls
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Interface.ISearchParameters.CollectQueryParameters(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Called by the sarch infrastructure when there is a need
+            for collection all querystring parameters used for linking
+            to result pages
+            </summary>
+            <remarks>Impementers should add all the neccessary querystring
+            parameters that might be needed on any search or result page.</remarks>
+            <param name="parameters">An initialized collection of parameters.</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Interface.ISearchParameters.ApplyArgumentsToSearch(BVNetwork.EPiMss.Library.Searching.SearchEngine)">
+            <summary>
+            Applies the arguments to search.
+            </summary>
+            <param name="searchEngine">Search engine.</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Interface.ISearchParameters.ApplyQueryParametersToUserInterface(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Applies the query parameters to user interface.
+            </summary>
+            <param name="parameters">Parameters.</param>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Interface.ISearchResultInitialize">
+            <summary>
+            Summary description for ISearchResultInitialize.
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.ClickService">
+            <summary>
+            Main class for performing search and retrieve search related information
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.ClickService.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.ClickService.GetClickInfo(System.String,System.String,System.String)">
+            <summary>
+            Retrieves an string containing xml
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.ClickService.SearchLocation">
+            <summary>
+            What search engine to use, local or remote
+            </summary>
+            <remarks>Uses configuration setting if not explicitly set here. 
+            The configuration setting defaults to Local.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.ClickService.ReturnedXml">
+            <summary>
+            Xml containing details for how to proceed to a page.
+            Will be parsed by click.aspx to detemine the link/page to show
+            Is used for logging to BehaviorTracking and showing pages with highlighting
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchCache">
+            <summary>
+            Utility class for caching search related data
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchInfo">
+            <summary>
+            Main class for performing search and retrieve search related information
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchInfo.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchInfo.GetSearchInfo">
+            <summary>
+            Retrieves the search information from the local SearchProvider or the
+            remote Web Service depending on settings.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchInfo.SearchLocation">
+            <summary>
+            What search engine to use, local or remote
+            </summary>
+            <remarks>Uses configuration setting if not explicitly set here. 
+            The configuration setting defaults to Local.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchInfo.ResultSet">
+            <summary>
+            Information about available categories and languages to limit search to
+            ,you need to know the dataset layout to retrieve the individual parts.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchInfo.LanguageInfo">
+            <summary>
+            The languages that MondoSearch has detected 
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchInfo.CategoryInfo">
+            <summary>
+            The languages MondoSearch has detected. Can also be manually defined in InSite
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchInfo.ResultMessages">
+            <summary>
+            Administrative information about the search. Should only be shown to developers and web admins that know how to tune
+            and change search behavior.
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchProxyBase">
+            <summary>
+            Base class for all proxy implementations
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyBase.Search(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <param name="searchFor"></param>
+            <param name="mql"></param>
+            <param name="enableSecurityFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyBase.GetSearchInfo(System.String,System.String,System.Boolean)">
+            <summary>
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyBase.GetLinkClickInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="linkClick"></param>
+            <param name="remoteIP"></param>
+            <param name="clickUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchProxyLocal">
+            <summary>
+            Provides a local search. Requires that the SearchProvider is installed on the local machine
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyLocal.Search(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            Provides a search on the local server
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <param name="searchFor"></param>
+            <param name="mql"></param>
+            <param name="useAuthentication"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyLocal.GetSearchInfo(System.String,System.String,System.Boolean)">
+            <summary>
+            Provides the searchinformation to be shown on the advanced search page.
+            For example available categories and languages
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyLocal.GetLinkClickInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Processes user clicks on search results. 
+            Because we would like to log user clicks for BehaviorTracking and 
+            possibly also to return pages with highlighted search words, 
+            we cannot simply allow users to load a result page directly from the result list.
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="linkClick"></param>
+            <param name="remoteIP"></param>
+            <param name="clickUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchProxyRemote">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyRemote.Search(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            Provides a search on a remote server using the searchpro
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <param name="searchFor"></param>
+            <param name="mql"></param>
+            <param name="useAuthentication">Ignored for remote searches. Needs to be handled after the search has returned pages</param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyRemote.GetSearchInfo(System.String,System.String,System.Boolean)">
+            <summary>
+            Provides the searchinformation to be shown on the advanced search page.
+            For example available categories and languages
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="requestLanguage"></param>
+            <param name="usePreview"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchProxyRemote.GetLinkClickInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Processes user clicks on search results. 
+            Because we would like to log user clicks for BehaviorTracking and 
+            possibly also to return pages with highlighted search words, 
+            we cannot simply allow users to load a result page directly from the result list.
+            </summary>
+            <param name="licenseNumber"></param>
+            <param name="linkClick"></param>
+            <param name="remoteIP"></param>
+            <param name="clickUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Searching.SearchEngine">
+            <summary>
+            Main class for performing search and retrieve search related information
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchEngine.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchEngine.Search(System.String)">
+            <summary>
+            Performs a search using default values
+            </summary>
+            <param name="searchFor">The phrase to search for</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchEngine.ExecuteSecurityFilter">
+            <summary>
+            Iterates all pages in the resultset and removes pages that the user is not allowed to see.
+            </summary>
+            <returns>True if this method succeeded, false if not</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Searching.SearchEngine.GenerateMqlFromClassOptions">
+            <summary>
+            Generates Mql based on the values of the different properties
+            on the object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.SearchLocation">
+            <summary>
+            What search engine to use, local or remote
+            </summary>
+            <remarks>Uses configuration setting if not explicitly set here. 
+            The configuration setting defaults to Local.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.SearchTypeOption">
+            <summary>
+            Determines how to interpret the search query. Can be
+            "or" (default), "and" or "exact".
+            Is null if not set explicitly, defaulting to "or" or
+            the setting in InSite if changed from the default setting.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.SortByDateOn">
+             <summary>
+            Search options as sorting
+             </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.FixedCatOrder">
+             <summary>
+            Search options - categoryorder
+             </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.SearchText">
+            <summary>
+            The text to search for.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.Filters">
+            <summary>
+            Search filters. See MQL query language reference
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.Categories">
+            <summary>
+            Cateogires to filter search on. See MQL query language reference
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.Languages">
+            <summary>
+            Languages to filter search on. See MQL query language reference
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.MaxResult">
+            <summary>
+            The maximum number of results to return
+            </summary>
+            <remarks>Uses configuration setting if not explicitly set here.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.MaxPagesShown">
+            <summary>
+            The maximum number of pages to show
+            </summary>
+            <remarks>Uses configuration setting if not explicitly set here.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.FirstResult">
+            <summary>
+            The first page to include in the ResultSet, highest rank is page 0
+            </summary>
+            <remarks>Use this for paging through results, setting FirstResult to 10, 
+            and 11 to whatever value set in maxresult in the resultset.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.FirstCategory">
+            <summary>
+            Sets the first category (by category ID) to display on the page.
+            </summary>
+            <remarks>Use this for showing an spesific category.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.MaxCategories">
+            <summary>
+            Sets the maximum number of categories to show on the page.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ExtraFields">
+            <summary>
+            Extra fields that should be part of the resultset
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ExcludeWords">
+            <summary>
+            All words that should be excluded from the search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.Mql">
+            <summary>
+            If set explicitly, the raw Mql string is used, if not
+            a Mql is generated based on properties set on this object. 
+            If no Mql has been specified, returns an empty string.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.TotalNumberOfPagesFound">
+            <summary>
+            Returns the total number of pages found, including any pages removed by the security filter.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfPagesFound">
+            <summary>
+            The number of pages found. This is the number of filtered pages found. If you need the count of pages before any security
+            filtering has been applied, use the <see cref="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.TotalNumberOfPagesFound"/>.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfPagesInDatabase">
+            <summary>
+            The number of pages found in the database.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfPagesWithAllWords">
+            <summary>
+            The number of pages that contains all the search words.
+            </summary>
+            <remarks>Note! this is an approximatly value if security filtering has been enabled.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfCategories">
+            <summary>
+            The number of categories found.
+            </summary>
+            <remarks>Note! this is an approximatly value if security filtering has been enabled.</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfAlternatives">
+            <summary>
+            The number of alternative words found.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfIgnoredWords">
+            <summary>
+            The number of words ignored in the search phrase.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfLanguages">
+            <summary>
+            The number of different languages found.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.NumberOfDaysSinceLastUpdate">
+            <summary>
+            The number of days since the last update of the search index.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.EnableSecurityFilter">
+            <summary>
+            Enables or disables the security filter. Default setting is true.
+            </summary>
+            <remarks>
+            You can change the default value through web.config or under the System Setting in Admin Mode.
+            If the site do not use secured pages, turn off the security check for better performance.
+            </remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.UserInfo">
+            <summary>
+            Logging of statistics for BehaviorTracking
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultSet">
+            <summary>
+            The complete search result
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultPages">
+            <summary>
+            The pages returned by the result
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultCategories">
+            <summary>
+            Categories returned by the search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultSearchNames">
+            <summary>
+            Search Names returned by the search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultSearchHeaders">
+            <summary>
+            Search Headers returned by the search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultLanguageSummary">
+            <summary>
+            Information about the pages broken up by language
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Searching.SearchEngine.ResultMessages">
+            <summary>
+            Administrative information about the search. Should only be shown to developers and web admins 
+            that know how to tune and change search behavior.
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Security.PageAccessCheck">
+            <summary>
+            Class for checking access rights on EPiServer pages
+            Debug functionality has been left by purpose, allowing developers
+            to control the security mechanism while testing. 
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Util.CategoryUtil">
+            <summary>
+            Summary description for CategoryUtil.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.CategoryUtil.GetCategoriesFromQueryString">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.CategoryUtil.GetCategoriesQueryStringValue(System.String[])">
+            <summary>
+            Returns a parsable querystring value with the categories specified. The
+            string is UrlEncoded, but does not contain the key.
+            </summary>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.CategoryUtil.GetCategoriesMqlValue(System.String[])">
+            <summary>
+            Returns a string encoded for using as category filter in Mql
+            </summary>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.CategoryUtil.IsCategoriesDefinedForQuery">
+            <summary>
+            Helper method to find out if a request is filtering the search result on categories
+            </summary>
+            <returns>True, categories is in use. False, no categories has been specified for the current request</returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.CategoryUtil.CategoryKeySetting">
+            <summary>
+            The querystring key used for filtering on categories
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Util.InputValidationUtil">
+            <summary>
+            Utility library for input validation
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.InputValidationUtil.SanitizeInput(System.String)">
+            <summary>
+            Strips out a range of potentially unsafe characters, including &lt;&gt;\"'%;()&amp;.
+            </summary>
+            <param name="input">The text to sanitize</param>
+            <returns>A safe version of the same string</returns>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Util.LanguageUtil">
+            <summary>
+            Utility class for working with language parameters to MondoSearch
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.#ctor">
+            <summary>
+            Private initializer, meaning this class should not be instanciated,
+            but used as a utility class instead.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.GetLanguagesFromQueryString(System.String)">
+            <summary>
+            Gets the languages from query string. The string is parsed, trimmed and returned
+            as an array of Language codes.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.GetLanguagesQueryStringValue(System.String[])">
+            <summary>
+            Returns a parsable querystring value with the languages specified. The
+            string is UrlEncoded, but does not contain the key
+            </summary>
+            <param name="languages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.GetLanguagesMqlValue(System.String[])">
+            <summary>
+            Returns a string encoded for using as category filter in Mql
+            </summary>
+            <param name="languages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.GetLanguagesQueryStringValue(System.String)">
+            <summary>
+            Gets the languages as a valid query string value.
+            </summary>
+            <param name="language">The language or languages</param>
+            <returns>An Url Encoded version of the language parameter, enclosed in quotes.</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.LanguageUtil.IsLanguagesDefinedForQuery">
+            <summary>
+            Helper method to find out if a request is filtering the search result on languages
+            </summary>
+            <returns>True, languages has been specified. False, no languages has been specified for the current request</returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.LanguageUtil.LanguageKeySetting">
+            <summary>
+            The querystring key used for filtering on categories
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.Util.PagingUtil">
+            <summary>
+            Helper class for building pageable resultlist
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.PagingUtil.IsPagingEnabledForQuery">
+            <summary>
+            Helper method to find out if a request is using
+            Paging. Checks to see if there is a page key
+            in the querystring
+            </summary>
+            <returns>True, paging is in use. False, no paging has been enabled for the current request</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.PagingUtil.IsPagingEnabledForQuery(System.String)">
+            <summary>
+            Helper method to find out if a request is using
+            Paging, with a specified key to check for in the querystring.
+            </summary>
+            <returns>True, paging is in use. False, no paging has been enabled for the current request</returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.PaginatorKeySetting">
+            <summary>
+            Static helper properties.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.PaginatorKey">
+            <summary>
+            The key to use in the querystring for pagination. Default is "page". You can change
+            this if you already use the key for other purposes.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.MqlKey">
+            <summary>
+            The key to use in the querystring for mql. Default is "mql". You can change
+            this if you already use the key for other purposes.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.NumberOfHitsOnPage">
+            <summary>
+            The number of search hits to show on the result page.
+            Usually fetched from the EPiServer search page, or from
+            web.config.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.MaximumNumberOfPagesToShow">
+            <summary>
+            The maximum number of pages to show, regardless of the number of search hits.
+            If not set, uses value from web.config, or defaults to 10 if not in web.config.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.CurrentPageNumber">
+            <summary>
+            The currently showing page. Starts at 1.
+            </summary>
+            <remarks>When used, always starts at 1</remarks>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.QuerystringMql">
+            <summary>
+            The mql read from the querystring. Returns null if not defined.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.ActualNumberOfPages">
+            <summary>
+            Calculates the actual number of pages to show, based on the total number of
+            hits, and configuration settings.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Library.Util.PagingUtil.SearchInstance">
+            <summary>
+            Information about the search
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.UserInterfaceUtil.#ctor">
+            <summary>
+            Not creatable, only util class
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.UserInterfaceUtil.FocusToTextBox(System.Web.UI.Page,System.Web.UI.WebControls.TextBox)">
+            <summary>
+            Sets input focus to a textbox, so the user can write text without using the mouse or tab
+            to select the correct input field.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.Util.UserInterfaceUtil.DefaultButton(System.Web.UI.Page,System.Web.UI.WebControls.TextBox,System.Web.UI.WebControls.ImageButton)">
+            <summary>
+            Registers a button as default Enter handler for a text box. Used to capture the Enter key when hit inside
+            a textbox, and to submit using another button than the standard submit button.
+            </summary>
+            <remarks>
+            Created by Janus Kamp Hansen - http://www.kamp-hansen.dk
+            Adaptet to ASP.NET and C# by Steve Celius
+            </remarks>
+            <param name="page"></param>
+            <param name="textBox"></param>
+            <param name="defaultButton"></param>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Library.MssWebService.SearchService">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.SearchInfo(System.String,System.String,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginSearchInfo(System.String,System.String,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndSearchInfo(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.SearchInfoXml(System.String,System.String,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginSearchInfoXml(System.String,System.String,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndSearchInfoXml(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.Search(System.String,System.String,System.Boolean,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginSearch(System.String,System.String,System.Boolean,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndSearch(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.SearchXml(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginSearchXml(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndSearchXml(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.Click(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginClick(System.String,System.String,System.String,System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndClick(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.IsAlive(System.String,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.BeginIsAlive(System.String,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Library.MssWebService.SearchService.EndIsAlive(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="T:BVNetwork.EPiMss.CrawlerLog">
+            <summary>
+            Summary description for Default.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.CrawlerLog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Plugins.MssEditTree.InitializeComponent">
+            <summary>
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Plugins.SystemSettings">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Plugins.SystemSettings.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.AdvancedSearchOptions">
+            <summary>
+            Advanced Search Options
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.AdvancedSearchOptions.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.AdvancedSearchOptions.CollectQueryParameters(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Adds advanced options to the querystring
+            </summary>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.AdvancedSearchOptions.ApplyQueryParametersToUserInterface(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Applies the query parameters to user interface, making sure the user sees the expected
+            values in any controls. We can not rely on the values beeing set by a postback, so we
+            need to parse and set the control state manually
+            </summary>
+            <param name="parameters">Parameters.</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.AdvancedSearchOptions.ApplyArgumentsToSearch(BVNetwork.EPiMss.Library.Searching.SearchEngine)">
+            <summary>
+            Applies any arguments to the search engine, that beeing search filters, 
+            category limitations etc.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.AdvancedSearchOptions.SearchTypeOption">
+            <summary>
+            Gets the search type option. Determines how the search should be done, 
+            regarding several search words in one query.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.AdvancedSearchOptions.Categories">
+            <summary>
+            Categories to limit the search to.
+            Returns null if none selected
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.AdvancedSearchOptions.EnableAdvancedSearch">
+            <summary>
+            Superior setting for enabling or disabling the advanced search features
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.CategoryInformation">
+            <summary>
+            Shows category information from a search. With links that limits the search
+            on category selection.
+            </summary>
+        </member>
+        <member name="F:BVNetwork.EPiMss.Units.CategoryInformation.SearchInstance">
+            <summary>
+            Will be set from the containing page. Logic that is dependent on the
+            SearchInstance object should be enclosed in HasDoneSearch tests
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.CategoryInformation.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.CategoryInformation.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.CategoryInformation.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.DebugInfo">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.DebugInfo.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.RenderCategoryList">
+            <summary>
+            Shows category information from a search. With links that limits the search
+            on category selection.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.RenderCategoryList.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.RenderCategoryList.PagesInCurrentCategory">
+            <summary>
+            The pages returned by the search result for current category
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.ResultPager">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.ResultPager.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.ResultPager.ApplyQueryParametersToUserInterface(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Applies the query parameters to user interface.
+            </summary>
+            <param name="parameters">Parameters.</param>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.ResultPager.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.ResultPager.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.ResultPager.UsePaging">
+            <summary>
+            Indicates if paging is in effect
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.SearchHeaders">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchHeaders.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchHeaders.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchHeaders.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.SearchResult">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchResult.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchResult.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchResult.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.SearchResultCategorized">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchResultCategorized.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchResultCategorized.ShowResult">
+            <summary>
+            Loads the RenderCategoryList User Control for each category.
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchResultCategorized.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchResultCategorized.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.SearchSummary">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchSummary.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchSummary.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.Units.SearchSummary.HasDoneSearch">
+            <summary>
+            Tells us if the search has been done. Often we do not want to show
+            some of the information on the page unless the user has performed a search
+            </summary>
+        </member>
+        <member name="T:BVNetwork.EPiMss.Units.SearchTips">
+            <summary>
+            System Settings Plugin for EPiServer and Mondosoft integration
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Units.SearchTips.InitializeComponent">
+            	Required method for Designer support - do not modify
+            	the contents of this method with the code editor.
+        </member>
+        <member name="T:BVNetwork.EPiMss.Click">
+            <summary>
+            Summary description for Click.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.Click.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Initializing page, setting focus to search textbox 
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.Page_PreRender(System.Object,System.EventArgs)">
+            <summary>
+            Performs the search. We run it in PreRender in order to allow all 
+            user controls on the page to initialize and load default values.
+            The Search will also ask all controls to update their selections
+            based on the parameters in the querystring.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.RegisterUserControls(System.Collections.ArrayList)">
+            <summary>
+            Registers the user controls on the page in an arraylist. If
+            you add user controls to the page, that should take part in
+            parameter collecting etc., make sure to add it to this array
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.SetGlobalOptions(BVNetwork.EPiMss.Library.Searching.SearchEngine)">
+            <summary>
+            Sets global options on the search engine instance before performing the search.
+            </summary>
+            <param name="searchEngine">The SearchEngine instance</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.DoSearch(System.String)">
+            <summary>
+            This is the main search method. It collects settings and sets
+            up the search engine for doing the search.
+            </summary>
+            <param name="searchFor">The text to search for</param>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.GetSearchPageLink">
+            <summary>
+            Retrieves the search parameters query string by asking
+            each participating control on the page to return key value
+            objects that should be part of the query.
+            </summary>
+            <returns>The link to the search page (this) containing all
+            search parameters in the querystring.</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.GetSearchPageParameters">
+            <summary>
+            Queries all registered user controls to return any search parameters
+            to store in the querystring.
+            </summary>
+            <remarks>Only user controls that implement the ISearchParameters interface will
+            be queried for parameters</remarks>
+            <returns>A name value colletion with name and value of parameters</returns>
+        </member>
+        <member name="M:BVNetwork.EPiMss.SearchTemplate.GetSearchPageLink(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Builds the search page link from the current page's Url and the
+            name value collection of parameters given as an argument.
+            </summary>
+            <param name="parameters">A collection of Name and Value pairs to build the query string from</param>
+            <returns>A relative link to the current page with all parameters needed to do a search</returns>
+        </member>
+        <member name="P:BVNetwork.EPiMss.SearchTemplate.EnableAdvancedSearch">
+            <summary>
+            Superior setting for enabling or disabling the advanced search features
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.SearchTemplate.HasResult">
+            <summary>
+            Tells if the search gave us any results
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.SearchTemplate.NumberOfPagesFound">
+            <summary>
+            Returns the number of pages found by the search
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.SearchTemplate.SearchFailed">
+            <summary>
+            Was the search successful? 
+            </summary>
+        </member>
+        <member name="P:BVNetwork.EPiMss.SearchTemplate.UserControlsOnPage">
+            <summary>
+            Retrieves the user controls on page.
+            </summary>
+            <value>An arraylist with all the usercontrols on the page</value>
+        </member>
+    </members>
+</doc>

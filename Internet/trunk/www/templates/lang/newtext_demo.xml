@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <pagetypes>
+      <common>
+        <property name="DisableCountry">
+          <caption>Editing country is not allowed</caption>
+          <help>Editing country is not allowed</help>
+        </property>
+        <property name="DisableFirstname">
+          <caption>Editing first name is not allowed</caption>
+          <help>Editing first name is not allowed</help>
+        </property>
+        <property name="DisableLastname">
+          <caption>Editing last name is not allowed</caption>
+          <help>Editing last name is not allowed</help>
+        </property>
+        <property name="DisableEmail">
+          <caption>Editing email is not allowed</caption>
+          <help>Editing email is not allowed</help>
+        </property>
+        <property name="DisableCompany">
+          <caption>Editing company is not allowed</caption>
+          <help>Editing company is not allowed</help>
+        </property>
+        <property name="DisableTitle">
+          <caption>Editing title is not allowed</caption>
+          <help>Editing title is not allowed</help>
+        </property>
+        <property name="DisableLanguage">
+          <caption>Editing language is not allowed</caption>
+          <help>Editing language is not allowed</help>
+        </property>
+      </common>
+    </pagetypes>
+  </language>
+  <language name="Svenska" id="sv">
+    <pagetypes>
+      <common>
+        <property name="DisableCountry">
+          <caption>Ändring av land är inte tillåtet</caption>
+          <help>Ändring av land är inte tillåtet</help>
+        </property>
+        <property name="DisableFirstname">
+          <caption>Ändring av förnamn är inte tillåtet</caption>
+          <help>Ändring av förnamn är inte tillåtet</help>
+        </property>
+        <property name="DisableLastname">
+          <caption>Ändring av efternamn är inte tillåtet</caption>
+          <help>Ändring av efternamn är inte tillåtet</help>
+        </property>
+        <property name="DisableEmail">
+          <caption>Ändring av e-post är inte tillåtet</caption>
+          <help>Ändring av e-post är inte tillåtet</help>
+        </property>
+        <property name="DisableCompany">
+          <caption>Ändring av företag är inte tillåtet</caption>
+          <help>Ändring av företag är inte tillåtet</help>
+        </property>
+        <property name="DisableTitle">
+          <caption>Ändring av titel är inte tillåtet</caption>
+          <help>Ändring av titel är inte tillåtet</help>
+        </property>
+        <property name="DisableLanguage">
+          <caption>Ändring av språk är inte tillåtet</caption>
+          <help>Ändring av språk är inte tillåtet</help>
+        </property>
+      </common>
+    </pagetypes>
+  </language>
+</languages>

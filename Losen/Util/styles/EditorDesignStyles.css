@@ -1,0 +1,33 @@
+A
+{
+	background-color:Yellow;
+}
+
+TD.selectable
+{
+}
+
+TD.selected
+{
+	color: White;
+	background-color: #6666aa;
+}
+
+TD.borderless
+{
+	border-style:solid;
+	border-width:1;
+	border-color:Silver;
+}
+
+TABLE.borderless
+{
+	border-style:solid;
+	border-width:1;
+	border-color:Silver;	
+}
+
+IMG.selected
+{
+	border: 1px dashed highlight;
+}

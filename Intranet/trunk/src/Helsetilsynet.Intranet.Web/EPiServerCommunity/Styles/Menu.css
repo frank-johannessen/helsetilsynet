@@ -1,0 +1,58 @@
+﻿#menu {
+	margin: 0px;
+	padding: 0px;
+	background-color: #eee;
+	background-repeat: repeat-y;
+}
+#menu .NavBar {
+	cursor: default;
+}
+#menu .TopItem {
+	color: #ffffff;
+	background-image: url(../images/menu/item_bg.png);
+	font-family: tahoma, verdana;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	cursor: pointer;
+}
+#menu .TopItem td {
+	font-weight: bold;
+	height: 31px;
+}
+#menu .TopItemHover {
+	color: #ffffff;
+	background-image: url(../images/menu/item_hoverBg.png);
+	font-family: tahoma, verdana;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	cursor: pointer;
+}
+#menu .TopItemHover td {
+	font-weight: bold;
+	height: 31px;
+}
+#menu .Level2Item {
+	font-family: tahoma, verdana;
+	font-size: 11px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+#menu .Level2ItemHover {
+	font-family: tahoma, verdana;
+	font-size: 11px;
+	text-decoration: underline;
+	padding-left: 10px;
+	cursor: pointer;
+}
+#menu .Level2Group {
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+}
+#menu .Empty {
+	padding-left: 10px;
+}

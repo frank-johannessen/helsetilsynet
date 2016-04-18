@@ -1,0 +1,88 @@
+﻿/* This class is for 1st level tabs */
+#tabStrip .topGroup {
+	z-index: 99;
+	position: relative;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #000;
+	padding: 0 0.7em;
+}
+
+/* This class is for 2nd level tabs */
+#tabStrip .subGroup {
+    z-index: 99;
+	position: relative;
+	font-size: 0.9em;
+	margin-left:0.7em;
+}
+
+#tabStrip .subGroup .defaultTab td, #tabStrip .subGroup .disabledTab td, #tabStrip .subGroup .defaultTabHover td, #tabStrip .subGroup .selectedTab td  {
+	padding: 0.3em 0.5em 0.2em 0.5em;
+}
+
+.defaultTab td, .disabledTab td, .defaultTabHover td, .selectedTab td {
+    padding: 0.5em 0.6em 0.2em 0.6em;
+    }
+
+.defaultTab, .disabledTab, .defaultTabHover, .selectedTab {
+	background: #dcdcdc url(../images/tabstrip/Gradients.png) repeat-x left -2300px;
+	border-top: 1px solid #4d4d4d;
+	border-left: 1px solid #4d4d4d;
+	border-right: 1px solid #4d4d4d;
+	color: #1d1d1d;
+	text-shadow: #f8f8f8 0 1px 0;
+	cursor: default;
+	float: left;
+	-moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;  
+}
+.disabledTab {
+    opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.defaultTabHover {
+	background: #f8f8f8 url(../images/tabstrip/Gradients.png) repeat-x left -5200px;
+	color: #000;
+}
+.selectedTab {
+	background: #f8f8f8 url(../images/tabstrip/Gradients.png) repeat-x left -5200px;
+	color: #000;
+	font-weight: bold !important;
+}
+
+.selectedTab td {
+font-weight: bold;
+}
+
+#tabStrip .multiPage {
+	width: 99%;
+	margin-left: 0.7em;
+	display: table !important;
+}
+
+#tabStrip .multiPage .multiPage {
+	width: 99% !important;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	margin-left: 0px;
+	padding: 0px;
+}
+
+.tabStripScrollItem, .tabStripScrollItemHover {
+	color: #fff;
+	font-weight: bold !important;
+	background-color: #666;
+	font-size: 14px;
+	border: 1px solid #4d4d4d;
+	height: 21px !important;
+	margin-top: 3px;
+	width: 20px;
+	padding: 0;
+	cursor: pointer;
+	background: #777 url(../images/tabstrip/Gradients.png) repeat-x left -200px;
+	margin-left: 2px;
+}
+
+.tabStripScrollItem td,.tabStripScrollItemHover td {
+    padding: 0 0.4em;
+}

@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Community.master.cs" Inherits="EPiServer.Community.Web.Administration.EPiServerCommunity.CommunityMasterPage" %>
+<%@ Import Namespace="EPiServer.Community.Web.Administration.EPiServerCommunity" %>
+
+<asp:Content runat="server" ContentPlaceHolderID="HeaderContent">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            epi.shell.layout.initScrollableArea({ area: "#epi-applicationBodySidebar,#epi-applicationBodyMain" });
+            var on = function(e) { $(this).closest("li").removeClass("epi-settings-closed"); };
+            var off = function(e) { $(this).closest("li").addClass("epi-settings-closed"); };
+            $(".epi-localNavigation > ul > li > a").toggle(off, on);
+            
+            $(document).bind("episearchresultnavigate",
+                function(e, data) {
+                    if (typeof (data) === "object" && data.area === "Community" && typeof (data.result.Metadata.PopupScript) !== "undefined") {
+                        // Show entity editor.
+                        eval(data.result.Metadata.PopupScript);
+                        e.preventDefault();
+                    }
+                }
+            );
+            <asp:ContentPlaceHolder runat="server" ID="HeaderDocumentReady"></asp:ContentPlaceHolder>
+        }); 
+    </script>
+
+</asp:Content>
+
+<asp:Content runat="server" ContentPlaceHolderID="MainContent">
+    <asp:ContentPlaceHolder runat="server" ID="MenuContent">
+        <div id="epi-applicationBodySidebar">
+        </div>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="MainContent">
+        <div id="epi-applicationBodyMainWrapper">
+            <div id="epi-applicationBodyMain">
+            </div>
+        </div>
+    </asp:ContentPlaceHolder>
+</asp:Content>

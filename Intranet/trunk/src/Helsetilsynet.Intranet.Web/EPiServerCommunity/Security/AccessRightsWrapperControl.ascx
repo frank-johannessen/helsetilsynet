@@ -1,0 +1,2 @@
+<%@ Control Language="c#" AutoEventWireup="True" Codebehind="AccessRightsWrapperControl.ascx.cs" Inherits="EPiServer.Community.Web.Administration.Security.AccessRightsWrapperControl" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+<asp:PlaceHolder ID="placeholderAccessRights" Runat="server"></asp:PlaceHolder>

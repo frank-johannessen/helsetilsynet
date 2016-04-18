@@ -1,0 +1,10 @@
+﻿Uninstalling assembly 'd:\inetpub\wwwroot\episerverintranett\bin\episerverscheduler.exe'.
+Affected parameters are:
+   assemblypath = d:\inetpub\wwwroot\episerverintranett\bin\episerverscheduler.exe
+   logfile = d:\inetpub\wwwroot\episerverintranett\bin\episerverscheduler.InstallLog
+Removing EventLog source EPiServerScheduler.
+Warning: The source EPiServerScheduler is not registered on the local machine.
+Service EPiServerScheduler is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

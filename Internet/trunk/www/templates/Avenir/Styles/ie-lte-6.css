@@ -1,0 +1,39 @@
+.lesewebWrapper
+	{ width:990px; margin:0 auto 10px; }
+#wrapper
+	{ width:990px; }
+	
+#lesewebContainer
+	{ position:absolute; }
+
+.mainMenu li
+	{ background-image:url(gfx/ie6-mainMenuItemLeft.png); }
+.mainMenu li a
+	{ background-image:url(gfx/ie6-mainMenuItemRight.png); width:104px; }
+.mainSearchField input
+	{ line-height:17px; }
+	
+#mainMenuSubLevels a
+	{ width:100%; padding:0; }
+#mainMenuSubLevels span
+	{ padding-right:15px; padding-left:15px; }
+	
+#innerWrapper
+	{ width:967px; }
+	
+.tabBox
+	{ float:left; }
+	
+.reportSearch .searchBox
+	{ width:357px; }
+	
+.pageNavigator .selected
+	{ font-weight:bold; }
+	
+#jQarticleNavigator .box,
+#PAFTOOLBAR,
+#articleNavigatorScroller
+	{ position:absolute !important; }
+	
+.message
+	{ width:388px; }

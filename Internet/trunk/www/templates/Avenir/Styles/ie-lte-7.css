@@ -1,0 +1,13 @@
+.mainSearch
+	{ float:left; }
+	
+#breadCrumbs .trigger.isExpanded
+	{ background-position:left -13px; }
+
+ul.searchDrillDown li a
+	{ display:inline; padding-left:0; }
+ul.searchDrillDown li input
+	{ margin-top:-3px; }
+	
+.focusBox h2
+	{ margin-top:-12px; }

@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.MasterPage" %>
+<%@ Import Namespace="EPiServer.Core" %>
+<%@ Import Namespace="MakingWaves.Helsetilsynet.Intranet.Web.ConfigSections" %>
+<%@ Import Namespace="MakingWaves.Helsetilsynet.Intranet.Web.Model" %>
+<%@ Register tagPrefix="ht" tagName="breadcrumbs" src="./Units/Static/BreadCrumbs.ascx" %>
+<%@ Register tagPrefix="ht" tagName="bookmarkThisPage" src="./Units/Placeable/BookmarkThisPage.ascx" %>
+<%@ Register tagPrefix="ht" tagName="addUserToContacts" src="./Units/Placeable/AddUserToContacts.ascx" %>
+<%@ Register tagPrefix="ht" tagName="joinClub" src="./Units/Placeable/JoinClub.ascx" %>
+<%@ Register tagPrefix="ht" tagName="footer" src="./Units/Static/Footer.ascx" %>
+<%@ Register tagPrefix="ht" tagName="megaMenu" src="./Units/MegaMenu/MegaMenu.ascx" %>
+<%@ Register tagPrefix="ht" tagName="metaTags" src="./Units/Static/MetaTags.ascx" %>
+<%@ Register tagPrefix="ht" tagName="printPdf" src="./Units/Static/PrintPdfButton.ascx" %>
+<%@ Register tagPrefix="ht" tagName="print" src="./Units/Placeable/PrintButton.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <ht:metaTags runat="server" />
+        <title><%= CurrentPage.PageName %> - Losen</title>
+        <link rel="profile" href="http://microformats.org/profile/hcalendar" />
+        <script type="text/javascript" src="/Templates/scripts/lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/Templates/scripts/lib/jquery-ui-1.8.20.custom.min.js"></script>
+        <script type="text/javascript" src="/Templates/scripts/lib/jquery.ui.datepicker-no.js"></script>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <link rel="stylesheet" type="text/css" href="/Templates/styles/losen.css" />
+        <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="/Templates/styles/losen-ie8.css" />
+        <![endif]-->
+        <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="/Templates/styles/losen-ie9.css" />
+        <![endif]-->
+        <link rel="stylesheet" media="print" type="text/css" href="/Templates/styles/print.css" />
+    </head>
+    <body class="<%= GetPageTypeName() %>">
+        
+        <form id="form1" runat="server">
+        <!--googleoff: index-->
+        <!--googleoff: snippet-->
+        <div class="page-header">
+            <div class="external-links">
+                <a href="https://gate.helsetilsynet.no/" target="_blank"><%= Translate("/general/safezone") %></a>
+                <a href="<%= ExternalSystemsConfig.GetExternalSystem(7).Url %>" target="_blank" class="external-system"><%= ExternalSystemsConfig.GetExternalSystem(7).Name %></a>
+            </div>
+            <asp:Panel CssClass="site-search" DefaultButton="btnSearch" runat="server">
+               <%--<asp:Label runat="server" AssociatedControlID="tbSearch">Søk på Losen og Helsetilsynet</asp:Label>--%>
+               <asp:TextBox runat="server" CssClass="search-textbox" ID="tbSearch" />
+               <asp:LinkButton ID="btnSearch" runat="server" OnClick="btnSearch_OnClick" Text="Søk" CssClass="site-search-button"/>
+            </asp:Panel>
+
+            <a class="site-logo" href="/">
+                <asp:Image runat="server" AlternateText="Losen – Barnevern, helse- og sosialtilsyn" ImageUrl="/Templates/styles/images/losen-logo.png" />
+            </a>
+        </div>
+        
+        <div class="main-menu">    
+            <ht:megaMenu runat="server" />
+            <div class="bread-crumbs-and-page-actions-wrapper" >
+                <ht:breadcrumbs runat="server" />
+                <div class="page-actions">
+                    <ht:bookmarkThisPage ID="BookmarkThisPage1" runat="server" />
+                    <ht:addUserToContacts ID="AddUserToContacts" runat="server" />
+                    <ht:joinClub ID="JoinClub" runat="server" />
+                    <ht:printPdf runat="server" />
+                    <ht:print runat="server" />
+                </div>
+            </div>
+        </div>
+        <!--googleon: snippet-->
+        <!--googleon: index-->
+        <div class="page-main-content <%= ((BasePage)CurrentPage).LayoutClassName %>">
+	        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+        </div>
+        <!--googleoff: index-->
+        <!--googleoff: snippet-->
+        <div class="page-footer">
+            <ht:footer runat="server" />
+        </div>
+        <!--googleon: snippet-->
+        <!--googleon: index-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderPopup" runat="server" />
+        </form>
+        <script type="text/javascript" src="/Templates/scripts/global.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.search-textbox').losenSearchBox({
+                    swap_val: '<%=  LanguageManager.Instance.Translate("/SearchFilter/descriptiontext") %>'
+                });
+            });
+        </script>
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P5RMGW"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P5RMGW');
+        </script>
+        <!-- End Google Tag Manager -->
+    </body>
+</html>

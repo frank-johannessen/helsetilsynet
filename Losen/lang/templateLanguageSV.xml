@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="Svenska" id="SV">
+		<templates>
+			<mobileinfo>
+				<maininfo>
+								&lt;b&gt;Hur du kompilerar WAP-funktioner i EPiServer&lt;/b&gt;
+					&lt;p&gt;Eftersom supporten för wap och mobila enheter i EPiServer baserar sig på Microsoft 
+						Mobile Internet Toolkit är den inte inkluderad som standard. Om du vill aktivera detta så är det bara
+						att följa instruktionerna nedan.&lt;/p&gt;
+					&lt;ul&gt;
+						&lt;li&gt;
+							Ladda ner och installera Microsoft Mobile Internet Toolkit på din server.
+							Du kan ladda ner det från &lt;a href="http://www.msdn.microsoft.com/downloads/default.asp?url=/downloads/sample.asp?url=/msdn-files/027/001/817/msdncompositedoc.xml" target="_blank"&gt;
+								http://www.msdn.microsoft.com&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;
+							Gå in i EPiServers administratorläge och öppna sidtypen Mobile page.&lt;/li&gt;
+						&lt;ul&gt;
+							&lt;li&gt;
+								Ställ in namn och beskrivning för sidtypen.
+							&lt;/li&gt;
+							&lt;li&gt;
+								Ändra "Filnamn" till att peka på  templates/Mobile.aspx istället för
+								templates/MobileInfo.aspx
+							&lt;/li&gt;
+							&lt;li&gt;
+								Spara ändringarna.
+							&lt;/li&gt;
+						&lt;/ul&gt;
+						&lt;li&gt;
+							Lägg till en referens till System.Web.Mobile (som installerades med Mobile
+							Internet Toolkit) i ditt EPiServer-projekt.&lt;/li&gt;
+						&lt;li&gt;
+							Inkludera filen /templates/Mobile.aspx i ditt EPiServer-projekt.&lt;/li&gt;
+						&lt;li&gt;
+							Kompilera om ditt EPiServer-projekt.&lt;/li&gt;
+					&lt;/ul&gt;
+				</maininfo>
+			</mobileinfo>
+			<form>
+				<numberofvotes>Antal röster: {0}</numberofvotes>
+				<showform>Till formuläret</showform>
+				<requirelogon>Du måste vara påloggad för att få svara.</requirelogon>
+				<denymultipleposts>Du har redan svarat på det här formuläret.</denymultipleposts>
+				<thankyouforyourreply>Tack för ditt svar!</thankyouforyourreply>
+				<showstat>Visa statistik</showstat>
+				<postedmessage>Tack för ditt svar!</postedmessage>
+			</form>
+			<register>
+				<invalidemail>Du måste fylla i en giltig e-postaddress för att vi ska kunna hantera din ansökning.</invalidemail>
+				<invalidpassword>Du måste ange ett lösenord. Skriv samma lösenord i de båda textfälten.</invalidpassword>
+				<expiredidentity>Du har tappat inloggningsinformationen, var god och logga in igen.</expiredidentity>
+				<usernotsaved>Användaren kunde inte sparas, pröva ett annat användarnamn.</usernotsaved>
+				<errorwhilesavinguser>Ett fel uppstod, användaren inte sparad.</errorwhilesavinguser>
+				<invalidsettings>Alla inställningar för självregistrering är inte satta.</invalidsettings>
+				<applyemailsubject>En ny användare har ansökt om ett extranätskonto.</applyemailsubject>
+				<applyemailbodyprefix>Gå till denna sida för att aktivera användaren:</applyemailbodyprefix>
+				<usersaved>Du kommer att få ett mail när din användare har blivit godkänd och aktiverad.</usersaved>
+				<usersavedandactivated>Du kan nu logga på webbplatsen.</usersavedandactivated>
+			</register>
+			<page>
+				<login>Logga in</login>
+				<logout>Logga ut</logout>
+				<notproperlyconfigured>Snabbsökningen är inte rätt konfigurerad. (Den dynamiska egenskapen "Global söksida" måste vara definerad)</notproperlyconfigured>
+			</page>
+			<newsgrouplist>
+				<search>Sök</search>
+				<subscribe>Prenumerera</subscribe>
+				<unsubscribe>Ta Bort Prenumeration</unsubscribe>
+			</newsgrouplist>
+			<search>
+				<searchfiles>			Sök även dokument och filer</searchfiles>
+				<onlywholewords>		Sök endast hela ord</onlywholewords>
+				<searchresult>			Resultat av sökning:</searchresult>
+				<rank>					Rank</rank>
+				<match>					Träff</match>
+				<matches>				Träff(ar)</matches>
+				<nomatches>				Din sökning gav inget resultat, försök igen</nomatches>
+				<help>
+							&lt;b&gt;Söktips!&lt;/b&gt;
+							&lt;ul&gt;
+							&lt;li&gt;Ange upp till 10 sökord separerade med mellanslag, tex &lt;i&gt;&lt;b&gt;&lt;nobr&gt;sökord1 sökord2 sökord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br/&gt;&lt;/li&gt;
+							&lt;li&gt;Begränsa sökningen genom att placera ett plustecken(+) framför de ord som måste finnas med på alla träffar, t ex &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+sökord1 +sökord2 +sökord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt;
+							&lt;li&gt;Begränsa sökningen genom att placera ett minustecken(-) framför de ord som inte får finnas på någon träff, t ex &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+sökord1 +sökord2 -sökord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt;
+							&lt;li&gt;Om du har valt "Sök endast hela ord" men ändå vill söka på del av ett ord, placera en asterisk(*) i slutet av ordet, t ex &lt;i&gt;&lt;b&gt;&lt;nobr&gt;ord1* ord2&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt; vilket kommer att ge träff för "ord123 ord2" men inte "ord123 ord234"&lt;/li&gt;
+							&lt;/ul&gt;	
+						</help>
+				<indexservererror>		Tyvärr, sökmotor för dokument och filer är för tillfället inte igång. Tills vidare kan endast sökningar på webben göras.	</indexservererror>
+				<quicksearch>		Snabbsökning</quicksearch>
+			</search>
+			<login>
+				<logintitle>Login</logintitle>
+				<loginheading>Skyddad information - du måste logga in</loginheading>
+				<username>				Namn</username>
+				<password>				Lösenord</password>
+				<persistentlogin>		Automatisk påloggning mot den här webbplatsen</persistentlogin>
+				<usernamerequired>		Du måste ange ett namn</usernamerequired>
+				<loginfailed>			Inloggningen misslyckades</loginfailed>
+			</login>
+			<calendar>
+				<next>Nästa</next>
+				<previous>Föregående</previous>
+			</calendar>
+			<changedpages file="templates/ChangedPages.aspx">
+				<header>			Senast ändrade filer</header>
+				<lastmodified>		Senast ändrad</lastmodified>
+				<page>				Sida</page>
+				<updatedpages>		Senast ändrade sidor</updatedpages>
+			</changedpages>
+			<conference>
+				<deleteconfirm>Vill du radera sidan?</deleteconfirm>
+				<createnew>Skapa nytt inlägg</createnew>
+				<post>Inlägg</post>
+				<heading>Rubrik</heading>
+				<message>Text</message>
+				<author>Namn</author>
+				<previous>Föregående</previous>
+				<next>Nästa</next>
+				<reply>Svara</reply>
+				<change>Ändra</change>
+				<delete>Ta bort</delete>
+				<replies>Svar</replies>
+				<uponelevel>Upp en nivå</uponelevel>
+			</conference>
+			<newsgroupitem>
+				<reply>Svara</reply>
+				<name>Namn</name>
+				<email>E-postadress</email>
+				<subject>Ämne</subject>
+			</newsgroupitem>
+			<newsgrouplist>
+				<newpost>Nytt inlägg</newpost>
+				<settings>Inställningar</settings>
+				<subject>Ämne</subject>
+				<author>Skapad av</author>
+				<created>Skapad</created>
+			</newsgrouplist>
+			<newsgroupsettings>
+				<personalsettings>Personliga inställningar</personalsettings>
+				<firstname>Förnamn</firstname>
+				<lastname>Efternamn</lastname>
+				<email>E-postadress</email>
+				<interval see="/templates/subscribe/interval"/>
+				<fastaspossible see="/templates/subscribe/fastaspossible"/>
+				<daily see="/templates/subscribe/daily"/>
+				<everysecondday see="/templates/subscribe/everysecondday"/>
+				<weekly see="/templates/subscribe/weekly"/>
+				<everysecondweek see="/templates/subscribe/everysecondweek"/>
+				<everyfourthweek see="/templates/subscribe/everyfourthweek"/>
+			</newsgroupsettings>
+			<newsgrouptree>
+				<back>Tillbaka</back>
+			</newsgrouptree>
+			<notimplemented>
+				<notimplemented>Denna funktion är inte tillgänglig ännu</notimplemented>
+			</notimplemented>
+			<register>
+				<couldnotsave>Användaren kunde inte sparas</couldnotsave>
+				<saved>Användaren är sparad</saved>
+				<notallowed>Denna webbplats tillåter inte självregistrering.</notallowed>
+			</register>
+			<subscribe>
+				<interval>Intervall</interval>
+				<fastaspossible>Så fort som möjligt</fastaspossible>
+				<daily>Varje dag</daily>
+				<everysecondday>Varannan dag</everysecondday>
+				<weekly>Varje vecka</weekly>
+				<everysecondweek>Varannan vecka</everysecondweek>
+				<everyfourthweek>Var fjärde vecka</everyfourthweek>
+				<subscriptions>Prenumerationer</subscriptions>
+			</subscribe>
+			<page>
+				<readmore>Läs mer</readmore>
+			</page>
+		</templates>
+		<pagetypes>
+			<common>
+				<property name="NewsContainer">
+					<caption>Nyhetslista</caption>
+					<help>Ange den sida som du vill hämta nyheter från</help>
+				</property>
+				<property name="EmbeddedURL">
+					<caption>Sökväg till flashfilm</caption>
+					<help>Ange sökvägen till flashfilmen som skall laddas</help>
+				</property>
+					<property name="Height">
+					<caption>Höjd</caption>
+					<help>Höjd på flashfilmen</help>
+				</property>
+				<property name="Width">
+					<caption>Bredd</caption>
+					<help>Bredd på flashfilmen</help>
+				</property>
+				<property name="StartPublishOffset">
+					<caption>	Startpubliceringsdatum relativt från när sidan skapas</caption>
+					<help>		Sätt publiceringsdatumet relativt från det datum då sida skapas</help>
+				</property>
+				<property name="StopPublishOffset">
+					<caption>	Slutpubliceringsdatum relativt från när sidan skapas</caption>
+					<help>		Sätt publiceringsdatumet relativt från det datum då sida skapas</help>
+				</property>
+				<property name="MainBody">
+					<caption>	Editor</caption>
+					<help>		Innehållet på din sida. Här finns det möjlighet att skriva text, infoga bilder, dokument, tabeller m m.</help>
+				</property>
+				<property name="ListingContainer">
+					<caption>Hämta listning från</caption>
+					<help>Ange den sida som du vill hämta listning från</help>
+				</property>
+				<property name="ListingCount">
+					<caption>Visa antal sidor i lista</caption>
+					<help>Ange med heltal hur många sidor som skall visas i listning</help>
+				</property>
+				<property name="ListingType">
+					<caption>Typ av sida i listning</caption>
+					<help>Ange vilken sidtyp som skall visas i listning</help>
+				</property>
+				<property name="ListingCategoryList">
+					<caption>Visa följande kategorier</caption>
+					<help>Ange vilka kategorier som skall visas på den här sidan</help>
+				</property>
+				<property name="EPSUBSCRIBE">
+					<caption>Aktivera prenumeration</caption>
+					<help>Markera denna ruta för att ge en besökare möjlighet att prenumerera på den här sidan och dess undersidor</help>
+				</property>
+				<property name="WriterName">
+					<caption>	Skribent</caption>
+					<help>		Namn på personen som är ansvarig för innehållet</help>
+				</property>
+				<property name="MailTo">
+					<caption>E-postadress till mottagare</caption>
+					<help>E-postadress till den person som ska ta emot informationen</help>
+				</property>
+				<property name="MainIntro">
+					<caption>Puff-text</caption>
+					<help>Inledande text som oftast visas i listningar</help>
+				</property>
+				<property name="MainBodyLoggedIn">
+					<caption>Editor för påloggade användare</caption>
+					<help>Beskrivning av vad en påloggad användare kan göra för val</help>
+				</property>
+				<property name="MainScope">
+					<caption>Scope för IndexServer sökning</caption>
+					<help>Ange den katalog som sökningen skall ske i. Om du lämnar fältet tomt sker sökning i Upload-katalogen</help>
+				</property>
+				<property name="MainCatalog">
+					<caption>Katalog för Index Server</caption>
+					<help>Ange den katalog som anvgivits i Index Server</help>
+				</property>
+				<property name="RecentContainer">
+					<caption>Visa sidor från</caption>
+					<help>Ange vilken sida som du vill visa de nyligen ändrade sidorna från</help>
+				</property>
+				<property name="RecentHours">
+					<caption>Visa sidor som ändrats de senaste x timmarna</caption>
+					<help>Ange ett heltal för hur många timmar tillbaka du skall visa ändrade sidor </help>
+				</property>
+				<property name="IndexContainer">
+					<caption>Visa innehåll från sida</caption>
+					<help>Ange vilken sida som innehållsföreteckningen skall starta  </help>
+				</property>
+				<property name="IndexLevel">
+					<caption>Visa innehållsföreteckning med antal nivåer ner</caption>
+					<help>Ange ett heltal för hur många undernivåer som skall visas i innehållsförteckningen</help>
+				</property>
+				<property name="IndexColumns">
+					<caption>Antal kolumner för innehållsförteckning</caption>
+					<help>Ange ett heltal för hur många kolumner som skall visas i innehållsförteckningen</help>
+				</property>
+				<property name="MailFrom">
+					<caption>E-postavsändare</caption>
+					<help>E-postadress till den person som skall ta emot svaren på formuläret</help>
+				</property>
+				<property name="MainForm">
+					<caption>Formulär</caption>
+					<help>Ange vilket formulär som skall visas på sidan. Genom att klicka på knappen kan du skapa egna formulär</help>
+				</property>
+				<property name="EPSUBSCRIBEHIDDEN">
+					<caption>Visa inte på prenumerationssidan</caption>
+					<help>Ange om du vill att besökaren skall kunna prenumerera på denna sida i ordinarie prenumerationssida </help>
+				</property>
+				<property name="NewsGroupRoot">
+					<caption>Huvudsida för nyhetsgrupper</caption>
+					<help>Ange vilken sidan som är huvudsida för nyhetsgruppen</help>
+				</property>
+				<property name="NewsGroupPageTypeID">
+					<caption>Sidtyp för inlägg</caption>
+					<help>Ange vilken sidtyp som skall användas för inlägg</help>
+				</property>
+				<property name="AllowNewsItem">
+					<caption>Tillåt inlägg</caption>
+					<help>Genom att markera detta alterntiv tillåter du inlägg i gruppen </help>
+				</property>
+				<property name="WriterEmail">
+					<caption>E-postadress</caption>
+					<help>E-postadress till den som skapat inlägget</help>
+				</property>
+				<property name="NewsGroupContainer">
+					<caption>Tillhör följande nyhetsgrupp</caption>
+					<help>Ange vilken nyhetsgrupp detta inlägg skall tillhöra</help>
+				</property>
+				<property name="MainMenuContainer">
+					<caption>Visa menyer från</caption>
+					<help>Ange en plats i menyträdet från vilken sida du vill visa menyer på vald sida</help>
+				</property>
+				<property name="MainSearchPage">
+					<caption>Global söksida</caption>
+					<help>Ange vilken sida som global söksida för webbplatsen</help>
+				</property>
+				<property name="MetaDescription">
+					<caption>Beskrivning av sidan</caption>
+					<help>Ange en kortfattad beskrivning av sidans innehåll</help>
+				</property>
+				<property name="MetaKeywords">
+					<caption>Standardsökord för sidor</caption>
+					<help>Ange en kommaseparerad lista av sökord som matchar den här sidan</help>
+				</property>
+				<property name="EventInputGuide">
+					<caption>Återkommande aktivitet</caption>
+					<help>Genom att markera detta alternativ skapar du återkommande aktivitet</help>
+				</property>
+				<property name="EventStartDate">
+					<caption>Starttid</caption>
+					<help>Ange starttid för aktivitet</help>
+				</property>
+				<property name="EventStopDate">
+					<caption>Sluttid</caption>
+					<help>Ange sluttid för aktivitet</help>
+				</property>
+				<property name="ValidDays">
+					<caption>Återkommande dag</caption>
+					<help>Ange vilken eller vilka dagar aktiviteten skall återkomma med regelbudet intervall</help>
+				</property>
+				<property name="nDaysToRender">
+					<caption>Visa antal dagar i kalendern</caption>
+					<help>Ange med ett helttal hur många dagar som skall visas när besökaren visar kalendern</help>
+				</property>
+				<property name="CalendarType">
+					<caption>Typ av sidor att visa i kalendern</caption>
+					<help>Ange vilken sidtyp/mall som skall används som händelse i kalendern</help>
+				</property>
+				<property name="CalendarContainer">
+					<caption>Visa kalender från</caption>
+					<help>Ange en plats i menyträdet från vilken sida du vill visa kalendern från. Vanligtvis denna sida.</help>
+				</property>
+				<property name="MailSubject">
+					<caption>	Ämnesrad i e-postmeddelande</caption>
+					<help>		Det som anges här kommer att stå i rubriken på de e-postmeddelande som skickas. </help>
+				</property>
+				<property name="MailReadMore">
+					<caption>	Text i e-post för länkar till sidor</caption>
+					<help>		Denna text kommer att fungera som länk till den sida som ändrats och som prenumerationsfunktionen därmed har skickat ut. </help>
+				</property>
+				<property name="MailBody">
+					<caption>	Introduktionstext till e-postmeddelande</caption>
+					<help>		Ange den text som du vill inleda ditt prenumerationsmeddelande med. Meddelandet skickas ut till alla prenumeranter via e-post </help>
+				</property>
+				<property name="EPSUBSCRIBE-ROOT">
+					<caption>	Prenumerationsurval</caption>
+					<help>		Ange vilken startpunkt just denna prenumerationssida ska söka nya och ändrade sidor från. </help>
+				</property>
+				<property name="MainContainer">
+					<caption>		Startsida för sökning</caption>
+					<help>			Om denna egenskap lämnas tom så sker sökning från startsidan</help>
+				</property>
+				<property name="RightListingContainer">
+					<caption>		Listning till höger</caption>
+					<help>			Anger startpunkt för de hjälpsidor som visas i högerlisten.</help>
+				</property>
+				<property name="EnableStatistics">
+						<caption>		Visa statistik på sidmallen</caption>
+						<help>			Visar resultatet av postningar för besökaren</help>
+				</property>
+				<property name="ConferenceContainer">
+						<caption>Startsida för diskussionen</caption>
+						<help>Ange en plats i menyträdet från vilken sida du vill starta diskussionen från. Vanligtvis denna sida.</help>
+				</property>
+					<property name="Box1Caption">
+					<caption>1. Rubrik</caption>
+				</property>
+				<property name="Box1Container">
+					<caption>1. Hämta listning från</caption>
+					<help>Ange den sida som du vill hämta listning från</help>
+				</property>
+				<property name="Box1Count">
+					<caption>1. Visa antal sidor i lista</caption>
+					<help>Ange med heltal hur många sidor som skall visas i listning</help>
+				</property>
+				<property name="Box1SortOrder">
+					<caption>1. Sorteringsordning</caption>
+					<help>Anger i vilken ordning underliggande sidor till den här sidan kommer att visas</help>
+				</property>
+				<property name="Box2Caption">
+					<caption>2. Rubrik</caption>
+				</property>
+				<property name="Box2Container">
+					<caption>2. Hämta listning från</caption>
+					<help>Ange den sida som du vill hämta listning från</help>
+				</property>
+				<property name="Box2Count">
+					<caption>2. Visa antal sidor i lista</caption>
+					<help>Ange med heltal hur många sidor som skall visas i listning</help>
+				</property>
+				<property name="Box2SortOrder">
+					<caption>2. Sorteringsordning</caption>
+					<help>Anger i vilken ordning underliggande sidor till den här sidan kommer att visas</help>
+				</property>
+			</common>
+			<pagetype name="Vanlig webbsida">
+				<name>Vanlig webbsida</name>
+				<description>Vanlig informationssida</description>
+			</pagetype>
+			<pagetype name="Prenumeration">
+				<name>Prenumeration</name>
+				<description>Sida för besökaren att välja prenumerationsinformation</description>
+			</pagetype>
+			<pagetype name="Kalender">
+				<name>Kalendar</name>
+				<description>Huvudsida för kalendar</description>
+			</pagetype>
+			<pagetype name="Kalenderhändelse">
+				<name>Kalenderhändelse</name>
+				<description>Sida för en ny händelse i kalendern</description>
+				<captions>
+					<caption name="Normalt möte">Normal aktivitet</caption>
+					<caption name="Tid för möte">Tid för aktivitet</caption>
+					<caption name="Starttid">Starttid</caption>
+					<caption name="Sluttid">Sluttid</caption>
+					<caption name="Återkommande möte">Återkommande aktvitet</caption>
+					<caption name="Hela dagen">Hela dagen</caption>
+					<caption name="Inträffar varje">Inträffar varje</caption>
+					<caption name="Begränsning av intervall">Begränsning av intervall</caption>
+					<caption name="Startdatum">Startdatum</caption>
+					<caption name="Slutdatum">Slutdatum</caption>
+					<caption name="Minst en dag måste markeras vid återkommande möte!">Minst en dag måste markeras vid återkommande aktivitet</caption>
+					<caption name="Ange mötesinformation">Ange mötesinformation</caption>
+				</captions>
+			</pagetype>
+			<pagetype name="Diskussion">
+				<name>Diskussionsforum</name>
+				<description>Huvudsida för att bygga upp ett diskussionsforum</description>
+			</pagetype>
+			<pagetype name="Sök">
+				<name>Sök</name>
+				<description>Sida för att söka information på webbplatsen</description>
+			</pagetype>
+			<pagetype name="Ändrat nyligen">
+				<name>Ändrat nyligen</name>
+				<description>Sida som visar en lista med sidor som nyligen blivit ändrade</description>
+			</pagetype>
+			<pagetype name="Innehållsförteckning">
+				<name>Innehållsförteckning</name>
+				<description>Sida som visar innehållet på hela eller delar av webbplatsen</description>
+			</pagetype>
+			<pagetype name="Fillistning">
+				<name>Fillistning</name>
+				<description>Sida som listar filer från en katalog på webbservern</description>
+			</pagetype>
+			<pagetype name="Startsida">
+				<name>Startsida</name>
+				<description>Startsida på webbplatsen </description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, huvudsida">
+				<name>Nyhetsgrupper, huvudsida</name>
+				<description>Huvudsida för nyhetsgrupper </description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, kategori">
+				<name>Nyhetsgrupper, kategori</name>
+				<description>Kategori för nyhetsgrupp</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, nyhetsgrupp">
+				<name>Nyhetsgrupper, nyhetsgrupp</name>
+				<description>Sida för nyhetsgrupp</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, inlägg">
+				<name>Nyhetsgrupper, inlägg</name>
+				<description>Sida för inlägg i en nyhetsgrupp</description>
+			</pagetype>
+			<pagetype name="Registrera användare">
+				<name>Registrera användare</name>
+				<description>Sida där besökaren kan registrera sig själva på webbplatsen</description>
+			</pagetype>
+			<pagetype name="Formulärsida">
+				<name>Formulärsida</name>
+				<description>Sida som innehåller ett formulär</description>
+			</pagetype>
+			<pagetype name="Alfabetisk innehållsförteckning">
+				<name>Alfabetisk innehållsföretckning</name>
+				<description>Listar sidor sorterade i bokstavsordning</description>
+			</pagetype>
+			<pagetype name="FlashSida">
+				<name>Flashsida</name>
+				<description>Sida som laddar en flashfilm</description>
+			</pagetype>		
+			<pagetype name="Mobile page">
+				<name>Mobila enheter</name>
+				<description>Sida för mobila enheter</description>
+			</pagetype>		
+			<pagetype name="Rösta">
+				<name>Rösta</name>
+				<description>Sida för besökaren att rösta på en fråga</description>
+			</pagetype>	
+			<pagetype name="SYS - Välkomstsida">
+				<name>Välkomstsida i redigeraläge</name>
+				<description>Första sida på webbplatsen i redigeraläge</description>
+			</pagetype>		
+			<pagetype name="SYS - Papperskorg">
+				<name>Papperkorg</name>
+				<description>Trädstruktur för papperskorgen på webbplatsen</description>
+			</pagetype>	
+		</pagetypes>
+		<categories>
+			<category name="News">
+				<description>Nyheter</description>
+			</category>
+			<category name="Technical">
+				<description>Teknik</description>
+			</category>
+			<category name="Data">
+				<description>Data</description>
+			</category>
+		</categories>		
+	</language>
+</languages>

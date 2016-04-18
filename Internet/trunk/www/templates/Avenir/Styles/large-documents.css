@@ -1,0 +1,50 @@
+﻿.large-document-body a {
+    text-decoration: none;
+}
+
+.large-document-body a:hover {
+    text-decoration: underline;
+}
+
+.large-document-body a.details-link {
+    margin: 30px 0 10px;
+    display: block;
+}
+
+.large-doc-toc ol:first-child {
+    padding-left: 0;
+}
+
+#main .large-doc-toc ol
+{
+    list-style: none;
+    margin-bottom: 0;
+}
+
+#main .large-doc-toc ol li ol li
+{
+    margin-bottom: 0;
+}
+#main .large-doc-toc ol li {
+    margin-bottom: 10px;
+}
+
+/* LEFT MENU*/
+
+#innerWrapper #left .large-doc-left-menu li {
+    margin: 3px 0;
+    background-image: none;
+}
+
+.large-doc-left-menu a {
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+.large-doc-left-menu a:hover {
+    text-decoration: underline;
+}
+
+.large-doc-left-menu li a.selected {
+    font-weight: bold;
+}

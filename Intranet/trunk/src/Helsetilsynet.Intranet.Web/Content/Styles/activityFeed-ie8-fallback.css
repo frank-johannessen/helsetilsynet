@@ -1,0 +1,27 @@
+﻿
+        .comments-list > ul > li 
+        {
+            padding: 10px 0 0 10px !important;
+             width:422px;
+        }
+
+         .comments-list .submit-comment 
+        {
+            width:412px;
+            margin-right:10px;
+        }
+
+        .update button.disabled,
+        .update button.disabled:hover,
+        .update button.disabled:focus,
+        .submit-comment button.disabled,
+        .submit-comment button.disabled:hover,
+        .submit-comment button.disabled:focus   
+        {
+            filter: none;
+        }
+
+        .post 
+        {
+            padding-top:10px;
+        }

@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<title>Help in EPiServer</title>
+		<meta http-equiv="Content-Language" content="sv">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<LINK href="../styles/help.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<table cellSpacing="0" cellPadding="1" width="500" border="0">
+			<tr>
+				<td align="right" width="100%"><IMG height="14" alt="In English" src="images/uk.gif" width="20" border="0">
+					<A href="../SV/ContentMirroring.htm"><IMG height="14" alt="På svenska" src="images/sv.gif" width="20" border="0"></A>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%">
+					<h1>Mirroring Administration</h1>
+					<p>Mirroring is a function that can be used to mirror content from an EPiServer Web 
+						site and&nbsp;allows content to be published to:
+					</p>
+					<UL>
+						<LI>
+						a remote EPiServer Web site
+						<LI>
+						HTML
+						<LI>
+							XML</LI></UL>
+					<P>
+						EPiServer can be used to mirror selected parts or all of a Web site. Mirroring 
+						can run automatically, or you can start it manually. You can&nbsp;mirror from 
+						one EPiServer to another, which can be very useful if you wish to create large 
+						sections in, for example, a demo site and then publish all the information at 
+						once on a remote site. Another useful function: create HTML based Web sites 
+						using your dynamic EPiServer, which can be extremely good for archiving.
+					</P>
+					<p>Mirroring from one Web site to another is built up through channels on the Web 
+						site that transmit information. It is also possible to define several channels. 
+						Each channel consists of a number of settings for the pages that are to be 
+						mirrored and, of these, the types of page to be included. One of a channel’s 
+						most important properties is the kind of a channel it is:</p>
+					<ul>
+						<li>
+							<b>Tree</b>
+						- This function finds all changes made in the tree. It finds pages that have 
+						been moved, erased, updated or created. The function finds all the changes from 
+						the root page down in the structure. This function is primarily used to mirror 
+						an exact tree structure. In this case, a page deleted on one Web site must also 
+						be deleted on the other.
+						<li>
+							<b>List</b>
+						- This function works like Tree, except it does not include changes below the 
+						first level.
+						<li>
+							<b>Search</b> - This function finds changed and new pages. It is useful when 
+							you wish to mirror news from one Web site to another.
+						</li>
+					</ul>
+					<p><b><a name="create_a_channel"></a>How to: Create a channel</b></p>
+					<OL>
+						<li>
+						Click the Config tab and then Mirroring Administration.
+						<LI>
+							Click <STRONG>Create</STRONG>.
+						<LI>
+							Enter a name for the channel in the <STRONG>Name</STRONG>
+						field.
+						<LI>
+							Choose a page, from where you wish to publish the structure in the <STRONG>Start 
+								page</STRONG>
+						field. The page must contain pages or subfolders.
+						<LI>
+							Select the type of mirroring that is to be in the <STRONG>Mirror type</STRONG>
+						field: Tree, List or Search.
+						<li>
+							If you want the changes to be automatically approved, select the&nbsp;<STRONG>Approve 
+								changes automatically</STRONG>
+						check box.
+						<li>
+							Select&nbsp;<STRONG>Include the start page</STRONG>
+						if the changes should also apply to the start page.
+						<LI>
+						Select to either mirror the information as an anonymous user or specify a user 
+						name and password.
+						<LI>
+							Click <STRONG>Save</STRONG>.</LI></OL>
+					<p>When you have saved the settings for the channel, you must create the 
+						destination depending on the information and output that you want to create. 
+						The instructions below outline how to mirror content&nbsp;to a remote EPiServer 
+						site, HTML and XML.
+					</p>
+					<P><A href="#episerver">How to: Create a destination and publish pages to a <STRONG>remote 
+								EPiServer</STRONG> site</A><BR>
+						<A href="#html">How to: Create a destination and publish pages to <STRONG>HTML</STRONG></A><BR>
+						<A href="#xml">How to: Create a destination and publish pages to <STRONG>XML</STRONG></A><BR>
+					</P>
+					<P><B><a name="episerver"></a>How to: Create a destination and&nbsp;publish pages to a 
+							remote EPiServer site</B></P>
+					<OL>
+						<LI>
+							Create a channel according to the instructions in <A href="#create_a_channel">How 
+								to: Create a channel in your demo site</A>.
+						<LI>
+							Click&nbsp;<STRONG>Create destination</STRONG>. Select "EPiServer" in the <STRONG>Select 
+								destination type</STRONG> box and click <STRONG>OK</STRONG>.
+						<li>
+							Enter a name for the destination in the <STRONG>Name</STRONG> field. Choose 
+							your second EPiServer site in the <STRONG>Remote site</STRONG>
+						box. (Contact your system administrator if a remote site is not available.)
+						<LI>
+							Choose a page at the remote site and enter the page's ID in the <STRONG>Root page 
+								on destination</STRONG>
+						field.
+						<LI>
+							Click <STRONG>Save</STRONG>.
+						<LI>
+							Go to Edit mode, open the Action Window and click <STRONG>Approve mirroring updates</STRONG>. 
+						A list of updated channels appears and your channel is listed with the amount 
+						of updated pages in parentheses. Click your channel.
+						<LI>
+							The&nbsp;pages to be updated are listed and a Publish button appears at the 
+							bottom. Click <STRONG>Publish</STRONG>.
+						<LI>
+							Click Mirroring Administration on the Config tab in Admin mode. A list of 
+							queued jobs is listed under the channel <STRONG>Queue Length</STRONG>
+						(If the scheduled service already executed it will say 0).
+						<LI>
+							If the scheduled service does not run, click Mirroring Service under the Admin 
+							tab and click <STRONG>Start Manually</STRONG>.
+						</LI>
+					</OL>
+					<P><STRONG><a name="html"></a>How to: Create a destination and publish pages to HTML</STRONG></P>
+					<OL>
+						<LI>
+							Create a channel according to the instructions in <A href="#create_a_channel">How 
+								to: Create a channel in your demo site</A>.
+						<LI>
+							Click&nbsp;<STRONG>Create destination</STRONG>. Select "HTML" in the <STRONG>Select 
+								destination type</STRONG> box and click <STRONG>OK</STRONG>.
+						<LI>
+							Enter a name for your destination in the <STRONG>Name</STRONG>
+						field.
+						<LI>
+							Create a directory in your file system where&nbsp;you want the HTML pages to be 
+							published. Enter the name of the directory in the <STRONG>Target directory on the 
+								server</STRONG>
+						field, e.g. C:\episerverhtml.
+						<LI>
+							The <STRONG>Relative root path</STRONG>
+						field contains the prefix for all the links. For example, enter 
+						"/episerverhtml/" in this field if you have selected C:\episerverhtml as the 
+						root directory and you are to run the remote site from your hard drive.
+						<LI>
+							Change the <STRONG>Default name for files</STRONG>
+						field if you want your HTML files to have an alternative name as default.
+						<LI>
+							The <STRONG>Use the following property for folder names</STRONG>
+						field defines the property that controls the name of the folder.
+						<LI>
+							If <STRONG>Verify check sum for all pages every time</STRONG>
+						is selected, all the pages are downloaded every time a change is discovered on 
+						a page. One page can change many pages in listings, site maps, etc. Mirroring 
+						is speeded up if you do not need this function.
+						<LI>
+							Select the <STRONG>Do not include file name in links</STRONG>
+						check box if you will be running the HTML site from a CD or hard drive and want 
+						to include the file name, e.g. Default.htm, in links. If you will be running 
+						the site online, it is usually preferable to only use the folder name for links 
+						and&nbsp;configure Default.htm as the default document in the Internet 
+						Information Services (IIS).
+						<LI>
+							It is possible to require that certain properties apply to certain channels. 
+							Select the <STRONG>Apply channel filters&nbsp;on templates</STRONG>
+						check box if&nbsp;you want to activate that listings and the menu tree are 
+						filtered in the same way when HTML is downloaded from a page.
+						<LI>
+							Click <STRONG>Save</STRONG>
+						.
+						<LI>
+							Go to Edit mode, open the Action Window and click <STRONG>Approve mirroring updates</STRONG>. 
+						A list of updated channels appears and your channel is listed with the amount 
+						of updated pages in parentheses. Click your channel.
+						<LI>
+							The&nbsp;pages to be updated are listed and a Publish button appears at the 
+							bottom. Click <STRONG>Publish</STRONG>.
+						<LI>
+							Click Mirroring Administration on the Config tab in Admin mode. A list of 
+							queued jobs is listed under the channel <STRONG>Queue Length</STRONG>
+						(If the scheduled service already executed it will say 0).
+						<LI>
+							If the scheduled service does not run, click Mirroring Service under the Admin 
+							tab and click <STRONG>Start Manually</STRONG>.</LI></OL>
+					<P><STRONG><A name="xml"></A>How to: Create a destination and publish pages to XML</STRONG></P>
+					<OL>
+						<LI>
+							Create a channel according to the instructions in <A href="#create_a_channel">How 
+								to: Create a channel in your demo site</A>.
+						<LI>
+							Click&nbsp;<STRONG>Create destination</STRONG>. Select "XML" in the <STRONG>Select 
+								destination type</STRONG> box and click <STRONG>OK</STRONG>.
+						<LI>
+							Enter a name for your destination in the <STRONG>Name</STRONG>
+						field.
+						<LI>
+							Create a directory in your file system where&nbsp;you want the XML&nbsp;pages 
+							to be published. Enter the name of the directory in the <STRONG>Target directory on 
+								the server</STRONG>
+						field, e.g. C:\episerverxml.
+						<li>
+							Create a file called template.xsl under your target directory. Fill the file 
+							with&nbsp;relevant text. (An example template.xsl can be found in white paper 
+							Setting Up EPiServer for Demo.) Enter the path to your XSL file in the <STRONG>Path 
+								to XSL template</STRONG>
+						field, e.g. C:\episerverxml\template.xsl.
+						<LI>
+							Change the <STRONG>Default name for files</STRONG>
+						field if you want your&nbsp;XML files to have an alternative name as default.
+						<LI>
+							The <STRONG>Use the following property for folder names</STRONG>
+						field defines the property that controls the name of the folder.
+						<LI>
+							Select the <STRONG>Do not include file name in links</STRONG>
+						check box if you will be running the HTML site from a CD or hard drive and want 
+						to include the file name, e.g. Default.htm, in links. If you will be running 
+						the site online, it is usually preferable to only use the folder name for links 
+						and&nbsp;configure Default.htm as the default document in the Internet 
+						Information Services (IIS).
+						<LI>
+							Click <STRONG>Save</STRONG>.
+						<LI>
+							Go to Edit mode, open the Action Window and click <STRONG>Approve mirroring updates</STRONG>. 
+						A list of updated channels appears and your channel is listed with the amount 
+						of updated pages in parentheses. Click your channel.
+						<LI>
+							The&nbsp;pages to be updated are listed and a Publish button appears at the 
+							bottom. Click <STRONG>Publish</STRONG>.
+						<LI>
+							Click Mirroring Administration on the Config tab in Admin mode. A list of 
+							queued jobs is listed under the channel <STRONG>Queue Length</STRONG>
+						(If the scheduled service already executed it will say 0).
+						<LI>
+							If the scheduled service does not run, click Mirroring Service under the Admin 
+							tab and click <STRONG>Start Manually</STRONG>.</LI></OL>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="100%"><hr noshade color="#666666" size="1">
+				</td>
+			</tr>
+			<tr>
+				<td width="100%">
+					<p align="center">Read more in <a href="Editorsmanual_online.pdf">Editor's Manual</a>
+						- Read more in <a href="Administratorsmanual_online.pdf">Administrator’s Manual</a></p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

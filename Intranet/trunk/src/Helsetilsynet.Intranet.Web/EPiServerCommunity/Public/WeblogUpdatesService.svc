@@ -1,0 +1,20 @@
+﻿<%@ServiceHost language="c#" Service="EPiServer.Community.Wcf.Blog.WeblogUpdates.WeblogUpdates" Factory="WeblogUpdatesServiceHostFactory" %>
+
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+using System.ServiceModel.Description;
+
+public class WeblogUpdatesServiceHostFactory : ServiceHostFactory
+{
+    protected override ServiceHost CreateServiceHost(System.Type serviceType, System.Uri[] baseAddresses)
+    {
+        ServiceHost host = base.CreateServiceHost(serviceType, baseAddresses);
+
+        WebHttpBinding binding = new WebHttpBinding("WeblogUpdatesCustomBinding");
+        ServiceEndpoint endpoint = host.AddServiceEndpoint(typeof(EPiServer.Community.Wcf.Blog.WeblogUpdates.IWeblogUpdates), binding, "");       
+
+        endpoint.Behaviors.Add(new EPiServer.Community.Wcf.Blog.XmlRpc.XmlRpcEndpointBehavior());
+
+        return host;
+    }
+}

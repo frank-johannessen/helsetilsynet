@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B022BB50-179D-48E3-BE71-B746FF2F9541}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Relate.HelpersAndExtensions</RootNamespace>
+    <AssemblyName>Relate.HelpersAndExtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutomatedRelease|AnyCPU'">
+    <OutputPath>bin\AutomatedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Relate.HelpersAndExtensions.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPiServer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL" />
+    <Reference Include="EPiServer.Common.Cache">
+      <HintPath>..\..\lib\EPiServer.Common.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Configuration, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Data, Version=4.1.517.380, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework">
+      <HintPath>..\..\lib\EPiServer.Common.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework.Exceptions">
+      <HintPath>..\..\lib\EPiServer.Common.Framework.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Framework.Impl">
+      <HintPath>..\..\lib\EPiServer.Common.Framework.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Common.Security">
+      <HintPath>..\..\lib\EPiServer.Common.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community">
+      <HintPath>..\..\lib\EPiServer.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Blog">
+      <HintPath>..\..\lib\EPiServer.Community.Blog.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Calendar">
+      <HintPath>..\..\lib\EPiServer.Community.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Club">
+      <HintPath>..\..\lib\EPiServer.Community.Club.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Configuration, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Contact, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.Contact.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Forum">
+      <HintPath>..\..\lib\EPiServer.Community.Forum.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.ImageGallery, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.ImageGallery.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.MyPage">
+      <HintPath>..\..\lib\EPiServer.Community.MyPage.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.NewsFeed, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.NewsFeed.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.VideoGallery, Version=4.1.517.358, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Community.VideoGallery.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Wcf.Blog">
+      <HintPath>..\..\lib\EPiServer.Community.Wcf.Blog.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Wcf.Feed">
+      <HintPath>..\..\lib\EPiServer.Community.Wcf.Feed.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Community.Web.Administration">
+      <HintPath>..\..\lib\EPiServer.Community.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Data, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Framework, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell, Version=6.2.267.1, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EPiServer.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="PageTypeBuilder">
+      <HintPath>..\..\lib\PageTypeBuilder.2.0\lib\net35\PageTypeBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\System.ComponentModel.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnonymousUser.cs" />
+    <Compile Include="BookmarkFramework\DynamicCommunityEntitiesManager.cs" />
+    <Compile Include="BookmarkFramework\DynamicCommunityEntity.cs" />
+    <Compile Include="BookmarkFramework\DynamicCommunityEntityProvider.cs" />
+    <Compile Include="BookmarkFramework\BookmarkLink.cs" />
+    <Compile Include="BookmarkFramework\LinkContainer.cs" />
+    <Compile Include="BookmarkFramework\LinkManager.cs" />
+    <Compile Include="CMSPageEntity.cs" />
+    <Compile Include="CMSPageEntityHandler.cs" />
+    <Compile Include="Constants\AttributeNames.cs" />
+    <Compile Include="Constants\PageTypeNames.cs" />
+    <Compile Include="DynamicDataStoreEntity.cs" />
+    <Compile Include="DynamicDataStoreEntityProvider.cs" />
+    <Compile Include="EventArguments\CalendarChangedEventArgs.cs" />
+    <Compile Include="ExtensionMethods\BlogExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\CalendarExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ClubExtensionMethodscs.cs" />
+    <Compile Include="CommunitySecurityModule.cs" />
+    <Compile Include="ExtensionMethods\ExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ForumExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\ImageExtensionMethods.cs" />
+    <Compile Include="Constants\QueryStrings.cs" />
+    <Compile Include="Constants\RelateConstants.cs" />
+    <Compile Include="Constants\Enums.cs" />
+    <Compile Include="Helpers\Encryptor.cs" />
+    <Compile Include="HelsetilsynetSpecific\AttributeNames.cs" />
+    <Compile Include="HelsetilsynetSpecific\DepartmentHelper.cs" />
+    <Compile Include="HelsetilsynetSpecific\RelateGlobalSettings.cs" />
+    <Compile Include="HelsetilsynetSpecific\RelateTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PeopleHelper.cs" />
+    <Compile Include="PropertyUserPickerControl\PropertySingleUserPicker.cs" />
+    <Compile Include="PropertyUserPickerControl\PropertySingleUserPickerControl.cs" />
+    <Compile Include="PropertyUserPickerControl\PropertyUserPicker.cs" />
+    <Compile Include="PropertyUserPickerControl\PropertyUserPickerControl.cs" />
+    <Compile Include="RelateGlobalSettings.cs" />
+    <Compile Include="RelateTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\UserExtensionMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelateUserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Advanced.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

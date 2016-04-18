@@ -1,0 +1,995 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="Norwegian" id="no">
+    <pagetypes>
+      <common>
+        <property name="LosenAlphabethicalIndex">
+          <caption>Losen A-Å</caption>
+          <help>Administrasjonsmodul for losen A-Å</help>
+        </property>
+        <property name="Heading">
+          <caption>Overskrift</caption>
+          <help>Overskrift</help>
+        </property>
+        <property name="Keywords">
+          <caption>Meta: Nøkkelord</caption>
+          <help>Meta: Nøkkelord</help>
+        </property>
+        <property name="ToBeRevised">
+          <caption>Revideres</caption>
+          <help>Revideres</help>
+        </property>
+        <property name="Description">
+          <caption>Meta: Description</caption>
+          <help>Meta: Description</help>
+        </property>
+        <property name="RightContent">
+          <caption>Høyrekolonne</caption>
+          <help>Høyrekolonne</help>
+        </property>
+        <property name="RightContentHeading">
+          <caption>Høyrekolonne-overskrift</caption>
+          <help>Høyrekolonne-overskrift</help>
+        </property>
+        <property name="MainIntro">
+          <caption>Ingress</caption>
+          <help>Ingress</help>
+        </property>
+        <property name="MainBody">
+          <caption>Brødtekst</caption>
+          <help>Brødtekst</help>
+        </property>
+        <property name="DocumentType">
+          <caption>Dokumenttype</caption>
+          <help>Dokumenttype</help>
+        </property>
+        <property name="DocType">
+          <caption>Dokumenttype</caption>
+          <help>Dokumenttype</help>
+        </property>
+        <property name="MainImage">
+          <caption>Hovedbilde</caption>
+          <help>Hovedbilde</help>
+        </property>
+        <property name="ResponsibleAuthor">
+          <caption>Ansvarlig redaktør</caption>
+          <help>Ansvarlig redaktør</help>
+        </property>
+        <property name="AttachedDocument">
+          <caption>Hoved-vedlegg</caption>
+          <help>Hoved-vedlegg (vises i teaser)</help>
+        </property>
+        <property name="IsCommentable">
+          <caption>Kan kommenteres</caption>
+          <help>Kan kommenteres</help>
+        </property>
+        <property name="IsC1Only">
+          <caption>Kun C1</caption>
+          <help>Gjelder bare C1</help>
+        </property>
+        <property name="PublishCounter">
+          <caption>Publiseringsteller</caption>
+          <help>Publiseringsteller</help>
+        </property>
+        <property name="AccessViolationPage">
+          <caption>Side for manglende tilgangsrettighet</caption>
+          <help>Side for manglende tilgangsrettighet</help>
+        </property>
+        <property name="AddCalendarEventDescription">
+          <caption>Kalenderhendelse: beskrivelse</caption>
+          <help>Kalenderhendelse: beskrivelse</help>
+        </property>
+        <property name="AltPubDate">
+          <caption>Alternativ publiseringsdato</caption>
+          <help>Alternativ publiseringsdato</help>
+        </property>
+        <property name="Backup">
+          <caption>Backup</caption>
+          <help>Backup</help>
+        </property>
+        <property name="CalendarYearOverview">
+          <caption>Kalender: årsoversikt</caption>
+          <help>Kalender: årsoversikt</help>
+        </property>
+        <property name="ClubArticlePage">
+          <caption>Prosjektrom: artikkel</caption>
+          <help>Prosjektrom: artikkel</help>
+        </property>
+        <property name="ClubEventPage">
+          <caption>Hendelse</caption>
+          <help>Hendelse</help>
+        </property>
+        <property name="ClubForumPage">
+          <caption>Prosjektforum</caption>
+          <help>Prosjektforum</help>
+        </property>
+        <property name="ClubHomePage">
+          <caption>Prosjektside</caption>
+          <help>Prosjektside</help>
+        </property>
+        <property name="ClubImageGalleryPage">
+          <caption>Prosjektrom: bildegalleri</caption>
+          <help>Prosjektrom: bildegalleri</help>
+        </property>
+        <property name="ClubMembersPage">
+          <caption>Prosjektrom: medlemmer</caption>
+          <help>Prosjektrom: medlemmer</help>
+        </property>
+        <property name="ClubPage">
+          <caption>Prosjektrom</caption>
+          <help>Prosjektrom</help>
+        </property>
+        <property name="ClubWallPage">
+          <caption>Prosjektvegg</caption>
+          <help>Prosjektvegg</help>
+        </property>
+        <property name="Col1Title">
+          <caption>Kolonne 1: tittel</caption>
+          <help>Kolonne 1: tittel</help>
+        </property>
+        <property name="Col2Title">
+          <caption>Kolonne 2: tittel</caption>
+          <help>Kolonne 2: tittel</help>
+        </property>
+        <property name="Col3Title">
+          <caption>Kolonne 3: tittel</caption>
+          <help>Kolonne 3: tittel</help>
+        </property>
+        <property name="CouncilName">
+          <caption>Fylke</caption>
+          <help>Fylke</help>
+        </property>
+        <property name="CountryWide">
+          <caption>Nasjonalt</caption>
+          <help>Nasjonalt</help>
+        </property>
+        <property name="Department">
+          <caption>Avdeling</caption>
+          <help>Avdeling</help>
+        </property>
+        <property name="DepartmentName">
+          <caption>Avdelingsnavn</caption>
+          <help>Avdelingsnavn</help>
+        </property>
+        <property name="Departments">
+          <caption>Avdelinger</caption>
+          <help>Avdelinger</help>
+        </property>
+        <property name="DoctorSpecialties">
+          <caption>Lege-spesialiteter</caption>
+          <help>Lege-spesialiteter</help>
+        </property>
+        <property name="ExternalSystem1">
+          <caption>Eksternt system 1</caption>
+          <help>Eksternt system 1</help>
+        </property>
+        <property name="ExternalSystem2">
+          <caption>Eksternt system 2</caption>
+          <help>Eksternt system 2</help>
+        </property>
+        <property name="ExternalSystem3">
+          <caption>Eksternt system 3</caption>
+          <help>Eksternt system 3</help>
+        </property>
+        <property name="FooterLeftLinkList">
+          <caption>Bunntekst: lenkeliste venstre</caption>
+          <help>Bunntekst: lenkeliste venstre</help>
+        </property>
+        <property name="FooterMainBody">
+          <caption>Bunntekst: hovedtekst</caption>
+          <help>Bunntekst: hovedtekst</help>
+        </property>
+        <property name="FooterRightImage">
+          <caption>Bunntekst: høyrebilde</caption>
+          <help>Bunntekst: høyrebilde</help>
+        </property>
+        <property name="FooterRightImageUrl">
+          <caption>Bunntekst: høyrebilde-lenke</caption>
+          <help>Bunntekst: høyrebilde-lenke</help>
+        </property>
+        <property name="FooterRightLinkList">
+          <caption>Bunntekst: lenkeliste høyre</caption>
+          <help>Bunntekst: lenkeliste høyre</help>
+        </property>
+        <property name="Fylke">
+          <caption>Fylke</caption>
+          <help>Fylke</help>
+        </property>
+        <property name="FylkesmannsEmbete">
+          <caption>FylkesmannsEmbete</caption>
+          <help>FylkesmannsEmbete</help>
+        </property>
+        <property name="GeneralErrorPage">
+          <caption>Generell feilmelding</caption>
+          <help>Generell feilmelding</help>
+        </property>
+        <property name="GlobalSettingsReference">
+          <caption>Globale innstillinger</caption>
+          <help>Globale innstillinger</help>
+        </property>
+        <property name="Helseforetak">
+          <caption>Helseforetak</caption>
+          <help>Helseforetak</help>
+        </property>
+        <property name="HelsetilsynetStandardRssFeed">
+          <caption>Helsetilsynet standard Rss</caption>
+          <help>Helsetilsynet standard Rss</help>
+        </property>
+        <property name="HitsPerPage">
+          <caption>Treff per side</caption>
+          <help>Treff per side</help>
+        </property>
+        <property name="ImageGalleriesPage">
+          <caption>Bildegalleri</caption>
+          <help>Bildegalleri</help>
+        </property>
+        <property name="KeyWordSelectList">
+          <caption>Nøkkelordliste</caption>
+          <help>Nøkkelordliste</help>
+        </property>
+        <property name="LargeDocumentChapterHeadingRegex">
+          <caption>Store dokumenter: regex for overskrift</caption>
+          <help>Store dokumenter: regex for overskrift</help>
+        </property>
+        <property name="LeftBody">
+          <caption>Venstre brødtekst</caption>
+          <help>Venstre brødtekst</help>
+        </property>
+        <property name="LinkExt1">
+          <caption>Ekstern lenke 1</caption>
+          <help>Ekstern lenke 1</help>
+        </property>
+        <property name="LinkExt10">
+          <caption>Ekstern lenke 10</caption>
+          <help>Ekstern lenke 10</help>
+        </property>
+        <property name="LinkExt2">
+          <caption>Ekstern lenke 2</caption>
+          <help>Ekstern lenke 2</help>
+        </property>
+        <property name="LinkExt3">
+          <caption>Ekstern lenke 3</caption>
+          <help>Ekstern lenke 3</help>
+        </property>
+        <property name="LinkExt4">
+          <caption>Ekstern lenke 4</caption>
+          <help>Ekstern lenke 4</help>
+        </property>
+        <property name="LinkExt5">
+          <caption>Ekstern lenke 5</caption>
+          <help>Ekstern lenke 5</help>
+        </property>
+        <property name="LinkExt6">
+          <caption>Ekstern lenke 6</caption>
+          <help>Ekstern lenke 6</help>
+        </property>
+        <property name="LinkExt7">
+          <caption>Ekstern lenke 7</caption>
+          <help>Ekstern lenke 7</help>
+        </property>
+        <property name="LinkExt8">
+          <caption>Ekstern lenke 8</caption>
+          <help>Ekstern lenke 8</help>
+        </property>
+        <property name="LinkExt9">
+          <caption>Ekstern lenke 9</caption>
+          <help>Ekstern lenke 9</help>
+        </property>
+        <property name="LinkExtHeader">
+          <caption>Ekstern lenke overskrift</caption>
+          <help>Ekstern lenke overskrift</help>
+        </property>
+        <property name="LinkExtName1">
+          <caption>Ekstern lenke 1 navn</caption>
+          <help>Ekstern lenke 1 navn</help>
+        </property>
+        <property name="LinkExtName10">
+          <caption>Ekstern lenke 10 navn</caption>
+          <help>Ekstern lenke 10 navn</help>
+        </property>
+        <property name="LinkExtName2">
+          <caption>Ekstern lenke 2 navn</caption>
+          <help>Ekstern lenke 2 navn</help>
+        </property>
+        <property name="LinkExtName3">
+          <caption>Ekstern lenke 3 navn</caption>
+          <help>Ekstern lenke 3 navn</help>
+        </property>
+        <property name="LinkExtName4">
+          <caption>Ekstern lenke 4 navn</caption>
+          <help>Ekstern lenke 4 navn</help>
+        </property>
+        <property name="LinkExtName5">
+          <caption>Ekstern lenke 5 navn</caption>
+          <help>Ekstern lenke 5 navn</help>
+        </property>
+        <property name="LinkExtName6">
+          <caption>Ekstern lenke 6 navn</caption>
+          <help>Ekstern lenke 6 navn</help>
+        </property>
+        <property name="LinkExtName7">
+          <caption>Ekstern lenke 7 navn</caption>
+          <help>Ekstern lenke 7 navn</help>
+        </property>
+        <property name="LinkExtName8">
+          <caption>Ekstern lenke 8 navn</caption>
+          <help>Ekstern lenke 8 navn</help>
+        </property>
+        <property name="LinkExtName9">
+          <caption>Ekstern lenke 9 navn</caption>
+          <help>Ekstern lenke 9 navn</help>
+        </property>
+        <property name="MaxResult">
+          <caption>Maks antall resultater</caption>
+          <help>Maks antall resultater</help>
+        </property>
+        <property name="LetUsersAddProjectrooms">
+          <caption>La brukere opprette prosjektrom</caption>
+          <help>Hvis denne er satt til sann, vil vanlige brukere kunne opprette prosjektrom</help>
+        </property>
+        <property name="MediaWatch">
+          <caption>Medieovervåkning</caption>
+          <help>Medieovervåkning</help>
+        </property>
+        <property name="MegaMenuSettingsPage">
+          <caption>Megameny: innstillinger</caption>
+          <help>Megameny: innstillinger</help>
+        </property>
+        <property name="MemberDeletedPage">
+          <caption>Ansattside slettet</caption>
+          <help>Ansattside slettet</help>
+        </property>
+        <property name="MetaDescription">
+          <caption>Meta: beskrivelse</caption>
+          <help>Meta: beskrivelse</help>
+        </property>
+        <property name="MetaKeywords">
+          <caption>Meta: nøkkelord</caption>
+          <help>Meta: nøkkelord</help>
+        </property>
+        <property name="MetaYear">
+          <caption>Meta: år</caption>
+          <help>Meta: år</help>
+        </property>
+        <property name="MyBlogPage">
+          <caption>Blogg</caption>
+          <help>Blogg</help>
+        </property>
+        <property name="MyImageGalleryPage">
+          <caption>Mitt bildegalleri</caption>
+          <help>Mitt bildegalleri</help>
+        </property>
+        <property name="MyImagesPage">
+          <caption>Mine bilder</caption>
+          <help>Mine bilder</help>
+        </property>
+        <property name="MyPage">
+          <caption>Min side</caption>
+          <help>Min side</help>
+        </property>
+        <property name="MySettingsPage">
+          <caption>Mine innstillinger</caption>
+          <help>Mine innstillinger</help>
+        </property>
+        <property name="NotMemberPage">
+          <caption>Ikke medlem</caption>
+          <help>Ikke medlem</help>
+        </property>
+        <property name="NumberOfItemsInLastPublished">
+          <caption>Antall i sist publisert</caption>
+          <help>Antall i sist publisert</help>
+        </property>
+        <property name="NurseSpecialties">
+          <caption>Sykepleier-spesialiteter</caption>
+          <help>Sykepleier-spesialiteter</help>
+        </property>
+        <property name="OtherProfessions">
+          <caption>Andre profesjoner</caption>
+          <help>Andre profesjoner</help>
+        </property>
+        <property name="PageHeader">
+          <caption>Side-overskrift</caption>
+          <help>Side-overskrift</help>
+        </property>
+        <property name="PersonellK">
+          <caption>PersonellK</caption>
+          <help>PersonellK</help>
+        </property>
+        <property name="Profession">
+          <caption>Profesjon</caption>
+          <help>Profesjon</help>
+        </property>
+        <property name="ReaksjonstypeK">
+          <caption>ReaksjonstypeK</caption>
+          <help>ReaksjonstypeK</help>
+        </property>
+        <property name="Region">
+          <caption>Region</caption>
+          <help>Region</help>
+        </property>
+        <property name="RelateGlobalCalenderID">
+          <caption>Relate: global kalender ID</caption>
+          <help>Relate: global kalender ID</help>
+        </property>
+        <property name="RelateGlobalSettingsPage">
+          <caption>Relate: globale innstillinger</caption>
+          <help>Relate: globale innstillinger</help>
+        </property>
+        <property name="Revision">
+          <caption>Revisjon</caption>
+          <help>Revisjon</help>
+        </property>
+        <property name="RightBody">
+          <caption>Høyre brødtekst</caption>
+          <help>Høyre brødtekst</help>
+        </property>
+        <property name="RightColsSubText">
+          <caption>Høyre undertekst</caption>
+          <help>Høyre undertekst</help>
+        </property>
+        <property name="RightColsTitle">
+          <caption>Høyrekolonne tittel</caption>
+          <help>Høyrekolonne tittel</help>
+        </property>
+        <property name="RoomPage">
+          <caption>Rom</caption>
+          <help>Rom</help>
+        </property>
+        <property name="SearchPage">
+          <caption>Søk</caption>
+          <help>Søk</help>
+        </property>
+        <property name="SectionMainCategory">
+          <caption>Seksjon: hovedkategori</caption>
+          <help>Seksjon: hovedkategori</help>
+        </property>
+        <property name="SelectedArticles">
+          <caption>Valgte artikler</caption>
+          <help>Valgte artikler</help>
+        </property>
+        <property name="Specialties">
+          <caption>Spesialiteter</caption>
+          <help>Spesialiteter</help>
+        </property>
+        <property name="Tab1Col1RootNode">
+          <caption>Fane 1 Kolonne 1 rotnode</caption>
+          <help>Fane 1 Kolonne 1 rotnode</help>
+        </property>
+        <property name="Tab1Col2RootNode">
+          <caption>Fane 1 Kolonne 2 rotnode</caption>
+          <help>Fane 1 Kolonne 2 rotnode</help>
+        </property>
+        <property name="Tab1Col3RootNode">
+          <caption>Fane 1 Kolonne 3 rotnode</caption>
+          <help>Fane 1 Kolonne 3 rotnode</help>
+        </property>
+        <property name="Tab1Col4RootNode">
+          <caption>Fane 1 Kolonne 4 rotnode</caption>
+          <help>Fane 1 Kolonne 4 rotnode</help>
+        </property>
+        <property name="Tab1Col5RootNode">
+          <caption>Fane 1 Kolonne 5 rotnode</caption>
+          <help>Fane 1 Kolonne 5 rotnode</help>
+        </property>
+        <property name="Tab2Col1RootNodes">
+          <caption>Fane 2 Kolonne 1 rotnoder</caption>
+          <help>Fane 2 Kolonne 1 rotnoder</help>
+        </property>
+        <property name="Tab2Col2RootNodes">
+          <caption>Fane 2 Kolonne 2 rotnoder</caption>
+          <help>Fane 2 Kolonne 2 rotnoder</help>
+        </property>
+        <property name="Tab2Col3RootNodes">
+          <caption>Fane 2 Kolonne 3 rotnoder</caption>
+          <help>Fane 2 Kolonne 3 rotnoder</help>
+        </property>
+        <property name="Tab2Col4RootNodes">
+          <caption>Fane 2 Kolonne 4 rotnoder</caption>
+          <help>Fane 2 Kolonne 4 rotnoder</help>
+        </property>
+        <property name="Tab2Col5RootNodes">
+          <caption>Fane 2 Kolonne 5 rotnoder</caption>
+          <help>Fane 2 Kolonne 5 rotnoder</help>
+        </property>
+        <property name="Tab3Col1RootNodes">
+          <caption>Fane 3 Kolonne 1 rotnoder</caption>
+          <help>Fane 3 Kolonne 1 rotnoder</help>
+        </property>
+        <property name="Tab3Col2RootNodes">
+          <caption>Fane 3 Kolonne 2 rotnoder</caption>
+          <help>Fane 3 Kolonne 2 rotnoder</help>
+        </property>
+        <property name="Tab3Col3RootNodes">
+          <caption>Fane 3 Kolonne 3 rotnoder</caption>
+          <help>Fane 3 Kolonne 3 rotnoder</help>
+        </property>
+        <property name="Tab3Col4RootNodes">
+          <caption>Fane 3 Kolonne 4 rotnoder</caption>
+          <help>Fane 3 Kolonne 4 rotnoder</help>
+        </property>
+        <property name="Tab3Col5RootNodes">
+          <caption>Fane 3 Kolonne 5 rotnoder</caption>
+          <help>Fane 3 Kolonne 5 rotnoder</help>
+        </property>
+        <property name="Tasks">
+          <caption>Oppgaver</caption>
+          <help>Oppgaver</help>
+        </property>
+        <property name="TjenesteomradeK">
+          <caption>TjenesteomradeK</caption>
+          <help>TjenesteomradeK</help>
+        </property>
+        <property name="TopicPage">
+          <caption>Emne-side</caption>
+          <help>Emne-side</help>
+        </property>
+        <property name="UserSearchPage">
+          <caption>Ansattsøk</caption>
+          <help>Ansattsøk</help>
+        </property>
+        <property name="VideoGalleryPage">
+          <caption>Videogalleri</caption>
+          <help>Videogalleri</help>
+        </property>
+        <property name="VirksomhetK">
+          <caption>VirksomhetK</caption>
+          <help>VirksomhetK</help>
+        </property>
+        <property name="VurderingsgrunnlagK">
+          <caption>VurderingsgrunnlagK</caption>
+          <help>VurderingsgrunnlagK</help>
+        </property>
+        <property name="PageReference">
+          <caption>Side-referanse</caption>
+          <help>Side-referanse</help>
+        </property>
+        <property name="Links">
+          <caption>Lenker</caption>
+          <help>Lenker</help>
+        </property>
+        <property name="UserPicker">
+          <caption>Ansatt-velger</caption>
+          <help>Ansatt-velger</help>
+        </property>
+        <property name="Width">
+          <caption>Bredde</caption>
+          <help>Bredde</help>
+        </property>
+        <property name="Height">
+          <caption>Høyde</caption>
+          <help>Høyde</help>
+        </property>
+        <property name="FolderBrowser">
+          <caption>Fil-katalog</caption>
+          <help>Fil-katalog</help>
+        </property>
+        <property name="FileTypeFilter">
+          <caption>Filter for filtype</caption>
+          <help>Filter for filtype</help>
+        </property>
+        <property name="NumberOfYearsToShow">
+          <caption>Antall år i visning</caption>
+          <help>Definer hvor mange år som det skal vises hendelser av.</help>
+        </property>
+
+      </common>
+      <pagetype name="Article">
+        <name>Artikkel</name>
+        <description>Sidetype: Artikkel</description>
+      </pagetype>
+      <pagetype name="ArticleArchive">
+        <name>Interninfo arkiv</name>
+        <description>Sidetype: Interninfo arkiv</description>
+      </pagetype>
+      <pagetype name="CalendarYearOverview">
+        <name>Kalender årsoversikt</name>
+        <description>Sidetype: Kalender årsoversikt</description>
+      </pagetype>
+      <pagetype name="ClubListPage">
+        <name>Prosjektrom-oversikt</name>
+        <description>Sidetype: Prosjektrom-oversikt</description>
+      </pagetype>
+      <pagetype name="ClubPage">
+        <name>Prosjektrom</name>
+        <description>Sidetype: Prosjektrom</description>
+      </pagetype>
+      <pagetype name="Folder">
+        <name>Mappe</name>
+        <description>Sidetype: Mappe</description>
+      </pagetype>
+      <pagetype name="GlobalSettings">
+        <name>Globale innstillinger</name>
+        <description>Sidetype: Globale innstillinger</description>
+      </pagetype>
+      <pagetype name="ImportedArticle">
+        <name>Importert artikkel</name>
+        <description>Sidetype: Importert artikkel</description>
+      </pagetype>
+      <pagetype name="LargeDocument">
+        <name>Stort dokument</name>
+        <description>Sidetype: Stort dokument</description>
+      </pagetype>
+      <pagetype name="LargeDocumentChapter">
+        <name>Stort dokument - kapittel</name>
+        <description>Sidetype: Stort dokument - kapittel</description>
+      </pagetype>
+      <pagetype name="Login">
+        <name>Innlogging</name>
+        <description>Sidetype: Innlogging</description>
+      </pagetype>
+      <pagetype name="MegaMenu">
+        <name>Megameny-innstillinger</name>
+        <description>Sidetype: Megameny-innstillinger</description>
+      </pagetype>
+      <pagetype name="MyPage">
+        <name>Min side</name>
+        <description>Sidetype: Min side</description>
+      </pagetype>
+      <pagetype name="PdfRenderer">
+        <name>Pdf-visning</name>
+        <description>Sidetype: Pdf-visning</description>
+      </pagetype>
+      <pagetype name="PhoneList">
+        <name>Telefonliste</name>
+        <description>Sidetype: Telefonliste</description>
+      </pagetype>
+      <pagetype name="RelateGlobalSettings">
+        <name>Relate-innstillinger</name>
+        <description>Sidetype: Relate-innstillinger</description>
+      </pagetype>
+      <pagetype name="Search">
+        <name>Søk</name>
+        <description>Sidetype: Søk</description>
+      </pagetype>
+      <pagetype name="Section">
+        <name>Seksjon</name>
+        <description>Sidetype: Seksjon</description>
+      </pagetype>
+      <pagetype name="StartPage">
+        <name>Forside</name>
+        <description>Sidetype: Forside</description>
+      </pagetype>
+      <pagetype name="SystemMessagePage">
+        <name>System-melding</name>
+        <description>Sidetype: System-melding</description>
+      </pagetype>
+      <pagetype name="UserSearch">
+        <name>Ansattsøk</name>
+        <description>Sidetype: Ansattsøk</description>
+      </pagetype>
+    </pagetypes>
+
+    <headings>
+      <heading name="Footer">
+        <description>Bunntekst</description>
+      </heading>
+      <heading name="LargeDocument">
+        <description>Store dokumenter</description>
+      </heading>
+      <heading name="LosenIndex">
+        <description>Losen A-Å</description>
+      </heading>
+      <heading name="MegaMenuTab1">
+        <description>Megameny fane 1</description>
+      </heading>
+      <heading name="MegaMenuTab2">
+        <description>Megameny fane 2</description>
+      </heading>
+      <heading name="MegaMenuTab3">
+        <description>Megameny fane 3</description>
+      </heading>
+      <heading name="RightColumn">
+        <description>Høyrekolonne</description>
+      </heading>
+    </headings>
+
+    <dynamiccontenttypes>
+      <dynamiccontent name="LinksPageTree">
+        <caption>Lenkeliste: EPiServer-struktur</caption>
+        <description>Lenkeliste: viser alle undersider gitt rot-node</description>
+      </dynamiccontent>
+      <dynamiccontent name="LinksInternal">
+        <caption>Lenkeliste: EPiServer-sider</caption>
+        <description>Lenkeliste: viser manuelt valgte sider fra EPiServer</description>
+      </dynamiccontent>
+      <dynamiccontent name="UserList">
+        <caption>Ansatt-liste</caption>
+        <description>Ansattt-liste: viser manuelt valgte personer</description>
+      </dynamiccontent>
+      <dynamiccontent name="LinksPageTreeAllLevels">
+        <caption>Lenkeliste: EPiServer-struktur (alle nivåer)</caption>
+        <description>Lenkeliste: viser alle sider på alle nivåer under en gitt rot-node</description>
+      </dynamiccontent>
+      <dynamiccontent name="Iframe">
+        <caption>Iframe</caption>
+        <description>Iframe: viser innhold fra annen URL i Iframe</description>
+      </dynamiccontent>
+      <dynamiccontent name="LinksGoogle">
+        <caption>Lenkeliste: GoogleMini</caption>
+        <description>Lenkeliste: bruker GoogleMini og DocQuery</description>
+      </dynamiccontent>
+      <dynamiccontent name="LinksFiles">
+        <caption>Lenkeliste: Filer</caption>
+        <description>Lenkeliste: viser filer fra filstrukturen</description>
+      </dynamiccontent>
+    </dynamiccontenttypes>
+
+    <LosenIndex>
+      <heading>Losen a - å</heading>
+    </LosenIndex>
+    
+    <personinformation>
+      <name>Navn</name>
+      <firstname>Fornavn</firstname>
+      <lastname>Etternavn</lastname>
+      <email>Epost</email>
+      <title>Tittel</title>
+      <initials>Initialer</initials>
+      <telephone>Telefon</telephone>
+      <telephoneshortcut>tlf.</telephoneshortcut>
+      <mobile>Mobil</mobile>
+      <department>Avdeling</department>
+      <serviceareas>Tjenesteområde</serviceareas>
+      <profession>Profesjon</profession>
+      <specialties>Spesialiteter</specialties>
+      <misc>Beskriv ...</misc>
+      <tasks>Oppgaver</tasks>
+      <fylkesmannsembete>Fylkesmannsembete</fylkesmannsembete>
+      <fylkesmannin>Fylkesmannen i</fylkesmannin>
+      <roomnumber>Romnummer</roomnumber>
+      <moreabouteducation>Mer om utdanning</moreabouteducation>
+      <moreaboutserviceareas>Mer om arbeidsområder</moreaboutserviceareas>
+      <previousworkexperience>Tidligere yrkeserfaring og annen kompetanse</previousworkexperience>
+      <wrongtelephone>Feil i telefonnummer</wrongtelephone>
+      <contactinformation>Kontaktinformasjon</contactinformation>
+      <competence>Egen kompetanse</competence>
+      <employeec1>Ansatte på C1</employeec1>
+      <employeefylkesmann>Ansatte hos fylkesmannen</employeefylkesmann>
+      <profilepicture>Endre profilbilde</profilepicture>
+      <savecontactinfo>Lagre kontaktinformasjon</savecontactinfo>
+      <contactinfosaved>kontaktinformasjon er lagret</contactinfosaved>
+      <savecompetenceinfo>Lagre egen kompetanse</savecompetenceinfo>
+      <competenceinfosaved>Egen kompetanse er lagret</competenceinfosaved>
+    </personinformation>
+
+    <login>
+      <usernameoremail>Skriv inn e-postadressen din</usernameoremail>
+      <username>E-post</username>
+      <password>Passord</password>
+      <rememberme>Husk meg</rememberme>
+      <login>logg inn</login>
+      <register>Registrer meg</register>
+      <forgotyourpassword>Glemt passord?</forgotyourpassword>
+      <sendforgotpassword>Send passord</sendforgotpassword>
+      <logout>Logg ut</logout>
+      <loginfailure>Du ble ikke logget inn: error.</loginfailure>
+      <usernamepassworderror>Feil passord. Klikk på Glemt passord for å lage et nytt passord.</usernamepassworderror>
+      <wrongurl>Brukernavnet eksisterer ikke</wrongurl>
+      <setnewpassword>Lagre nytt passord</setnewpassword>
+      <nouserexistswithloginoremail>Det finnes ingen bruker med oppgitt e-postadresse.</nouserexistswithloginoremail>
+      <passwordsent>Instruksjoner for å endre ditt passord har blitt sendt til din e-post</passwordsent>
+      <passwordchanged>Passordet har blitt endret</passwordchanged>    
+  </login>
+
+    <registration>
+      <required>Må fylles ut</required>
+      <confirmpassword>Gjenta passord</confirmpassword>
+      <newaccount>Opprett</newaccount>
+      <firstnamemissing>Fornavn mangler</firstnamemissing>
+      <lastnamemissing>Etternavn mangler</lastnamemissing>
+      <emailmissing>Email mangler</emailmissing>
+      <emailwrongformat>Dette er ikke en email</emailwrongformat>
+      <passwordmissing>Passord mangler</passwordmissing>
+      <passwordnotmatching>Passordene er ikke like</passwordnotmatching>
+      <invalidpasswordformat>Ugylding passord</invalidpasswordformat>
+      <invalidphoneformat>Telefonnummer må ha 8 siffer</invalidphoneformat>
+      <emailinuse>Denne emailen er allerede i bruk</emailinuse>
+      <nouserexistswithemail>Det er ingen bruker registrert med denne emailen</nouserexistswithemail>
+      <emailservermissing>Emailserver error</emailservermissing>
+      <emailfrommissing>Configuration error: email from missing</emailfrommissing>
+      <bothcountyanddepartmentmissing>Ansatte hos Fylkesmannen må velge fylke, ansatte i C1 må velge avdeling</bothcountyanddepartmentmissing>      
+      <newpasswordmailsubject>Password reset confirmation</newpasswordmailsubject>
+      <choosedepartment>Velg avdeling</choosedepartment>
+      <choosecounty>Velg fylke</choosecounty>
+    </registration>
+    
+    <usercontrolheadings>
+      <mycontacts>mine kollegaer</mycontacts>
+      <mytools>Mine verktøy</mytools>
+      <myprojectrooms>Mine prosjektrom</myprojectrooms>
+      <othersprojectrooms>Prosjektrom / Grupper</othersprojectrooms>
+      <myexternallinks>Mine eksterne lenker</myexternallinks>
+      <myinternallinks>Mine lenker på losen</myinternallinks>
+      <documentsandlinks>Dokumenter og lenker</documentsandlinks>
+      <externallinks>Eksterne lenker</externallinks>
+      <mypage>Min Side</mypage>
+      <projectmembers>Prosjekt deltakere</projectmembers>
+      <mysettings>Innstillinger</mysettings>
+      <usersearchshort>Ansatte og fagområder</usersearchshort>
+    </usercontrolheadings>
+
+    <errormessages>
+      <notimageformat>Dette er ikke et støttet bildeformat</notimageformat>
+    </errormessages>
+
+    <mysettings>
+      <description>Her kan du lagre egne innstillinger på følgende områder:</description>
+      <frontpagesettings>
+        <description>Tilpasset forside (OBS! Valgfritt, uansett arbeidssted):</description>
+        <youget>Du får:</youget>
+        <allnewsarticlearchive>Alle nyheter som publiseres på Interninfo</allnewsarticlearchive>
+        <nonewsarticlearchive>Ikke nyheter fra C1 på Interninfo</nonewsarticlearchive>
+        <calmayerscorner>Presentasjon av de siste innleggene i Calmeyers hjørne nederst på forsiden</calmayerscorner>
+        <notcalmayerscorner>Ikke Calmeyers hjørne på forsiden, samt at innleggene derfra lukes ut fra nyhetsstrømmen din</notcalmayerscorner>
+      </frontpagesettings>
+      <newsfeed>Nyhetsstrøm på Losen</newsfeed>
+      <serviceareadescription>Velg hvilke områder du vil få varsel om oppdateringer og publikasjoner fra:</serviceareadescription>
+      <projectroomdescription>Velg hvilke prosjektrom du vil få varsel om hendelser i:</projectroomdescription>
+      <membersdescription>Velg hvilke kollegaer du vil få varsel om innlegg fra:</membersdescription>
+      <toolboxdescription>Fast innhold i Mine verktøy:</toolboxdescription>
+      <rssfeed>Nyhetsstrøm fra helsetilsynet.no:</rssfeed>
+      <noprojectrooms>Du er ikke medlem i noen prosjektrom enda. Hvis du melder deg inn i et, kan du her velge å filtrere disse bort fra nyhetsstrømmen på forsiden.</noprojectrooms>
+      <nousers>Du har ikke lagt til noen kollegaer enda. Hvis du legger til kollegaer, kan du her velge å filtrere disse bort fra nyhetsstrømmen på forsiden.</nousers>
+    </mysettings>
+    
+    <createentry>
+      <title>Tittel</title>
+      <body>Fritekst</body>
+    </createentry>
+
+    <createclub>
+      <name>Navn:</name>
+      <description>Kort prosjektbeskrivelse:</description>
+      <goal>Målsetning:</goal>
+      <period>Prosjektperiode:</period>
+      <statusopen>Åpent (synlig for alle)</statusopen>
+      <statusclosed>Lukket (synlig kun for inviterte deltagere)</statusclosed>
+      <imageformatinvalid>Dette er ikke et gyldig bildeformat</imageformatinvalid>
+      <heading>Opprett/rediger prosjektrom</heading>
+      <bulletone>Navn og beskrivelse</bulletone>
+      <bullettwo>Legg til deltagere</bullettwo>
+      <bulletthree>Tilgangsbegrensning</bulletthree>
+      <edit>Rediger prosjektrom</edit>
+      <create>Opprett nytt prosjektrom</create>
+    </createclub>
+    
+    <calendar>
+      <earlierevents>Tidligere Hendelser</earlierevents>
+      <commingevents>Fremtidige Hendelser</commingevents>
+      <event>Aktivitet</event>
+      <calendaractivity>Kalenderaktivitet</calendaractivity>
+      <addevent>Legg til aktivitet</addevent>
+      <addeditevent>Legg til / endre aktivitet</addeditevent>
+      <seeall>Se alle</seeall>
+      <title>Tittel:</title>
+      <description>Beskrivelse:</description>
+      <articlelink>Lenke til artikkel:</articlelink>
+      <choosetimeanddate>Velg tidspunkt:</choosetimeanddate>
+      <starttime>Start tidspunkt:</starttime>
+      <endtime>Slutt tidspunkt:</endtime>
+    </calendar>
+    
+    <time>
+      <shortdatepattern>dd.MM.yyyy</shortdatepattern>
+      <shortdatetimepattern>dd.MM.yyyy hh:mm</shortdatetimepattern>
+      <longdatepattern>dd MMM yyyy</longdatepattern>
+      <year>År</year>
+      <month>month</month>
+      <day>day</day>
+      <days>days</days>
+      <hour>h</hour>
+      <hours>h</hours>
+      <minute>m</minute>
+      <minutes>m</minutes>
+    </time>
+    
+    <general>
+      <save>Lagre</save>
+      <delete>Slett</delete>
+      <cancel>Avbryt</cancel>
+      <remove>Fjern</remove>
+      <edit>Endre</edit>
+      <add>Legg til</add>
+      <empty>Tomt</empty>
+      <created>Opprettet</created>
+      <showmore>Vis flere...</showmore>
+      <addnewexternallink>Legg til ny ekstern lenke</addnewexternallink>
+      <addimage>Legg til bilde</addimage>
+      <addorchangeimage>Legg til / endre bilde</addorchangeimage>
+      <linkname>Lenkenavn</linkname>
+      <linkurl>Lenke URL</linkurl>
+      <calendaractivitylist>Kalender / aktivitetsliste</calendaractivitylist>
+      <confirmdeletequestion>Er du sikker på at du vil slette dette innholdet?</confirmdeletequestion>
+      <firstname>Fornavn</firstname>
+      <lastname>Etternavn</lastname>
+      <email>Email</email>
+      <mypage>Min side (personlig)</mypage>
+      <othersmypage>Ansattside</othersmypage>
+      <projectroom>Prosjektrom</projectroom>
+      <competenceworkareas>Kompetanse og arbeidsområder</competenceworkareas>
+      <texttolong>Du har brukt for mange tegn i dette feltet</texttolong>
+      <admin>Admin</admin>
+      <responsible>Ansvarlig</responsible>
+      <lastupdated>Sist oppdatert</lastupdated>
+      <totop>Til toppen</totop>
+      <linktodocument>Lenke til dokumentet</linktodocument>
+      <safezone>Sikker sone</safezone>
+    </general>
+
+    <confirmdeletequestions>
+      <blogentry>Er du sikker på du vil slette dette innlegget?</blogentry>
+      <calendarevent>Er du sikker på du vil slette denne kalenderoppføringen?</calendarevent>
+      <bookmark>Er du sikker på du vil slette denne lenken?</bookmark>
+      <contact>Er du sikker på du vil slette denne kontakten?</contact>
+      <comment>Er du sikker på du vil slette denne kommentaren?</comment>
+    </confirmdeletequestions>
+    
+    <bookmarks>
+      <bookmarkthispage>Legg til i Mine verktøy</bookmarkthispage>
+      <unbookmarkthispage>Fjern fra Mine verktøy</unbookmarkthispage>
+      <addlinksonmypage>Eksterne lenker lagres inne på Min Side</addlinksonmypage>
+      <addtomycontacts>Legg til i Mine kontakter</addtomycontacts>
+      <removefrommycontacts>Fjern fra Mine kontakter</removefrommycontacts>
+      <addinternallinks>Bruk "legg til i mine verktøy" knapp øverst til høre på hver side</addinternallinks>
+    </bookmarks>
+    
+    <club>
+      <projectwall>Prosjektvegg</projectwall>
+      <projectforum>Prosjektforum</projectforum>
+      <createpost>Lag nytt innlegg</createpost>
+      <addroomsonclubpage>Bli med i prosjektrom her</addroomsonclubpage>
+      <newclub>Nytt prosjektrom</newclub>
+      <status>Status</status>
+      <securitystatusclosed>Lukket prosjektrom</securitystatusclosed>
+      <securitystatusopen>Åpent prosjektrom</securitystatusopen>
+      <goal>Mål</goal>
+      <period>Prosjektperiode</period>
+      <description>Hva vi jobber med</description>
+      <join>Bli med i prosjektrom</join>
+      <leave>Forlat prosjektrom</leave>
+      <list-heading>Prosjektrom</list-heading>
+    </club>
+    
+    <ArticleArchive>
+      <ArticleArchiveSearchFilter>
+        <Heading>Avgrens</Heading>
+        <ServicesList>Tjenester på Losen</ServicesList>
+        <YearMonthList>Filtrer på år</YearMonthList>
+      </ArticleArchiveSearchFilter>
+    </ArticleArchive>
+
+    <SearchFilter>
+      <EarlierYears>Eldre</EarlierYears>
+      <SortOrderByDate>Dato</SortOrderByDate>
+      <SortOrderByRelevance>Relevans</SortOrderByRelevance>
+      <searchresult>Søkeresultat</searchresult>
+      <descriptiontext>Søk på Losen og Helsetilsynet.no</descriptiontext>
+    </SearchFilter>
+
+    <UserSearchFilter>
+      <freetextsearch>Fritekstsøk</freetextsearch>
+      <department>Avdeling</department>
+      <services>Tjenester</services>
+      <profession>Profesjon</profession>
+      <tasks>Oppgaver</tasks>
+      <AllDepartments>Alle ansatte C1 + FM</AllDepartments>
+      <AllServices>Alle tjenester</AllServices>
+      <AllCounties>"Alle fylker"</AllCounties>
+      <AllProfessions>Alle profesjoner</AllProfessions>
+      <AllTasks>Alle oppgaver</AllTasks>
+      <searchincompetencecatalog>Søk etter ansatte og fagområder</searchincompetencecatalog>
+      <descriptiontext>Søk på navn, arbeidsoppgaver eller kompetanse</descriptiontext>
+    </UserSearchFilter>
+
+    <myTools>
+      <externalLinksHelpText>Eksterne lenker lagres inne på Min side.</externalLinksHelpText>
+      <internalLinksHelpText>Lagre snarvei til dine mest brukte sider på Losen inne på den faktiske siden</internalLinksHelpText>
+    </myTools>
+
+    <LargeDocuments>
+      <SimpleTocLinkText>Vis enkel innholdsbeskrivelse</SimpleTocLinkText>
+      <DetailedTocLinkText>Vis detaljert innholdsbeskrivelse</DetailedTocLinkText>
+    </LargeDocuments>
+    
+  </language>
+</languages>

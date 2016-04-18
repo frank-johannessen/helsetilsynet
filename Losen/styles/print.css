@@ -1,0 +1,100 @@
+/* Print styles */
+body
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	line-height: 20px;
+	margin: 10px 5px 10px 50px;
+}
+
+
+TD 
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	line-height: 20px;
+}
+
+.PrintTitle    
+{
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.PrintIntro 
+{
+	margin: 0px 0px 12px 0px;
+	font-style: italic;
+	/*font-size: 12px;*/
+}
+
+/* subtitle */
+.subtitle {
+	font-size: 14pt;
+	font-weight: bold;
+	margin: 12px 0px 0px 0px;
+}
+
+.link {
+	padding: 3px 15px 4px 0px;		
+}
+
+.cattitle {
+	font-size: 18px; /*16*/
+	font-weight: normal;
+	/*line-height: 22px;*/
+	padding: 0px 0px 0px 0px;
+	margin: 25px 0px 0px 0px;
+}
+
+
+
+A:link,
+A:active,
+A:visited,
+A:hover {
+/*	text-decoration: none;*/
+	color: #000000;
+}
+
+.bt A:link,
+.bt A:active,
+.bt A:visited,
+.bt A:hover {
+	font-family: Arial;
+	color: #cc0033;
+	text-decoration: none;
+}
+
+.indent 
+{
+	padding-left: 30px;
+	padding-right: 10px;
+}
+
+.hr {
+	background-color: #cccccc;
+}
+.indent .LetterText 
+{
+	font-family:arial;
+	font-size: 10pt;
+	line-height: 20px;
+}
+
+.screen {display: none}
+.paper {display: none}
+
+.subtitle2 {
+	font-size: 12pt;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+	FONT-WEIGHT: bold;
+}
+
+.lastUpdate {
+	font-size: 11px;
+	margin: 20px 0px 5px 0px;
+}

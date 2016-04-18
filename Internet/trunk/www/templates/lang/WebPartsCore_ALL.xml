@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <!--
+    This language file holds texts for the Web Part library.
+  -->
+  <!-- NORWEGIAN -->
+  <language name="Norsk" id="NO">
+    <webparts>
+      <templatebase>
+        <rightclickmenu>
+          <editwebpartslabel>Rediger webdeler</editwebpartslabel>
+          <publishversion>Publiser denne versjonen</publishversion>
+          <browsewebpartslabel>Forhåndsvis webdeler</browsewebpartslabel>
+          <catalogwebpartslabel>Legg til webdeler</catalogwebpartslabel>
+        </rightclickmenu>
+        <webparteditor>
+          <title>Rediger innhold for webdel</title>
+          <instructiontext>Feltene under lar deg endre egenskapene for webdelen.</instructiontext>
+          <applyverb>OK</applyverb>
+          <applyverbdescription>Bruker endringene og lukker redigeringsprogrammet</applyverbdescription>
+          <cancelverb>Avbryt</cancelverb>
+          <cancelverbdescription>Avbryter endringer</cancelverbdescription>
+        </webparteditor>
+        <webpartmanager>
+          <deletewarning>Er du sikker på at du vil slette denne webdelen? For å slette webdel, velg OK.  For å beholde, velg Cancel.</deletewarning>
+        </webpartmanager>
+      </templatebase>
+      <lowimpactzone>
+        <addwebpartheader>
+          <label>Legg til webdel:</label>
+          <button>Legg til</button>
+        </addwebpartheader>
+        <emptyzonetext>Velg webdel fra listen over og trykk på Legg til knappen for å legge til en ny webdel her.</emptyzonetext>
+        <emptyzonetextnomanager>Ingen webdeler i denne sonen. Bruk dra og slipp for å legge webdeler her.</emptyzonetextnomanager>
+        <minimize>Minimer</minimize>
+        <minimizedesc>Minimer '{0}'</minimizedesc>
+        <restore>Maksimer</restore>
+        <restoredesc>Maksimer '{0}'</restoredesc>
+        <delete>Slett</delete>
+        <deletedesc>Slett '{0}'</deletedesc>
+        <edit>Endre</edit>
+        <editdesc>Endre '{0}'</editdesc>
+      </lowimpactzone>
+      <parts>
+        <pagelistitemview>
+          <editlabel></editlabel>
+          <editdesc></editdesc>
+        </pagelistitemview>
+        <pagesummarywebpart>
+          <listtitlelabel>Overskrift</listtitlelabel>
+          <listtitledesc>Angi overskrift/tittel for liste</listtitledesc>
+          <articlepagelinklabel>Peker til side:</articlepagelinklabel>
+          <articlepagelinkdesc>Åpner sidevelgeren som lar deg velge en side i EPiServer.</articlepagelinkdesc>
+          <cannotloadpage>Siden kan ikke lastes. Det kan skyldes at du ikke har tilgang til siden, eller at den har blitt slettet.</cannotloadpage>
+        </pagesummarywebpart>
+        <LinkButton>
+          <title>LinkButton</title>
+          <description>Knapp med link og beskrivelse (alt tekst)</description>
+        </LinkButton>
+        <imagebanner>
+          <title>Banner</title>
+          <description>Viser et bilde med link og beskrivelse (alt tekst)</description>
+
+          <imageurllabel>Sti til bilde</imageurllabel>
+          <imageurldesc>Angi sti (url) til bilde som skal vises i banner</imageurldesc>
+
+          <imageclickurllabel>Klikkadresse</imageclickurllabel>
+          <imageclickurldesc>Adressen (url) som bruker skal sendes til ved klikk på bildet</imageclickurldesc>
+
+          <imagealttextlabel>Alernativ tekst</imagealttextlabel>
+          <imagealttextdesc>Tekst som vises for de som ikke har bildevisning, eksempelvis blinde</imagealttextdesc>
+        </imagebanner>
+        <pagesummary>
+          <title>Artikkel</title>
+          <description>Viser sammendrag fra en artikkel</description>
+          <editordesc>
+            Her kan du velge en artikkel som vises til sluttbrukeren i "ingressmodus". Hvis artikkelen har
+            ingressbilde vil det vises til venstre for artikkelen.
+          </editordesc>
+        </pagesummary>
+        <longstring>
+          <title>LongString</title>
+          <description>Fri Tekst</description>          
+          <editorlabel>Html redigering</editorlabel>
+          <editordesc>Redigeringsvindu for html formatert tekst</editordesc>
+          <headinglabel>Tittel</headinglabel>
+          <headingdesc>Tittel til webdelen</headingdesc>          
+        </longstring>
+        <rsslist>
+          <title>Tittel </title>
+          <description>Overskrift for rss liste</description>
+          <maxcount>Maks antall i liste </maxcount>
+          <uri>Url </uri>
+          <uridesc>Angi url til rss feed</uridesc>
+        </rsslist>
+      </parts>
+    </webparts>
+  </language>
+
+  <!-- ENGLISH -->
+  <language name="English" id="EN">
+    <webparts>
+      <templatebase>
+        <rightclickmenu>
+          <editwebpartslabel>Edit Web Parts</editwebpartslabel>
+          <publishversion>Publish This Version</publishversion>
+          <browsewebpartslabel>Preview Web Parts</browsewebpartslabel>
+          <catalogwebpartslabel>Add Web Parts</catalogwebpartslabel>
+        </rightclickmenu>
+        <webparteditor>
+          <title>Edit Web Part Contents</title>
+          <instructiontext>The fields below allow you to change the behaviour of the web part.</instructiontext>
+          <applyverb>OK</applyverb>
+          <applyverbdescription>Applies changes and closes editor</applyverbdescription>
+          <cancelverb>Cancel</cancelverb>
+          <cancelverbdescription>Cancel changes</cancelverbdescription>
+        </webparteditor>
+        <webpartmanager>
+          <deletewarning>You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.</deletewarning>
+        </webpartmanager>
+      </templatebase>
+      <lowimpactzone>
+        <addwebpartheader>
+          <label>Add Web Part:</label>
+          <button>Add</button>
+        </addwebpartheader>
+        <emptyzonetext>Choose a web part from the list above and click the Add button to add the web part here.</emptyzonetext>
+        <emptyzonetextnomanager>No web parts in this zone. Use drag &amp; drop to place web parts here.</emptyzonetextnomanager>
+        <minimize>Minimize</minimize>
+        <minimizedesc>Minimize '{0}'</minimizedesc>
+        <restore>Restore</restore>
+        <restoredesc>Restore '{0}'</restoredesc>
+        <delete>Delete</delete>
+        <deletedesc>Delete '{0}'</deletedesc>
+        <edit>Edit</edit>
+        <editdesc>Edit '{0}'</editdesc>
+      </lowimpactzone>
+      <parts>
+        <pagesummarywebpart>
+          <listtitlelabel>Heading</listtitlelabel>
+          <listtitledesc>Add list heading</listtitledesc>
+          <articlepagelinklabel>Select a Page</articlepagelinklabel>
+          <articlepagelinkdesc>Opens the page picker dialog, to allow you to select a page in EPiServer.</articlepagelinkdesc>
+          <cannotloadpage>Cannot load page. This can be because the page has been deleted or you do not have the neccessary access rights.</cannotloadpage>
+        </pagesummarywebpart>
+        <pagesummary>
+          <title>Article</title>
+          <description>Shows an article in summary view</description>
+          <editordesc>
+            Select the article you want to show in ingress view. If the article has an ingress picture
+            it will be shown to the left of the title and the text.
+          </editordesc>
+        </pagesummary>
+        <LinkButton>
+          <title>LinkButton</title>
+          <description>Displays an button ,with alternative text and a link.</description>         
+        </LinkButton>
+        <imagebanner>
+          <title>Banner</title>
+          <description>Displays an image, with alternative text and a link.</description>
+
+          <imageurllabel>Url to Picture</imageurllabel>
+          <imageurldesc>The url to the image to show in the banner</imageurldesc>
+
+          <imageclickurllabel>Click Url</imageclickurllabel>
+          <imageclickurldesc>The url to open when the user clicks the image</imageclickurldesc>
+
+          <imagealttextlabel>Alernative Text</imagealttextlabel>
+          <imagealttextdesc>Text shown where pictures are not shown, or as a tooltip on the image</imagealttextdesc>
+        </imagebanner>
+        <longstring>
+          <editorlabel>Editor</editorlabel>
+          <editordesc>Wysiwyg Editor for html formatted text</editordesc>
+          <title>LongString</title>
+          <description>Free Text</description>
+          <headinglabel>Title</headinglabel>
+          <headingdesc>Title to webpart</headingdesc>
+        </longstring>
+        <rsslist>
+          <title>List heading </title>
+          <description>Title for Rss listing</description>
+          <maxcount>Max items in list </maxcount>
+          <uri>Src </uri>
+          <uridesc>The feed url </uridesc>
+        </rsslist>
+      </parts>
+    </webparts>
+  </language>
+</languages>

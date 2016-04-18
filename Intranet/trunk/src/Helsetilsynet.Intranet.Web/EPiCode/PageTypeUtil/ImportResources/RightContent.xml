@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<import>
+	<importinfo>
+		<name>Right Menu Properties</name>
+		<description>Properties to be shown in the right menu. Requires a few custom property types.</description>
+	</importinfo>
+	<properties>
+		<property>
+			<name>divRightMenu</name>
+			<editcaption>&amp;nbsp;</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>false</languagespecific>
+			<tab>Right menu</tab>
+			<type>
+				<!-- The importer will try to match an existing type like this:
+					1. Find a type with the same name
+					2. Find a type with the same fulltype
+					3. Find the basetype
+					The matching is case insensitive
+				 -->
+				<name>Divider</name>
+				<basetype>Number</basetype>
+				<!-- Custom types uses the fulltype, the built in ones do not -->
+				<fulltype>BVNetwork.PropertyTypes.PropertyDivider</fulltype>
+				<!-- This is not needed, can be included as information -->
+				<assemblyname>EPiServerSample</assemblyname>
+			</type>
+		</property>
+		<!-- RightMenuTitle1 -->
+		<property>
+			<name>RightMenuTitle1</name>
+			<editcaption>Right menu title 1</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>true</languagespecific>
+			<tab>Right menu</tab>
+			<type>
+				<name>String</name>
+				<basetype>String</basetype>
+				<!-- Custom ones -->
+				<fulltype></fulltype>
+				<assemblyname></assemblyname>
+			</type>
+		</property>
+		<!-- RightMenuMainBody1 -->
+		<property>
+			<name>RightMenuMainBody1</name>
+			<editcaption>Right menu text 1</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>true</languagespecific>
+			<tab>Right menu</tab>
+			<type>
+				<name>LongString</name>
+				<basetype>LongString</basetype>
+				<!-- Custom ones -->
+				<fulltype></fulltype>
+				<assemblyname></assemblyname>
+			</type>
+		</property>
+
+		<!-- RightMenuTitle2 -->
+		<property>
+			<name>RightMenuTitle2</name>
+			<editcaption>Right menu title 2</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>true</languagespecific>
+			<tab>Right menu</tab>
+			<type>
+				<name>String</name>
+				<basetype>String</basetype>
+				<!-- Custom ones -->
+				<fulltype></fulltype>
+				<assemblyname></assemblyname>
+			</type>
+		</property>
+		<!-- RightMenuMainBody2 -->
+		<property>
+			<name>RightMenuMainBody2</name>
+			<editcaption>Right menu text 2</editcaption>
+			<editdesc></editdesc>
+			<required>false</required>
+			<searchable>false</searchable>
+			<languagespecific>true</languagespecific>
+			<tab>Right menu</tab>
+			<type>
+				<name>LongString</name>
+				<basetype>LongString</basetype>
+				<!-- Custom ones -->
+				<fulltype></fulltype>
+				<assemblyname></assemblyname>
+			</type>
+		</property>
+		
+	</properties>
+</import>

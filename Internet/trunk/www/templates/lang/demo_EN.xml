@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="English" id="en">
+		<blog>
+			<item>
+				<comment>Comment:</comment>
+				<commentheading>Comments:</commentheading>
+				<commentlegend>Post a comment</commentlegend>
+				<errormessages>
+					<requiredcomment>Please fill in the Comment field.</requiredcomment>
+					<requiredname>Please fill in the Name field.</requiredname>
+				</errormessages>
+				<name>Name:</name>
+				<permanentlink>Permanent link</permanentlink>
+				<postedby>by:</postedby>
+				<posteddate>Posted date:</posteddate>
+				<send>Send</send>
+				<tags>Tags:</tags>
+			</item>
+			<itemsummary>
+				<readblog>Read blog:</readblog>
+			</itemsummary>
+			<listpage>
+				<dateheading>Blog entries posted during {0}</dateheading>
+				<errormessage>A configuration error has occured. Either IsTagListing or IsDateListing must be true.</errormessage>
+				<tagheading>Blog entries tagged with {0}</tagheading>
+			</listpage>
+			<propertyblogtags>
+				<errormessage>
+					<categorytoolong>At least one of the tag names is too long. (Max. 64 characters)</categorytoolong>
+				</errormessage>
+				<existingtagsbutton>Add tags</existingtagsbutton>
+				<existingtagslabel>Existing tags</existingtagslabel>
+				<selectedtagslabel>Selected tags</selectedtagslabel>
+			</propertyblogtags>
+			<secondarylist>
+				<aboutme>About me</aboutme>
+				<archive>Archive</archive>
+				<tagcloud>Tag cloud</tagcloud>
+			</secondarylist>
+			<tagstatisticsupdater>
+				<description>Used for updating the blog tag statistics.</description>
+				<displayname>Update tag statistics</displayname>
+			</tagstatisticsupdater>
+		</blog>
+		<captcha>
+			<errormessage>The text entered does not match the text shown in the image.</errormessage>
+			<heading>User verification</heading>
+			<imagealternativetext>Image for user verification</imagealternativetext>
+			<label>Please enter the text shown in the image:</label>
+		</captcha>
+		<common>
+			<messages>
+				<confirmdelete>Are you sure you want to delete this item?</confirmdelete>
+			</messages>
+		</common>
+		<filemanager>
+			<button>
+				<back>Back</back>
+				<rename>Rename</rename>
+				<replacefile>Replace File</replacefile>
+				<upload>Upload</upload>
+				<restore>Restore to this version</restore>
+				<deleteversion>Delete version</deleteversion>
+			</button>
+			<choosefile>Select file:</choosefile>
+			<deletefilesandfoldersheading>Delete files/folders</deletefilesandfoldersheading>
+			<disabledfunctions>Some functions are not available since you don't have sufficient access rights for this folder.</disabledfunctions>
+			<editfilesummaryheading>Edit file summary</editfilesummaryheading>
+			<errormessage>
+				<checkedout>A file with the same name already exists and is checked out by someone else.</checkedout>
+				<insufficientaccess>You don't have sufficient access rights to create or modify files in this folder.</insufficientaccess>
+				<insufficientaccesscreatefolder>You don't have sufficient access rights to create folders in this location.</insufficientaccesscreatefolder>
+				<insufficientaccessmetadata>You don't have sufficient access rights to modify this file.</insufficientaccessmetadata>
+				<insufficientaccessmove>You don't have sufficient access rights to move this item.</insufficientaccessmove>
+				<insufficientaccessremove>You don't have sufficient access rights to remove the selected items.</insufficientaccessremove>
+				<insufficientaccessrename>You don't have sufficient access rights to rename the selected item.</insufficientaccessrename>
+				<readonlyfile>A read-only file with the same name already exists.</readonlyfile>
+				<replacefile>A file with the same name already exists. Do you want to replace the file {0}?</replacefile>
+                <cannotchange>Unable to move, rename, delete or update the selected file. This file may be checked out by someone else.</cannotchange>
+                <containscheckedout>Unable to move or delete selected directory. The directory may contain a file that is checked out by someone else.</containscheckedout>
+                <versioningisnotsupported>Unable to perform operation. Versioning is not supported.</versioningisnotsupported>
+                <versionisnotfound>Unable to perform operation. Version {0} is not found.</versionisnotfound>
+            </errormessage>
+			<filecomment>Comment:</filecomment>
+			<parentfolder>Parent Folder</parentfolder>
+			<filelistheading>
+				<checkedout>Checked out</checkedout>
+				<lastchanged>Last changed</lastchanged>
+				<name>Name</name>
+				<size>Size</size>
+			</filelistheading>
+      <versionlistheading>
+        <version>Version</version>
+        <comments>Comments</comments>
+        <size>Size</size>
+        <createdby>Created By</createdby>
+        <created>Created</created>
+      </versionlistheading>
+			<filename>File name</filename>
+			<files>Files</files>
+			<filesummary>
+				<author>Author</author>
+				<category>Category</category>
+				<comments>Comments</comments>
+				<keywords>Keywords</keywords>
+				<subject>Description</subject>
+				<title>Title</title>
+			</filesummary>
+			<filesummaryheading>File summary for</filesummaryheading>
+      <versionfileheading>Versions for</versionfileheading>
+			<foldername>Folder name:</foldername>
+			<foldernotempty>Folder is not empty</foldernotempty>
+			<foldernotemptywarning>Some of the folders are not empty. Any content in them will be deleted.</foldernotemptywarning>
+			<folders>Folders</folders>
+			<maxuploadmessage>The size of the file to be uploaded may not exceed {0}.</maxuploadmessage>
+			<missingfoldererror>The file could not be created. Either a target folder is missing, or you are not authorized to create files in the specified folder.</missingfoldererror>
+			<newfolder>New folder</newfolder>
+			<parentfolder>Parent folder</parentfolder>
+			<renamefile>Rename file</renamefile>
+			<renamefolder>Rename folder</renamefolder>
+			<selectfilemessage>Select a file with the Browse button below and then click "Upload".</selectfilemessage>
+			<switchview>
+				<addfile>Add file</addfile>
+				<addfolder>Add folder</addfolder>
+				<copy>Copy</copy>
+				<cut>Cut</cut>
+				<checkout>Check out</checkout>
+				<checkin>Check in</checkin>
+				<delete>Delete</delete>
+				<details>Details</details>
+				<paste>Paste</paste>
+				<rename>Rename</rename>
+				<undocheckout>Undo checkout</undocheckout>
+				<view>View</view>
+        <version>Version</version>
+			</switchview>
+			<uploadbutton>Upload</uploadbutton>
+			<uploadheading>File upload</uploadheading>
+			<validation>
+				<folderexists>A folder or file with the same name already exists.</folderexists>
+				<illigalchar>Name cannot contain /, ?, &lt;, &gt;, \, :, *, |, # or ".</illigalchar>
+				<nametolong>Folder name cannot be longer then 255 characters.</nametolong>
+				<requiredname>Name must be entered.</requiredname>
+			</validation>
+		</filemanager>
+		<forum>
+			<forumform>
+				<allowforumslabel>Allow forums:</allowforumslabel>
+				<allowthreadslabel>Allow threads:</allowthreadslabel>
+				<createbutton>Create forum</createbutton>
+				<heading>Create forum</heading>
+				<icondropdown>
+					<auction>Auction</auction>
+					<bomb>Bomb</bomb>
+					<default>Default</default>
+					<information>Information</information>
+				</icondropdown>
+				<iconlabel>Icon:</iconlabel>
+				<titleerror>Title can not be empty</titleerror>
+				<titlelabel>Title:</titlelabel>
+			</forumform>
+			<forumlist>
+				<createbutton>Add sub forum</createbutton>
+				<deleteforumbutton>Delete this forum</deleteforumbutton>
+				<heading>Sub forums - </heading>
+				<setupbutton>Configure automatically</setupbutton>
+				<setuperror>The page is not setup correctly. Please verify your settings.</setuperror>
+				<title>Forum</title>
+				<updated>Latest updated thread</updated>
+			</forumlist>
+			<thread>
+				<addreply>Add reply</addreply>
+				<deletereply>Delete reply</deletereply>
+				<deletethread>Delete thread</deletethread>
+				<lock>Lock thread</lock>
+				<postedby>Posted by: </postedby>
+				<reply>Reply</reply>
+				<replyempty>Reply cannot be empty</replyempty>
+				<sticky>Sticky thread</sticky>
+				<toforum>To forum</toforum>
+				<unlock>Unlock thread</unlock>
+				<unsticky>Unsticky thread</unsticky>
+			</thread>
+			<threadform>
+				<contenterror>Text can not be empty</contenterror>
+				<contentlabel>Text:</contentlabel>
+				<createbutton>Create Thread</createbutton>
+				<heading>Create Thread</heading>
+				<titleerror>Title can not be empty</titleerror>
+				<titlelabel>Title:</titlelabel>
+			</threadform>
+			<threadlist>
+				<createbutton>Add thread</createbutton>
+				<createdby>Created by</createdby>
+				<heading>Threads - </heading>
+				<replies>Replies</replies>
+				<title>Thread</title>
+				<updated>Last updated</updated>
+			</threadlist>
+			<today>Today</today>
+			<Yesterday>Yesterday</Yesterday>
+		</forum>
+		<headings>
+			<heading name="Listings">
+				<description>Listings</description>
+			</heading>
+		</headings>
+		<pagetypes>
+			<common>
+				<property name="ActiveThreadContainer">
+					<caption>Container for active threads</caption>
+					<help>The container for the active threads in this forum.</help>
+				</property>
+				<property name="AllowForums">
+					<caption>Allow sub-forums in this forum</caption>
+					<help>State whether this forum can contain sub-forums.</help>
+				</property>
+				<property name="AllowThreads">
+					<caption>Allow threads in this forum</caption>
+					<help>State whether this forum can contain threads.</help>
+				</property>
+				<property name="ArchiveThreadContainer">
+					<caption>Container for archived threads</caption>
+					<help>The container for the archived threads in this forum.</help>
+				</property>
+				<property name="BlogStart">
+					<caption>Blog start page</caption>
+					<help>The start page of the blog that this blog item belongs to.</help>
+				</property>
+				<property name="CalendarContainer">
+					<caption>Show calendar from</caption>
+					<help>Specify a place in the menu tree from where the calendar will be displayed. Usually this page.</help>
+				</property>
+				<property name="CalendarItemContainer">
+					<caption>Calendar start</caption>
+					<help>Show calendar posts from this page</help>
+				</property>
+				<property name="DateContainer">
+					<caption>Container for date pages</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="Details">
+					<caption>Personal details</caption>
+					<help>Enter a short description of the blogger.</help>
+				</property>
+				<property name="DisableAnonymousComments">
+					<caption>Deny comments from anonymous users</caption>
+					<help>State whether anonymous users are allowed to post comments to blog entries.</help>
+				</property>
+				<property name="EventStartDate">
+					<caption>Start date</caption>
+					<help>Specify the start date for the activity.</help>
+				</property>
+				<property name="EventStopDate">
+					<caption>Stop date</caption>
+					<help>Specify the stop date for the activity.</help>
+				</property>
+				<property name="FeedCount">
+					<caption>Number of items in a feed</caption>
+					<help>The number of items that should be sent out in an RSS/Atom feed.</help>
+				</property>
+				<property name="ForumStart">
+					<caption>Start page of a forum</caption>
+					<help>The start page of the forum that the forum item belongs to.</help>
+				</property>
+				<property name="HistoryLength">
+					<caption>Max. age of listed items</caption>
+					<help>Maximum age of items, in days, that should be viewed in the list.</help>
+				</property>
+				<property name="Icon">
+					<caption>The icon for this forum</caption>
+					<help>The name of the icon this forum should use.</help>
+				</property>
+				<property name="IndexContainer">
+					<caption>Display content from page</caption>
+					<help>Specify the page from which the index will start</help>
+				</property>
+				<property name="IsDateListing">
+					<caption>Date listing</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="IsLocked">
+					<caption>Thread is locked</caption>
+					<help>States whether this thread is locked.</help>
+				</property>
+				<property name="IsTagListing">
+					<caption>Tag listing</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="IsTeamLevel">
+					<caption>Team level</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="ListingSlideContainer">
+					<caption>	Downloading presentations</caption>
+					<help>		Select the page you want to download a presentation from</help>
+				</property>
+				<property name="ListingSlideCount">
+					<caption>	Show number of pages in presentation</caption>
+					<help>		In whole numbers, specify how many pages are to be displayed in the presentation</help>
+				</property>
+				<property name="MainLinksCount">
+					<caption>Display number of links</caption>
+					<help>Using an integer, specify the number of links to be displayed in the listing</help>
+				</property>
+				<property name="MainLinksRoot">
+					<caption>Fetch left listing from</caption>
+					<help>Specify the page from which you want to fetch the listing.</help>
+				</property>
+				<property name="MaxCount">
+					<caption>Max. number of posts</caption>
+					<help>Maximum number of posts viewed in the list.</help>
+				</property>
+				<property name="nDaysToRender">
+					<caption>Number of days to show in calendar</caption>
+					<help>Specify an integer for how many days you want to show in the calendar.</help>
+				</property>
+				<property name="NumberOfReplies">
+					<caption>Number of replies</caption>
+					<help>The number of replies that has been made to this thread.</help>
+				</property>
+				<property name="PageAlphanumericChars">
+					<caption>Character set to use for page listing</caption>
+					<help>Default is ABCDEFGHIJKLMNOPQRSTUVWXYZ</help>
+				</property>
+				<property name="RecentContainer">
+					<caption>Display pages from</caption>
+					<help>Specify the page from which you want to display the recently changed pages</help>
+				</property>
+				<property name="RecentHours">
+					<caption>Display the pages that have been changed in the past x hours</caption>
+					<help>Specify how far back you want to display changed pages, using an integer for the number of hours</help>
+				</property>
+				<property name="RefreshRate">
+					<caption>	Number of seconds each page is to be displayed</caption>
+					<help>		In whole numbers, specify how many seconds each page is to be displayed in the presentation</help>
+				</property>
+				<property name="SecondaryLinksCount">
+					<caption>Display number of links</caption>
+					<help>Using an integer, specify the number of links to be displayed in the listing</help>
+				</property>
+				<property name="SecondaryLinksRoot">
+					<caption>Fetch right listing from</caption>
+					<help>Specify the page from which you want to fetch the listing.</help>
+				</property>
+				<property name="SelectedWebPart">
+					<caption>Select Web Part</caption>
+					<help>Selects which Web Part to use on the page</help>
+				</property>
+				<property name="StickyThreadContainer">
+					<caption>Container for sticky threads</caption>
+					<help>The container for the sticky threads in this forum.</help>
+				</property>
+				<property name="SummaryTextLength">
+					<caption>Length of text summary</caption>
+					<help>Number of characters used to truncate the summary text.</help>
+				</property>
+				<property name="TagCloudValue">
+					<caption>Tag cloud value</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="TagContainer">
+					<caption>Container for tag pages</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="Tags">
+					<caption>Tags</caption>
+					<help>Enter a comma-separated list and/or add from existing tags</help>
+				</property>
+				<property name="TemplateContainer">
+					<caption>Workroom templates</caption>
+					<help>A reference to the container that contains avaliable workroom templates.</help>
+				</property>
+				<property name="UsageStatistics">
+					<caption>Statistics for tag usage</caption>
+					<help>Should be set automatically.</help>
+				</property>
+				<property name="ValidDays">
+					<caption>Recurring day</caption>
+					<help>Specify if the activity is to recur at set intervals.</help>
+				</property>
+				<property name="VideoSourceURL">
+					<caption>Video file</caption>
+					<help>Specify a video file in .flv format.</help>
+				</property>
+				<property name="WorkroomIcon">
+					<caption>Icon image for this workroom</caption>
+					<help>An image to use as the icon for this workroom.</help>
+				</property>
+				<property name="WorkroomStart">
+					<caption>Start page for this workroom</caption>
+					<help>The start page of the workroom that this page belongs to.</help>
+				</property>
+				<property name="Writer">
+					<caption>Blogger name</caption>
+					<help>Enter the name of the blogger.</help>
+				</property>
+			</common>
+			<pagetype name="[Demo] Alphabetical index">
+				<description>Page that lists content in alphabetical order</description>
+				<name>[Demo] Alphabetical index</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog comment">
+				<description>Page used to store comments to blog items</description>
+				<name>[Demo] Blog comment</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog item">
+				<description>A blog item page that is used for a single blog entry</description>
+				<name>[Demo] Blog item</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog list">
+				<description>Listing page used for date listings and tag listings</description>
+				<name>[Demo] Blog list</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog personal start">
+				<description>The start page for a personal blog</description>
+				<name>[Demo] Personal blog start</name>
+				<property name="Image">
+					<caption>Image of blogger</caption>
+					<help>Select an image for the blogger.</help>
+				</property>
+			</pagetype>
+			<pagetype name="[Demo] Blog team start">
+				<description>The start page for a team blog</description>
+				<name>[Demo] Team blog start</name>
+			</pagetype>
+			<pagetype name="[Demo] Calendar">
+				<description>A page showing calendar events.</description>
+				<name>[Demo] Calendar</name>
+			</pagetype>
+			<pagetype name="[Demo] Calendar event">
+				<description>Page for an event in the calendar</description>
+				<name>[Demo] Calendar event</name>
+			</pagetype>
+			<pagetype name="[Demo] Changed recently">
+				<description>Page that displays a list of pages that have recently been changed</description>
+				<name>[Demo] Changed recently</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum">
+				<description>A forum page.</description>
+				<name>[Demo] Forum</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum post">
+				<description>A reply to a forum thread.</description>
+				<name>[Demo] Forum post</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum thread">
+				<description>A thread in a forum.</description>
+				<name>[Demo] Forum thread</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum thread container">
+				<description>A container for threads in a forum.</description>
+				<name>[Demo] Forum thread container</name>
+			</pagetype>
+			<pagetype name="[Demo] My Settings">
+				<description>A settings page where users can change their password and other personal settings</description>
+				<name>[Demo] My settings</name>
+			</pagetype>
+			<pagetype name="[Demo] Slide show">
+				<description>Page that displays a number of pages as a presentation, each page changing at pre-determined intervals</description>
+				<name>[Demo] Slide show</name>
+			</pagetype>
+			<pagetype name="[Demo] Start page">
+				<description>The start page is the main entrance to the web site containing a main and secondary body as well as different listings of links</description>
+				<name>[Demo] Start page</name>
+			</pagetype>
+			<pagetype name="[Demo] Video Player">
+				<description>Page for viewing videos in .flv format</description>
+				<name>[Demo] Video player</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Calendar">
+				<description>A calendar page in a workroom.</description>
+				<name>[Demo] Workroom calendar</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Calendar event">
+				<description>Page for an event in the calendar</description>
+				<name>[Demo] Workroom calendar event</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom File Manager">
+				<description>Simple file management in a workroom</description>
+				<name>[Demo] Workroom File Manager</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom list">
+				<description>This page lists all available workrooms</description>
+				<name>[Demo] Workroom list</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Membership Manager">
+				<description>Page for adding or modifying membership in a workroom</description>
+				<name>[Demo] Workroom Membership Manager</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom news list">
+				<description>A news page in a workroom.</description>
+				<name>[Demo] Workroom news list</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Settings">
+				<description>Page for changing settings for a workroom.</description>
+				<name>[Demo] Workroom settings</name>
+			</pagetype>
+		</pagetypes>
+		<templates>
+			<changedpages>
+				<header>			Last changed files</header>
+				<lastmodified>		Last changed</lastmodified>
+				<page>				Page</page>
+				<updatedpages>		Latest updated pages</updatedpages>
+			</changedpages>
+			<webparts>
+				<portal>
+					<catalogzone>Web Part Catalogs</catalogzone>
+					<connectionzone>Connect Web Parts</connectionzone>
+					<displaymode>Display Mode</displaymode>
+					<editorzone>Modify Web Part</editorzone>
+					<importzone>Import Web Parts</importzone>
+					<leftzone>Left Column</leftzone>
+					<rightzone>Right Column</rightzone>
+					<scope>Scope</scope>
+				</portal>
+				<units>
+					<rsscontrol>
+						<emptyurl>URL cannot be empty.</emptyurl>
+					</rsscontrol>
+				</units>
+			</webparts>
+		</templates>
+		<workroom>
+			<editdescription>Edit Description</editdescription>
+			<calendar>
+				<createheading>Create Event</createheading>
+				<dateformat>Example: 11/25/2007</dateformat>
+				<editheading>Edit Event</editheading>
+				<latestarttime>The start time must occur before the end time.</latestarttime>
+				<nameempty>Title cannot be empty</nameempty>
+				<selectedperiod>Selected period:</selectedperiod>
+				<starttimeempty>Start date cannot be empty</starttimeempty>
+				<starttimelabel>Start date:</starttimelabel>
+				<stoptimeempty>End date cannot be empty</stoptimeempty>
+				<stoptimelabel>End date:</stoptimelabel>
+        <buttoneditname>Edit Name</buttoneditname>
+        <buttonaddevent>Add Event</buttonaddevent>
+        <buttondeletecalendar>Delete Calendar</buttondeletecalendar>
+			</calendar>
+			<editablecontent>
+				<labeltext>Edit the content and then click "Save".</labeltext>
+			</editablecontent>
+			<eventlist>
+				<heading>Upcoming events</heading>
+			</eventlist>
+			<filelist>
+				<errormessage>The workroom root folder could not be found or you have insufficient permissions for the folder.</errormessage>
+				<errormissingindex>An index is not configured for the workroom root folder. An index is required to show the recently changed files.</errormissingindex>
+				<heading>Recent files</heading>
+			</filelist>
+			<membershiplevel>
+				<administer>Administrator</administer>
+				<modify>Participating Member</modify>
+				<read>Read-Only Member</read>
+			</membershiplevel>
+			<membershipmanager>
+				<email>E-mail address</email>
+				<emptysearchresult>Your search didn't return any matching users.</emptysearchresult>
+				<managemembersheading>Manage workroom members</managemembersheading>
+				<membershiplevel>Membership status</membershiplevel>
+				<searchheading>Search for users</searchheading>
+				<searchresultheading>Search results</searchresultheading>
+				<searchtext>Search</searchtext>
+				<username>User name</username>
+				<viewmembersheading>Workroom members</viewmembersheading>
+				<inviteheading>Invite user</inviteheading>
+				<invitemembership>Status to assign</invitemembership>
+				<inviteunfiledsenderemail>E-mail address is not specified in your profile.</inviteunfiledsenderemail>
+				<invitewithoutstatus>Status to assign is missed.</invitewithoutstatus>
+				<sendinvitationok>Invitation successfully sent.</sendinvitationok>
+				<sendinvitationerror>Send invitation error.</sendinvitationerror>
+				<removeheading>Remove member</removeheading>
+                <confirmremovemember>Are you sure you want to remove selected members from the workroom?</confirmremovemember>
+                <sendnotifications>Send notifications about membership status change?</sendnotifications>
+                <sendnotificationsyes>Yes</sendnotificationsyes>
+                <sendnotificationsno>No</sendnotificationsno>
+                <invitemembermessage>Send an e-mail membership invitation to the user.</invitemembermessage>
+                <unabletosendnotification>Some notifications may not be sent.</unabletosendnotification>
+				<button>
+					<invite>Invite</invite>
+					<sendinvitation>Send invitation</sendinvitation>
+                    <remove>Remove</remove>
+                    <addmembers>Add members</addmembers>
+                    <editmembers>Edit members</editmembers>
+				</button>
+			</membershipmanager>
+			<newslist>
+				<newssectionname>Newsroom name</newssectionname>
+				<heading>News</heading>
+			</newslist>
+      <calendarlist>
+        <calendarsectionname>Calendar name</calendarsectionname>
+        <calendaraddnew>Add Calendar</calendaraddnew>
+        <calendaritemfrom>From:</calendaritemfrom>
+        <calendaritemto>To:</calendaritemto>
+      </calendarlist>
+      <newslistpage>
+        <bodylabel>Description:</bodylabel>
+        <createheading>Create News Item</createheading>
+        <editheading>Edit News Item</editheading>
+        <headinglabel>Title:</headinglabel>
+        <titleempty>Title cannot be empty</titleempty>
+        <editnewssection>Edit Newsroom</editnewssection>
+        <deletenewssection>Delete Newsroom</deletenewssection>
+        <addnewssection>Add Newsroom</addnewssection>
+        <addnewsitem>Add News Item</addnewsitem>
+      </newslistpage>
+			<settings>
+				<availablefunctions>Available functions</availablefunctions>
+			</settings>
+			<workroomlist>
+				<createheading>Create Workroom</createheading>
+				<duplicatename>There is already a workroom with this name</duplicatename>
+				<nameempty>Name cannot be empty</nameempty>
+				<namelabel>Name:</namelabel>
+				<templatelabel>Select template:</templatelabel>
+				<viewheading>My Workrooms</viewheading>
+				<addworkroom>Add Workroom</addworkroom>
+				<descriptionlabel>Description:</descriptionlabel>
+			</workroomlist>
+			<userprofile>
+				<username>User name</username>
+				<email>E-mail</email>
+				<role>Role</role>
+				<firstname>First name</firstname>
+				<lastname>Last name</lastname>
+				<password>Password</password>
+				<confirmpassword>Confirm password</confirmpassword>
+				<error>
+					<usernamerequired>User name is required</usernamerequired>
+					<usernameexists>User name already exists</usernameexists>
+					<firstnamerequired>First name is required</firstnamerequired>
+					<lastnamerequired>Last name is required</lastnamerequired>
+					<passwordrequired>Password is required</passwordrequired>
+					<passwordweak>The password does not meet the password policy requirements</passwordweak>
+					<passworddiffers>Password must be the same</passworddiffers>
+					<logout>You are logged in as a different user. Log out and try again.</logout>
+					<unavailable>You do not have access rights to this page.</unavailable>
+					<membership>Current security settings do not allow registration of new users. Please contact the administrator for additional information.</membership>
+				</error>
+			</userprofile>
+		</workroom>
+	</language>
+</languages>

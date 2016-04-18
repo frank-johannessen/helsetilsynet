@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchSummary.ascx.cs" Inherits="Helsetilsynet.templates.Avenir.Units.Placeable.SearchSummary" %>
+<asp:Literal ID="litSearchSummary" runat="server" />    

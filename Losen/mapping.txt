@@ -1,0 +1,168 @@
+369,Papperskorg
+5,Rotobjekt
+30,Mangler smittevernplaner!
+2257,asdfasdfasdfasdf
+2258,ddddddddddddd
+2259,Registrer deg
+2261,Artikkelliste
+2262,test 1
+2263,test 2
+2266,test 1
+2268,Testpublisering
+2269,Dokumentliste
+2270,Dokument 1
+2271,a dok 2
+2272,ikke dok
+1274,Nettstedskart
+384,Utvidet søk
+2273,Testliste Lover
+2274,Biobankloven
+2276,Pasientskadeloven 
+2277,listeside
+2278,Dette er en rapport
+2279,Bred side
+2280,Liste over siste nytt
+2281,Helsetilsynet fra A til Å
+2286,Siste nytt
+2287,Nettstedskart
+2288,Finn tilsynsrapporter
+2289,Spørsmål og svar om Helse
+2290,Er SARS en trussel for Norge?
+2291,Nei!
+2292,tewst
+2295,Helsetilsynets kalender
+2296,Møte hos kunde
+2275,Helseforetaksloven
+2299,rtrtyrtyrtyrtyrtyrtyrfgfhgtyt  ygjg
+2265,test 0
+2267,b test
+2006,Nyheter
+2180,Helsetilsynet i Akershus
+2026,Sider utenom hovedmenyen
+2047,Regelverk
+2048,Publikasjoner
+2051,Bibliotek
+2052,Internettressurser
+2056,Myndighet og organisasjon
+2061,Tilsynsresultater
+2011,Nyheter og presse
+2093,Innledning
+2110,Regler og instrukser
+2260,tilsyn liste
+2264,Mangler smittevernplaner
+2101,Våre oppgaver
+2112,Lover for sosialtjenestene
+2113,Lover 2
+2114,Institusjoner i forvaltningen
+2119,Forskrifter - helse
+2123,Rundskriv helse
+2124,Rundskriv Helsetilsynet
+2127,Rundskriv Helsedepartementet
+2129,Helsetilsynet i fylkene
+2133,Rundskriv - slettede rundskriv Helsetilsynet
+2134,Om Helsetilsynet
+2135,Endringer 01.07.2003
+2136,Lovforarbeider
+2137,Fylker
+2138,Samlinger
+2139,Tannhelsetjenesten
+2150,Førerkortsaker
+2151,Medisinsk utstyr
+2152,Offshore - helsetjeneste
+2087,Historikk
+2094,Ledige stillinger
+2095,Saksbehandling
+2097,Serviceerklæringer
+2098,Strategiske dokumenter
+2099,Årsrapporter
+2120,Rundskriv
+2122,Rundskriv sosial
+2130,Rundskriv Sosialdepartementet
+2178,Tilsynsmelding
+2179,Helserett-info
+2183,Telemark
+2184,Vest-Agder
+2185,Aust-Agder
+2186,Rogaland
+2187,Hordaland
+2256,asdfa
+2090,Htil i forvaltningen
+2108,Helsedirektører
+2109,Lover
+2117,Forskrifter
+2118,Forskrifter - sosial
+2125,Rundskriv Sosial- og helsedirektoratet
+2126,Kontakt oss
+2245,Lover for helsetjenestene
+2181,Helsetilsynet i Østfold
+2189,Helsetilsynet i Hordaland
+2190,Helsetilsynet i Rogaland
+2191,Møre og Romsdal
+2192,Helsetjenesten for eldre ved sykehjem i Bindal kommune
+2193,Helsetilsynet i Møre og Romsdal
+2209,Helsetilsynet i Telemark
+2216,Prosedyrer for tilsyn
+2217,Landsomfattende tilsyn
+2222,Pasientinformasjon
+2153,Hedmark
+2154,Nordland
+2155,Tilsynsrapporter
+2156,Helsetjenesten til barn og unge med psykiske problem i Rana kommune
+2157,Skolehelsetjenesten i Træna kommune
+2158,Tilsyn med helsetjenesten for eldre ved Saltdal sykehjem i Saltdal kommune
+2159,Skolehelsetjenesten i Vefsn kommune
+2160,Helsetilsynet i Nordland
+2161,Akershus
+2162,Oslo
+2163,Østfold
+2282,Dette er et skjema
+2165,Helsetilsynet i Oslo
+2166,Helsetilsynet i Hedmark
+2167,Oppland
+2168,Helsetilsynet i Oppland
+2169,Buskerud
+2170,Helsetilsynet i Buskerud
+2171,Sivilombudsmannen
+2172,Vestfold
+2173,Helsetilsynet i Vestfold
+2174,Abonnere på nyheter
+2175,Helsetilsynet fra A til Å
+2176,Lovforarbeider
+2177,Prosesser
+2283,Stem
+2284,Helsetilsynets kalender
+2285,Ny tilsynsrapport
+2293,Ny kalender
+2294,aktivitet 1
+2298,Ny tilsynsrapport
+2194,Sør-Trøndelag
+2246,TEST
+2247,TEST nyhetsgruppe
+2248,Sport
+2202,Pleie- og omsorgstjenesten etter helselovgivningen i Bø kommune, Bøheimen bo- og behandlingssenter
+2203,Troms
+2204,Helsetilsynet i Troms
+2205,Finnmark
+2206,Helsetilsynet i Finnmark
+2207,Helsetilsynet i Vest-Agder
+2208,Helsetilsynet i Aust-Agder
+2210,Helsetjenesten for eldre i Brønnøy kommune
+2249,Nyheter
+2212,Helsetjenesten til barn og unge med psykiske problem i Dønna kommune
+2213,Sogn og Fjordane
+2214,Helsetilsynet i Sogn og Fjordane
+2250,Sport
+2219,Bibliotekets tjenester
+2220,Nyheter
+2251,meg
+2252,asdfasdf
+2253,Abonnere på nyheter
+2254,Liste artikler som bruker malsiden nyheter
+2255,en liten nyhet
+2195,Helsetilsynet i Sør-Trøndelag
+2196,Nord-Trøndelag
+2197,Fengselshelsetjenesten ved Bodø fengsel 
+2198,Helsetilsynet i Nord-Trøndelag
+2218,Kontaktinformasjon
+2221,Tilsynsetater
+2297,Kalender

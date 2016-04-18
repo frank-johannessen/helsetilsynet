@@ -1,0 +1,9 @@
+﻿.epi-button-child-item:disabled {
+    color: #999;
+    cursor: default;
+}
+
+.epi-approvalGadget-iconRefresh {
+    background: transparent url("../SharedResources/Images/icon-refresh.png") no-repeat left center;
+    padding-left: 17px;
+}

@@ -1,0 +1,36 @@
+﻿.EPiImageProperty {overflow: hidden; width: 122px; border: solid 1px lightgrey;}
+.EPiImageProperty .Image {float: left; width: 110px; height: 110px; border: solid 1px #000000; background-color: #ffffff; margin: 5px; text-align:center; overflow: hidden;position:relative;}
+.EPiImageProperty .Image .ImagePadding {height: 100px;}
+.EPiImageProperty .Image .ImagePadding img {padding-top: 5px;}
+/*.EPiImageProperty .Image .Close {display: block; margin-left: 91px; margin-top: -100px; cursor: pointer;}*/
+.EPiImageProperty .Image .Close {position:absolute; top:0px; right:0px; cursor: pointer;}
+.EPiImageProperty .Image .Close:hover, .EPiImageProperty .Image .AltText:hover {} 
+/*.EPiImageProperty .Image .AltText {display: block; margin-left: 91px; margin-top: 75px; cursor: pointer;}*/
+.EPiImageProperty .Image .AltText {position:absolute; bottom:0px; right:0px; cursor: pointer;}
+.EPiImageProperty .AddImage {float: left; width: 110px; height: 110px; border: dashed 1px #d3d3d3; background: transparent url(/EPiImage/imgs/image_add.png) 40px 30px no-repeat; margin: 5px; text-align:center; overflow: hidden;}
+.EPiImageProperty .AddImage a {display: block; margin-top: 65px;}
+.EPiImageProperty .AddImage:hover {cursor: pointer; background-color: #f6f6f6;}
+
+.EPiImageGalleryProperty {overflow: hidden; width: 490px; border: solid 1px lightgrey;}
+.EPiImageGalleryProperty .Slide {float: left; width: 110px; height: 110px;  cursor: move; border: solid 1px #000000; background-color: #ffffff; margin: 5px; text-align:center; overflow: hidden; position:relative;}
+.EPiImageGalleryProperty .Slide .ImagePadding {height: 100px;}
+.EPiImageGalleryProperty .Slide .ImagePadding img {padding-top: 5px;}
+.EPiImageGalleryProperty .Slide .Close {display:none; position:absolute; top:0px; right:0px; cursor: pointer;}
+.EPiImageGalleryProperty .Slide .AltText {display:none; position:absolute; bottom:0px; right:0px; cursor: pointer;}
+.EPiImageGalleryProperty .Slide:hover .Close {display: block;}
+.EPiImageGalleryProperty .Slide:hover .AltText {display: block;}
+.EPiImageGalleryProperty .AddSlide {float: left; width: 110px; height: 110px; border: dashed 1px #d3d3d3; background: transparent url(/EPiImage/imgs/image_add.png) 40px 30px no-repeat; margin: 5px; text-align:center; overflow: hidden;}
+.EPiImageGalleryProperty .AddSlide a {display: block; margin-top: 65px;}
+.EPiImageGalleryProperty .AddSlide:hover {cursor: pointer; background-color: #f6f6f6;}
+
+.PreviewImage {text-align: center; height: 300px;}
+.PreviewDescLabel {font-family: arial; font-size: 11px; padding: 10px 0 3px 20px;}
+.PreviewDescInput {padding-left: 20px;}
+.PreviewDescInput textarea {border: 1px solid grey; width: 408px; font-family: arial; font-size: 11px; margin: 0 0 5px 0; min-height: 10px;}
+.PreviewButton {text-align: right; width: 439px;}
+.PreviewLink {font-family: arial; font-size: 11px; padding: 5px 0 10px 20px;}
+.PreviewLink .LinkUrl {border: 1px solid grey; width: 200px; font-family: arial; font-size: 11px; margin-left: 5px;}
+.PreviewPrevNext {text-align: center; font-size: 11px; padding-top: 10px; color: grey;}
+.PreviewPrevNext a {color: grey; text-decoration: underline;}
+.PreviewSavedMessage {color: green; font-weight: bold; padding-right: 10px;}
+

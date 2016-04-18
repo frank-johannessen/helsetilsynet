@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="english" id="en">
+    <linkdetective>
+      <general>
+        <brokenlinks>broken links</brokenlinks>
+      </general>
+      <report>
+        <heading>LinkDetective Report</heading>
+        <noreportheading>No report available.</noreportheading>
+        <noreporttext>
+          Make sure that LinkDetective is set up to run as a scheduled task. Please note that the report
+          is kept in memory only, and is lost if the server is rebooted.
+        </noreporttext>
+        <reportwasrun>Report was run</reportwasrun>
+        <timeused>Time used</timeused>
+        <pageschecked>Pages Checked</pageschecked>
+        <pagesfailed>Pages w/Broken Links</pagesfailed>
+        <linkschecked>Links Checked</linkschecked>
+        <linksfailed>Broken links</linksfailed>
+        <failedpagesheading>Pages with broken links</failedpagesheading>
+      </report>
+      <pagereport>
+        <heading>LinkDetective Page Report</heading>
+        <noreportheading>No report available.</noreportheading>
+        <noreporttext>Make sure that LinkDetective is set up to run as a scheduled task. Please note that the report is kept in memory only, and is lost if the server is rebooted.</noreporttext>
+        <notcheckedheading>This page was not checked by LinkDetective.</notcheckedheading>
+        <notcheckedtext>This page was not checked by LinkDetective the last time it ran</notcheckedtext>
+        <reportokheading>No broken links where found!</reportokheading>
+        <reportoktext>No broken links was found on this page when it was checked by LinkDetective on</reportoktext>
+        <reportfailedheading>broken link(s) was found by LinkDetective! (Checked:</reportfailedheading>
+        <checkok>No broken links where found!</checkok>
+        <checkfailed>broken link(s) was found by LinkDetective!</checkfailed>
+        <property>Property</property>
+        <lang>Lang</lang>
+        <linkurl>Link URL</linkurl>
+        <error>Error</error>
+        <checkpage>Check Page</checkpage>
+        <checkpagetooltip>Check page with LinkDetective</checkpagetooltip>
+      </pagereport>
+      <errors>
+        <error-1>User prompted for EPiServer login.</error-1>
+        <error-2>Page doesn't exist.</error-2>
+        <error-3>Page not available to visitors.</error-3>
+        <error-4>Page doesn't exist.</error-4>
+        <error-5>File not found. (VPP).</error-5>
+        <error-6>Invalid URL.</error-6>
+        <error-7>Invalid URL.</error-7>
+        <error-8>Error getting file. (VPP)</error-8>
+        <notresolved>The remote name could not be resolved</notresolved>
+        <couldnotconnect>Unable to connect to the remote server</couldnotconnect>
+        <remoteservererror>The remote server returned an error</remoteservererror>
+      </errors>
+    </linkdetective>
+  </language>
+</languages>

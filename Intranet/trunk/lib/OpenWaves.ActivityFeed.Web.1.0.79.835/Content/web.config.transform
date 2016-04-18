@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.webServer>
+        <modules>
+            <remove name="WebDAVModule" />
+            <add name="DocumentSessionPerRequestModule" type="OpenWaves.ActivityFeed.Web.DocumentSessionPerRequestHttpModule, OpenWaves.ActivityFeed.Web" preCondition="managedHandler"/>
+        </modules>
+    </system.webServer>
+
+    <system.web>
+        <pages>
+            <controls>
+                <add assembly="OpenWaves.ActivityFeed.Web" namespace="OpenWaves.ActivityFeed.Web.Controls" tagPrefix="ow" />
+            </controls>
+        </pages>
+    </system.web>
+
+  <location path="activityFeed">
+    <system.web>
+      <compilation debug="true" targetFramework="4.0" />
+      <httpHandlers>
+        <add verb="*" type="OpenWaves.ActivityFeed.Web.Hanlder.ActivityFeedApiHandler" path="*" />
+      </httpHandlers>
+    </system.web>
+    <system.webServer>
+      <modules runAllManagedModulesForAllRequests="true" />
+      <validation validateIntegratedModeConfiguration="false" />
+      <handlers>
+        <add name="Nancy" verb="*" type="OpenWaves.ActivityFeed.Web.Hanlder.ActivityFeedApiHandler" path="*" />
+      </handlers>
+    </system.webServer>
+  </location>
+</configuration>

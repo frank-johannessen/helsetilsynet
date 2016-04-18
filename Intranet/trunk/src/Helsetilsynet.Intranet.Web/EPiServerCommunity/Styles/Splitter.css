@@ -1,0 +1,8 @@
+﻿.SSSplitterBar {
+	background-color: #e0e3e1;
+}
+.SSActiveSplitterBar {
+	background-color: #000000;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+	opacity: 0.4;
+}

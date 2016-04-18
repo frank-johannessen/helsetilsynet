@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+	<language name="Norsk" id="NO">
+		<templates>
+			<mobileinfo>
+				<maininfo>
+					&lt;b&gt;Hvordan man kompilerer WAP funksjoner i EPiServer&lt;/b&gt;
+					&lt;p&gt;Ettersom support for wap og mobile enhenter i EPiServer baserer seg på Microsoft Mobile Internet Toolkit
+							 er den ikke inkludert som standard. Om du ønsker å aktivere dette må du følge instruksjonene under.
+					&lt;/p&gt;
+					&lt;ul&gt;
+						&lt;li&gt;
+							Last ned og installer Microsoft Mobile Internet Toolkit på din utviklingsmaskin.
+							Du kan laste ned fra &lt;a href="http://www.msdn.microsoft.com/downloads/default.asp?url=/downloads/sample.asp?url=/msdn-files/027/001/817/msdncompositedoc.xml" target="_blank"&gt;
+							http://www.msdn.microsoft.com&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;
+							Gå inn i EPiServers administrasjonsmodus og åpne sidetypen Mobile page.
+							&lt;/li&gt;
+						&lt;ul&gt;
+							&lt;li&gt;
+								Skriv inn navn og beskrivelse for sidetypen.
+							&lt;/li&gt;
+							&lt;li&gt;
+								Endre "Filnavn" til å peke på templates/Mobile.aspx istedet for templates/MobileInfo.aspx
+							&lt;/li&gt;
+							&lt;li&gt;
+								Lagre endringene.
+							&lt;/li&gt;
+						&lt;/ul&gt;
+						&lt;li&gt;
+							Legg til en referanse til System.Web.Mobile (som ble installert med Mobile Internet Toolkit)
+							i ditt EPiServer prosjekt.
+						&lt;/li&gt;
+						&lt;li&gt;
+							Inkluder filen /templates/Mobile.aspx i ditt EPiServer prosjekt.
+						&lt;/li&gt;
+						&lt;li&gt;
+							Kompiler om EPiServer prosjektet.
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				</maininfo>
+			</mobileinfo>
+			<form>
+				<numberofvotes>Antall stemmer: {0}</numberofvotes>
+				<showform>Til skjemaet</showform>
+				<requirelogon>Dette skjemaet krever at du er logget på.</requirelogon>
+				<denymultipleposts>Du har allerede svart på dette skjemaet før.</denymultipleposts>
+				<postedmessage>Takk for ditt svar!</postedmessage>
+			</form>
+			<register>
+				<invalidemail>Du må fylle inn en gyldig e-post adresse for at vi skal kunne behandle din registrering.</invalidemail>
+				<invalidpassword>Du må angi et passord. Skriv samme passord i begge tekstfeltene.</invalidpassword>
+				<expiredidentity>Nettleseren har mistet påloggingsinformasjonen. Vennligst logg på en gang til.</expiredidentity>
+				<usernotsaved>Brukeren kan ikke lagres, vennligst prøv et annet brukernavn.</usernotsaved>
+				<errorwhilesavinguser>En feil oppstod, brukeren kunne ikke lagres.</errorwhilesavinguser>
+				<invalidsettings>Alle innstillinger for selvregistrering er ikke satt.</invalidsettings>
+				<applyemailsubject>En ny bruker har søkt om en ekstranettkonto.</applyemailsubject>
+				<applyemailbodyprefix>Gå til denne siden for å aktivere brukeren:</applyemailbodyprefix>
+				<usersaved>Du kommer til å motta en e-post når ditt brukernavn har blitt godkjent og aktivert.</usersaved>
+				<usersavedandactivated>Du kan nå logge på nettstedet.</usersavedandactivated>
+			</register>
+			<page>
+				<login>Logg inn</login>
+				<logout>Logg ut</logout>
+				<notproperlyconfigured>Hurtigsøking er ikke riktig konfigurert. (Den dynamiske egenskapen "Global søkeside" må være definert)</notproperlyconfigured>
+			</page>
+			<newsgrouplist>
+				<search>Søk</search>
+				<subscribe>Abonner</subscribe>
+				<unsubscribe>Avslutt abonnering</unsubscribe>
+			</newsgrouplist>
+			<search>
+				<searchfiles>			Søk også i dokumenter og filer</searchfiles>
+				<onlywholewords>		Søk bare etter hele ord</onlywholewords>
+				<searchresult>			Søkeresultat:</searchresult>
+				<rank>					Rekkefølge</rank>
+				<match>					Treff</match>
+				<matches>				treff</matches>
+				<nomatches>				Søket gav ingen resultater. Prøv på nytt</nomatches>
+				<help>
+							&lt;b&gt;Søketips!&lt;/b&gt; &lt;ul&gt; &lt;li&gt;Angi opptil 10 søkeord adskilt med mellomrom, f.eks. &lt;i&gt;&lt;b&gt;&lt;nobr&gt;søkeord1 søkeord2 søkeord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br/&gt;&lt;/li&gt; &lt;li&gt;Begrens søket ved å plassere et plusstegn (+) foran de ordene som må være til stede i alle treff, f.eks. &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+søkeord1 +søkeord2 +søkeord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt; &lt;li&gt;Begrens søket ved å plassere et minustegn (-) foran de ordene som ikke skal være med i noen treff, f.eks. &lt;i&gt;&lt;b&gt;&lt;nobr&gt;+søkeord1 +søkeord2 -søkeord3&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/li&gt; &lt;li&gt;Hvis du har valgt "Søk bare på hele ord", men likevel vil søke på en del av et ord, plasserer du en asterisk (*) bak ordet, f.eks. &lt;i&gt;&lt;b&gt;&lt;nobr&gt;ord1* ord2&lt;/nobr&gt;&lt;/b&gt;&lt;/i&gt;. Det kommer til å gi treff på "ord123 ord2", men ikke på "ord123 ord234"&lt;/li&gt; &lt;/ul&gt;	
+				</help>
+				<indexservererror>		Søkemotoren for dokumenter og filer er dessverre ikke tilgjengelig for øyeblikket. Inntill videre kan det bare søkes på Internett.</indexservererror>
+				<quicksearch>			Quick search</quicksearch>
+				<simplesearch>			Gå til enkelt søk</simplesearch>
+				<advancedsearch>		Gå til utvidet søk</advancedsearch>
+			</search>
+			<login file="login.aspx">
+				<logintitle>			Login</logintitle>
+				<loginheading>			Beskyttet informasjon - du må logge inn</loginheading>
+				<username>				Navn</username>
+				<password>				Passord</password>
+				<persistentlogin>		Automatisk pålogging mot dette webområdet</persistentlogin>
+				<usernamerequired>		Du må oppgi et navn</usernamerequired>
+				<loginfailed>			Påloggingen mislyktes</loginfailed>
+			</login>
+			<calendar file="calendar.aspx">
+				<next>					Neste</next>
+				<previous>				Forrige</previous>
+			</calendar>
+			<changedpages file="templates/ChangedPages.aspx">
+				<header>				Sist endrede filer</header>
+				<lastmodified>			Sist endret</lastmodified>
+				<page>					Side</page>
+				<updatedpages>			Sist endrede sider</updatedpages>
+			</changedpages>
+			<conference file="conferance.aspx">
+				<deleteconfirm>			Vil du slette siden?</deleteconfirm>
+				<createnew>				Lag nytt innlegg</createnew>
+				<post>					Innlegg</post>
+				<heading>				Overskrift</heading>
+				<message>				Tekst</message>
+				<author>				Navn</author>
+				<previous>				Forrige</previous>
+				<next>					Neste</next>
+				<reply>					Svare</reply>
+				<change>				Endre</change>
+				<delete>				Slett</delete>
+				<replies>				Svar</replies>
+				<uponelevel>			Opp et nivå</uponelevel>
+			</conference>
+			<form file="form.aspx">
+				<thankyouforyourreply>	Takk for ditt svar!</thankyouforyourreply>
+				<showstat>				Vis statistikk</showstat>
+			</form>
+			<newsgroupitem>
+				<reply>					Svar</reply>
+				<name>					Navn</name>
+				<email>					Epostadresse</email>
+				<subject>				Emne</subject>
+			</newsgroupitem>
+			<newsgrouplist>
+				<newpost>				Nytt innlegg</newpost>
+				<settings>				Innstillinger</settings>
+				<subject>				Emne</subject>
+				<author>				Opprettet av</author>
+				<created>				Opprettet</created>
+			</newsgrouplist>
+			<newsgroupsettings>
+				<personalsettings>		Personlige innstillinger</personalsettings>
+				<firstname>				Fornavn</firstname>
+				<lastname>				Etternavn</lastname>
+				<email>					Epostadresse</email>
+				<interval see="/templates/subscribe/interval"/>
+				<fastaspossible see="/templates/subscribe/fastaspossible"/>
+				<daily see="/templates/subscribe/daily"/>
+				<everysecondday see="/templates/subscribe/everysecondday"/>
+				<weekly see="/templates/subscribe/weekly"/>
+				<everysecondweek see="/templates/subscribe/everysecondweek"/>
+				<everyfourthweek see="/templates/subscribe/everyfourthweek"/>
+			</newsgroupsettings>
+			<newsgrouptree>
+				<back>					Tilbake</back>
+			</newsgrouptree>
+			<notimplemented>
+				<notimplemented>		Denne funksjonen er ikke tilgjengelig ennå</notimplemented>
+			</notimplemented>
+			<register>
+				<couldnotsave>			Brukeren kunne ikke lagres</couldnotsave>
+				<saved>					Brukeren er lagret</saved>
+				<notallowed>			Dette nettstedet tillater ikke selvregistrering.</notallowed>
+			</register>
+			<subscribe>
+				<interval>				Intervall</interval>
+				<fastaspossible>		Så fort som mulig</fastaspossible>
+				<daily>					Hver dag</daily>
+				<everysecondday>		Annenhver dag</everysecondday>
+				<weekly>				Hver uke</weekly>
+				<everysecondweek>		Annenhver uke</everysecondweek>
+				<everyfourthweek>		Hver fjerde uke</everyfourthweek>
+				<subscriptions>			Abonnement</subscriptions>
+				<email>					E-postadresse</email>
+				<error>
+					<emailformat>		E-post er ikke på riktig format</emailformat>
+					<checkedlist>		Du må krysse av i abonnementslisten</checkedlist>
+					<savesubscription>	Feil ved lagring av abonnement</savesubscription>
+				</error>
+			</subscribe>
+			<page>
+				<readmore>				Les mer</readmore>
+			</page>
+		</templates>
+		<pagetypes>
+			<common>
+				<property name="StartPublishOffset">
+					<caption>Dato for publiseringsstart regnet fra datoen siden blir opprettet</caption>
+					<help>Angi publiseringsdatoen basert på datoen siden opprettes</help>
+				</property>
+				<property name="StopPublishOffset">
+					<caption>Dato for publiseringsslutt regnet fra datoen siden blir opprettet</caption>
+					<help>Angi publiseringsdatoen basert på datoen siden opprettes</help>
+				</property>
+				<property name="MainBody">
+					<caption>Redigeringsprogram</caption>
+					<help>Innholdet på din side. Her kan du skrive tekst, sette inn bilder, , dokumenter, tabeller m.m</help>
+				</property>
+				<property name="ListingContainer">
+					<caption>Hent liste fra</caption>
+					<help>Angi hvilken side du vil hente listen fra</help>
+				</property>
+				<property name="ListingCount">
+					<caption>Vis antall sider i listen</caption>
+					<help>Angi med heltall hvor mange sider som skal vises på listen</help>
+				</property>
+				<property name="ListingType">
+					<caption>Sidetype i liste</caption>
+					<help>Angi hvilken sidetype som skal vises på listen</help>
+				</property>
+				<property name="ListingCategoryList">
+					<caption>Vis følgende kategorier</caption>
+					<help>Angi hvilke kategorier som skal vises på denne siden</help>
+				</property>
+				<property name="EPSUBSCRIBE">
+					<caption>Aktiver abonnement</caption>
+					<help>Merk denne ruten for å gi gjester mulighet til å abonnere på denne siden</help>
+				</property>
+				<property name="WriterName">
+					<caption>Forfatter</caption>
+					<help>Navn på personen som er ansvarlig for innholdet</help>
+				</property>
+				<property name="MailTo">
+					<caption>E-postadressen til mottakeren</caption>
+					<help>E-postadressen til den personen som skal ta imot informasjonen</help>
+				</property>
+				<property name="MainIntro">
+					<caption>Ingress</caption>
+					<help>Innledende tekst som ofte vises på lister</help>
+				</property>
+				<property name="MainBodyLoggedIn">
+					<caption>Redigeringsprogram for påloggede brukere</caption>
+					<help>Beskrivelse av hvilke valgmuligheter en pålogget bruker har</help>
+				</property>
+				<property name="MainScope">
+					<caption>Område for IndexServer-søk</caption>
+					<help>Angi hvilken katalog søket skal skje i. Hvis du lar feltet stå tomt, skjer søket i Upload-katalogen</help>
+				</property>
+				<property name="MainCatalog">
+					<caption>Katalog for Index Server</caption>
+					<help>Angi hvilken katalog er definert i Index Server</help>
+				</property>
+				<property name="RecentContainer">
+					<caption>Vis sider fra</caption>
+					<help>Angi hvilken side du vil vise de sist endrede sidene fra</help>
+				</property>
+				<property name="RecentHours">
+					<caption>Vis sider som er endret siste x timer</caption>
+					<help>Angi et heltall for hvor mange timer tilbake du vil vise endrede sider</help>
+				</property>
+				<property name="IndexContainer">
+					<caption>Vis innhold fra side</caption>
+					<help>Angi hvilken side innholdsfortegnelsen skal starte på</help>
+				</property>
+				<property name="IndexLevel">
+					<caption>Vis innholdsfortegnelse med antall nivåer nedover</caption>
+					<help>Angi et heltall for hvor mange undernivåer som skal vises i innholdsfortegnelsen</help>
+				</property>
+				<property name="IndexColumns">
+					<caption>Antal kolonner for innholdsfortegnelsen</caption>
+					<help>Angi et heltall for hvor mange kolonner som skal vises i innholdsfortegnelsen</help>
+				</property>
+				<property name="MailFrom">
+					<caption>E-postavsender</caption>
+					<help>E-postadressen til den personen som skal ta imot svarene på skjemaet</help>
+				</property>
+				<property name="MainForm">
+					<caption>Skjema</caption>
+					<help>Angi hvilket skjema som skal vises på siden. Ved å klikke på knappen kan du opprette egne skjemaer</help>
+				</property>
+				<property name="EPSUBSCRIBEHIDDEN">
+					<caption>Ikke vis på abonnementssiden</caption>
+					<help>Angi om du vil at besøkeren skal kunne abonnere på denne siden via den ordinære abonnementssiden</help>
+				</property>
+				<property name="NewsGroupRoot">
+					<caption>Hovedside for nyhetsgrupper</caption>
+					<help>Angi hvilken side som er hovedside for nyhetsgruppen</help>
+				</property>
+				<property name="NewsGroupPageTypeID">
+					<caption>Sidetype for innlegg</caption>
+					<help>Angi hvilken sidetype som skal brukes for innlegg</help>
+				</property>
+				<property name="AllowNewsItem">
+					<caption>Tillat innlegg</caption>
+					<help>Ved å markere dette alternativet tillater du innlegg i gruppen</help>
+				</property>
+				<property name="WriterEmail">
+					<caption>E-postadresse</caption>
+					<help>E-postadresse til den som har opprettet innlegget</help>
+				</property>
+				<property name="NewsGroupContainer">
+					<caption>Tilhører følgende nyhetsgruppe</caption>
+					<help>Angi hvilken nyhetsgruppe dette innlegget skal tilhøre</help>
+				</property>
+				<property name="MainMenuContainer">
+					<caption>Vis menyer fra</caption>
+					<help>Angi en plass i menytreet som du vil vise menyer fra på den valgte siden</help>
+				</property>
+				<property name="MainSearchPage">
+					<caption>Global søkeside</caption>
+					<help>Angi hvilken side som skal være global søkeside for nettstedet</help>
+				</property>
+			<property name="MetaDescription">
+					<caption>Beskrivelse av siden</caption>
+					<help>Angi en kort beskrivelse av sidens innhold</help>
+				</property>
+				<property name="MetaKeywords">
+					<caption>Standardsøkeord for sider</caption>
+					<help>Angi en kommaatskilt liste over søkeord som passer til denne siden</help>
+				</property>
+				<property name="EventInputGuide">
+					<caption>Gjentatt aktivitiet</caption>
+					<help>Ved å markere dette alternativet lager du en gjentatt aktivitet</help>
+				</property>
+				<property name="EventStartDate">
+					<caption>Startklokkeslett</caption>
+					<help>Angi startklokkeslett for aktiviteten</help>
+				</property>
+				<property name="EventStopDate">
+					<caption>Sluttid</caption>
+					<help>Angi sluttklokkeslett for hendelsen</help>
+				</property>
+				<property name="ValidDays">
+					<caption>Gjentatt</caption>
+					<help>Angi hvilken dag aktiviteten skal gjentas med regelmessig intervall</help>
+				</property>
+				<property name="nDaysToRender">
+					<caption>Vise antall dager fra</caption>
+					<help/>
+				</property>
+				<property name="CalendarType">
+					<caption>Type sider å vise i kalenderen</caption>
+					<help/>
+				</property>
+				<property name="CalendarContainer">
+					<caption>Vise kalender fra</caption>
+					<help/>
+				</property>
+				<property name="Box1Caption">
+					<caption>1. Navn</caption>
+				</property>
+				<property name="Box1Container">
+					<caption>1. Hent liste fra</caption>
+					<help>Angi hvilken side du vil hente listen fra</help>
+				</property>
+				<property name="Box1Count">
+					<caption>1. Vis antall sider i listen</caption>
+					<help>Angi med heltall hvor mange sider som skal vises på listen</help>
+				</property>
+				<property name="Box1SortOrder">
+					<caption>1. Sorteringsrekkefølge</caption>
+					<help>Angir i hvilken rekkefølge denne sidens underliggende sider skal vises</help>
+				</property>
+				<property name="Box2Caption">
+					<caption>2. Navn</caption>
+				</property>
+				<property name="Box2Container">
+					<caption>2. Hent liste fra</caption>
+					<help>Angi hvilken side du vil hente listen fra</help>
+				</property>
+				<property name="Box2Count">
+					<caption>2. Vis antall sider i listen</caption>
+					<help>Angi med heltall hvor mange sider som skal vises på listen</help>
+				</property>
+				<property name="Box2SortOrder">
+					<caption>2. Sorteringsrekkefølge</caption>
+					<help>Angir i hvilken rekkefølge denne sidens underliggende sider skal vises</help>
+				</property>
+				<property name="MailSubject">
+					<caption>Emnefelt i e-postmelding</caption>
+					<help>Det som angis her, vil stå i feltet i de e-postmeldingene som sendes. </help>
+				</property>
+				<property name="MailReadMore">
+					<caption>Tekst i e-post for koblinger til sider</caption>
+					<help>Denne teksten vil fungere som kobling til den siden som endres, og som abonneringsfunksjonen dermed har sendt ut. </help>
+				</property>
+				<property name="MailBody">
+					<caption>Innledningstekst til e-post</caption>
+					<help>Denne teksten er den innledningen som sendes til alle abonnenter når de får en ny abonnementsmelding. </help>
+				</property>
+				<property name="EPSUBSCRIBE-ROOT">
+					<caption>Abonnementsutvalg</caption>
+					<help>Angi hvilket startpunkt denne abonnementssiden skal søke etter nye og endrede sider fra. </help>
+				</property>
+					<property name="EnableStatistics">
+					<caption>Vis statistikk på sidemalen</caption>
+					<help>Vis resultat av postinger for besøkeren</help>
+				</property>
+				<property name="MainContainer">
+					<caption>Startside for søk</caption>
+					<help>Hvis dette feltet er tomt vil søket begynne på	startsiden.</help>
+				</property>
+				<property name="RightListingContainer">
+					<caption>Liste til høyre</caption>
+					<help>Velg startpunkt for listen til høyre.</help>
+				</property>
+				<property name="NewsContainer">
+					<caption>Nyhetsliste</caption>
+					<help>Angi den siden du ønsker å hente nyheter fra</help>
+				</property>	
+				<property name="EmbeddedURL">
+					<caption>Søkesti til flashpresentasjon</caption>
+					<help>Angi søkestien til flashpresentasjonen som skal vises ved å klikke på knappen og markere filen</help>
+				</property>
+					<property name="Height">
+					<caption>Høyde</caption>
+					<help>Høyde på flashpresentasjonen</help>
+				</property>
+				<property name="Width">
+					<caption>Bredde</caption>
+					<help>Bredde på flashpresentasjonen</help>
+				</property>
+				<property name="ConferenceContainer">
+					<caption>Startside for konferansen</caption>
+					<help>Angi hvilken side som er den første siden i dette forumet (som oftest denne siden)</help>
+				</property>
+			</common>
+			<pagetype name="Vanlig webbsida">
+				<name>Vanlig nettside</name>
+				<description>Vanlig informasjonsside</description>
+			</pagetype>
+			<pagetype name="FlashSida">
+				<name>Flashside</name>
+				<description>Side som viser en flashpresentasjon</description>
+			</pagetype>		
+			<pagetype name="Mobile page">
+				<name>Mobile enheter</name>
+				<description>Side for mobile enheter</description>
+			</pagetype>		
+			<pagetype name="Rösta">
+				<name>Stem</name>
+				<description>Side som lar besøkeren avgi sin stemme</description>
+			</pagetype>					
+			<pagetype name="Prenumeration">
+				<name>Abonnement</name>
+				<description>Side der gjester kan velge abonnementsinformasjon</description>
+			</pagetype>
+			<pagetype name="Kalender">
+				<name>Kalender</name>
+				<description>Hovedside for kalender</description>
+			</pagetype>
+			<pagetype name="Kalenderhändelse">
+				<name>Kalenderaktivitet</name>
+				<description>Side for en ny aktivitet i kalenderen</description>
+				<captions>
+					<caption name="Normalt möte">Normal aktivitet</caption>
+					<caption name="Tid för möte">Klokkeslett for aktivitet</caption>
+					<caption name="Starttid">Startklokkeslett</caption>
+					<caption name="Sluttid">Sluttklokkeslett</caption>
+					<caption name="Återkommande möte">Gjentatt aktivitet</caption>
+					<caption name="Hela dagen">Hele dagen</caption>
+					<caption name="Inträffar varje">Inntreffer hver</caption>
+					<caption name="Begränsning av intervall">Begrensning av intervall</caption>
+					<caption name="Startdatum">Startdato</caption>
+					<caption name="Slutdatum">Sluttdato</caption>
+					<caption name="Minst en dag måste markeras vid återkommande möte!">Du må merke minst ett alternativ ved en gjentatt aktivitet!</caption>
+					<caption name="Ange mötesinformation">Angi møteinformasjon</caption>
+				</captions>
+			</pagetype>
+			<pagetype name="Diskussion">
+				<name>Diskusjonsforum</name>
+				<description>Hovedside for oppbygging av diskusjonsforum</description>
+			</pagetype>
+			<pagetype name="Sök">
+				<name>Søk</name>
+				<description>Side for informasjonssøking på nettstedet</description>
+			</pagetype>
+			<pagetype name="Ändrat nyligen">
+				<name>Nylig endret</name>
+				<description>Side som viser en liste over sider som nylig er endret</description>
+			</pagetype>
+			<pagetype name="Innehållsförteckning">
+				<name>Innholdsfortegnelse</name>
+				<description>Side som viser innholdet på hele eller deler av nettstedet</description>
+			</pagetype>
+			<pagetype name="Fillistning">
+				<name>Filliste</name>
+				<description>Side som viser filer fra en katalog på webserveren i listeform</description>
+			</pagetype>
+			<pagetype name="Startsida">
+				<name>Startside</name>
+				<description>Startside for nettstedet</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, huvudsida">
+				<name>Nyhetsgrupper, hovedside</name>
+				<description>Hovedside for nyhetsgrupper</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, kategori">
+				<name>Nyhetsgrupper, kategori</name>
+				<description>Kategori for nyhetsgruppe</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, nyhetsgrupp">
+				<name>Nyhetsgrupper, nyhetsgruppe</name>
+				<description>Side for nyhetsgruppe</description>
+			</pagetype>
+			<pagetype name="Nyhetsgrupper, inlägg">
+				<name>Nyhetsgrupper, innlegg</name>
+				<description>Side for innlegg i en nyhetsgruppe</description>
+			</pagetype>
+			<pagetype name="Registrera användare">
+				<name>Registrer bruker</name>
+				<description>Side der en gjest kan registrere seg på nettstedet</description>
+			</pagetype>
+			<pagetype name="Formulärsida">
+				<name>Skjemaside</name>
+				<description>Side som inneholder et skjema</description>
+			</pagetype>
+			<pagetype name="Alfabetisk innehållsförteckning">
+				<name>Alfabetisk innholdsfortegnelse</name>
+				<description>Lister sider sortert alfabetisk</description>
+			</pagetype>
+					<pagetype name="SYS - Välkomstsida">
+				<name>Velkommstsiden i redigeringsmodus</name>
+				<description>Første side på nettstedet i redigeringsmodus</description>
+			</pagetype>		
+			<pagetype name="SYS - Papperskorg">
+				<name>Papirkurv</name>
+				<description>Nettstedets papirkurv som inneholder slettede sider i sin opprinnelige struktur</description>
+			</pagetype>
+		</pagetypes>
+		<categories>
+			<category name="News">
+				<description>Nyheter</description>
+			</category>
+			<category name="Technical">
+				<description>Teknisk</description>
+			</category>
+			<category name="Data">
+				<description>Data</description>
+			</category>
+		</categories>
+	</language>
+</languages>

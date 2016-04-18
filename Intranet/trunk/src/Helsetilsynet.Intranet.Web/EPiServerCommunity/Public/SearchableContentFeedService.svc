@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language="c#" Service="EPiServer.Community.Wcf.Indexing.SearchableContentFeedService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

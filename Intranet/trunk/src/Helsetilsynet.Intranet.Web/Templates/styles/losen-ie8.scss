@@ -1,0 +1,27 @@
+@import "_losen-constants-typography";
+@import "_losen-constants-layout";
+@import "_losen-constants-colors";
+
+
+.mega-menu {
+	> li > .menu {
+		border: 1px solid $megamenu-column-border-color;
+		border-width: 0 1px 1px;
+		margin:0 -1px;
+
+		> .last-child {
+			border: none;
+		}
+	}
+	> li.my-tools .toolbox {
+		border: 1px solid $megamenu-column-border-color;
+		border-width: 0 1px 1px;
+		margin:0 -1px;
+	}
+}
+
+.frontpage {
+	&:before {
+		background:url(images/gradient-frontpage.png) top repeat-x;
+	}
+}

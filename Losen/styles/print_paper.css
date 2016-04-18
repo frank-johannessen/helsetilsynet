@@ -1,0 +1,55 @@
+/* Print styles */
+BODY,
+TD 
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	line-height: 20px;
+}
+
+.PrintTitle    
+{
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.PrintIntro 
+{
+	margin: 0px 0px 12px 0px;
+	font-style: italic;
+	font-size: 12px;
+}
+
+/* subtitle */
+.subtitle {
+	font-size: 14pt;
+	font-weight: bold;
+	margin: 12px 0px 0px 0px;
+}
+/*
+A:link,
+A:active,
+A:visited,
+A:hover {
+	text-decoration: none;
+	color: #000000;
+}
+*/
+.bt A:link,
+.bt A:active,
+.bt A:visited,
+.bt A:hover {
+	font-family: Arial;
+	color: #cc0033;
+	text-decoration: none;
+}
+
+.indent 
+{
+	padding-left: 30px;
+	padding-right: 10px;
+}
+
+.screen {display: none}
+.paper {display: none}
+	

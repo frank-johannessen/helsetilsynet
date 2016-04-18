@@ -1,0 +1,94 @@
+/* The CSS-part prepared for a ClientTab in admin mode*/
+.admintab-Background
+{
+	background-image:url(/mondosoft/images/admintab/tabrow_background.gif);
+}
+.admintab-Active
+{
+	height:27px;
+	background-image:url(/mondosoft/images/admintab/tab_background_active.gif);
+	text-align:center;
+	padding-top:9px;
+	position:relative;
+	z-index:10;
+	font:bold 11px tahoma;
+	cursor: hand;
+
+}
+.admintab-ActiveLeft
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_left_active.gif);
+	position:relative;
+}
+.admintab-ActiveRight
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_right_active.gif);
+	position:relative;
+}
+.admintab-Inactive
+{
+	font:normal 11px tahoma;
+	height:27px;
+	background-image:url(/mondosoft/images/admintab/tab_background.gif);
+	text-align:center;
+	padding-top:9px;
+	position:relative;
+	z-index:10;
+	cursor:hand;
+	position:relative;
+}
+.admintab-InactiveLeft
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_left.gif);
+	position:relative;
+}
+.admintab-InactiveRight
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_right.gif);
+	position:relative;
+}
+.admintab-Disabled
+{
+	font:normal 11px tahoma;
+	color: Gray;
+	height:27px;
+	background-image:url(/mondosoft/images/admintab/tab_background.gif);
+	text-align:center;
+	padding-top:9px;
+	position:relative;
+	z-index:10;
+	cursor:default;
+	position:relative;
+}
+.admintab-DisabledLeft
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_left.gif);
+	position:relative;
+}
+.admintab-DisabledRight
+{
+	height:27px;
+	width:7px;
+	background-image:url(/mondosoft/images/admintab/tab_background_right.gif);
+	position:relative;
+}
+.admintab-ObjectActive
+{
+	display:block;
+}
+.admintab-ObjectInactive
+{
+	display:none;
+}
+
+

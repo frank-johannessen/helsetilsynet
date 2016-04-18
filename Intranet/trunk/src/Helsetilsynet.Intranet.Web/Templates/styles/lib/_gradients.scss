@@ -1,0 +1,23 @@
+@mixin linear-gradient($gradient) {
+	background-image: -webkit-linear-gradient($gradient);
+	background-image:    -moz-linear-gradient($gradient);
+	background-image:     -ms-linear-gradient($gradient);
+	background-image:      -o-linear-gradient($gradient);
+	background-image:         linear-gradient($gradient);
+}
+
+@mixin two-linear-gradients($gradient1, $gradient2) {
+	background-image: -webkit-linear-gradient($gradient1), -webkit-linear-gradient($gradient2);
+	background-image:    -moz-linear-gradient($gradient1),    -moz-linear-gradient($gradient2);
+	background-image:     -ms-linear-gradient($gradient1),     -ms-linear-gradient($gradient2);
+	background-image:      -o-linear-gradient($gradient1),      -o-linear-gradient($gradient2);
+	background-image:         linear-gradient($gradient1),         linear-gradient($gradient2);
+}
+
+@mixin image-and-linear-gradient($url, $gradient) {
+				background-image: url($url), -webkit-linear-gradient($gradient);
+				background-image: url($url),    -moz-linear-gradient($gradient);
+				background-image: url($url),     -ms-linear-gradient($gradient);
+				background-image: url($url),      -o-linear-gradient($gradient);
+				background-image: url($url),         linear-gradient($gradient);
+}

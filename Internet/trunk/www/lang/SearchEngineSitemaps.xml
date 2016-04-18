@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<languages>
+
+    <language name="English" id="EN">
+        
+        <admin>
+			<editpagetypefield>
+				<typesearchenginesitemaps.propertysearchenginesitemaps>Search Engine Sitemaps</typesearchenginesitemaps.propertysearchenginesitemaps>
+			</editpagetypefield>
+        </admin>
+
+		<searchenginesitemaps>
+			<admin>
+				<admin>
+					<displayname>Search Engine Sitemaps</displayname>
+					<description>Configures the SearchEngineSitemaps-module</description>
+					<heading>Search Engine Sitemaps</heading>
+					
+					<tabregister>Register</tabregister>
+					<tabsettings>Settings</tabsettings>
+					<cacheinterval>Cache settings</cacheinterval>
+					<none>Disabled</none>
+					<onehour>One hour</onehour>
+					<twohours>Two hours</twohours>
+					<sixhours>Six hours</sixhours>
+					<oneday>One day</oneday>
+					<oneweek>One week</oneweek>
+					
+					<startpage>Startpage</startpage>
+					
+					<resetcache>Clear cache now</resetcache>
+					<save>Save</save>
+					<copy>Copy</copy>
+					<test>Test</test>
+					<reginfo>
+					&lt;p&gt;
+					Before registering the site url with Google, you must enable what pages to be included in the sitemap. This is done 
+					by editing the dynamicproperty &quot;SearchEngineSitemaps&quot; accordingly, You can also create a property of the same type
+					on each page and enable that
+					&lt;/p&gt;
+					&lt;p&gt;
+						Below is the url to your sites SiteIndex-file. This url must be registered with Search Engine Sitemaps.
+						To register the url with Google:&lt;br/&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Open &lt;a href="http://www.google.com/webmasters/sitemaps" target="_blank"&gt;http://www.google.com/webmasters/sitemaps&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;Login with your Google account&lt;/li&gt;
+						&lt;li&gt;Click Add a Sitemap. &lt;/li&gt;
+						&lt;li&gt;Enter your Sitemap URL (as found below) and click Submit URL&lt;/li&gt;
+						&lt;li&gt;Put the URL in your robots.txt with Sitemaps: before it&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/p&gt;
+					</reginfo>
+				</admin>
+			</admin>
+        </searchenginesitemaps>
+
+		<propertysearchenginesitemaps>
+			<info>More information on Search Engine Sitemaps</info>
+			<enabled>Enabled</enabled>
+			<changefreq>Change freq.</changefreq>
+			<priority>Priority</priority>
+			
+			<changefreqoptions>
+				<automatic>Determine automatically</automatic>
+				<always>Always</always>
+				<hourly>Hourly</hourly>
+				<daily>Daily</daily>
+				<weekly>Weekly</weekly>
+				<monthly>Monthly</monthly>
+				<yearly>Yearly</yearly>
+				<never>Never</never>
+			</changefreqoptions>
+			
+			<priorityoptions>
+				<low>Low (0.0)</low>
+				<medium-low>Medium-low (0.25)</medium-low>
+				<medium>Medium (0.5)</medium>
+				<medium-high>Medium-high (0.75)</medium-high>
+				<high>High (1.0)</high>
+			</priorityoptions>
+			
+        </propertysearchenginesitemaps>
+        
+	</language>
+	
+    <language name="Norsk" id="NO">
+        
+        <admin>
+			<editpagetypefield>
+				<typesearchenginesitemaps.propertysearchenginesitemaps>Search Engine Sitemaps</typesearchenginesitemaps.propertysearchenginesitemaps>
+			</editpagetypefield>
+        </admin>
+        
+        <searchenginesitemaps>
+			<admin>
+				<admin>
+					<displayname>Search Engine Sitemaps</displayname>
+					<description>Konfigurerar SearchEngineSitemaps-modulen</description>
+					<heading>EPiServer Google Sitemaps</heading>
+					
+					<tabregister>Registrering</tabregister>
+					<tabsettings>Inställningar</tabsettings>
+					<cacheinterval>Cacheinställningar</cacheinterval>
+					<none>Inaktiverad</none>
+					<onehour>En timme</onehour>
+					<twohours>Två timmar</twohours>
+					<sixhours>Sex timmar</sixhours>
+					<oneday>Ett dygn</oneday>
+					<oneweek>En vecka</oneweek>
+					
+					<startpage>Startsida</startpage>
+					
+					<resetcache>Töm cachen nu</resetcache>
+					<save>Spara</save>
+					<copy>Kopiera</copy>
+					<test>Provkör</test>
+					<reginfo>
+					&lt;p&gt;
+					Innan du registrerar sajten hos Sökmotorer bör du aktivera de sidor som skall inkluderas i "sitemapen". Detta gör
+					du genom att redigera den dynamiska egenskapen &quot;SearchEngineSitemaps&quot;. Du kan även skapa en property på alla sidtyper 
+					och använde den.
+					&lt;/p&gt;
+					&lt;p&gt;
+					Nedan är urlen till din sajts SiteIndex-fil. Denna url måste registreras på Google Webmaster. För
+					att registrera:&lt;br/&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Öppna &lt;a href="http://www.google.com/webmasters/sitemaps" target="_blank"&gt;http://www.google.com/webmasters/sitemaps&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;Logga in med ditt Google-konto&lt;/li&gt;
+						&lt;li&gt;Klicka "Add a Sitemap". &lt;/li&gt;
+						&lt;li&gt;Skriv in urlen nedan och klicka "Submit URL"&lt;/li&gt;
+						&lt;li&gt;Ta urlen och lägg den i din robots.txt med Sitemaps: före"&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/p&gt;
+					</reginfo>
+				</admin>
+			</admin>
+        </searchenginesitemaps>
+
+		<searchenginesitemaps>
+			<info>Mer information om Search Engine Sitemaps</info>
+			<enabled>Aktiverad</enabled>
+			<changefreq>Ändringsfrekvens (Change freq.)</changefreq>
+			<priority>Prioritet</priority>
+
+			<changefreqoptions>
+				<automatic>Avgör automatiskt</automatic>
+				<always>Alltid</always>
+				<hourly>Varje timme</hourly>
+				<daily>Dagligen</daily>
+				<weekly>Varje vecka</weekly>
+				<monthly>Månatligen</monthly>
+				<yearly>Årligen</yearly>
+				<never>Aldrig</never>
+			</changefreqoptions>
+
+			<priorityoptions>
+				<low>Låg (0.0)</low>
+				<medium-low>Ganska låg (0.25)</medium-low>
+				<medium>Mellan (0.5)</medium>
+				<medium-high>Ganska hög (0.75)</medium-high>
+				<high>Hög (1.0)</high>
+			</priorityoptions>
+
+		</searchenginesitemaps>
+
+	</language>	
+</languages>
+        

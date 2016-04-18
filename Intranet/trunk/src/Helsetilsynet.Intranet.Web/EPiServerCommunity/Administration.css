@@ -1,0 +1,300 @@
+﻿.epi-noPadding { padding: 0 !important; }
+/*.table*/ thead /*.td*/ a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+table.input /*.td*/ {
+	border: 0px !important;
+}
+table.input td 
+{
+    padding: 0.1em 0.4em !important;
+}
+
+table.epi-default table.epi-default 
+{
+    border: none !important;
+}
+table.epi-default table.epi-default th 
+{
+   	background: #f1f1f1 url(images/tabstrip/Gradients.png) repeat-x scroll left -2200px;
+   	padding: 0.1em 0.4em;
+   	border-width: 0 1px 1px 0;
+}
+
+.attributeName {
+	text-transform: capitalize;
+}
+.topTd {
+	padding-top: 8px !important;
+}
+.paging 
+{
+    height:20px;
+    margin: 8px 0 8px 0;
+}
+.paging a {
+	border: 1px solid #fff;
+	width: 20px;
+	height: 20px;
+	padding: 3px 6px 3px 6px;
+	background-color: #808080;
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+.paging a.endPage {
+	border-right: 1px solid #fff;
+}
+.paging a.selectedPage {
+	font-weight: bold;
+}
+.save {
+	display: inline;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.save .img {
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+.save .msg {
+	position: relative;
+	font-size: 8pt;
+	font-weight: normal;
+	top: 5px;
+	left: 5px;
+	float: left;
+}
+.save .msg .summary {
+	font-weight: normal;
+	float: left;
+	padding-bottom: 10px;
+}
+.save.nok {
+	border: 1px solid #575757;
+	background-color: #FFD053;
+}
+.save.nok .img {
+	background-image: url(images/saveNOK.png);
+	_background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/saveNOK.png');
+}
+.save.ok {
+	border: 1px solid #575757;
+	background-color: #FFD053;
+}
+.save.ok .img {
+	background-image: url(images/saveOK.png);
+	background-repeat: no-repeat;
+	_background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/saveOK.png');
+}
+#blog td {
+	border: 0px;
+}
+#blog .entry {
+	border: 1px solid #58595b;
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#blog .entry .title {
+	float: left;
+	font-weight: bold;
+}
+#blog .entry .date {
+	float: right;
+	font-weight: bold;
+}
+#blog .entry .content {
+	padding-left: 4px;
+	clear: both;
+}
+#imageGallery td {
+	border: 0px;
+}
+#imageGallery .image {
+	position: relative;
+	height: 105px;
+	width: 105px;
+}
+#imageGallery .image img {
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+}
+#imageGallery .image .imageSelector {
+	position: relative;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+#myPage .portraitCell {
+	border-left: 1px solid #7F9DB9;
+}
+
+#tabStrip .multiPage .multiPage .epi-default 
+{
+    border-left: none !important;
+    border-right: none !important;
+    margin-bottom: 0 !important;
+}
+
+
+.epi-default td[valign=top] { vertical-align: top !important; }
+.epi-default td[valign=middle] { vertical-align: middle !important; }
+.epi-default td[valign=bottom] { vertical-align: bottom !important; }
+.epi-default td { padding: 0.5em 0.4em; }
+.epi-default table.epi-default td { padding: 0.5em 0.4em; }
+/*.table*/ .epi-default .menu {
+	width: 210px;
+	border-right: 1px solid #aaa;
+	vertical-align: top;
+}
+/*.table*/ .epi-default .section {
+	/*background: #808080 url(images/Menu/TableHeadingBg.gif) repeat-x !important;*/
+	background: #f1f1f1 url(images/tabstrip/Gradients.png) repeat-x scroll left -2200px;
+	color: #000;
+	border-top: 1px solid #aeaeae;
+	border-bottom: 1px solid #aeaeae;
+	/*
+	margin-top: 1px;
+	margin-left: -5px;
+	margin-right: -6px;
+	margin-bottom: 5px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	*/
+    margin: 5px -0.4em;
+    padding: 0.3em 0.4em;
+	display: block;
+	overflow: hidden;
+}
+.epi-default .sectionTop 
+{
+    margin-top: -0.5em;
+    border-top: none;
+}
+
+#poll td {
+	border: 0px;
+}
+.poll {
+	border: 1px solid #7F9DB9;
+	padding: 5px;
+	width: 200px;
+	float: left;
+}
+.poll .choice {
+	float: left;
+	background-image: url(images/pagingBg.gif);
+	height: 10px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 7pt;
+	color: #ffffff;
+	text-align: center;
+}
+.poll .choiceBg {
+	float: left;
+	border: 1px solid #7F9DB9;
+	height: 10px;
+	width: 100%;
+}
+.pollInfo {
+	border: 0px;
+}
+.pollInfo .choice {
+	float: left;
+	background-image: url(images/pagingBg.gif);
+	height: 10px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 7pt;
+	color: #ffffff;
+	text-align: center;
+}
+.pollInfo .choiceBg {
+	float: left;
+	border: 1px solid #7F9DB9;
+	height: 10px;
+	width: 100%;
+	vertical-align: middle;
+}
+/* IE7 only fix for overcoming 100% width in padded cell overflow */
+*:first-child+html .pollInfo .choiceBg {
+	width: 100px;
+}
+.accessRightsPanel td {
+	padding: 0px !important;
+	border: 0px !important;
+	height: 16px !important;
+}
+#sc_menu {
+	width: 99%;
+}
+#sc_menu .menuItem {
+	float: left;
+	clear: both;
+	margin-bottom: 20px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+	color: #000000;
+}
+#sc_menu .menuItem .title {
+	font-weight: bold;
+}
+#sc_menu .menuItem .description {
+	float: left;
+	clear: both;
+	padding-top: 2px;
+}
+#sc_menu .menuItem a {
+	color: #000000;
+	text-decoration: none;
+}
+#sc_menu .menuItem .title .icon {
+	width: 19px;
+	_width: 16px;
+	float: left;
+	margin-top: -2px;
+}
+/* Check-box problems, Markus 2006-05-16. */
+/* Check-box text alignment was too low, setting this class resolves the problem. */
+/* Margin-top must be 0px. */
+.checkboxInList input {
+	float: left;
+	margin-right: 3px;
+	margin-top: 0px;
+}
+div.checkbox {
+	margin-top: 4px;
+	margin-bottom: 0px;
+}
+div.checkbox input {
+	margin-right: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#expert .answerOverdue {
+	font-weight: bold;
+	color: #930303;
+}
+.calendar .whitetitle TD {
+	font-weight: bold;
+	font-size: 11pt;
+	color: #ffffff;
+}
+#startPage .chart {
+    float: left;
+    text-align: center;
+    width: 50%;
+}

@@ -1,0 +1,160 @@
+.page-main-content {
+	width: $content-width;
+	margin: 0 auto;
+	@include clearfix;
+}
+.bread-crumbs-wrapper {
+	height: $bread-crumbs-wrapper-height;
+}
+
+// columns
+
+// generic layout
+.main-content,
+.aside 
+{
+	margin-top: $bread-crumbs-wrapper-height;
+}
+.main-content {
+	width: $grid-16-9-columns-width;
+	margin-left: $grid-16-3-columns-offset;
+	float: left;
+}
+.aside {
+	float: left;
+	width: $grid-16-4-columns-width;
+	margin-left: $grid-16-spacing;
+}
+.aside.nav {
+	float: left;
+	width: $grid-16-3-columns-width;
+	margin-left: -$content-width;
+	padding-bottom: 150px;
+}
+
+// layout for large documents
+.page-main-content.large-doc {
+	.main-content {
+		width: $grid-18-14-columns-width;
+		margin-left: $grid-18-4-columns-offset;
+	}
+	.aside.nav {
+		width: $grid-18-4-columns-width;
+		margin-left: -($content-width);
+	}
+}
+
+// layout for filtered pages (search result, article archive, calendar year)
+// and large documents' table of contents
+
+.page-main-content.filtered,
+.page-main-content.large-doc-toc
+{
+	.main-content {
+		width: $grid-18-10-columns-width;
+		margin-left: $grid-18-4-columns-offset;
+	}
+	.aside {
+		width: $grid-18-4-columns-width;
+		margin-left: $grid-18-spacing;
+	}
+	.aside.nav,
+	.aside.filters
+	{
+		width: $grid-18-4-columns-width;
+		margin-left: -($grid-18-14-columns-offset);
+  		margin-top: 124px; 
+  	}
+   .aside.nav h2 {
+    	color: #656565;
+    	padding: 0 0.5em;
+	}
+}
+.page-main-content.large-doc-toc {
+	.aside.nav {
+		margin-left: -745.778px; // copied from losen.css in svn rev. 112423 (PBronsta)
+	}
+}
+.page-main-content.filtered .aside.filters {
+	margin-top: $bread-crumbs-wrapper-height;
+}
+
+// pages with wide right column (my page, project room)
+.page-main-content.groups-and-persons {
+	.main-content {
+		width: $content-width - ($grid-16-3-columns-offset + $grid-18-6-columns-offset);
+		margin-left: $grid-16-3-columns-offset;
+	}
+	.aside.nav {
+		width: $grid-16-3-columns-width;
+		margin-left: -($content-width);
+	}
+	.aside.related {
+		width: $grid-18-6-columns-width;
+		margin-left: $grid-18-spacing;
+	}
+}
+
+// page type phone_list
+.page-main-content.phone-list {
+	.section.main-content {
+		width: $grid-16-13-columns-width;
+	}
+}
+
+// front page layout
+.frontpage {
+	.featured,
+	.alphabetical-index {
+		float: left;
+		clear: both;
+		width: $content-width;
+	}
+	.main-content {
+		margin-left: 0;
+		width: $frontpage-main-content-width;
+		margin-top: 0;
+	}
+	.aside {
+		width: $grid-18-6-columns-width;
+		margin-left: $grid-18-spacing;
+		margin-top: 0;
+	}
+}
+
+// section front page layout
+.section-front {
+	> .wrapper {
+		margin-left: $grid-16-3-columns-offset;
+		float: left;
+		@include clearfix;
+	}
+	.featured,
+	> .wrapper {
+		width: $section-front-featured-width;
+
+	}
+	.aside, 
+	.main-content {
+		margin-top: 0;
+	}
+	.wrapper {
+		margin-top: $bread-crumbs-wrapper-height;
+	}
+	.aside.nav {
+		margin-top: $bread-crumbs-wrapper-height;
+	}
+	.main-content {
+		width: $grid-16-9-columns-width;
+		margin-left: 0;
+	}
+	.aside {
+		margin-left: $grid-16-spacing;
+		width: $grid-16-4-columns-width;
+	}
+	.aside.nav {
+		margin-left: -($content-width);
+		width: $grid-16-3-columns-width;
+	}
+}
+

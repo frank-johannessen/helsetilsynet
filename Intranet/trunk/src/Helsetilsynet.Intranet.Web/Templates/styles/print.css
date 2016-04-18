@@ -1,0 +1,88 @@
+﻿body, html {
+    font-size: 100%;
+    font-size: 12pt !important;
+    line-height: 1.1em;
+    
+}
+body {
+    margin: 0 auto;
+    font-family: "Times New Roman", Roman, serif;
+    /*width: 500px;*/
+    width: 100%;
+}
+.page-header, 
+.mega-menu, 
+.page-actions, 
+.page-footer, 
+.button-add-club,
+.section.my-links.external,
+.aside.nav,
+.aside,
+.add-event,
+.page-main-content.calendar-year .add-event,
+.section.comments,
+.filter-options,
+.page-main-content.filtered .aside.filters {
+    display: none;
+}
+.page-main-content, .bread-crumbs-and-page-actions-wrapper, .main-content {
+    width: 100%;
+    max-width: 100%;
+}
+.bread-crumbs-and-page-actions-wrapper {
+    font-size: 1em;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+    height: auto;
+}
+.page-main-content.article .main-intro, .main-intro {
+    font-size: 12pt !important;
+    font-weight: bold;
+}
+.page-main-content.article .article-body, .bread-crumbs, .article-body {
+    font-size: 100% !important;
+}
+.page-main-content.article .article-body, .bread-crumbs, .article-body 
+{
+    font-size: 12pt !important;
+}
+.main-menu {
+    background: none;
+}
+.frontpage .section.main-content, .page-main-content.large-doc .main-content {
+    /*width: 636.667px;*/
+    margin-top: 0;
+}
+.page-main-content.large-doc .main-content {
+    margin-left: 0;
+}
+.main-content, .page-main-content.groups-and-persons .main-content {
+    margin: 30px 0;
+}
+.section.feeds ul {
+    overflow: visible;
+}
+.page-main-content.article .section.main-content {
+    margin-top: 10px;
+}
+.section.main-content {
+   /* width: 716px;*/
+}
+.page-main-content
+.main-content, .aside {
+    margin-top: 18px;
+}
+.page-main-content.filtered .main-content, .page-main-content.large-doc-toc .main-content {
+    width: auto;
+    margin-left: 0;
+}
+
+h2 {
+    line-height: 1.3em;
+    font-size: 1.3em;
+}
+h1 {
+    line-height: 1.5em;
+    font-size: 1.5em;
+}

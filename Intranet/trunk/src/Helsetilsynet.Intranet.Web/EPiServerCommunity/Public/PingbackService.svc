@@ -1,0 +1,20 @@
+﻿<%@ServiceHost language="c#" Service="EPiServer.Community.Wcf.Blog.Pingback.Pingback" Factory="PingbackServiceHostFactory" %>
+
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+using System.ServiceModel.Description;
+
+public class PingbackServiceHostFactory : ServiceHostFactory
+{
+    protected override ServiceHost CreateServiceHost(System.Type serviceType, System.Uri[] baseAddresses)
+    {
+        ServiceHost host = base.CreateServiceHost(serviceType, baseAddresses);
+        
+        WebHttpBinding binding = new WebHttpBinding("PingbackCustomBinding");
+        ServiceEndpoint endpoint = host.AddServiceEndpoint(typeof(EPiServer.Community.Wcf.Blog.Pingback.IPingback), binding, "");
+
+        endpoint.Behaviors.Add(new EPiServer.Community.Wcf.Blog.XmlRpc.XmlRpcEndpointBehavior());
+
+        return host;
+    }
+}

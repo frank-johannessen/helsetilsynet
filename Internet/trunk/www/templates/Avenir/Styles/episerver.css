@@ -1,0 +1,68 @@
+body,
+td,
+p {
+	/*EditMenuName: Normal;*/
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #333333;	
+}
+
+h2 {
+	EditMenuName: h2;
+	font-family: Arial, Sans-Serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+}
+
+h3 {
+	EditMenuName: h3;
+	font-family: Arial, Sans-Serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 4px 0px;
+	font-weight: bold;
+}
+
+
+
+.leftFloating 
+{
+	EditMenuName: Venstrejustert;
+	text-align: left;
+}
+
+.caption_offScreenContent 
+{
+	EditMenuName: Skjul element;
+	position: absolute;
+	left:-999em;
+}
+
+.signature_left
+{
+	EditMenuName: Signatur venstre;
+	float:left;
+	width:48%;
+	clear:left;
+	padding-right:4%;
+}
+.signature_right
+{
+	EditMenuName: Signatur hoyre;
+	float:left;
+	width:48%;
+	clear:right;
+}
+td.center_cell
+{
+	Editmenuname: Midstill celle
+}
+#main th.center_cell, #main td.center_cell { text-align:center; }
+
+ 

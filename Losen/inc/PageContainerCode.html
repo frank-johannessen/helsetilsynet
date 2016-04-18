@@ -1,0 +1,149 @@
+
+
+<STYLE>
+	.pagelink { color:black; text-decoration:none; cursor:n-resize }
+	.pagelink:hover { text-decoration:none; cursor:n-resize }	
+</STYLE>
+
+<SCRIPT>
+var OBJECTNAME_getpagetool = "http://" + window.location.hostname + "/admin/getpagename.aspx";
+var OBJECTNAME_initdiv = '<TABLE ondrop="OBJECTNAME_internaldrop(0)" CELLPADDING="2" CELLSPACING="1" BORDER="0" WIDTH="500" BGCOLOR="666666" STYLE="height:25px"><TR BGCOLOR="white"><TD WIDTH="100%" ALIGN="center">--> DRAG AND DROP PAGES HERE <--</TD></TR></TABLE><IMG SRC="/images/pxl.gif" WIDTH="1" HEIGHT="22"><BR>';
+var OBJECTNAME_header = '<DIV ID="list" STYLE="overflow:auto; width:517px; height=121; z-index:1"><TABLE CELLPADDING="2" CELLSPACING="1" BORDER="0" WIDTH="500" BGCOLOR="666666">';
+var OBJECTNAME_itemstart = '<TR ondrop="OBJECTNAME_internaldrop(MYID)" ONDRAGSTART="OBJECTNAME_movepage(MYID)" BGCOLOR="white"><TD WIDTH="100%" HEIGHT="23"><A CLASS="pagelink" HREF="#">'; 
+var OBJECTNAME_itemend = '</A></TD></TR>';
+var OBJECTNAME_footer = '</TABLE></DIV><IMG ondrop="OBJECTNAME_removepage()" VSPACE="3" SRC="/Util/images/ExplorerTree/fullwastebasket.gif">';
+var OBJECTNAME_items = new Array();
+var OBJECTNAME_pagecount = 0;
+var OBJECTNAME_saveobject = document.all[OBJECTNAME_clientid];
+
+function OBJECTNAME_removeAt(arr,index) {
+	tmp = new Array(); newcount=0;
+	for(i=0;i<arr.length;i++) {
+		if (i!=index) {
+			tmp[tmp.length] = arr[i];1
+		}
+	}
+	return tmp;
+}
+
+function OBJECTNAME_insertAt(arr,index,value) {
+	tmp = new Array(); newcount=0;
+	for(i=0;i<arr.length;i++) {
+		if (i==index) {
+			tmp[tmp.length] = value;
+		}
+		tmp[tmp.length] = arr[i];
+	}
+	if (index>=arr.length) tmp[tmp.length] = value;
+	return tmp;	
+}
+
+function OBJECTNAME_page(name,id) {
+	this.name = name;
+	this.id = id;
+}
+
+function OBJECTNAME_cancelEvent() {
+    window.event.returnValue = false;
+}
+
+function OBJECTNAME_drop(index) {
+	datavalue = event.dataTransfer.getData("Text").split("|");
+	OBJECTNAME_idframe.location = OBJECTNAME_getpagetool + "?id=" + datavalue + "&recall=OBJECTNAME_addpage&index=" + index;
+}
+
+function OBJECTNAME_addpage(name,id,typeid,index){
+	if (name!="") {
+		pagedata = new OBJECTNAME_page(name,id);
+		if (index!="") {
+			OBJECTNAME_items = OBJECTNAME_insertAt(OBJECTNAME_items,index+1, pagedata);	
+			OBJECTNAME_updatediv();		
+		}
+		else {
+			OBJECTNAME_items[OBJECTNAME_items.length] = pagedata;
+			OBJECTNAME_updatediv();
+		}
+	}
+}
+
+function OBJECTNAME_updatediv() {
+	html = OBJECTNAME_header; OBJECTNAME_saveobject.value = "";
+	if (OBJECTNAME_items.length<6) html = html.replace("height=121;","");
+	for(i=0;i<OBJECTNAME_items.length;i++) {
+		html += OBJECTNAME_itemstart.replace("MYID",i).replace("MYID",i) + "&nbsp;" +  OBJECTNAME_items[i].name + "</TD>" + OBJECTNAME_itemend;
+		if (i>0) OBJECTNAME_saveobject.value += ","; OBJECTNAME_saveobject.value += OBJECTNAME_items[i].id;
+	}
+	html += OBJECTNAME_footer;	
+	
+	if(html.indexOf("<TR")>-1) {
+		OBJECTNAME_divTarget.innerHTML = html;
+	} else {
+		OBJECTNAME_divTarget.innerHTML = OBJECTNAME_initdiv;
+	}
+}
+
+function OBJECTNAME_datasync() {
+	OBJECTNAME_saveobject.value = "";
+	for(i=0;i<OBJECTNAME_items.length;i++) {
+		if (i>0) OBJECTNAME_saveobject.value += ","; OBJECTNAME_saveobject.value += OBJECTNAME_items[i].id;
+	}
+}
+
+function OBJECTNAME_movepage(index) {    
+	event.dataTransfer.setData("Text","OBJECTNAME|" + index); 
+	event.dataTransfer.effectAllowed = "move";  
+}
+
+function OBJECTNAME_removepage() {
+	datavalue = event.dataTransfer.getData("Text").split("|");
+	if (datavalue.length==2) {
+		items = eval(datavalue[0] + "_items");
+		items = OBJECTNAME_removeAt(items,datavalue[1]);
+		eval(datavalue[0] + "_items = items");	
+		eval(datavalue[0] + "_updatediv()");					
+	}
+}
+
+function OBJECTNAME_internaldrop(index) {
+	datavalue = event.dataTransfer.getData("Text").split("|"); 
+	if (datavalue.length==2) {
+		fromitems = eval(datavalue[0] + "_items");
+		copyvalue = fromitems[datavalue[1]];
+		fromitems = OBJECTNAME_removeAt(fromitems,datavalue[1]);		
+		eval(datavalue[0] + "_items = fromitems");	
+		eval(datavalue[0] + "_updatediv()");	
+		OBJECTNAME_items = OBJECTNAME_insertAt(OBJECTNAME_items,index, copyvalue);	
+		OBJECTNAME_updatediv();
+	} else {
+		OBJECTNAME_drop(index);
+	}
+}
+
+function OBJECTNAME_initlist_server() {
+	//if (OBJECTNAME_dynamicproperty=="false") document.all.OBJECTNAMERow1.style.display = "none";
+	OBJECTNAME_divTarget.innerHTML = OBJECTNAME_initdiv;
+	for(i=0;i<OBJECTNAME_containerdata.length;i++) {
+		pagedata = OBJECTNAME_containerdata[i].split('|');
+		if(pagedata.length==2) {
+			OBJECTNAME_items[OBJECTNAME_items.length] = new OBJECTNAME_page(pagedata[1],pagedata[0]); 		
+		}
+	}
+	if (OBJECTNAME_items.length>0) {
+		OBJECTNAME_updatediv();
+	}
+}
+
+function OBJECTNAME_updatemethod(index,obj) {
+	OBJECTNAME_items[index].method = obj[obj.selectedIndex].value;
+	OBJECTNAME_datasync();
+}
+
+</SCRIPT>
+
+<div id="OBJECTNAME_divTarget" ondragenter="OBJECTNAME_cancelEvent()" ondragover="OBJECTNAME_cancelEvent()"></div>
+
+<iframe id="OBJECTNAME_idframe" style="visibility:hidden" width="1" height="1" src="http://localhost/admin/getpagename.aspx"></iframe>
+
+<SCRIPT>
+	OBJECTNAME_initlist_server();	
+</SCRIPT>

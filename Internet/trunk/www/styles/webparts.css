@@ -1,0 +1,237 @@
+/* You do NOT need to include this stylesheet if you are using EPiChrome */
+/* Styles used by the web part framework */
+#disablerBackground /* You shold not tamper with this one... */
+{	
+	width:100%;
+	background:green;
+	display:block;
+	opacity: 0.3;
+	filter: alpha(opacity = 30);
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+}
+
+
+.WebPartTitleArea
+{
+	border: solid 1px silver;
+	background-color: #e8e8e8;
+	padding: 4px 4px 4px 4px;
+}
+.WebPartTitleArea:hover 
+{
+	background-color: yellow;
+}
+
+.WebPartZoneTitleArea 
+{
+	background-color: #c0c0c0;
+	padding: 4px;
+	border: solid 1px #a0a0a0;
+}
+.WebPartSelectedArea
+{
+	border: solid 1px red;
+	background-color: #f0f0f0;
+}
+.AddWebPartPanel
+{
+	padding: 4px 20px 4px 20px;
+	background-color: #f0f0f0;
+	padding: 4px;
+	border: solid 1px #a0a0a0;
+	white-space: normal;
+	font-size:1.1em;
+}
+
+.AddWebPartPanelButton 
+{
+	height: 22px;
+	font-size:0.9em;
+}
+/*
+Styles which can be used, but has not:
+AddWebPartPanelLabel
+AddWebPartPanelDropDown
+AddWebPartPanelButton
+ */
+
+.WebPartEditInputFieldsContainer
+{
+	margin: 0px 10px 0px 10px;
+}
+.ZoneGeneral
+{
+	font-family: Arial;
+	color: #000;
+}
+
+.WebPartEditContainerFooter
+{
+	padding-left: 10px;
+}
+.WebPartEditContainerOuter
+{
+    z-index: 1001; 
+    width: 650px; 
+    height: auto; 
+    position: absolute; 
+    border:ridge 1px #000;
+    display:none;
+    left:50%;
+    margin-left:-200px;
+    top:50px;
+    font-family:tahoma;
+    font-size:11px;
+    background-color:#eeeeee;
+    text-align:left;
+    padding-bottom:20px;
+}
+
+
+.WebPartEditContainerInner
+{
+	padding:0 10px;	 
+}
+
+.WebPartEditContainerInner span
+{
+	display:block;	
+	padding-bottom:20px;
+	font-weight:bold;
+}
+.WebPartEditContainerInner fieldset span
+{
+	padding:0;
+	display:inline;
+	font-weight:normal;
+}
+
+.WebPartEditContainerInner fieldset
+{
+	display:block;
+	padding:0px;
+	margin:0px;
+}
+
+/*
+.WebPartEditDescription
+{
+	display:block;
+	margin-bottom:5px;
+	margin-top:5px;
+	font-weight:normal;
+	font-size:1.2em;
+	
+}*/
+
+.WebPartEditContainerInner span, .WebPartEditContainerInner label
+{
+	font-size:1.2em;
+	vertical-align:middle;
+}
+.WebPartEditContainerInner input
+{
+	font-size:1.2em;
+	margin:5px 3px 5px 0px;
+	vertical-align:middle;	
+}
+.WebPartEditContainerInner input.epismallbutton
+{
+	padding:0;
+	margin:0;
+}
+.WebPartEditContainerInner input.WebPartEditContainerButtons
+{
+	font-size:1.2em;
+	margin:5px 3px 5px 0px;
+}
+.WebPartEditContainerTitle
+{
+    background-color: #cccccc; 
+    vertical-align: middle; 
+    color: #000; 
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-right: 4px; 
+    padding-left: 4px; 
+    padding-top: 6px;
+    padding-bottom: 4px;
+    height: 20px;
+    vertical-align: middle; 
+    margin: 8px 8px 0px 8px;
+}
+
+.WebPartEditContainerButtons
+{
+    height: 22px;
+    width: 80px;
+}
+
+span.WebPartEditContainerInstruction
+{
+	color: #000;
+}
+
+/* BEGIN Standard Web Parts */
+/* -- */
+.ingressView 
+{
+	padding: 0em 0em 1em 0em;
+}
+.ingressView h2
+{
+	margin: 0em 0em 0.2em 0em;
+}
+.ingressView img
+{
+	margin: 0em 0em 0.2em 0em;
+	float: left;
+}
+
+.ingressView p
+{
+	margin: 0em 0em 0em 0em;
+}
+/* -- */
+
+.ingressImage
+{
+    float: left;
+}
+.ingressParagraph
+{
+	margin: 0em 0em 0em 0em;
+}
+
+.ingressOuterDiv 
+{
+	padding: 0em 0em 1em 0em;
+}	
+.ingressOuterDiv h2
+{
+	margin: 0em 0em 0.2em 0em;
+}	
+/* Banner imgage */
+.bannerimg 
+{
+	
+}
+/*
+.ingressOuterDiv
+.ingressImage
+.ingressHeader
+.ingressParagraph
+.ingressLink
+*/
+/* Long String */
+div.WP_PD_LongString textarea
+{
+	/* Override 100% height, as the container
+	   get too small to be useful */
+	height: 230px !important;
+}
+/* END Standard Web Parts */

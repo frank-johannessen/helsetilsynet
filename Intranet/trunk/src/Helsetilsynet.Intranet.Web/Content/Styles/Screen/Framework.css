@@ -1,0 +1,14 @@
+﻿/*-----------Centering framework--------------*/
+.Framework
+{
+	margin:auto;
+	text-align:left;
+	position:relative;
+}
+/*-----------Positioning framework elements--------------*/
+.Header, 
+.Container,
+.Footer
+{
+	position:relative;
+}

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="norsk" id="no">
+    <linkdetective>
+      <general>
+        <brokenlinks>brutte lenker</brokenlinks>
+      </general>
+      <report>
+        <heading>LinkDetective Rapport</heading>
+        <noreportheading>Ingen rapport tilgjengelig.</noreportheading>
+        <noreporttext>
+          Sjekk at LinkDetective er satt opp til å kjøre som en planlagt jobb.
+          Husk at rapporten kun lagres i minne, og blir slettet hvis serveren startes på nytt.
+        </noreporttext>
+        <reportwasrun>Rapporten ble kjørt</reportwasrun>
+        <timeused>Tid brukt</timeused>
+        <pageschecked>Sider sjekket</pageschecked>
+        <pagesfailed>Sider m/brutte lenker</pagesfailed>
+        <linkschecked>Lenker sjekket</linkschecked>
+        <linksfailed>Brutte lenker</linksfailed>
+        <failedpagesheading>Sider med brutte lenker</failedpagesheading>
+      </report>
+      <pagereport>
+        <heading>LinkDetective Siderapport</heading>
+        <noreportheading>Ingen rapport tilgjengelig.</noreportheading>
+        <noreporttext>
+          Sjekk at LinkDetective er satt opp til å kjøre som en planlagt jobb.
+          Husk at rapporten kun lagres i minne, og blir slettet hvis serveren startes på nytt.
+        </noreporttext>
+        <notcheckedheading>Denne siden ble ikke sjekket av LinkDetective.</notcheckedheading>
+        <notcheckedtext>Denne siden ble ikke sjekket av LinkDetective ved siste sjekk </notcheckedtext>
+        <reportokheading>Ingen brutte lenker funnet!</reportokheading>
+        <reportoktext>Ingen brutte lenker ble funnet sist LinkDetective ble kjørt</reportoktext>
+        <reportfailedheading>brutte lenker ble funnet av LinkDetective! (Sjekket:</reportfailedheading>
+        <checkok>Ingen brutte lenker funnet!</checkok>
+        <checkfailed>brutte lenker ble funnet av LinkDetective!</checkfailed>
+        <property>Felt</property>
+        <lang>Språk</lang>
+        <linkurl>Lenke URL</linkurl>
+        <error>Feilmelding</error>
+        <checkpage>Sjekk siden</checkpage>
+        <checkpagetooltip>Sjekk siden med LinkDetective</checkpagetooltip>
+      </pagereport>
+      <errors>
+        <error-1>Brukeren ble spurt av EPiServer om å logge inn.</error-1>
+        <error-2>Siden finnes ikke.</error-2>
+        <error-3>Siden er ikke tilgjengelig for besøkende.</error-3>
+        <error-4>Siden finnes ikke.</error-4>
+        <error-5>Filen finnes ikke. (VPP).</error-5>
+        <error-6>Ikke en gyldig URL.</error-6>
+        <error-7>Ikke en gyldig URL.</error-7>
+        <error-8>Problemer med aksessere filen. (VPP)</error-8>
+        <notresolved>Feil i domenenavn</notresolved>
+        <couldnotconnect>Kunne ikke koble til serveren</couldnotconnect>
+        <remoteservererror>Ekstern serverfeil</remoteservererror>
+      </errors>
+    </linkdetective>
+  </language>
+</languages>

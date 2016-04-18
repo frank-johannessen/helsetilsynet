@@ -1,0 +1,77 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+table th { font-weight: bold; }
+table td, table th { padding: 9px 10px; text-align: left; }
+.scroll-help { display: none; }
+/* Mobile */
+@media only screen and (max-width: 767px) {
+	
+	table.responsive { margin-bottom: 0; }
+	
+	.pinned { position: absolute; left: 0; top: 0; background: #fff; width: 35%; overflow: hidden; overflow-x: scroll; border-right: 1px solid #ccc; border-left: 1px solid #ccc; }
+	.pinned table { border-right: none; border-left: none; width: 100%; }
+	.pinned table th, .pinned table td { white-space: nowrap; }
+	.pinned td:last-child { border-bottom: 0; }
+	
+	div.table-wrapper { position: relative; margin-bottom: 20px; overflow: hidden; border-right: 1px solid #ccc; }
+	div.table-wrapper div.scrollable { margin-left: 35%; }
+	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
+	
+	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
+	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
+	
+	.scroll-help 
+	{
+	    display: block;
+	    text-align: right;
+	    padding: 10px 0;
+	    margin: 10px 0;
+	    padding-right: 50px;
+	    position: relative;
+	    font-size: 13px;
+	    background: transparent;
+	   
+	  
+	 }
+	
+	.scroll-help .icon-arrow-right:after {
+	    display: block;
+	    margin: 0;
+	    padding: 0;
+	} 
+	
+	.scroll-help .icon-arrow-right {
+	    opacity: 1;
+	    height: auto;
+	    top: 15px;
+	     right: 7px;  
+	    border: 0;
+	      width: 0;
+	    opacity: 0.75;
+	}
+	
+	.scroll-help .icon-arrow-right:first-child{
+	    right: 19px;
+	    opacity: 1;
+	}
+	
+	.scroll-help .icon-arrow-right:last-child{
+	      right: -5px;
+	    opacity: 0.5;
+	}
+	
+}

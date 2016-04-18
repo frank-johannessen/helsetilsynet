@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="Svenska" id="sv">
+    <epiimage>
+      <selectimage>Välj bild</selectimage>
+      <addimage>Lägg till bild</addimage>
+      <preview>Förhandsvisning</preview>
+      <imagedescription>Bildbeskrivning</imagedescription>
+      <imagelink>Bildlänk</imagelink>
+      <saveandclose>Spara &amp; stäng</saveandclose>
+      <prev>Föregående</prev>
+      <next>Nästa</next>
+      <prevtooltip>Spara och gå till föregående bild</prevtooltip>
+      <nexttooltip>Spara och gå till nästa bild</nexttooltip>
+      <draganddroptooltip>Dra och släpp filer eller mappar från Filhantering i Åtgärdsfönsteret här.</draganddroptooltip>
+      <errorcreateslidefailed>Det gick inte att skapa bilden</errorcreateslidefailed>
+      <errorfiltypenotsupported>Filtypen stöds inte</errorfiltypenotsupported>
+      <errorimagenotfound>Källbilden hittades inte</errorimagenotfound>
+      <erroremptyparameter>Tom parameter</erroremptyparameter>
+    </epiimage>
+  </language>
+</languages>

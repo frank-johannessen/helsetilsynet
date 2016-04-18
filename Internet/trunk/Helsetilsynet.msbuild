@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Project DefaultTargets="deploy" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.targets"/>
+
+    <UsingTask TaskName="FileUpdate" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="SvnInfo" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="Version" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="Zip" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="AssemblyInfo" AssemblyFile="tools\build\AssemblyInfoTask.dll"/>
+    <UsingTask TaskName="JSCompress" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="Attrib" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="Merge" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="CompressorTask" AssemblyFile="tools\build\Yahoo.Yui.Compressor.MsBuildTask.dll"/>
+    <UsingTask TaskName="FlattenCss" AssemblyFile="tools\build\MakingWaves.Common.Build.dll"/>
+    <UsingTask TaskName="Modulo" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="Divide" AssemblyFile="tools\build\MSBuild.Community.Tasks.dll"/>
+    <UsingTask TaskName="MSBuild.ExtensionPack.Framework.MSBuildHelper" AssemblyFile="tools\build\MSBuild.ExtensionPack.dll"/>
+    <UsingTask TaskName="MSBuild.ExtensionPack.FileSystem.FindUnder" AssemblyFile="tools\build\MSBuild.ExtensionPack.dll"/>
+
+    <Target Name="discover-svn-repository-version">
+        <Message Text="Checking for 1.7 repository version"/>
+        <Exec WorkingDirectory="." Command="tools\svn\1.7\svn.exe info" IgnoreExitCode="true">
+            <Output TaskParameter="ExitCode" PropertyName="SvnInfoExitCode"/>
+        </Exec>
+        <PropertyGroup Condition="$(SvnInfoExitCode)==0">
+            <SvnRepositoryVersion>1.7</SvnRepositoryVersion>
+        </PropertyGroup>
+
+        <Message Text="Checking for 1.6 repository version" Condition="'$(SvnRepositoryVersion)'==''"/>
+        <Exec WorkingDirectory="." Command="tools\svn\1.6\svn.exe info" IgnoreExitCode="true" Condition="'$(SvnRepositoryVersion)'==''">
+            <Output TaskParameter="ExitCode" PropertyName="SvnInfoExitCode"/>
+        </Exec>
+        <PropertyGroup Condition="$(SvnInfoExitCode)==0 And '$(SvnRepositoryVersion)'==''">
+            <SvnRepositoryVersion>1.6</SvnRepositoryVersion>
+        </PropertyGroup>
+
+        <!-- version not recognized -->
+        <Error Text="Repository version not recognized" Condition="$(SvnInfoExitCode)!=0"/>
+        <Message Text="Discoverd repository version: $(SvnRepositoryVersion)"/>
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="setup-version" Condition="$(LocalInstallation)!='True'" DependsOnTargets="discover-svn-repository-version">
+        <SvnInfo LocalPath="." ToolPath="tools\svn\$(SvnRepositoryVersion)">
+            <Output TaskParameter="LastChangedRevision" PropertyName="LastChangedRevision"/>
+        </SvnInfo>
+
+        <Message Text="Last changed revision set to: $(LastChangedRevision)"/>
+
+        <Modulo Numbers="$(LastChangedRevision);1000" NumericFormat="000">
+            <Output TaskParameter="Result" PropertyName="AssemblyVersionRevision"/>
+        </Modulo>
+
+        <Divide Numbers="$(LastChangedRevision);1000" TruncateResult="true">
+            <Output TaskParameter="Result" PropertyName="AssemblyVersionBuild"/>
+        </Divide>
+
+
+        <Copy SourceFiles="./www/Properties/AssemblyInfo.cs.bak" DestinationFiles="./www/Properties/AssemblyInfo.cs" Condition="Exists('./www/Properties/AssemblyInfo.cs.bak')"/>
+        <Copy SourceFiles="./www/Properties/AssemblyInfo.cs" DestinationFiles="./www/Properties/AssemblyInfo.cs.bak"/>
+
+
+        <AssemblyInfo AssemblyInfoFiles="www/Properties/AssemblyInfo.cs" AssemblyRevision="$(AssemblyVersionRevision)" AssemblyFileRevision="$(AssemblyVersionRevision)" AssemblyBuildNumber="$(AssemblyVersionBuild)" AssemblyFileBuildNumber="$(AssemblyVersionBuild)">
+            <Output TaskParameter="MaxAssemblyVersion" PropertyName="MaxAssemblyVersion"/>
+        </AssemblyInfo>
+
+        <Message Text="Version: $(MaxAssemblyVersion)"/>
+    </Target>
+
+    <ItemGroup>
+        <BinFiles Include="www\bin\*"/>
+    </ItemGroup>
+
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="build-release">
+        <Message Text="Version: $(MaxAssemblyVersion)"/>
+        <RemoveDir Directories="build/Release"/>
+        <MSBuild Projects="Helsetilsynet.sln" Properties="Configuration=Release" Targets="Clean;Build"/>
+        <AspNetCompiler VirtualPath="temp" PhysicalPath="www"/>
+
+        <Copy SourceFiles="@(BinFiles)" DestinationFolder="build\Release\Helsetilsynet"/>
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+    <!--<Target Name="run-tests">
+
+        <MSBuild.ExtensionPack.FileSystem.FindUnder TaskAction="FindDirectories" Path="lib" Recursive="False" SearchPattern="NUnit.Runners*">
+            <Output ItemName="NUnitRoots" TaskParameter="FoundItems"/>
+        </MSBuild.ExtensionPack.FileSystem.FindUnder>
+
+        <MSBuild.ExtensionPack.Framework.MsBuildHelper TaskAction="Sort" InputItems1="@(NUnitRoots)">
+            <Output TaskParameter="OutputItems" ItemName="sortednNUnitRoots"/>
+        </MSBuild.ExtensionPack.Framework.MsBuildHelper>
+
+        <MSBuild.ExtensionPack.Framework.MsBuildHelper TaskAction="GetLastItem" InputItems1="@(sortednNUnitRoots)">
+            <Output TaskParameter="OutputItems" ItemName="latestNUnitRoot"/>
+        </MSBuild.ExtensionPack.Framework.MsBuildHelper>
+
+        <Message Text="Using NUnit from @(latestNUnitRoot)"/>
+
+        <Exec Command='@(latestNUnitRoot)\tools\nunit-console-x86.exe /nologo MakingWaves.DNK.Tests.dll' WorkingDirectory='build\Release\DNK.Tests'/>
+    </Target>-->
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="init-package" DependsOnTargets="setup-version">
+        <CreateProperty Value="build\packages\$(MaxAssemblyVersion)\">
+            <Output TaskParameter="Value" PropertyName="BuildPackagePath"/>
+        </CreateProperty>
+        <RemoveDir Directories="$(BuildPackagePath)" Condition="Exists('$(BuildPackagePath)')"/>
+        <MakeDir Directories="$(BuildPackagePath)"/>
+
+        <CreateProperty Value="$(BuildPackagePath)web\">
+            <Output TaskParameter="Value" PropertyName="WebPackagePath"/>
+        </CreateProperty>
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="publish-web" DependsOnTargets="init-package">
+        <MSBuild Projects="www\Helsetilsynet.csproj" Properties="Configuration=Release;WebProjectOutputDir=..\$(WebPackagePath);OutDir=..\$(WebPackagePath)\bin\" Targets="ResolveReferences;_CopyWebApplication"/>
+
+        <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(WebPackagePath)\bin\"/>
+
+        <!--<Exec Command='runas /noprofile /netonly /savecred /user:administrator@$(TargetMachine) &quot;iisreset /noforce $(TargetMachine)&quot;' Condition="'$(TargetMachine)'!=''"/>-->
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="transform-configuration">
+        <CreateProperty Value="$(BuildPackagePath)config\">
+            <Output TaskParameter="Value" PropertyName="ConfigurationPackagePath"/>
+        </CreateProperty>
+
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-files" Properties="ConfigurationName=InternalTest;SourcePath=www\;DestinationPath=$(ConfigurationPackagePath)\InternalTest"/>
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-files" Properties="ConfigurationName=Production;SourcePath=www\;DestinationPath=$(ConfigurationPackagePath)\Production"/>
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-files" Properties="ConfigurationName=Staging;SourcePath=www\;DestinationPath=$(ConfigurationPackagePath)\Staging"/>
+    </Target>
+
+    <Target Name="transform-configuration-files">
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)connectionStrings.config;TransformationFile=$(SourcePath)connectionStrings.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\connectionStrings.config"/>
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)episerver.config;TransformationFile=$(SourcePath)episerver.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\episerver.config"/>
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)EPiServerFramework.config;TransformationFile=$(SourcePath)EPiServerFramework.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\EPiServerFramework.config"/>
+        <MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)EPiServerLog.config;TransformationFile=$(SourcePath)EPiServerLog.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\EPiServerLog.config"/>
+		<MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)FileSummary.config;TransformationFile=$(SourcePath)FileSummary.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\FileSummary.config"/>
+		<MsBuild Projects="$(MSBuildProjectFile)" Targets="transform-configuration-file" Properties="SourceFile=$(SourcePath)web.config;TransformationFile=$(SourcePath)web.$(ConfigurationName).config;DestinationFile=$(DestinationPath)\web.config"/>
+    </Target>
+
+    <Target Name="transform-configuration-file" Condition="Exists('$(SourceFile)') AND Exists('$(TransformationFile)')">
+        <PropertyGroup>
+            <DestinationDirectory>$([System.IO.Path]::GetDirectoryName($(DestinationFile)))  </DestinationDirectory>
+        </PropertyGroup>
+
+        <MakeDir Directories="$(DestinationDirectory)" Condition="!Exists('$(DestinationDirectory)')"/>
+        <TransformXml Source="$(SourceFile)" Transform="$(TransformationFile)" Destination="$(DestinationFile)"/>
+    </Target>
+	
+	<Target Name="create-license-file">
+       <Copy SourceFiles="www\License.Production.config" DestinationFiles="$(BuildPackagePath)config\Production\License.config"/>
+       <Copy SourceFiles="www\License.InternalTest.config" DestinationFiles="$(BuildPackagePath)config\InternalTest\License.config"/>
+	   <Copy SourceFiles="www\License.Staging.config" DestinationFiles="$(BuildPackagePath)config\Staging\License.config"/>
+    </Target>
+  
+    <Target Name="create-robots-file">
+       <Copy SourceFiles="www\robots.Production.txt" DestinationFiles="$(BuildPackagePath)config\Production\robots.txt"/>
+       <Copy SourceFiles="www\robots.InternalTest.txt" DestinationFiles="$(BuildPackagePath)config\InternalTest\robots.txt"/>
+	   <Copy SourceFiles="www\robots.Staging.txt" DestinationFiles="$(BuildPackagePath)config\Staging\robots.txt"/>
+    </Target>
+	
+    <!--##################################################################################################################################################################-->
+    <Target Name="create-package">
+        <ItemGroup>
+            <DeployFiles Include="tools\deploy\**\*" Exclude="tools\deploy\**\.svn\**\*"/>
+        </ItemGroup>
+        <Copy SourceFiles="@(DeployFiles)" DestinationFolder="$(BuildPackagePath)\%(RecursiveDir)"/>
+
+        <ItemGroup>
+            <ZipFiles Include="$(BuildPackagePath)**\*.*"/>
+        </ItemGroup>
+        <CreateProperty Value="packages" Condition="'$(PackagePath)'==''">
+            <Output TaskParameter="Value" PropertyName="PackagePath"/>
+        </CreateProperty>
+
+        <MakeDir Directories="$(PackagePath)"/>
+
+        <Zip Files="@(ZipFiles)" ZipFileName="$(PackagePath)\Helsetilsynet_Internet.$(MaxAssemblyVersion).zip" WorkingDirectory="$(BuildPackagePath)"/>
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+        <Target Name="deploy-files">
+        <Exec Command="NET USE /DELETE $(DeploymentPath)" ContinueOnError="true" />
+		<Exec Command="NET USE &quot;$(DeploymentPath)&quot; 6tst8E6N19XC760J /USER:MAKINGSOFTWARE\svc_het_buildserver" Condition="'True'=='True'"/>
+
+		<CreateProperty Value="$(DeploymentPath)">
+            <Output TaskParameter="Value" PropertyName="DeploymentPathTemp"/>
+        </CreateProperty>
+		
+        <CreateProperty Value="$(DeploymentPath)\" Condition=" !HasTrailingSlash('$(DeploymentPath)') ">
+            <Output TaskParameter="Value" PropertyName="DeploymentPath"/>
+        </CreateProperty>		
+		
+        <!--<Copy SourceFiles="$(WebPackagePath)Deployment_App_Offline.htm" DestinationFiles="$(DeploymentPath)App_Offline.htm"></Copy>-->
+
+        <RemoveDir Condition="Exists('$(DeploymentPath)')" Directories="$(DeploymentPath)bin;$(DeploymentPath)Views;$(DeploymentPath)Content" ContinueOnError="true"/>
+
+        <ItemGroup>
+            <PackageFiles Include="$(WebPackagePath)**\*.*"/>
+            <TestConfigurationFiles Include="$(ConfigurationPackagePath)\InternalTest\**\*.*"/>
+        </ItemGroup>
+
+
+        <Copy SourceFiles="@(PackageFiles)" DestinationFolder="$(DeploymentPath)%(RecursiveDir)"></Copy>
+        <Copy SourceFiles="@(TestConfigurationFiles)" DestinationFolder="$(DeploymentPath)%(RecursiveDir)"/>
+
+        <Delete Files="$(DeploymentPath)App_Offline.htm"/>
+		
+		<Exec Command="NET USE /DELETE $(DeploymentPathTemp)" ContinueOnError="true" />
+    </Target>
+
+    <!--##################################################################################################################################################################-->
+    <Target Name="post-build-cleanup">
+        <Copy SourceFiles="./www/Properties/AssemblyInfo.cs.bak" DestinationFiles="./www/Properties/AssemblyInfo.cs" Condition="$(LocalInstallation)!='True'"/>
+        <Delete Files="./www/Properties/AssemblyInfo.cs.bak" Condition="$(LocalInstallation)!='True'"/>
+        <RemoveDir Directories="$(BuildPackagePath)"/>
+    </Target>
+
+
+    <!--##################################################################################################################################################################-->
+    <!--##################################################################################################################################################################-->
+    <Target Name="build" DependsOnTargets="setup-version; build-release; post-build-cleanup"/>
+    <Target Name="build-package" DependsOnTargets=" setup-version; build-release; init-package; publish-web; transform-configuration; create-license-file; create-robots-file; create-package; post-build-cleanup"/>
+    <Target Name="deploy" DependsOnTargets="setup-version; build-release; init-package; publish-web; transform-configuration; create-license-file; create-robots-file; create-package; deploy-files; post-build-cleanup"/>
+
+</Project>

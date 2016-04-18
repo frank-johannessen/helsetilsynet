@@ -1,0 +1,246 @@
+﻿.redirecttable
+{
+	width: 80%;
+}
+
+td.longer
+{
+	width: 45%;
+}
+
+td.shorter
+{
+	width: auto;
+	text-align: center;
+}
+
+td.shorter a, input
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.redirect-longer
+{
+	width: 96%
+}
+
+.right
+{
+	float: right;
+}
+
+.notfound.wildcard
+{
+	margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.pager, .pagercenter, .pagerright
+{
+	display: inline-block;
+	margin: 1em 0 1em 0;
+	white-space: nowrap;
+	width: 30%;
+}
+.pager
+{
+	float: left;
+}
+.pagercenter
+{
+	float: left;
+	text-align: center;
+}
+.pagerright
+{
+	float: right;
+}
+
+.pagercenter span, .pagercenter a
+{
+	vertical-align: top;
+}
+
+.arrow img
+{
+	vertical-align: bottom;
+}
+
+.pagerright .refresh
+{
+	float: right;
+	width: 22px;
+	height:22px;
+	background-color:Transparent;
+	background-image: url(/App_Themes/Default/Images/Tools/Refresh.gif);
+	background-repeat: no-repeat;
+	background-position:center;
+	bottom: 3px;
+	position: relative;
+}
+
+.pagerright .refreshinput
+{
+	float: right;
+	width: 30px;
+	margin-right: 0.3em;
+}
+.pagerright .refreshlabel
+{
+	float: right;
+}
+
+.pagerwrapper
+{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.redirecthidden
+{
+	display: none;
+}
+
+.notfound.ignore2
+{
+   background: url("Images/BaseSprite.png") no-repeat scroll 30px -350px transparent;
+    color: #0077EE;
+    float: right;
+    font-size: 9px;
+    min-width: 20px;
+    padding: 3px 16px 0 0;
+    text-align: left;
+    text-transform: lowercase;
+    width: 29px;
+}
+
+.notfound.ignore
+{
+   float: left;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    top: 4px;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.notfound.add2
+{
+    border:0;
+  background: url("Images/BaseSprite.png") no-repeat scroll 30px -447px transparent;
+     color: #0077EE;
+    float: right;
+    font-size: 9px;
+    min-width: 20px;
+    padding: 3px 16px 0 0;
+    text-align: left;
+    text-transform: lowercase;
+    width: 29px;
+}
+
+
+.shorter.delete.notfound.fixedrow
+{
+    width:100px;
+}
+
+.notfound.hidden
+{
+ display:none;   
+}
+
+.notfound.add
+{
+    padding:0 3px 0px 3px
+}
+ 
+
+.notfound.showreferers
+{
+    background-color:transparent;
+    background-position:right;
+    color: #4878D4;
+    border:none;
+    cursor: pointer;
+    margin-left: 3px;
+     padding:1px 14px 1px 5px;   
+}
+
+.notfound.showreferers.up
+{
+    
+    background: url("Images/navigate_open.png") no-repeat scroll transparent;
+    background-position:right 2px;
+}
+
+.notfound.showreferers.down
+{
+  
+    background: url("Images/navigate_close.png") no-repeat scroll transparent;
+      background-position:right;
+    
+}
+
+
+
+
+
+.notfound.showreferers:hover
+{ 
+}
+
+.notfound.refererlist li
+{
+    list-style-position:inside;
+    list-style-type:circle;
+}
+
+.notfound.refererlist
+{
+    padding-left:10px;  
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-right:4px;
+    
+}
+
+.notfound.allreferers
+{
+ color:#398AC9;
+ font-weight:bold;
+    
+}
+
+.notfound.epi-tabView
+{
+ margin-bottom:0;
+    
+}
+
+.notfound.about
+{
+    float:right;
+    height:18px;
+    width:18px;
+  background: url("Images/SpriteTools.png") no-repeat scroll 0 -4130px transparent;  
+}
+
+.notfound .epi-tabView-navigation-item-selected
+{
+   
+    background: url("Images/Gradients.png") repeat-x scroll left -2300px #DCDCDC;
+     background-color:#fff;
+     padding-bottom:1px;
+    border-bottom:0;
+   
+  
+    
+}
+
+.notfound ul.epi-tabView-navigation 
+{
+ background: 0;   
+}

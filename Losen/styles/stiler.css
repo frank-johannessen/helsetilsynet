@@ -1,0 +1,85 @@
+.toppmeny {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: 988600;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.header1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	color: 00000;
+	text-decoration: none;
+}
+.yahoo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: 0300C9;
+	line-height: 12px;
+	text-decoration: none;
+
+}
+.yahoounder {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #0300c9;
+	line-height: 15px;
+	text-decoration: none;
+
+
+}
+.header2 {
+	font-family: Helvetica;
+	font-size: 24px;
+	font-weight: normal;
+	color: #000000;
+}
+.broedtekst {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+.toppmenyaktiv {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: 7F9AB0;
+	text-decoration: none;
+}
+.introtekst {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	top: auto;
+	clip:  rect(2px auto auto auto);
+
+}
+.atilaa {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 0500D3;
+	text-decoration: none;
+	word-spacing: normal;
+	line-height: 16px;
+
+}
+.atilaaaktiv {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 7F99B2;
+	text-decoration: none;
+}
+.alfa {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 0500D3;
+	text-decoration: none;
+	font-weight: normal;
+	line-height: 15px;
+
+}

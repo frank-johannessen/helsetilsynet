@@ -1,0 +1,356 @@
+﻿/*Moved the treenode css from files to this file and import it in main.css*/
+@import url('Tree.css');
+body {
+	background-color: #aaa;
+}
+body#framePage {
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+}
+body#adminPage {
+	margin: 0;
+	background-color: #F4F4F4 !important;
+	max-width: 65em;
+	min-width: 45em;    
+	/*position: relative;*/
+}
+body#adminPage>form {
+	padding: 1.5em;
+}
+
+#forum table.multiPage {
+    margin-left:0;
+    padding:0;
+    }
+
+body#adminPage h1 {
+    margin : 0 0 0.6em 0;
+    padding: 0 0 0.3em 0;
+    border-bottom: 1px solid #bebebe;
+    color: #333;
+    font-family:Helvetica,Arial,Sans-Serif;
+    font-size:1.7em;
+    font-weight:normal;
+    line-height:1.3;
+}
+
+body#adminPage h2 {
+    color: #333;
+    font-family: Helvetica,Arial,Sans-Serif;
+    font-size: 1.4em;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+#framePage tr.header {
+	background: #4e4e4e;
+}
+
+#framePage .header {
+	padding: 0px 0px 0px 10px;
+	height: 46px;
+}
+
+#framePage .headerRight {
+	background: #c6c6c6 url(../images/HeaderBackground.gif) repeat-y left;
+}
+
+#framePage .header div.session {
+	text-align: left;
+	width: 300px;
+	overflow: hidden;
+	margin-right: 5px;
+	margin-top: 0px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	color: #000;
+}
+
+#framePage .header div.session .user {
+	float: left;
+	margin-left: 5px;
+	padding-top: 5px;
+}
+
+#framePage .header div.session .icon {
+	float: left;
+	margin-left: 5px;
+	margin-top: 3px;
+	background-image: url(../images/security/user_small.gif);
+	_background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/security/user_small.gif');
+	width: 16px;
+	height: 16px;
+}
+
+div.session a.buttonLogout {
+	float: right;
+	background: url(../images/security/logout.gif) no-repeat right;
+	padding-right: 22px;
+	margin: 3px 1px 5px 0;
+	color: #333;
+}
+
+#framePage .header div.session input {
+	float: right;
+	margin-right: 3px;
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+
+#framePage .button, #adminPage .button {
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+	overflow: visible;
+	padding: 0 0.5em;
+	margin: 0;
+	width: auto;
+	_width: 1;
+}
+
+#adminPage .requiredField {
+	background-image: url(../images/general/reqField.gif) !important;
+	background-repeat: no-repeat;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+	height: 16px !important;
+	width: 16px !important;
+	padding-top: 3px !important;
+	padding-left: 20px !important;
+	padding-right: 5px !important;
+	color: #930303 !important;
+	cursor: default !important;
+}
+
+#adminPage input.input {
+	background-color: #fff;
+	border: 1px solid #7F9DB9;
+	padding: 1px;
+}
+
+#adminPage input.file {
+}
+
+#dropDownMenuItems {
+}
+
+#adminPage textarea {
+	background-color: #fff;
+	border: 1px solid #7F9DB9;
+}
+
+#adminPage select {
+	background-color: #fff;
+	border: 1px solid #7F9DB9;
+	padding: 1px;
+}
+
+#adminPage .label {
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+}
+
+#adminPage table th {
+    height: 16px;
+    }
+
+#adminPage .icon {
+	width: 16px;
+}
+
+#adminPage a.link, #adminPage a:link.link, #adminPage a:visited.link {
+	text-decoration: underline;
+	color: #000000;
+}
+
+#adminPage .calendar {
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 8pt;
+	color: #000000;
+	border: 1px solid #808080;
+}
+
+#adminPage .calendar .title {
+	background: #808080 url(../images/Menu/TableHeadingBg.gif) repeat-x;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11pt;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #FFFFFF;
+	height: 24px;
+}
+
+#adminPage .calendar .title td {
+    text-align: center !important;
+}
+
+#adminPage .calendar .title a {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #FFFFFF !important;
+	text-decoration: none;
+}
+
+#adminPage .calendar .otherMonth {
+	padding: 2px;
+	background-color: #ebebeb !important;
+	border-top: 1px solid #808080;
+	border-right: 1px solid #808080;
+}
+#adminPage .calendar .otherMonth table {
+    background: none !important;
+	color: #757575 !important;
+}
+#adminPage .calendar .otherMonth table .label { color: #757575 !important; }
+#adminPage .calendar .otherMonth a {
+	text-decoration: none;
+	color: #757575 !important;
+}
+
+#adminPage .calendar .day {
+	padding: 2px;
+	border-right: 1px solid #808080;
+	border-top: 1px solid #808080;
+}
+
+#adminPage .calendar .day a {
+	text-decoration: none;
+}
+
+#adminPage .calendar .dayHeader {
+	padding: 2px;
+	font-weight: bold;
+}
+
+#adminPage .calendar .selectedDay {
+	padding: 0px;
+	border: 2px solid #7F9DB9;
+	background-color: #abd0e0;
+}
+
+#adminPage .calendar .selectedDay a {
+	text-decoration: none;
+}
+
+#adminPage .licenseWarning {
+	background-color: #f4d5d5;
+}
+
+.searchQuery{
+	width:100%;	
+}
+
+/* /////////////////////////////////////////////// */
+
+#adminPage .adminHeader {
+    background: #808080 url(../images/Menu/TableHeadingBg.gif) repeat-x;
+	height: 24px;
+	line-height: 1.7em;
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: middle;
+	width: 100%;
+	color: #ffffff;
+	margin: 0 0 0.5em 0;
+}
+
+#adminPage .adminTable,
+#adminPage .adminPanel 
+{
+    width: 100%;
+    margin: 0 0 0.5em 0;
+    line-height: 1.7em;
+    border-collapse: collapse;
+}
+
+#adminPage .adminTable td,
+#adminPage .adminTable th
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 10%;
+    border-bottom: solid 1px #aaaaaa;
+    margin: 0;
+    padding: 0;
+    padding: 0.3em 0 0.3em 0;
+}
+
+#adminPage .adminTable td.first,
+#adminPage .adminTable th.first
+{
+    width: 20%;
+    text-align: left;
+}
+
+#adminPage .adminTable td.last,
+#adminPage .adminTable th.last
+{
+    width: 100%;
+    text-align: right;
+}
+
+#adminPage .entryLink
+{
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#adminPage .entryLink span
+{
+    vertical-align: middle;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#adminPage .entryLink img
+{
+    border: none 0px;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    margin-right: 1em;
+}
+
+#adminPage .divider
+{
+    width: 1.5em;
+}
+
+#adminPage .adminButton
+{
+    font-size: 8pt;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 0 0.3em 0 0.3em;
+    width: 80px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#adminPage .noentityerror {
+    color: Red;
+    font-size: large;
+}
+
+table.epi-atAGlance-table td {
+    font-size: 1.2em;
+    padding: 0.3em 2em 0.3em 0.7em;
+    color: #333;
+}
+
+table.epi-atAGlance-table tr.epi-table-evenRow td {
+    background: #e7e7e7;
+}
+
+.epi-table-absolutePadding {
+    padding: 4px 5px !important;
+}

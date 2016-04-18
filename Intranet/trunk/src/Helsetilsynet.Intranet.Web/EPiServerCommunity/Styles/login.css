@@ -1,0 +1,188 @@
+﻿body.epi-loginBody {
+    background: white url(../Images/Login/BodyBg.png) repeat-x top;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, Sans-Serif;
+    font-size: 70%;
+    color: #e8e8e8;    
+}
+
+.epi-loginContent h1 {
+    text-shadow: #000 0 1px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0 0 8px 0;
+    font-weight: normal;
+    position: relative; /* Needed because of IE6 Peek-a-boo bug */
+}
+
+.epi-loginContainer p, .epi-loginContainer label, .epi-loginContainer form {
+    padding: 0;
+    margin: 0;
+}
+
+.epi-button-container {
+	margin-top:16px;
+}
+
+.epi-checkbox-container {
+	width:100%;
+	float:left;
+	margin-top: 5px;
+}
+
+.epi-float-left {
+	float: left;
+}
+
+/* Outer button wrapper. Adds button background and top/bottom borders. */ 
+span.epi-button {
+	background: url("../Images/Login/BaseSprite.png") left -944px repeat-x;
+	background-color: #2f2e2f;
+	border-top: 1px solid #898a8d;
+	border-bottom: 1px solid #898a8d;
+	border-width: 1px 0;
+	display: inline-block;
+	margin: auto 0.5em auto 0; /* LTR */
+	vertical-align: text-bottom;
+}
+
+/* Inner button wrapper. Creates the rounded corner effect. */ 
+span.epi-button-child {
+    border-color: #898a8d;
+	border-style: solid;
+	border-width: 0 1px;	
+	display: block;
+	margin: 0 -1px;
+	_margin: 0;
+}
+
+/* The actual input button item. Adds default width/height and padding.  */
+.epi-button-child-item {
+	background-color: transparent;
+	border: medium none;
+	cursor: pointer;
+	min-height: 1.5em;
+	min-width: 2em;
+	overflow: visible;
+	padding: 0 0.75em;
+	color: #fff;
+}
+
+.epi-button-highlight {
+	background: url("../Images/Login/BaseSprite.png") left -1072px repeat-x;
+	background-color: #d3d3d3;
+	border-bottom: 1px solid #4e4e4e;
+	border-top: 1px solid #4e4e4e;
+}
+
+/* Custom style to highlight button focus in Mozilla  */
+button:focus::-moz-focus-inner,
+input[type="reset"]:focus::-moz-focus-inner,
+input[type="button"]:focus::-moz-focus-inner,
+input[type="submit"]:focus::-moz-focus-inner,
+input[type="file"] > input[type="button"]:focus::-moz-focus-inner {
+  border-color: White;
+}
+
+/* Login Box ---------------- */
+
+.epi-loginContainer {
+    position: absolute;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, Sans-Serif;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -10em;
+    width: 500px;
+    text-align:left;
+}
+.epi-loginTop {
+    height: 10px;
+    background-image: url(../Images/Login/PaneCorners.png);
+    _background: none; /* IE6 */
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.epi-loginMiddle {
+    background: #333 url(../Images/Login/PaneBg.png);
+    _background: #333 none; /* IE6 */
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+.epi-loginBottom {
+    height: 10px;
+    background-image: url(../Images/Login/PaneCorners.png);
+    _background: none; /* IE6 */
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.epi-loginContent {
+    padding: 20px 10px 20px 30px;
+}
+
+.epi-credentialsContainer {
+    margin-bottom: 5px;
+    margin-top:4px;
+    overflow: hidden;
+}
+
+.epi-credentialsContainer-logout {
+    margin: 4em 0;
+}
+
+/* Links and Forms ---------------- */
+
+.epi-loginContainer a, .epi-loginContainer a:link, .epi-loginContainer a:active {
+    color: #bababa;
+    text-shadow: #000 0 1px;
+    text-decoration: none;
+}
+
+.epi-loginContainer a:hover, .epi-loginContainer a:visited {
+    color: #efefef;
+    text-shadow: #000 0 1px;
+    text-decoration: none;
+}
+
+.epi-loginLogo {
+    background-image: url(../Images/Login/EPiServerLogo.png);
+    _background-image: url(../Images/Login/EPiServerLogo8.png); /* IE6 */
+    background-repeat: no-repeat;
+    height: 20px;
+    text-indent: -9999px;
+}
+
+
+
+.epi-loginForm {
+    padding: 0;
+    margin: 20px 0 10px 0;
+}
+
+.epi-inputText {
+	border: 1px solid Black;
+	border-bottom: 1px solid #5b5b5b;
+	color: #606060;
+	width: 170px;
+	margin-right:5px;
+}
+
+.epi-inputButton {
+    border: 1px solid #82858a;
+    color: #e8e8e8;
+    background: #434343 url(../Images/Login/BtnBg.png);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    text-shadow: #000 0 1px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 0 5px;
+    margin-left: 3px;
+    height: 20px;
+}    
+
+.epi-checkbox input {
+	padding-left: 0;
+	margin-left: 0;
+	width: 15px;
+}

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ActivityFeed.ascx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.Units.Dummy.ActivityFeed" %>
+<p class="dummy-content">TODO: activity feed</p>

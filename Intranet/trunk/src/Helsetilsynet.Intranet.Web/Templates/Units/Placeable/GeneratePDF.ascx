@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GeneratePDF.ascx.cs" Inherits="MakingWaves.Helsetilsynet.Intranet.Web.Templates.Units.Placeable.GeneratePDF" %>
+<asp:LinkButton runat="server" CssClass="action pdf" OnClick="GetPDF"><%= LinkText %></asp:LinkButton>

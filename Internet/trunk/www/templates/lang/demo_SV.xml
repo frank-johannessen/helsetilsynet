@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="Svenska" id="sv">
+		<blog>
+			<item>
+				<comment>Kommentar:</comment>
+				<commentheading>Kommentarer:</commentheading>
+				<commentlegend>Skriv en kommentar</commentlegend>
+				<errormessages>
+					<requiredcomment>Kommentarsfältet är obligatoriskt.</requiredcomment>
+					<requiredname>Vänligen fyll i namnfältet.</requiredname>
+				</errormessages>
+				<name>Namn:</name>
+				<permanentlink>Permanent länk</permanentlink>
+				<postedby>av:</postedby>
+				<posteddate>Postningsdatum:</posteddate>
+				<send>Skicka</send>
+				<tags>Taggar:</tags>
+			</item>
+			<itemsummary>
+				<readblog>Läs blogg:</readblog>
+			</itemsummary>
+			<listpage>
+				<dateheading>Blogginlägg postade under {0}</dateheading>
+				<errormessage>Ett konfigurationsfel har inträffat. Antingen måste IsTagListing eller IsDateListing vara valda.</errormessage>
+				<tagheading>Blogginlägg taggade med {0}</tagheading>
+			</listpage>
+			<propertyblogtags>
+				<errormessage>
+					<categorytoolong>Minst ett taggnamn är för långt. (Max 64 tecken)</categorytoolong>
+				</errormessage>
+				<existingtagsbutton>Lägg till</existingtagsbutton>
+				<existingtagslabel>Befintliga taggar</existingtagslabel>
+				<selectedtagslabel>Valda taggar</selectedtagslabel>
+			</propertyblogtags>
+			<secondarylist>
+				<aboutme>Om mig</aboutme>
+				<archive>Arkiv</archive>
+				<tagcloud>Taggmoln</tagcloud>
+			</secondarylist>
+			<tagstatisticsupdater>
+				<description>Används för att uppdatera statistiken för taggarna.</description>
+				<displayname>Uppdatera taggstatistik</displayname>
+			</tagstatisticsupdater>
+		</blog>
+		<captcha>
+			<errormessage>Den inmatade texten är inte samma som visas i bilden.</errormessage>
+			<heading>Användarverifikation</heading>
+			<imagealternativetext>Bild för användarverifikation</imagealternativetext>
+			<label>Skriv in texten som visas i bilden:</label>
+		</captcha>
+		<common>
+			<messages>
+				<confirmdelete>Är du säker på att du vill ta bort denna post?</confirmdelete>
+			</messages>
+		</common>
+		<filemanager>
+			<button>
+				<back>Tillbaka</back>
+				<rename>Byt namn</rename>
+				<replacefile>Ersätt fil</replacefile>
+				<upload>Ladda upp</upload>
+				<restore>Återställ till denna version</restore>
+				<deleteversion>Ta bort version</deleteversion>
+			</button>
+			<choosefile>Select file:</choosefile>
+			<deletefilesandfoldersheading>Ta bort filer och kataloger</deletefilesandfoldersheading>
+			<disabledfunctions>Vissa funktioner är inte tillgänliga eftersom du saknar tillräcklig behörighet till den här katalogen.</disabledfunctions>
+			<editfilesummaryheading>Redigera filsammanfattning</editfilesummaryheading>
+			<errormessage>
+				<checkedout>En fil med samma namn finns redan och är utcheckad av en annan användare.</checkedout>
+				<insufficientaccess>Du saknar tillräcklig behörighet för att skapa eller ändra filer i den aktuella katalogen.</insufficientaccess>
+				<insufficientaccesscreatefolder>Du saknar tillräcklig behörighet för att skapa kataloger här.</insufficientaccesscreatefolder>
+				<insufficientaccessmetadata>Du saknar tillräcklig behörighet för att modifiera denna fil.</insufficientaccessmetadata>
+				<insufficientaccessmove>Du saknar tillräcklig behörighet för att flytta detta objekt.</insufficientaccessmove>
+				<insufficientaccessremove>Du saknar tillräcklig behörighet för att ta bort det valda objektet.</insufficientaccessremove>
+				<insufficientaccessrename>Du saknar tillräcklig behörighet för att byta namn på det valda objektet.</insufficientaccessrename>
+				<readonlyfile>En fil med samma namn finns, men den kan endast läsas.</readonlyfile>
+				<replacefile>En fil med samma namn finns redan. Vill du ersätta den befintliga filen {0}?</replacefile>
+                <cannotchange>Kan inte flytta, döpa om eller uppdatera den valda filen. Denna fil kan vara utcheckad av någon annan.</cannotchange>
+                <containscheckedout> Kan inte flytta eller ta bort den valda katalogen. Katalogen kan innehålla en fil som är utcheckad av någon annan.</containscheckedout>
+                <versioningisnotsupported>Kan inte genomföra denna åtgärd. Versionshantering stöds ej.</versioningisnotsupported>
+                <versionisnotfound>Kan inte genomföra åtgärden. Version {0} hittades ej.</versionisnotfound>
+            </errormessage>
+			<filecomment>Kommentar:</filecomment>
+			<parentfolder>Parent Folder</parentfolder>
+			<filelistheading>
+				<checkedout>Utcheckad</checkedout>
+				<lastchanged>Senast ändrad</lastchanged>
+				<name>Namn</name>
+				<size>Storlek</size>
+			</filelistheading>
+      <versionlistheading>
+        <version>Version</version>
+        <comments>Kommentarer</comments>
+        <size>Storlek</size>
+        <createdby>Skapad av</createdby>
+        <created>Skapad</created>
+      </versionlistheading>
+			<filename>Filnamn</filename>
+			<files>Filer</files>
+			<filesummary>
+				<author>Skribent</author>
+				<category>Kategori</category>
+				<comments>Kommentarer</comments>
+				<keywords>Nyckelord</keywords>
+				<subject>Beskrivning</subject>
+				<title>Titel</title>
+			</filesummary>
+			<filesummaryheading>Filsammanfattning för</filesummaryheading>
+      <versionfileheading>Versioner för</versionfileheading>
+			<foldername>Katalognamn:</foldername>
+			<foldernotempty>Katalogen är inte tom</foldernotempty>
+			<foldernotemptywarning>Några kataloger är inte tomma. Allt innehåll i dem kommer tas bort.</foldernotemptywarning>
+			<folders>Kataloger</folders>
+			<maxuploadmessage>Storleken på den valda filen får inte överskrida {0}.</maxuploadmessage>
+			<missingfoldererror>Filen kunde inte skapas. Destinationskatalog saknas eller så har du inte tillräckliga rättigheter för att skapa filer i katalogen.</missingfoldererror>
+			<newfolder>Ny katalog</newfolder>
+			<parentfolder>Upp en nivå</parentfolder>
+			<renamefile>Nytt filnamn</renamefile>
+			<renamefolder>Nytt katalognamn</renamefolder>
+			<selectfilemessage>Välj en fil med bläddraknappen nedan och klicka sedan på "Ladda upp".</selectfilemessage>
+			<switchview>
+				<addfile>Lägg till fil</addfile>
+				<addfolder>Lägg till katalog</addfolder>
+				<copy>Kopiera</copy>
+				<cut>Klipp ut</cut>
+				<checkout>Checka ut</checkout>
+				<checkin>Checka in</checkin>
+				<delete>Ta bort</delete>
+				<details>Detaljer</details>
+				<paste>Klistra in</paste>
+				<rename>Byt namn</rename>
+				<undocheckout>Avbryt checka ut</undocheckout>
+				<view>Visa</view>
+        <version>Version</version>
+			</switchview>
+			<uploadbutton>Ladda upp</uploadbutton>
+			<uploadheading>Uppladdning av filer</uploadheading>
+			<validation>
+				<folderexists>En katalog eller fil med samma namn existerar redan.</folderexists>
+				<illigalchar>Namn kan inte innehålla /, ?, &lt;, &gt;, \, :, *, |, # eller ".</illigalchar>
+				<nametolong>Katalognamnet får inte vara längre än 255 tecken.</nametolong>
+				<requiredname>Namn måste anges.</requiredname>
+			</validation>
+		</filemanager>
+		<forum>
+			<forumform>
+				<allowforumslabel>Tillåt underforum:</allowforumslabel>
+				<allowthreadslabel>Tillåt trådar:</allowthreadslabel>
+				<createbutton>Skapa forum</createbutton>
+				<heading>Skapa forum</heading>
+				<icondropdown>
+					<auction>Auktion</auction>
+					<bomb>Bomb</bomb>
+					<default>Allmän</default>
+					<information>Information</information>
+				</icondropdown>
+				<iconlabel>Ikon:</iconlabel>
+				<titleerror>Titelfältet får ej vara tomt</titleerror>
+				<titlelabel>Titel:</titlelabel>
+			</forumform>
+			<forumlist>
+				<createbutton>Skapa underforum</createbutton>
+				<deleteforumbutton>Ta bort detta forum</deleteforumbutton>
+				<heading>Underforum - </heading>
+				<setupbutton>Konfigurera automatiskt</setupbutton>
+				<setuperror>Sidans konfiguration är felaktig. Kontrollera inställningerna.</setuperror>
+				<title>Forum</title>
+				<updated>Senast uppdaterade tråd</updated>
+			</forumlist>
+			<thread>
+				<addreply>Skriv svar</addreply>
+				<deletereply>Ta bort svar</deletereply>
+				<deletethread>Ta bort tråd</deletethread>
+				<lock>Lås tråd</lock>
+				<postedby>Postat av: </postedby>
+				<reply>Svara</reply>
+				<replyempty>Svar kan inte vara tomt</replyempty>
+				<sticky>Klistra fast</sticky>
+				<toforum>Till forum</toforum>
+				<unlock>Lås upp tråd</unlock>
+				<unsticky>Ta bort fastklistring</unsticky>
+			</thread>
+			<threadform>
+				<contenterror>Textfältet får ej vara tomt</contenterror>
+				<contentlabel>Text:</contentlabel>
+				<createbutton>Skapa Tråd</createbutton>
+				<heading>Skapa Tråd</heading>
+				<titleerror>Titelfältet får ej vara tomt</titleerror>
+				<titlelabel>Titel:</titlelabel>
+			</threadform>
+			<threadlist>
+				<createbutton>Skapa tråd</createbutton>
+				<createdby>Skapad av</createdby>
+				<heading>Trådar - </heading>
+				<replies>Svar</replies>
+				<title>Tråd</title>
+				<updated>Senast uppdaterad</updated>
+			</threadlist>
+			<today>Idag</today>
+			<Yesterday>Igår</Yesterday>
+		</forum>
+		<headings>
+			<heading name="Listings">
+				<description>Listningar</description>
+			</heading>
+		</headings>
+		<pagetypes>
+			<common>
+				<property name="ActiveThreadContainer">
+					<caption>Behållare för aktiva trådar</caption>
+					<help>Behållaren för de aktiva trådarna i detta forum.</help>
+				</property>
+				<property name="AllowForums">
+					<caption>Tillåt underforum i detta forum</caption>
+					<help>Ange om detta forum kan innehålla underforum.</help>
+				</property>
+				<property name="AllowThreads">
+					<caption>Tillåt trådar i detta forum</caption>
+					<help>Ange om detta forum kan innehålla trådar.</help>
+				</property>
+				<property name="ArchiveThreadContainer">
+					<caption>Behållare för arkiverade trådar</caption>
+					<help>Behållaren för de arkiverade trådarna i detta forum.</help>
+				</property>
+				<property name="BlogStart">
+					<caption>Startsida för bloggen</caption>
+					<help>Startsidan för bloggen som denna sida tillhör.</help>
+				</property>
+				<property name="CalendarContainer">
+					<caption>Visa kalender från</caption>
+					<help>Ange en plats i menyträdet från vilken sida du vill visa kalendern. Vanligtvis denna sida.</help>
+				</property>
+				<property name="CalendarItemContainer">
+					<caption>Kalender start</caption>
+					<help>Visa kalenderposter från denna sida</help>
+				</property>
+				<property name="DateContainer">
+					<caption>Behållare för datumsidor</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="Details">
+					<caption>Personlig information</caption>
+					<help>En kort beskrivning av bloggaren.</help>
+				</property>
+				<property name="DisableAnonymousComments">
+					<caption>Hindra kommentarer från anonyma besökare</caption>
+					<help>Ange om anonyma besökare ska få skriva kommentarer till blogginlägg.</help>
+				</property>
+				<property name="EventStartDate">
+					<caption>Starttid</caption>
+					<help>Ange starttid för aktivitet.</help>
+				</property>
+				<property name="EventStopDate">
+					<caption>Sluttid</caption>
+					<help>Ange sluttid för aktivitet.</help>
+				</property>
+				<property name="FeedCount">
+					<caption>Antal poster i en kanal</caption>
+					<help>Antal poster som ska skickas ut i en RSS/Atom-kanal.</help>
+				</property>
+				<property name="ForumStart">
+					<caption>Startsida för forumet</caption>
+					<help>Startsidan för forumet som denna forumsida tillhör.</help>
+				</property>
+				<property name="HistoryLength">
+					<caption>Hur gamla inlägg som listas</caption>
+					<help>Hur många dagar gamla inlägg som ska synas i listan.</help>
+				</property>
+				<property name="Icon">
+					<caption>Detta forums ikon</caption>
+					<help>Namnet på ikonen som detta forum använder.</help>
+				</property>
+				<property name="IndexContainer">
+					<caption>Visa innehåll från sida</caption>
+					<help>Ange vilken sida som innehållsföreteckningen skall starta  </help>
+				</property>
+				<property name="IsDateListing">
+					<caption>Datumlistning</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="IsLocked">
+					<caption>Tråden är låst</caption>
+					<help>Ange om den här tråden är låst.</help>
+				</property>
+				<property name="IsTagListing">
+					<caption>Tagglistning</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="IsTeamLevel">
+					<caption>Teamnivå</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="ListingSlideContainer">
+					<caption>	Hämta bildspel från</caption>
+					<help>		Välj den sida som du vill hämta bildspel från</help>
+				</property>
+				<property name="ListingSlideCount">
+					<caption>	Visa antal sidor i bildspel</caption>
+					<help>		Ange med ett heltal hur många sidor som skall visas i bildspelet</help>
+				</property>
+				<property name="MainLinksCount">
+					<caption>Antal länkar</caption>
+					<help>Ange ett heltal för de antal länkar som ska visas</help>
+				</property>
+				<property name="MainLinksRoot">
+					<caption>Hämta vänster listning från</caption>
+					<help>Ange en föräldersida som är startsida för listning</help>
+				</property>
+				<property name="MaxCount">
+					<caption>Max antal inlägg</caption>
+					<help>Max antal inlägg i listan.</help>
+				</property>
+				<property name="nDaysToRender">
+					<caption>Visa antal dagar i kalendern</caption>
+					<help>Ange med ett helttal hur många dagar som skall visas när besökaren visar kalendern.</help>
+				</property>
+				<property name="NumberOfReplies">
+					<caption>Antal svar</caption>
+					<help>Antal svar som är postade till den här tråden.</help>
+				</property>
+				<property name="PageAlphanumericChars">
+					<caption>Teckenuppsättning som används för sidlistning</caption>
+					<help>Förvalt är ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ</help>
+				</property>
+				<property name="RecentContainer">
+					<caption>Visa sidor från</caption>
+					<help>Ange vilken sida som du vill visa de nyligen ändrade sidorna från</help>
+				</property>
+				<property name="RecentHours">
+					<caption>Visa sidor som ändrats de senaste X timmarna</caption>
+					<help>Ange ett heltal för hur många timmar tillbaka du vill visa ändrade sidor </help>
+				</property>
+				<property name="RefreshRate">
+					<caption>	Antal sekunder som varje sida skall visas</caption>
+					<help>		Ange med ett heltal hur många sekunder varje sida skall visas i bildspelet</help>
+				</property>
+				<property name="SecondaryLinksCount">
+					<caption>Antal länkar</caption>
+					<help>Ange ett heltal för de antal länkar som ska visas</help>
+				</property>
+				<property name="SecondaryLinksRoot">
+					<caption>Hämta höger listning från</caption>
+					<help>Ange en föräldersida som är startsida för listning</help>
+				</property>
+				<property name="SelectedWebPart">
+					<caption>Välj webbdel</caption>
+					<help>Välj webbdelen som ska visas på sidan</help>
+				</property>
+				<property name="StickyThreadContainer">
+					<caption>Behållare för klistrade trådar</caption>
+					<help>Behållaren för de klistrade trådarna i detta forum.</help>
+				</property>
+				<property name="SummaryTextLength">
+					<caption>Längd på summeringstext</caption>
+					<help>Antal tecken att trunkera summeringstexten till.</help>
+				</property>
+				<property name="TagCloudValue">
+					<caption>Värde för taggmoln</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="TagContainer">
+					<caption>Behållare för taggsidor</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="Tags">
+					<caption>Taggar</caption>
+					<help>Skriv in en kommaseparerad lista och/eller välj från befintliga taggar</help>
+				</property>
+				<property name="TemplateContainer">
+					<caption>Arbetsrumsmallar</caption>
+					<help>En referens till behållaren som innehåller tillgängliga arbetsrumsmallar.</help>
+				</property>
+				<property name="UsageStatistics">
+					<caption>Statistik om tagganvändning</caption>
+					<help>Ska sättas upp automatiskt.</help>
+				</property>
+				<property name="ValidDays">
+					<caption>Återkommande dag</caption>
+					<help>Ange vilken eller vilka dagar aktiviteten skall återkomma med regelbundet intervall.</help>
+				</property>
+				<property name="VideoSourceURL">
+					<caption>Videofil</caption>
+					<help>Ange en videofil i flv-format.</help>
+				</property>
+				<property name="WorkroomIcon">
+					<caption>Ikonbild för detta arbetsrum</caption>
+					<help>Ange en bild att använda som ikon för detta arbetsrum.</help>
+				</property>
+				<property name="WorkroomStart">
+					<caption>Startsida för detta arbetsrum</caption>
+					<help>Startsidan för det arbetsrum som denna sida tillhör.</help>
+				</property>
+				<property name="Writer">
+					<caption>Bloggarens namn</caption>
+					<help>Namnet på bloggaren.</help>
+				</property>
+			</common>
+			<pagetype name="[Demo] Alphabetical index">
+				<description>Sida som listar sidor sorterade i bokstavsordning</description>
+				<name>[Demo] Alfabetisk innehållsförteckning</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog comment">
+				<description>Sida som används för att spara bloggkommentarer</description>
+				<name>[Demo] Bloggkommentar</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog item">
+				<description>Sida som används för att göra ett blogginlägg</description>
+				<name>[Demo] Blogginlägg</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog list">
+				<description>Listningssida som används för datum- och tagglistningar</description>
+				<name>[Demo] Blogglistning</name>
+			</pagetype>
+			<pagetype name="[Demo] Blog personal start">
+				<description>Startsidan för en personlig blogg</description>
+				<name>[Demo] Start personlig blogg</name>
+				<property name="Image">
+					<caption>Bild på bloggaren</caption>
+					<help>Ange en bild för bloggaren.</help>
+				</property>
+			</pagetype>
+			<pagetype name="[Demo] Blog team start">
+				<description>Startsidan för en teamblogg-sida</description>
+				<name>[Demo] Start teamblogg</name>
+			</pagetype>
+			<pagetype name="[Demo] Calendar">
+				<description>En sida som visar kalenderhändelser.</description>
+				<name>[Demo] Kalender</name>
+			</pagetype>
+			<pagetype name="[Demo] Calendar event">
+				<description>Sida för en händelse i kalendern.</description>
+				<name>[Demo] Kalenderhändelse</name>
+			</pagetype>
+			<pagetype name="[Demo] Changed recently">
+				<description>Sida som visar en lista med sidor som nyligen blivit ändrade</description>
+				<name>[Demo] Ändrat nyligen</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum">
+				<description>En forumsida.</description>
+				<name>[Demo] Forum</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum post">
+				<description>Ett svar till en forumtråd.</description>
+				<name>[Demo] Forumpost</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum thread">
+				<description>En tråd som används i ett forum.</description>
+				<name>[Demo] Forumtråd</name>
+			</pagetype>
+			<pagetype name="[Demo] Forum thread container">
+				<description>En behållare för trådar i ett forum.</description>
+				<name>[Demo] Forum-trådbehållare</name>
+			</pagetype>
+			<pagetype name="[Demo] My Settings">
+				<description>En inställningssida där användare bland annat kan ändra lösenord och andra personliga inställningar</description>
+				<name>[Demo] Mina inställningar</name>
+			</pagetype>
+			<pagetype name="[Demo] Slide show">
+				<description>Sida som visar ett antal sidors innehåll som ett bildspel med ett valt intervall</description>
+				<name>[Demo] Bildspel</name>
+			</pagetype>
+			<pagetype name="[Demo] Start page">
+				<description>Sida som är huvudingången till webbplatsen som innehåller en primär och en sekundär del</description>
+				<name>[Demo] Startsida</name>
+			</pagetype>
+			<pagetype name="[Demo] Video Player">
+				<description>En sida för att spela upp video i flv-format</description>
+				<name>[Demo] Videospelare</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Calendar">
+				<description>En sida som visar kalenderhändelser.</description>
+				<name>[Demo] Kalender för arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Calendar event">
+				<description>Sida för en händelse i kalendern.</description>
+				<name>[Demo] Kalenderhändelse för arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom File Manager">
+				<description>Enkel filhantering i arbetsrum.</description>
+				<name>[Demo] Filhanterare för arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom list">
+				<description>Den här sidan listar alla tillgängliga arbetsrum.</description>
+				<name>[Demo] Lista av arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Membership Manager">
+				<description>En sida för att lägga till och modifiera medlemsskap i ett arbetsrum</description>
+				<name>[Demo] Medlemshantering för arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom news list">
+				<description>En nyhetslista som används i ett arbetsrum.</description>
+				<name>[Demo] Nyhetslista för arbetsrum</name>
+			</pagetype>
+			<pagetype name="[Demo] Workroom Settings">
+				<description>Sida för att ändra inställningar för ett arbetsrum.</description>
+				<name>[Demo] Inställnigar för arbetsrum</name>
+			</pagetype>
+		</pagetypes>
+		<templates>
+			<changedpages>
+				<header>			Senast ändrade filer</header>
+				<lastmodified>		Senast ändrad</lastmodified>
+				<page>				Sida</page>
+				<updatedpages>		Senast ändrade sidor</updatedpages>
+			</changedpages>
+			<webparts>
+				<portal>
+					<catalogzone>Webbdel-kataloger</catalogzone>
+					<connectionzone>Koppla samman webbdelar</connectionzone>
+					<displaymode>Visningsläge</displaymode>
+					<editorzone>Ändra webbdel</editorzone>
+					<importzone>Importera webbdelar</importzone>
+					<leftzone>Vänsterkolumn</leftzone>
+					<rightzone>Högerkolumn</rightzone>
+					<scope>Omfattning</scope>
+				</portal>
+				<units>
+					<rsscontrol>
+						<emptyurl>Web-addressen får inte vara tom.</emptyurl>
+					</rsscontrol>
+				</units>
+			</webparts>
+		</templates>
+		<workroom>
+			<editdescription>Ändra beskrivning</editdescription>
+			<calendar>
+				<createheading>Skapa händelse</createheading>
+				<dateformat>Exempel: 2007-11-25</dateformat>
+				<editheading>Redigera händelse</editheading>
+				<latestarttime>Starttiden måste vara före sluttiden.</latestarttime>
+				<nameempty>Titel kan inte vara tom</nameempty>
+				<selectedperiod>Vald period:</selectedperiod>
+        <starttimeempty>Starttid kan inte vara tom</starttimeempty>
+        <starttimelabel>Starttid:</starttimelabel>
+        <stoptimeempty>Sluttid kan inte vara tom</stoptimeempty>
+        <stoptimelabel>Sluttid:</stoptimelabel>
+        <buttoneditname>Ändra namn</buttoneditname>
+        <buttonaddevent>Lägg till händelse</buttonaddevent>
+        <buttondeletecalendar>Ta bort kalender</buttondeletecalendar>
+			</calendar>
+			<editablecontent>
+				<labeltext>Redigera innehållet och klicka sedan på "Spara".</labeltext>
+			</editablecontent>
+			<eventlist>
+				<heading>Kommande händelser</heading>
+			</eventlist>
+			<filelist>
+				<errormessage>Startkatalogen för arbetsrummet kan inte hittas eller så har du inte tillräckliga rättigheter för denna katalog.</errormessage>
+				<errormissingindex>Indexering är inte konfigurerat för arbetsrummets filkatalog. Indexering krävs för att visa senast ändrade filer.</errormissingindex>
+				<heading>Senaste filer</heading>
+			</filelist>
+			<membershiplevel>
+				<administer>Administratör</administer>
+				<modify>Aktiv medlem</modify>
+				<read>Passiv medlem</read>
+			</membershiplevel>
+			<membershipmanager>
+				<email>e-postadress</email>
+				<emptysearchresult>Din sökning gav inga träffar.</emptysearchresult>
+				<managemembersheading>Administrara arbetsrummets medlemmar</managemembersheading>
+				<membershiplevel>Nivå av medlemsskap</membershiplevel>
+				<searchheading>Sök användare</searchheading>
+				<searchresultheading>Sökresultat</searchresultheading>
+				<searchtext>Sök</searchtext>
+				<username>Användarnamn</username>
+				<viewmembersheading>Arbetsrummets medlemmar</viewmembersheading>
+				<inviteheading>Bjud in användare</inviteheading>
+				<invitemembership>Tilldela status</invitemembership>
+				<inviteunfiledsenderemail>E-postadress har inte angivits i din profil.</inviteunfiledsenderemail>
+				<invitewithoutstatus>Tilldelad status saknas.</invitewithoutstatus>
+				<sendinvitationok>Sändning av inbjudan lyckades.</sendinvitationok>
+				<sendinvitationerror>Fel uppstod vid sändandet av inbjudan.</sendinvitationerror>
+				<removeheading>Ta bort medlem</removeheading>
+                <confirmremovemember>Vill du verkligen ta bort valda medlemmar från arbetsrummet?</confirmremovemember>
+                <sendnotifications>Vill du sända notifikationer om ändrad medlemstatus?</sendnotifications>
+                <sendnotificationsyes>Ja</sendnotificationsyes>
+                <sendnotificationsno>Nej</sendnotificationsno>
+                <invitemembermessage>Sänd en medlemsinbjudan med e-post till användaren.</invitemembermessage>
+                <unabletosendnotification>Vissa notifikationer kunde inte sändas.</unabletosendnotification>
+                <button>
+					<invite>Bjud in</invite>
+					<sendinvitation>Skicka inbjudan</sendinvitation>
+                    <remove>Ta bort</remove>
+                    <addmembers>Lägg till medlemmar</addmembers>
+                    <editmembers>Ändra medlemmear</editmembers>
+				</button>
+			</membershipmanager>
+			<newslist>
+				<newssectionname>Nyhetssektion namn</newssectionname>
+				<heading>Nyheter</heading>
+			</newslist>
+      <calendarlist>
+        <calendarsectionname>Kalendernamn</calendarsectionname>
+        <calendaraddnew>Lägg till kalender</calendaraddnew>
+        <calendaritemfrom>Från:</calendaritemfrom>
+        <calendaritemto>Till:</calendaritemto>
+      </calendarlist>
+			<newslistpage>
+				<bodylabel>Beskrivning:</bodylabel>
+				<createheading>Skapa nyhet</createheading>
+				<editheading>Ändra nyhet</editheading>
+				<headinglabel>Titel:</headinglabel>
+				<titleempty>Titel får inte vara tom</titleempty>
+				<editnewssection>Ändra nyhetssektion</editnewssection>
+				<deletenewssection>Ta bort nyhetssektion</deletenewssection>
+				<addnewssection>Lägg till nyhetssektion</addnewssection>
+				<addnewsitem>Lägg till nyhet</addnewsitem>
+			</newslistpage>
+			<settings>
+				<availablefunctions>Tillgängliga funktioner</availablefunctions>
+			</settings>
+			<workroomlist>
+				<createheading>Skapa arbetsrum</createheading>
+				<duplicatename>Det finns redan ett arbetsrum med det namnet</duplicatename>
+				<nameempty>Namn kan inte vara tomt</nameempty>
+				<namelabel>Namn:</namelabel>
+				<templatelabel>Välj mall:</templatelabel>
+				<viewheading>Mina arbetsrum</viewheading>
+				<addworkroom>Lägg till arbetsrum</addworkroom>
+				<descriptionlabel>Beskrivning:</descriptionlabel>
+			</workroomlist>
+			<userprofile>
+				<username>Användarnamn</username>
+				<email>E-post</email>
+				<role>Roll</role>
+				<firstname>Förnamn</firstname>
+				<lastname>Efternamn</lastname>
+				<password>Lösenord</password>
+				<confirmpassword>Bekräfta lösenord</confirmpassword>
+				<error>
+					<usernamerequired>Användarnamn krävs</usernamerequired>
+					<usernameexists>Användarnamnet finns redan</usernameexists>
+					<firstnamerequired>Förnamn krävs</firstnamerequired>
+					<lastnamerequired>Efternamn krävs</lastnamerequired>
+					<passwordrequired>Lösenord krävs</passwordrequired>
+					<passwordweak>Lösenordet uppfyller inte kraven enligt lösenordspolicyn</passwordweak>
+					<passworddiffers>Lösenordet måste vara det samma</passworddiffers>
+					<logout>Du är inloggad som en annan användare. Logga ut och försök igen.</logout>
+					<unavailable>Du har inte behörighet till denna sida.</unavailable>
+					<membership>Gällande säkerhetsinställningar medger inte registrering av nya användare. Kontakta din administratör för mer information.</membership>
+				</error>
+			</userprofile>
+		</workroom>
+	</language>
+</languages>

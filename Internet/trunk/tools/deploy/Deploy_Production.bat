@@ -1,0 +1,3 @@
+powershell -command "& {Set-ExecutionPolicy RemoteSigned -Scope CurrentUser}"
+powershell ".\tools\deploy.ps1 -DeploymentPath 'C:\www\Helsetilsynet\web\www.helsetilsynet.no_cms6r2' -BackupRoot 'C:\Backup\Helsetilsynet.Internet' -ConfigurationName 'Production' -IISSiteName 'www.helsetilsynet.no' -IISApplicationName 'www.helsetilsynet.no' -WorkerUsers 'IUSR', 'IIS_IUSRS' -AddAccessToFolders 'Templates\Avenir\Scripts\', 'Templates\Avenir\Styles\'"
+pause

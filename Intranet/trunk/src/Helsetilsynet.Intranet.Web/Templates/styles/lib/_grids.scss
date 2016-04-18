@@ -1,0 +1,11 @@
+@function column-width($total-width, $column-count, $spacing) {
+	@return (($total-width + $spacing) / $column-count) - $spacing;
+}
+
+@function n-columns-width($columns, $column-width, $spacing-width) {
+	@return $columns * $column-width + $spacing-width * ($columns - 1);
+}
+
+@function n-columns-offset($columns, $column-width, $spacing-width) {
+	@return ($column-width + $spacing-width) * $columns;
+}

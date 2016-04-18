@@ -1,0 +1,1654 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPiUtilities</name>
+    </assembly>
+    <members>
+        <member name="T:EPiUtilities.WebControls.BaseClasses.WebControlBase">
+            <summary>
+            Base control for web controls. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.WebControlBase.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            We don't want any other markup than our own from templates.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.WebControlBase.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            We don't want any other markup than our own from templates.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.WebControlBase.DataBind">
+            <summary>
+            Override to mark control as databound. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.WebControlBase.DataBind(System.Boolean)">
+            <summary>
+            Override to mark control as databound. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.WebControlBase.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which performs AutoBind.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.WebControlBase.AutoBind">
+            <summary>
+            If true, the control will call DataBind() on itself on PreRender if 
+            it is not already databound.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.WebControlBase.DataSource">
+            <summary>
+            This property can be used to fill the control with data.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.WebControlBase.EnableViewState">
+            <summary>
+            We don't want to use ViewState. 
+            
+            Why? 
+            
+            Most of the time EPiServer is used as a publishing system, and 
+            postbacks are rare. ViewState is really only necessary for postbacks,
+            and even then you can easily databind a second time. ViewState is 
+            expensive in terms of encoding/decoding as well as bandwidth. 
+            Putting a large PageDataCollection in ViewState can cripple the 
+            performance of a web site if you are not careful, so best to just 
+            disable it. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PageDataList">
+            <summary>
+            A simple templated PageData list. Fill it by setting the 
+            Pages property to a PageDataCollection or set the ListRoot
+            to have the list fill itself with the root's children.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase">
+            <summary>
+            Base class for templated item lists where item is <see cref="T:EPiServer.Core.PageData"/>.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase">
+            <summary>
+            Defines header, footer, separator and empty template which is common to
+            many templated controls.
+            Does not define item templates as they vary in type and number. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.AddHeaderTemplate">
+            <summary>
+            Adds the header template. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.AddFooterTemplate">
+            <summary>
+            Adds the footer template.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.AddSeparatorTemplate">
+            <summary>
+            Adds the separator template.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.HideOrEmpty">
+            <summary>
+            Adds the empty template or hides the control. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.AddTemplate(EPiUtilities.WebControls.BaseTemplateContainer,System.Web.UI.ITemplate)">
+            <summary>
+            Adds a template to the control collection. 
+            </summary>
+            <param name="container"></param>
+            <param name="template"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.InvisibleIfEmpty">
+            <summary>
+            If true, the control will set itself invisible when there are
+            no items instead of showing the empty template.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.HeaderTemplate">
+            <summary>
+            Header template for the control.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.FooterTemplate">
+            <summary>
+            Footer template for the control.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.EmptyTemplate">
+            <summary>
+            This template will be displayed if there are no items.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedItemListControlBase.SeparatorTemplate">
+            <summary>
+            The separator template will be displayed in between items.
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase.AddSeparator">
+            <summary>
+            Indicates whether a separator should be added before adding a new item. 
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase.Added">
+            <summary>
+            Indicates whether an item was added during an iteration. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase.AddItemTemplate(System.Web.UI.ITemplate,EPiServer.Core.PageData,System.Int32)">
+            <summary>
+            Adds an item with the specified template. Assumes selected is false.
+            </summary>
+            <param name="template"></param>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase.AddItemTemplate(System.Web.UI.ITemplate,EPiServer.Core.PageData,System.Int32,System.Boolean)">
+            <summary>
+            Adds an item with the specified template.
+            </summary>
+            <param name="template"></param>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedPageDataItemListControlBase.ItemTemplate">
+            <summary>
+            The item template will be used for all items if not 
+            an alternative item template is defined. 
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.PageDataList.TotalItemCount">
+            <summary>
+            Holds the total number of items before any paging. 
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.PageDataList.SortBy">
+            <summary>
+            Sort by a property instead of setting SortOrder.
+            Used together with SortDirection.
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.PageDataList.MaxCount">
+            <summary>
+            Limits the total number of items in the list.
+            Is applied after sorting.
+            A value larger than zero is considered a value, 
+            zero or less has no effect.
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.PageDataList.SortDirection">
+            <summary>
+            The sortdirection when using SortBy.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataList.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which creates and adds the content of the control. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataList.GetItems">
+            <summary>
+            Gets the items to display in the control, applying sorting 
+            and filtering as required. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataList.AddHeaderPager(System.Int32)">
+            <summary>
+            An empty method which can be overridden by descendants which 
+            implements paging.
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataList.AddFooterPager(System.Int32)">
+            <summary>
+            An empty method which can be overridden by descendants which 
+            implements paging.
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataList.ApplyPagingFilter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            An empty method which can be overridden by descendants which 
+            implements paging.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.ListRoot">
+            <summary>
+            If set, the reference will be used as a root for the list and
+            it will be populated with the root's first level children 
+            filtered with FilterForVisitor. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.Pages">
+            <summary>
+            Can be used to get or set the pages in the list.
+            Will be ignored if ListRoot is set. 
+            </summary>
+        </member>
+        <member name="E:EPiUtilities.WebControls.PageDataList.Filter">
+            <summary>
+            Filters added to this event will be run on the items before 
+            filling the list. These filters run before filters invoked by 
+            properties on this list. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.SortOrder">
+            <summary>
+            Sort order used for this list. Default is None. 
+            Will be applied after the Filter event.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.AlternatingItemTemplate">
+            <summary>
+            If this template is defined it will be used for every other item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.FirstItemTemplate">
+            <summary>
+            A special template for the first item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.SecondItemTemplate">
+            <summary>
+            A special template for the second item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.ThirdItemTemplate">
+            <summary>
+            A special template for the third item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataList.FourthItemTemplate">
+            <summary>
+            A special template for the fourth item.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.Filters.PageDataCollectionFilterDelegate">
+            <summary>
+            Delegate for EPiServer's standard filter method signature.
+            </summary>
+            <param name="pages"></param>
+        </member>
+        <member name="T:EPiUtilities.Extensions.StringExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.NullOrEmpty(System.String)">
+            <summary>
+            Returns the value of string.IsNullOrEmpty() for the string.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ConvertToExternalUrl(System.String)">
+            <summary>
+            Takes an url of internal format (/example/example.aspx?id=123&amp;epslanguage=no)
+            and returns the friendly url equivalent. 
+            </summary>
+            <param name="internalUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ConvertToInternalUrl(System.String)">
+            <summary>
+            Takes an url of friendly external format (/example/example/)
+            and returns the internal url equivalent. 
+            </summary>
+            <param name="externalUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToImgWithAltText(System.String,System.String)">
+            <summary>
+            Returns an html image tag with string as url and specified alt text.
+            Returns empty string if imageUrl is null or empty.
+            </summary>
+            <param name="imageUrl"></param>
+            <param name="altText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToImgWithCssClassAndAltText(System.String,System.String,System.String)">
+            <summary>
+            Returns a html image tag with string as url and specified alt text.
+            Returns empty string if imageUrl is null or empty.
+            </summary>
+            <param name="imageUrl"></param>
+            <param name="cssClass"></param>
+            <param name="altText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToFigureWithImgAndAltAndFigcaption(System.String,System.String,System.String)">
+            <summary>
+            Returns a html figure tag with an image and figcaption tag inside
+            using the string as imageUrl. 
+            Figcaption is only added if figcaption text is not null or empty. 
+            </summary>
+            <param name="imageUrl"></param>
+            <param name="altText"></param>
+            <param name="figCaption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.SurroundWithDiv(System.String)">
+            <summary>
+            If content is not null or empty, returns it surrounded by a div. 
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.SurroundWithDivWithCssClass(System.String,System.String)">
+            <summary>
+            If content is not null or empty, returns it surrounded by a div with a css class.
+            </summary>
+            <param name="content"></param>
+            <param name="cssClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToCssEncoded(System.String)">
+            <summary>
+            Calls CssEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToHtmlAttributeEncoded(System.String)">
+            <summary>
+            Calls HtmlAttributeEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToHtmlEncoded(System.String)">
+            <summary>
+            Calls HtmlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToHtmlEncoded(System.String,System.Boolean)">
+            <summary>
+            Calls HtmlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <param name="useNamedEntities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToJavaScriptEncoded(System.String)">
+            <summary>
+            Calls JavaScriptEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToJavaScriptEncoded(System.String,System.Boolean)">
+            <summary>
+            Calls JavaScriptEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <param name="emitQuotes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToUrlEncoded(System.String)">
+            <summary>
+            Calls UrlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToUrlEncoded(System.String,System.Text.Encoding)">
+            <summary>
+            Calls UrlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <param name="inputEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToUrlEncoded(System.String,System.Int32)">
+            <summary>
+            Calls UrlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <param name="codePage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToXmlAttributeEncoded(System.String)">
+            <summary>
+            Calls XmlAttributeEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.StringExtensions.ToXmlEncoded(System.String)">
+            <summary>
+            Calls XmlEncode from the AntiXss library on the string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.WebControls.MultiLevelMenu">
+            <summary>
+            A menu control which displays pages of a specified number of levels 
+            below a menu root. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase">
+            <summary>
+            Base class for menu controls which display children collections. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseClasses.TemplatedSelectedPageDataItemListControlBase">
+            <summary>
+            Base class for templated item lists where item is <see cref="T:EPiServer.Core.PageData"/> and 
+            items may also be selected.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.TemplatedSelectedPageDataItemListControlBase.SelectedItemTemplate">
+            <summary>
+            The selected item template will be used for items which 
+            are considered selected.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.ApplyFilter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Applies the Filter event to the collection.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.AddItemCheckSelected(EPiServer.Core.PageData,System.Int32)">
+            <summary>
+            Adds an item, using item or selected item template as required.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.IsSelected(EPiServer.Core.PageData)">
+            <summary>
+            Whether or not the page is considered selected.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.MenuRoot">
+            <summary>
+            The root page for the menu.  
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.ShowPagesNotVisibleInMenu">
+            <summary>
+            If true, pages marked not visible in menu will be included.
+            Default value is false. 
+            </summary>
+        </member>
+        <member name="E:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.Filter">
+            <summary>
+            Filters added to this event will be run on the items each time 
+            a new collection is fetched. For one level menus this will happen 
+            one time, for multi level menus each time a new level is fetched. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.SelectedCheckFollowsShortcutsToAncestors">
+            <summary>
+            If true, the item selected check will follow shortcut pages
+            and check their ancestors instead. 
+            Enable this if you have created a menu with shortcut pages.
+            
+            If false, the item selected check will check if items are 
+            a shortcut to current page or is an ancestor of current page.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseClasses.ChildrenBasedPageDataMenuBase.CurrentPage">
+            <summary>
+            A reference to the current page in EPiServer. Is used to 
+            determine if items are selected or not. 
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.MultiLevelMenu.AddSeparatorForLevel">
+            <summary>
+            Indicates if a separator should be added when adding a new item to a level.
+            </summary>
+        </member>
+        <member name="F:EPiUtilities.WebControls.MultiLevelMenu.AddedForLevel">
+            <summary>
+            Indicates if an item was added to a level during an iteration. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which creates and adds the content of the control. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.GetChildrenItems(EPiServer.Core.PageReference)">
+            <summary>
+            Gets the children of root with filters according to configuration.
+            </summary>
+            <param name="root"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.AddLevel(EPiServer.Core.PageDataCollection,System.Int32)">
+            <summary>
+            Adds a level. 
+            </summary>
+            <param name="items"></param>
+            <param name="level"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.AddItem(EPiServer.Core.PageData,System.Int32,System.Int32)">
+            <summary>
+            Adds an item. 
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="level"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.AddItemTemplate(System.Web.UI.ITemplate,EPiServer.Core.PageData,System.Int32,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            Adds an item with the specified template. 
+            </summary>
+            <param name="template"></param>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+            <param name="level"></param>
+            <param name="hasChildren"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.AddLevelStartTemplate(System.Int32)">
+            <summary>
+            Adds a level start template.
+            </summary>
+            <param name="level"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.MultiLevelMenu.AddLevelEndTemplate(System.Int32)">
+            <summary>
+            Adds a level end template.
+            </summary>
+            <param name="level"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.ExpandSelectedOnly">
+            <summary>
+            If true, only selected items will have their children listed. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.NumberOfLevels">
+            <summary>
+            The number of levels to display in the control.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.LevelStartTemplate">
+            <summary>
+            The template will be applied at the start of every 
+            level. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.LevelEndTemplate">
+            <summary>
+            The template will be applied at the end of every level. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.ItemTemplate">
+            <summary>
+            The item template will be used for all items if not 
+            an alternative item template is defined. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.ItemEndTemplate">
+            <summary>
+            This template is applied to an item after its nested
+            children are added. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.SelectedItemTemplate">
+            <summary>
+            The selected item template will be used for items which 
+            are considered selected.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.MultiLevelMenu.SelectedItemEndTemplate">
+            <summary>
+            This template is applied to a selected item after its nested
+            children are added. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.Filters.PagerFilter">
+            <summary>
+            A filter which filters the collection to only contain the pages
+            in a given page given a page size and page number.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Filters.PagerFilter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a filter which filters a PageDataCollection for a pager
+            given the size and number of the page. 
+            pageNumber must be 1 or larger, it is not zero based. 
+            </summary>
+            <param name="pageSize"></param>
+            <param name="pageNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PagerFilter.Filter(System.Object,EPiServer.Filters.FilterEventArgs)">
+            <summary>
+            Event handler that calls the filter in this filter class.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PagerFilter.Filter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Filters the collection, leaving only the pages which 
+            correspond to the given page number and size.
+            </summary>
+            <param name="pages"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PagerFilter.ShouldFilter(EPiServer.Core.PageData)">
+            <summary>
+            Not implemented, as this filter only applies to collection contexts.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.WebControls.OneLevelMenu">
+            <summary>
+            A simple menu control which displays one level of pages below 
+            the specified menu root. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.OneLevelMenu.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which creates and adds the content of the control. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:EPiUtilities.Extensions.LinkItemCollectionExtensions">
+            <summary>
+            Extension methods for <see cref="T:EPiServer.SpecializedProperties.LinkItemCollection"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.LinkItemCollectionExtensions.ToPageDataCollection(EPiServer.SpecializedProperties.LinkItemCollection)">
+            <summary>
+            Returns a <see cref="T:EPiServer.Core.PageDataCollection"/> with the links that resolve to EPiServer pages.
+            Other links are dropped without error.
+            </summary>
+            <param name="linkItemCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.PageDataCollectionExtensions">
+            <summary>
+            Extension methods for <see cref="T:EPiServer.Core.PageDataCollection"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.ToPageReferenceCollection(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Returns the the collection as a <see cref="T:EPiServer.Core.PageReferenceCollection"/>.
+            </summary>
+            <param name="pages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.OfPageType(EPiServer.Core.PageDataCollection,System.Int32)">
+            <summary>
+            Filters the PageDataCollection to only contain pages of the specified type. 
+            </summary>
+            <param name="pages"></param>
+            <param name="pageTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.OfPageTypes(EPiServer.Core.PageDataCollection,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Filters the PageDataCollection to only contain pages of the specified types. 
+            </summary>
+            <param name="pages"></param>
+            <param name="pageTypeIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.ForVisitor(EPiServer.Core.PageDataCollection)">
+            <summary>
+             Filters the PageDataCollection with the FilterForVisitor filter.
+            </summary>
+            <param name="pages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.VisibleInMenu(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Filters the collection so it only contains pages visible in menu.
+            </summary>
+            <param name="pages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.NotVisibleInMenu(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Filters the collection so it only contains pages not visible in menu.
+            </summary>
+            <param name="pages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.FilterAccess(EPiServer.Core.PageDataCollection,EPiServer.Security.AccessLevel)">
+            <summary>
+            Uses FilterAccess to filter for the specified access.
+            </summary>
+            <param name="pages"></param>
+            <param name="requiredAccess"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.FilterCompareTo(EPiServer.Core.PageDataCollection,System.String,System.String)">
+            <summary>
+            Uses FilterCompareTo to filter the collection.
+            </summary>
+            <param name="pages"></param>
+            <param name="propertyName"></param>
+            <param name="propertyValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.PropertySort(EPiServer.Core.PageDataCollection,System.String,EPiServer.Filters.FilterSortDirection)">
+            <summary>
+            Sorts the collection with FilterPropertySort.
+            </summary>
+            <param name="pages"></param>
+            <param name="sortBy"></param>
+            <param name="sortDirection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.Sort(EPiServer.Core.PageDataCollection,EPiServer.Filters.FilterSortOrder)">
+            <summary>
+            Sorts the collection using FilterSort.
+            </summary>
+            <param name="pages"></param>
+            <param name="sortOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.Filter(EPiServer.Core.PageDataCollection,EPiUtilities.Filters.PageDataCollectionFilterDelegate)">
+            <summary>
+            Applies the filter delegate to the collection.
+            </summary>
+            <param name="pages"></param>
+            <param name="filterDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.FilterForPager(EPiServer.Core.PageDataCollection,System.Int32,System.Int32)">
+            <summary>
+            Applies the <see cref="T:EPiUtilities.Filters.PagerFilter"/> on the collection.
+            </summary>
+            <param name="pages"></param>
+            <param name="pageSize"></param>
+            <param name="pageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataCollectionExtensions.AddIfResolvable(EPiServer.Core.PageDataCollection,EPiServer.Core.PageReference)">
+            <summary>
+            Adds the referenced page to the collection if it is resolvable. 
+            </summary>
+            <param name="pages"></param>
+            <param name="reference"></param>
+        </member>
+        <member name="T:EPiUtilities.Extensions.EnumerableExtensions">
+            <summary>
+            Extension methods for <see iref="IEnumerable"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.EnumerableExtensions.ToPageDataCollection(System.Collections.Generic.IEnumerable{EPiServer.Core.PageData})">
+            <summary>
+            Converts an enumerable of <see cref="T:EPiServer.Core.PageData"/> to a <see cref="T:EPiServer.Core.PageDataCollection"/>.
+            </summary>
+            <param name="enumerable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.EnumerableExtensions.ToPageDataCollection(System.Collections.Generic.IEnumerable{EPiServer.Core.PageReference})">
+            <summary>
+            Converts an enumerable of <see cref="T:EPiServer.Core.PageReference"/> to a <see cref="T:EPiServer.Core.PageDataCollection"/>.
+            Any non resolvable references are dropped without errors. 
+            </summary>
+            <param name="enumerable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.PageExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Web.UI.Page"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageExtensions.ToCurrentPage(System.Web.UI.Page)">
+            <summary>
+            Attempts to get the current EPiServer page from the Page
+            object. Returns null if current page is not an EPiServer page.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.IntExtensions">
+            <summary>
+            Extension methods for <see ref="int"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.IntExtensions.ToPageReference(System.Int32)">
+            <summary>
+            Returns a <see cref="T:EPiServer.Core.PageReference"/> with the int as id. 
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseTemplateContainer">
+            <summary>
+            Base class for all templates.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.HeaderTemplateContainer">
+            <summary>
+            Template class used for headers.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.EmptyTemplateContainer">
+            <summary>
+            Template class used for empty templates.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.FooterTemplateContainer">
+            <summary>
+            Template class used for footers.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.SeparatorTemplateContainer">
+            <summary>
+            Template class used for separators.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.LevelHeaderFooterTemplateContainer">
+            <summary>
+            Template class used for headers and footers in levels in multilevel controls.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.LevelHeaderFooterTemplateContainer.#ctor(System.Int32)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.LevelHeaderFooterTemplateContainer"/>.
+            </summary>
+            <param name="level"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LevelHeaderFooterTemplateContainer.Level">
+            <summary>
+            The current level.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer">
+            <summary>
+            Template class used for pager headers.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer"/>.
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="itemCount"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.PageNumber">
+            <summary>
+            The number of the current page being shown.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.ItemCount">
+            <summary>
+            The total number of items. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.PageSize">
+            <summary>
+            The size of a page.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.NumberOfPages">
+            <summary>
+            The total number of pages.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.FromItemNumber">
+            <summary>
+            Returns the number of the first item being shown. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerHeaderFooterTemplateContainer.ToItemNumber">
+            <summary>
+            Returns the number of the last item being shown. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PagerItemTemplateContainer">
+            <summary>
+            Template class used for pager items.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagerItemTemplateContainer.#ctor(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.PagerItemTemplateContainer"/>.
+            </summary>
+            <param name="url"></param>
+            <param name="pageNumber"></param>
+            <param name="text"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerItemTemplateContainer.Url">
+            <summary>
+            The url for this item. 
+            The url is encoded for use in html attributes, do not encode it a second time.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerItemTemplateContainer.PageNumber">
+            <summary>
+            The page number this item represents.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerItemTemplateContainer.Text">
+            <summary>
+            The text for this item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagerItemTemplateContainer.Selected">
+            <summary>
+            Whether this item represents the current page or not. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BaseItemTemplateContainer`1">
+            <summary>
+            Base item template class.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseItemTemplateContainer`1.#ctor(`0,System.Int32)">
+            <summary>
+            Base constructor for <see cref="T:EPiUtilities.WebControls.BaseItemTemplateContainer`1"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BaseItemTemplateContainer`1.#ctor(`0,System.Int32,System.Boolean)">
+            <summary>
+            Base constructor for <see cref="T:EPiUtilities.WebControls.BaseItemTemplateContainer`1"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseItemTemplateContainer`1.Item">
+            <summary>
+            The item this template represents. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseItemTemplateContainer`1.ItemNumber">
+            <summary>
+            The number in the list this item is, starting at 1.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseItemTemplateContainer`1.Selected">
+            <summary>
+            True if item is considered selected. If you do not specify a 
+            SelectedItemTemplate in controls which define selected items, 
+            the ItemTemplate will be used and this property will be true.
+            Useful if you only want to output a css class on selected items 
+            for instance. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseItemTemplateContainer`1.Odd">
+            <summary>
+            True if this item has an odd number in the item number sequence.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BaseItemTemplateContainer`1.Even">
+            <summary>
+            True if this item has an even number in the item number sequence.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PageDataItemTemplateContainer">
+            <summary>
+            Item template with <see cref="T:EPiServer.Core.PageData"/> object as strongly typed item.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataItemTemplateContainer.#ctor(EPiServer.Core.PageData,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.PageDataItemTemplateContainer"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataItemTemplateContainer.#ctor(EPiServer.Core.PageData,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.PageDataItemTemplateContainer"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PageDataMultiLevelItemTemplateContainer">
+            <summary>
+            Item template with additional properties for <see cref="T:EPiUtilities.WebControls.MultiLevelMenu"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PageDataMultiLevelItemTemplateContainer.#ctor(EPiServer.Core.PageData,System.Int32,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.PageDataMultiLevelItemTemplateContainer"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+            <param name="level"></param>
+            <param name="hasChildren"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataMultiLevelItemTemplateContainer.Level">
+            <summary>
+            The current level.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PageDataMultiLevelItemTemplateContainer.HasChildren">
+            <summary>
+            Whether or not this item will have a sublevel with items.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.LinkItemItemTemplateContainer">
+            <summary>
+            Item template with <see cref="T:EPiServer.SpecializedProperties.LinkItem"/> object as strongly typed item.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.LinkItemItemTemplateContainer.#ctor(EPiServer.SpecializedProperties.LinkItem,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.LinkItemItemTemplateContainer"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.LinkItemItemTemplateContainer.#ctor(EPiServer.SpecializedProperties.LinkItem,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:EPiUtilities.WebControls.LinkItemItemTemplateContainer"/>.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="T:EPiUtilities.WebControls.PagedPageDataList">
+            <summary>
+            A templated PageData list with paging. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.ApplyPagingFilter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Applies a pager filter to the items to limit items to the current page.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddHeaderPager(System.Int32)">
+            <summary>
+            Adds a pager to the header if specified. 
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddFooterPager(System.Int32)">
+            <summary>
+            Adds a pager to the footer if specified.
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddPager(System.Int32)">
+            <summary>
+            Adds a full set of pager templates to the controls. 
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddPagerItemTemplate(System.Web.UI.ITemplate,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Adds a pager item template.
+            </summary>
+            <param name="template"></param>
+            <param name="pageNumber"></param>
+            <param name="text"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddPagerHeaderTemplate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a pager header template. 
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="itemCount"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddPagerFooterTemplate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a pager footer template.
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="itemCount"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.PagedPageDataList.AddPagerSeparatorTemplate">
+            <summary>
+            Adds a pager separator template.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PageSize">
+            <summary>
+            The number of items on each page when paging.
+            Defaults to 10.
+            
+            The MaxCount property has the same behavior as in a 
+            non paged list, it limits the total number of items.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagingQueryParameterKey">
+            <summary>
+            The query string parameter the control uses to determine
+            which page is the current page. 
+            Defaults to "p". 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.CurrentPageNumber">
+            <summary>
+            Tries to get the current page number from the query parameter value.
+            Defaults to 1. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PrevText">
+            <summary>
+            The text to use for the previous item.
+            Defaults to &lt;&lt;.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.NextText">
+            <summary>
+            The text to use for the next item. 
+            Defaults to &gt;&gt;.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.ShowTopPager">
+            <summary>
+            If true, shows paging at the top of the control. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.HideBottomPager">
+            <summary>
+            If true, hides paging at the bottom of the control.
+            Default is false. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerHeaderTemplate">
+            <summary>
+            Header template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerFooterTemplate">
+            <summary>
+            Footer template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerPrevTemplate">
+            <summary>
+            Previous template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerNextTemplate">
+            <summary>
+            Next template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerItemTemplate">
+            <summary>
+            Item template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerSelectedItemTemplate">
+            <summary>
+            Selected item template for the pager.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.PagedPageDataList.PagerSeparatorTemplate">
+            <summary>
+            Separator template for the pager.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.Extensions.PageReferenceCollectionExtensions">
+            <summary>
+            Extension methods for <see cref="T:EPiServer.Core.PageReferenceCollection"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceCollectionExtensions.ToPageDataCollection(EPiServer.Core.PageReferenceCollection)">
+            <summary>
+            Returns the PageDataCollection which the PageReferenceCollection represents.
+            Any non resolvable references will be skipped without errors.
+            </summary>
+            <param name="references"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Filters.PageTypeFilter">
+            <summary>
+            A filter class that can filter <see cref="T:EPiServer.Core.PageDataCollection"/>s to only contain 
+            pages of certain type(s).
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Filters.PageTypeFilter.#ctor(System.Int32)">
+            <summary>
+            Creates a new filter that will filter PageDataCollections to only contain 
+            pages of the specified type.
+            </summary>
+            <param name="pageTypeId"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PageTypeFilter.#ctor(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Creates a new filter that will filter PageDataCollections to only contain 
+            pages of the specified type(s).
+            </summary>
+            <param name="pageTypeIds"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PageTypeFilter.Filter(System.Object,EPiServer.Filters.FilterEventArgs)">
+            <summary>
+            Event handler that calls the filter in this filter class.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PageTypeFilter.Filter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Filters the specified collection, removing pages of types not specified in
+            the constructor. 
+            </summary>
+            <param name="pages"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.PageTypeFilter.ShouldFilter(EPiServer.Core.PageData)">
+            <summary>
+            Returns true if the filter will remove this page when filtering a collection.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Filters.DateIntervalFilter">
+            <summary>
+            A filter which filters pages on whether a certain property is in a given date interval. 
+            If the property has no value the page will be removed as well. 
+            If you need a "later than" or "earlier than" filter just use DateTime.MaxValue or MinValue
+            as one of the boundaries. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.#ctor(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Creates a filter that will filter the specified property with the specified date range. 
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <param name="datePropertyName"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.StartPublishFilter(System.DateTime,System.DateTime)">
+            <summary>
+            Returns an instance of <see cref="T:EPiUtilities.Filters.DateIntervalFilter"/> that will filter on the 
+            start publish property.
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.StopPublishFilter(System.DateTime,System.DateTime)">
+            <summary>
+            Returns an instance of <see cref="T:EPiUtilities.Filters.DateIntervalFilter"/> that will filter on the 
+            stop publish property.
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.PageCreatedFilter(System.DateTime,System.DateTime)">
+            <summary>
+            Returns an instance of <see cref="T:EPiUtilities.Filters.DateIntervalFilter"/> that will filter on the 
+            page created property.
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.PageChangedFilter(System.DateTime,System.DateTime)">
+            <summary>
+            Returns an instance of <see cref="T:EPiUtilities.Filters.DateIntervalFilter"/> that will filter on the 
+            page changed property.
+            </summary>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.Filter(System.Object,EPiServer.Filters.FilterEventArgs)">
+            <summary>
+            Event handler that calls the filter in this filter class.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.Filter(EPiServer.Core.PageDataCollection)">
+            <summary>
+            Filters the collection, removing pages that do not have a value in the correct range
+            for the specified property. 
+            </summary>
+            <param name="pages"></param>
+        </member>
+        <member name="M:EPiUtilities.Filters.DateIntervalFilter.ShouldFilter(EPiServer.Core.PageData)">
+            <summary>
+            Returns true if the filter will remove this page when filtering a collection.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.PageDataExtensions">
+            <summary>
+            Extension methods for <see cref="T:EPiServer.Core.PageData"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.Children(EPiServer.Core.PageData)">
+            <summary>
+            Returns the children of the page.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.ChildrenForVisitor(EPiServer.Core.PageData)">
+            <summary>
+            Returns the children of the page filtered with FilterForVisitor.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.Parent(EPiServer.Core.PageData)">
+            <summary>
+            Returns the parent of page as <see cref="T:EPiServer.Core.PageData"/> or null if 
+            the parent reference is not resolvable.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsShortcutToPage(EPiServer.Core.PageData)">
+            <summary>
+            Returns true if page is a shortcut to another EPiServer page.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.ToShortcutPageOrSelf(EPiServer.Core.PageData)">
+            <summary>
+            If page is a shortcut to another EPiServer page, returns that page.
+            Otherwise returns page itself.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.AncestorOrSelfOfType(EPiServer.Core.PageData,System.Int32)">
+            <summary>
+            Checks page itself and then ancestors up the tree and returns the 
+            first page of specified type. Returns null if no page found.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.PropertyHasValue(EPiServer.Core.PageData,System.String)">
+            <summary>
+            Returns true if the specified property on the page has a value. 
+            </summary>
+            <param name="page"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.PropertyValueOrDefault``1(EPiServer.Core.PageData,System.String)">
+            <summary>
+            If the specified property has a value and is of type T, returns the value.
+            Otherwise returns the system default value for T.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="page"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.PropertyValue``1(EPiServer.Core.PageData,System.String,``0)">
+            <summary>
+            If the specified property has a value and is of type T, returns the value.
+            Otherwise returns the specified default value. 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="page"></param>
+            <param name="propertyName"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsDescendantOf(EPiServer.Core.PageData,EPiServer.Core.PageData)">
+            <summary>
+            Returns true if page is a descendant of ancestorCandidate. Will not compare
+            page itself. 
+            </summary>
+            <param name="page"></param>
+            <param name="ancestorCandidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsOrIsDescendantOf(EPiServer.Core.PageData,EPiServer.Core.PageData)">
+            <summary>
+            Returns true if the page is ancestorCandidate or page is a descendant of 
+            ancestorCandidate.
+            </summary>
+            <param name="page"></param>
+            <param name="ancestorCandidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsOrIsDescendantOfOrShortcut(EPiServer.Core.PageData,EPiServer.Core.PageData)">
+            <summary>
+            Returns true if the page is ancestorCandidate, if ancestorCandidate is a shortcut
+            to page or if page is a descendant of ancestorCandidate.
+            </summary>
+            <param name="page"></param>
+            <param name="ancestorCandidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsDescendantOfFollowShortcutToAncestors(EPiServer.Core.PageData,EPiServer.Core.PageData)">
+            <summary>
+            Returns true if page is a descendant of ancestorCandidate. Will not compare
+            page itself. 
+            If ancestorCandidate is a shortcut to another page the linked page will be used
+            instead. This is useful if you create menu items with shortcuts for instance.
+            </summary>
+            <param name="page"></param>
+            <param name="ancestorCandidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.IsOrIsDescendantOfFollowShortcutToAncestors(EPiServer.Core.PageData,EPiServer.Core.PageData)">
+            <summary>
+            Returns true if the page is ancestorCandidate or page is a descendant of 
+            ancestorCandidate.
+            If ancestorCandidate is a shortcut to another page the linked page will be used
+            instead. This is useful if you create menu items with shortcuts for instance.
+            </summary>
+            <param name="page"></param>
+            <param name="ancestorCandidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.ToHtmlAnchorWithLinkUrlAndPageName(EPiServer.Core.PageData)">
+            <summary>
+            Returns an html anchor with LinkURL as href and PageName as value. 
+            Returns empty if page is null.
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageDataExtensions.ToHtmlAnchorWithLinkUrl(EPiServer.Core.PageData,System.String)">
+            <summary>
+            Returns an html anchor with LinkURL as href and innerText as value. 
+            Returns empty if page is null or innerText is null or empty.
+            </summary>
+            <param name="page"></param>
+            <param name="innerText"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.HttpResponseExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Web.HttpResponse"/> objects.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.HttpResponseExtensions.ReturnXmlResponse(System.Web.HttpResponse,System.Xml.XmlDocument)">
+            <summary>
+            Returns the xml value of the XmlDocument as a xml response using UTF8.
+            Ends the response after writing to the response stream. 
+            </summary>
+            <param name="response"></param>
+            <param name="document"></param>
+        </member>
+        <member name="M:EPiUtilities.Extensions.HttpResponseExtensions.RedirectPermanent(System.Web.HttpResponse,System.String)">
+            <summary>
+            Redirects the response with a 301 redirect. 
+            This method has the same behavior as the HttpResponse method with the same
+            name in .NET 4.0.
+            </summary>
+            <param name="response"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:EPiUtilities.Extensions.HttpResponseExtensions.RedirectPermanent(System.Web.HttpResponse,System.String,System.Boolean)">
+            <summary>
+            Redirects the response with a 301 redirect. 
+            This method has the same behavior as the HttpResponse method with the same
+            name in .NET 4.0.
+            </summary>
+            <param name="response"></param>
+            <param name="url"></param>
+            <param name="endResponse"></param>
+        </member>
+        <member name="T:EPiUtilities.WebControls.LinkItemList">
+            <summary>
+            A simple templated LinkItem list.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.LinkItemList.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which creates and adds the content of the control. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EPiUtilities.WebControls.LinkItemList.AddItemTemplate(System.Web.UI.ITemplate,EPiServer.SpecializedProperties.LinkItem,System.Int32)">
+            <summary>
+            Adds an item with the specified template. 
+            </summary>
+            <param name="template"></param>
+            <param name="item"></param>
+            <param name="itemNumber"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.LinkItems">
+            <summary>
+            Can be used to get or set the linkitems in the list.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.ItemTemplate">
+            <summary>
+            The item template will be used for all items if not 
+            an alternative item template is defined. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.AlternatingItemTemplate">
+            <summary>
+            If this template is defined it will be used for every other item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.FirstItemTemplate">
+            <summary>
+            A special template for the first item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.SecondItemTemplate">
+            <summary>
+            A special template for the second item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.ThirdItemTemplate">
+            <summary>
+            A special template for the third item.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.LinkItemList.FourthItemTemplate">
+            <summary>
+            A special template for the fourth item.
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.WebControls.BreadCrumbsMenu">
+            <summary>
+            A menu which displays "breadcrumbs", links to the pages between the
+            site root and the current page. 
+            Site root can be set, but defaults to the pageStartId set in web.config.
+            Current page can be set, but defaults to the current EPiServer page.
+            The current page is always considered selected, the others not. 
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.WebControls.BreadCrumbsMenu.OnPreRender(System.EventArgs)">
+            <summary>
+            Override which creates and adds the content of the control. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BreadCrumbsMenu.ShowPagesNotVisibleInMenu">
+            <summary>
+            If true, pages marked not visible in menu will be included.
+            Default value is false. 
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BreadCrumbsMenu.SiteRoot">
+            <summary>
+            The root of the bread crumbs menu. Defaults to the site start page.
+            </summary>
+        </member>
+        <member name="P:EPiUtilities.WebControls.BreadCrumbsMenu.CurrentPage">
+            <summary>
+            The current page of the bread crumbs, which is the end of the
+            menu. Can be set or defaults to the current EPiServer page. 
+            </summary>
+        </member>
+        <member name="T:EPiUtilities.Extensions.PageReferenceExtensions">
+            <summary>
+            Extension methods for <see cref="T:EPiServer.Core.PageReference"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceExtensions.IsNullOrEmpty(EPiServer.Core.PageReference)">
+            <summary>
+            Checks whether the reference is null or empty. 
+            Uses <see cref="T:EPiServer.Core.PageReference"/>s own static method. 
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceExtensions.ToPageData(EPiServer.Core.PageReference)">
+            <summary>
+            Returns the <see cref="T:EPiServer.Core.PageData"/> this reference points to, or null if the reference is invalid. 
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceExtensions.IsResolvable(EPiServer.Core.PageReference)">
+            <summary>
+            Returns true if the reference can be resolved to a <see cref="T:EPiServer.Core.PageData"/>. 
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceExtensions.Children(EPiServer.Core.PageReference)">
+            <summary>
+            Returns the children of the referenced page. Returns an empty collection
+            if the reference is not resolvable.
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiUtilities.Extensions.PageReferenceExtensions.ChildrenForVisitor(EPiServer.Core.PageReference)">
+            <summary>
+            Returns the children of the referenced page filtered for visitor. Returns 
+            an empty collection if the reference is not resolvable.
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiUtilities.Extensions.IhttpHandlerExtensions">
+            <summary>
+            Extension methods for <see iref="IHttpHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EPiUtilities.Extensions.IhttpHandlerExtensions.CurrentPage(System.Web.IHttpHandler)">
+            <summary>
+            Tries to get the current EPiServer page from the HttpContext. 
+            </summary>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

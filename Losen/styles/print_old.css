@@ -1,0 +1,39 @@
+BODY
+{ 
+	font-family: Times New Roman; 
+	font-size:100%; 
+}
+
+TD
+{
+   font-family: Times New Roman; 
+   font-size:100%;
+}
+P
+{ 
+	margin: 0px;
+}
+
+/* Styles by WM-data Consulting AS */
+
+/* Print styles */
+.teaserHeading    { font-family:Times New Roman; font-size:110%; font-weight:bold; color:#000000; margin-bottom:1px; EditMenuName: Overskift;}
+.temaHeading      { font-family:Times New Roman; font-size:110%; font-weight:bold; color:#000000; line-height:140%;}
+.pictureSubtitle  { font-family:Times New Roman; font-size:80%; color:#000000; EditMenuName: Kildehenvisning;}
+.pageHeading      { font-family:Times New Roman; font-size:160%; font-weight:bold; color:#000000;} 
+.heading2		  { font-family:Times New Roman; font-size:100%; font-weight:bold; color:#000000; margin-bottom:1px;}
+
+/* Articles */
+.h2  { font-family:Times New Roman; font-size:150%; font-weight:bold; color:#000000; margin-top:10px; }
+.h3  { font-size:110%; font-weight:bold; margin-top:5px; margin-bottom:5px; }
+.p   { font-size:110%; line-height:140%; margin-top:5px; margin-bottom:15px; EditMenuName: Normal;}
+
+/* Links */
+a          { text-decoration:none; color:#0300C9; }
+a:hover    { text-decoration:underline; }
+
+
+
+
+
+

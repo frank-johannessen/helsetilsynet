@@ -1,0 +1,127 @@
+@import "lib/_grids";
+
+// sitewide measures
+
+$content-width: 964px;
+
+$grid-18-spacing: 18px;
+$grid-18-column-count: 18;
+$grid-18-column-width: column-width($content-width, $grid-18-column-count, $grid-18-spacing);
+$grid-18-4-columns-width:   n-columns-width( 4,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-5-columns-width:   n-columns-width( 5,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-6-columns-width:   n-columns-width( 6,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-10-columns-width:  n-columns-width(10,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-12-columns-width:  n-columns-width(12,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-14-columns-width:  n-columns-width(14,  $grid-18-column-width, $grid-18-spacing);
+$grid-18-4-columns-offset:  n-columns-offset( 4, $grid-18-column-width, $grid-18-spacing);
+$grid-18-6-columns-offset:  n-columns-offset( 6, $grid-18-column-width, $grid-18-spacing);
+$grid-18-14-columns-offset: n-columns-offset(14, $grid-18-column-width, $grid-18-spacing);
+
+
+$grid-16-spacing: 21px;
+$grid-16-column-count: 16;
+$grid-16-column-width: column-width($content-width, $grid-16-column-count, $grid-16-spacing);
+$grid-16-3-columns-width: n-columns-width(3, $grid-16-column-width, $grid-16-spacing);
+$grid-16-4-columns-width: n-columns-width(4, $grid-16-column-width, $grid-16-spacing);
+$grid-16-9-columns-width: n-columns-width(9, $grid-16-column-width, $grid-16-spacing);
+$grid-16-13-columns-width: n-columns-width(13, $grid-16-column-width, $grid-16-spacing);
+$grid-16-1-column-offset: n-columns-offset(1, $grid-16-column-width, $grid-16-spacing);
+$grid-16-3-columns-offset: n-columns-offset(3, $grid-16-column-width, $grid-16-spacing);
+$grid-16-4-columns-offset: n-columns-offset(4, $grid-16-column-width, $grid-16-spacing);
+$grid-16-8-columns-offset: n-columns-offset(8, $grid-16-column-width, $grid-16-spacing);
+
+
+
+// common components
+
+$page-header-height: 83px;
+
+$main-menu-height: 40px;
+$main-menu-border-width: 3px;
+
+$megamenu-width: $content-width;
+$megamenu-column-count: 5;
+$megamenu-column-border-width: 1px;
+$megamenu-column-padding-left: 12px;
+$megamenu-column-padding-right: 12px;
+$megamenu-column-width: column-width($megamenu-width, $megamenu-column-count, $megamenu-column-border-width) - ($megamenu-column-padding-left + $megamenu-column-padding-right);
+$megamenu-column-margin-bottom: 18px;
+$megamenu-column-margin-top: 28px;
+$megamenu-column-heading-height: 28px;
+$megamenu-min-height: 386px;
+
+$my-tools-width: $grid-18-6-columns-width;
+$my-tools-header-height-active: 80px;
+
+$bread-crumbs-wrapper-height: 90px;
+
+$site-search-width: $grid-18-6-columns-width;
+$site-search-height: 30px;
+
+$footer-min-height: 125px;
+
+$aside-component-margin-bottom: 40px;
+
+
+// page specific components
+
+$frontpage-main-column-width: 631px;
+$frontpage-side-column-width: 311px;
+$frontpage-calendar-section-padding: 18px;
+$frontpage-main-content-width: $grid-18-12-columns-width;
+$frontpage-calendar-parts-spacing: 20px;
+$frontpage-calendar-parts-width: column-width($frontpage-main-content-width - 2 * $frontpage-calendar-section-padding, 2, $frontpage-calendar-parts-spacing);
+$frontpage-featured-height: 375px;
+$frontpage-featured-article-height: 280px;
+
+$featured-article-reflection-height: 26px;
+$featured-article-padding: 15px;
+$featured-image-size: 90px;
+$featured-image-margin: 5px;
+
+$subpage-menu-column-width: 164px;
+$subpage-main-column-width: 533px;
+$subpage-side-column-width: 277px;
+$section-front-featured-width: $grid-16-13-columns-width;
+$section-front-featured-article-gap: 20px;
+$section-front-featured-article-padding: 14px;
+
+$big-document-main-column-width: 732px;
+$big-document-side-column-width: 205px;
+
+
+$alphabetical-index-height: 40px;
+$alphabetical-index-letter-list-width: n-columns-offset(13, $grid-18-column-width, $grid-18-spacing);
+$alphabetical-index-column-count: 3;
+$alphabetical-index-column-spacing: $grid-18-spacing;
+$alphabetical-index-column-width: column-width($content-width - 2 * $grid-18-column-width, $alphabetical-index-column-count, $alphabetical-index-column-spacing);
+
+
+$search-filters-left-padding: 10px;
+$search-filters-right-padding: 12px;
+$search-result-secondary-aside-margin: 20px;
+$search-result-secondary-aside-width: 225px;
+
+$mypage-menu-column-width: $grid-16-3-columns-width;
+$mypage-related-column-width: $grid-18-6-columns-width;
+$mypage-related-column-left-margin: $grid-18-spacing;
+$mypage-main-content-column-width: 448px;
+
+$my-links-delete-column-width: $grid-16-1-column-offset;
+
+$edit-contact-info-tab-width: 138px;
+$employee-category-selector-height: 34px;
+$edit-contact-info-top-border-height: 2px;
+$edit-my-info-padding: 19px;
+
+$my-contacts-spacing: 10px;
+$my-page-my-contacts-contact-width: column-width($mypage-related-column-width, 5, $my-contacts-spacing);
+
+$user-search-nav-column-width: $grid-16-3-columns-width;
+$user-search-main-column-width: $grid-16-9-columns-width;
+$user-search-aside-column-width: $grid-16-4-columns-width;
+$user-search-select-all-button-width: 150px;
+$dynamic-content-user-spacing: 10px;
+$dynamic-content-user-column-count: 3;
+$dynamic-content-user-width: column-width($grid-16-9-columns-width, $dynamic-content-user-column-count, $dynamic-content-user-spacing);
+

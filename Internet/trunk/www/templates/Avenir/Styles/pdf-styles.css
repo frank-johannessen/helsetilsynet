@@ -1,0 +1,89 @@
+﻿body:before {
+    background: none;
+}
+body {
+    line-height: 1.7em;
+    font-size: 1.4em;
+    background: none;
+    font-family: "Times New Roman", Roman, serif;
+}
+h1.frontpage-header {
+    font-size: 50px;
+    margin: 50px 40px;
+    line-height: 1em;
+    font-family: "Times New Roman", Roman, serif;
+}
+.frontpage-content {
+    margin: 10px 40px;
+    font-size: 1.4em;
+}
+.largeDocumentToc h2 {
+    margin: 15px 0px;
+}
+.pdf-body {
+    margin: 20px 0;
+    font-family: "Times New Roman", Roman, serif;
+}
+span.chapter-number {
+    margin-right: 5px;
+}
+ul.table-of-contents li.level1 span.chapter-number {
+    margin-right: 27px;
+}
+ul.table-of-contents {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 10px;  
+}
+ul.table-of-contents li.level1 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+ul.table-of-contents li {
+    list-style: none;
+    margin: 0;
+    font-weight: normal;
+}
+ul.table-of-contents ul ul {
+    padding-left: 20px;
+    margin: 0;
+}
+ul.table-of-contents ul {
+    padding-left: 40px;
+    margin: 0;
+}
+
+div.footer, div.header {
+    width: 2048px;
+    background-color: #F5F5F5;
+}
+.main-content {
+    width: 1024px;
+}
+div.header {
+    margin-bottom: 80px;
+    border-bottom: 1px solid #808080;
+}
+div.footer {
+    margin-top: 30px;
+    height: 80px;
+    border-top: 1px solid #808080;
+}
+.pdf-body.main-content td, .pdf-body.main-content th {
+    padding: 0.2em 1em;
+}
+.pdf-body.main-content table, .pdf-body.main-content tr, .pdf-body.main-content td, .pdf-body.main-content th {
+    border: 1px solid #DDDDDD;
+    border-collapse: collapse;    
+}
+.pdf-body.main-content caption {
+    text-align: left
+}
+
+.work-and-competence-description {
+    display: none;
+}
+.vcard {
+    float: left;
+}
+
